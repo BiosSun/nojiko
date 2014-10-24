@@ -1,0 +1,93 @@
+# 一些编辑器生成的临时文件
+*~
++.#*
+\#*\#
+
+# 日志文件
+*.log
+
+# 私有密钥文件
+*.pem
+
+# 临时文件存放目录
+.tmp/
+
+# node.js 的模块存储目录
+node_modules/
+
+# sea.js 的模块存储目录
+sea-modules/
+
+# sass/scss 的编译缓存文件存储目录
+.sass-cache/
+
+# bower 的包存储目录
+bower_components/
+
+# 大多静态站点生成工具默认存放生成页面的目录
+_site/
+
+# gem 项目会在根目录生成安装包
+/*.gem
+
+# chrome 扩展的打包文件
+*.crx
+
+# 过滤掉其它版本控制工具的相关文件
+.svn
+
+
+#-----------------------------
+# Windows
+#-----------------------------
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+
+#-----------------------------
+# OSX
+#-----------------------------
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+#-----------------------------
+# 项目相关
+#-----------------------------

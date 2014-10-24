@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+$BUTTON-INPUTS-LIST: 'input[type="button"]',
+                     'input[type="reset"]',
+                     'input[type="submit"]';
+
+$ALL-BUTTON-INPUTS: nojiko-attach-inputs($BUTTON-INPUTS-LIST);
+$ALL-BUTTON-INPUTS-HOVER: nojiko-attach-inputs($BUTTON-INPUTS-LIST, 'hover');
+$ALL-BUTTON-INPUTS-FOCUS: nojiko-attach-inputs($BUTTON-INPUTS-LIST, 'focus');
+$ALL-BUTTON-INPUTS-ACTIVE: nojiko-attach-inputs($BUTTON-INPUTS-LIST, 'active');

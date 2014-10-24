@@ -1,0 +1,285 @@
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize $ */
+/* line 12, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 22, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 35, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 55, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 68, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 78, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 90, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+a {
+  background: transparent;
+}
+
+/* line 98, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 110, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 118, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 127, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 136, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 145, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 154, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 162, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 170, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 174, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 185, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 193, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 204, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 212, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 222, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 230, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 253, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 267, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+button {
+  overflow: visible;
+}
+
+/* line 278, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 291, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 303, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 312, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 323, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+input {
+  line-height: normal;
+}
+
+/* line 330, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+*
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 347, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 358, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 371, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 380, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 391, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 400, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 409, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 420, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 425, ../../stylesheets/nojiko/reset/_nojiko-normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 11, ../../stylesheets/nojiko/reset/_nojiko-normalize-supplement.scss */
+audio,
+canvas,
+progress,
+video {
+  *zoom: 1;
+  *display: inline;
+}
+
+/* line 20, ../../stylesheets/nojiko/reset/_nojiko-normalize-supplement.scss */
+form {
+  margin: 0;
+}
+
+/* line 25, ../../stylesheets/nojiko/reset/_nojiko-normalize-supplement.scss */
+iframe {
+  display: block;
+}
+
+/* line 31, ../../stylesheets/nojiko/reset/_nojiko-normalize-supplement.scss */
+img {
+  border: none;
+  -ms-interpolation-mode: bicubic;
+}

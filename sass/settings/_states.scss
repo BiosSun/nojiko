@@ -1,0 +1,30 @@
+@charset 'utf-8';
+
+// 成功
+$success:                       #5cb85c !default;
+// 消息
+$info:                          #5bc0de !default;
+// 警告
+$warning:                       #f0ad4e !default;
+// 错误
+$danger:                        #d9534f !default;
+
+// 成功状态配色
+$nojiko-success-text:           #468847 !default;
+$nojiko-success-bg:             #dff0d8 !default;
+$nojiko-success-border:         darken(adjust-hue($nojiko-success-bg, -10), 5%) !default;
+
+// 消息状态配色
+$nojiko-info-text:              #3a87ad !default;
+$nojiko-info-bg:                #d9edf7 !default;
+$nojiko-info-border:            darken(adjust-hue($nojiko-info-bg, -10), 5%) !default;
+
+// 警告状态配色
+$nojiko-warning-text:           #c09853 !default;
+$nojiko-warning-bg:             #fcf8e3 !default;
+$nojiko-warning-border:         darken(adjust-hue($nojiko-warning-bg, -10), 5%) !default;
+
+// 错误状态配色
+$nojiko-danger-text:            #b94a48 !default;
+$nojiko-danger-bg:              #f2dede !default;
+$nojiko-danger-border:          darken(adjust-hue($nojiko-danger-bg, -10), 5%) !default;

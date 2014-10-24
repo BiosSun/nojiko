@@ -1,0 +1,18 @@
+{
+    "name": "nojiko",
+    "version": "0.1.0",
+    "main": "sass/_nojiko.scss",
+    "license": "MIT",
+    "ignore": [
+        ".jshintrc",
+        "**/*.txt",
+        "doc/",
+        "test/",
+        "bin/"
+    ],
+    "keywords": [
+        'nojiko',
+        'scss',
+        'library'
+    ]
+}

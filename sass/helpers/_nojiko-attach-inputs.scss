@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+// ===========================================================================================================
+// 遍历所提供的一组 input 元素选择器，为每个元素选择器附加伪类。
+//
+// @examples:
+//   nojiko-attach-inputs('input[text]' 'input[password]', :hover);   // input[text], input[password]
+// ===========================================================================================================
+
+@function nojiko-attach-inputs($inputs, $attached: null) {
+    $list: ();
+
+    @each $input in $inputs {
+        $input: unquote($input);
+        @if $attached { $input: $input + ":" + $attached; }
+        $list: append($list, $input, comma);
+    }
+
+    @return $list;
+}

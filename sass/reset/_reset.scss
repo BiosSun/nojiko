@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+@mixin reset($is-plain) {
+    @include nojiko-normalize;
+
+    @if $support-for-ie6 or $support-for-ie7 {
+        @include nojiko-normalize-supplement;
+    }
+
+    if $is-plain {
+        @include nojiko-plain;
+    }
+}

@@ -1,0 +1,44 @@
+@charset 'utf-8';
+
+// 全局盒尺寸计算模式
+$default-box-sizing:            content-box                      !default;
+
+// 默认尺寸
+$nojiko-m-padding-vertical:     6px                              !default;
+$nojiko-m-padding-horizontal:   12px                             !default;
+$nojiko-m-border-width:         1px                              !default;
+$nojiko-m-border-radius:        3px                              !default;
+$nojiko-m-line-height:          $line-height-base                !default;
+$nojiko-m-font-size:            $font-size-base                  !default;
+
+// 较大尺寸
+$nojiko-l-padding-vertical:     10px                             !default;
+$nojiko-l-padding-horizontal:   16px                             !default;
+$nojiko-l-border-width:         $nojiko-m-border-width           !default;
+$nojiko-l-border-radius:        $nojiko-m-border-radius          !default;
+$nojiko-l-font-size:            $font-size-large                 !default;
+$nojiko-l-line-height:          1.34                             !default;
+
+// 超大尺寸
+$nojiko-xl-padding-vertical:    13px                             !default;
+$nojiko-xl-padding-horizontal:  22px                             !default;
+$nojiko-xl-border-width:        $nojiko-l-border-width           !default;
+$nojiko-xl-border-radius:       $nojiko-l-border-radius          !default;
+$nojiko-xl-font-size:           ceil($nojiko-l-font-size * 1.2)  !default;
+$nojiko-xl-line-height:         $nojiko-l-line-height            !default;
+
+// 较小尺寸
+$nojiko-s-padding-vertical:     4px                              !default;
+$nojiko-s-padding-horizontal:   9px                              !default;
+$nojiko-s-border-width:         $nojiko-m-border-width           !default;
+$nojiko-s-border-radius:        $nojiko-m-border-radius          !default;
+$nojiko-s-font-size:            $font-size-small                 !default;
+$nojiko-s-line-height:          1.5                              !default;
+
+// 超小尺寸
+$nojiko-xs-padding-vertical:    2px                              !default;
+$nojiko-xs-padding-horizontal:  6px                              !default;
+$nojiko-xs-border-width:        $nojiko-s-border-width           !default;
+$nojiko-xs-border-radius:       $nojiko-s-border-radius          !default;
+$nojiko-xs-font-size:           $nojiko-s-font-size              !default;
+$nojiko-xs-line-height:         $nojiko-s-line-height            !default;

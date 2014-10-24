@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Document</title>
+        <link href="resources/styles/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="toc"></div>
+        <div id="content">
+            {{ content }}
+        </div>
+        <script src="resources/scripts/jquery.js"></script>
+        <script src="resources/scripts/jquery_create-toc.js"></script>
+        <script>
+            var $documentDirectory = $('body').createTOC('h2, h3');
+            $documentDirectory && $documentDirectory.appendTo($('#toc'));
+        </script>
+    </body>
+</html>

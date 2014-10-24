@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+@if $default-box-sizing == border-box {
+    * {
+        @include box-sizing($default-box-sizing);
+    }
+
+    *:before, *:after {
+        @include box-sizing($default-box-sizing);
+    }
+}
+
+body {
+    font: unquote('#{$font-size-base}/#{$line-height-base}') $font-family;
+    color: $font-color;
+    background: $brand-background;
+}
+
+a {
+    text-decoration: none;
+    color: $link-color;
+
+    &:visited {
+        color: $link-color;
+    }
+
+    &:focus, &:hover {
+        color: $link-focus-color;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+img {
+  vertical-align: middle;
+}
+
+hr {
+  margin-top:    $line-height-computed;
+  margin-bottom: $line-height-computed;
+  border: 0;
+  border-top: 1px solid $hr-border-color;
+}

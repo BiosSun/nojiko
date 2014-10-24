@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+// ===========================================================================================================
+// 展开使用速记语法声明的方向类型复合值，比如 margin，padding 属性的值。
+//
+// example:
+//   nojiko-expand(1px);             // 1px 1px 1px 1px
+//   nojiko-expand(1px 2px);         // 1px 2px 1px 2px
+//   nojiko-expand(1px 2px 3px);     // 1px 2px 3px 2px
+//   nojiko-expand(1px 2px 3px 4px); // 1px 2px 3px 4px
+// ===========================================================================================================
+
+@function nojiko-expand($shorthand) {
+    @if length($shorthand) == 1 {
+        @return nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1);
+    }
+    @else if length($shorthand) == 2 {
+        @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 1) nth($shorthand, 2);
+    }
+    @else if length($shorthand) == 3 {
+        @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 3) nth($shorthand, 2);
+    }
+    @else {
+        @return $shorthand;
+    }
+}

@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+// 默认字体集
+$font-family:                   $FONT-FAMILY-SERIF !default;
+// 默认代码字体集
+$font-family-monspace:          $FONT-FAMILY-FIXED-FONT !default;
+
+// 默认文字大小
+$font-size-base:                14px !default;
+// 较大文字大小
+$font-size-large:               ceil($font-size-base * 1.25) !default;
+// 较小文字大小
+$font-size-small:               ceil($font-size-base * 0.85) !default;
+
+// 默认文字行高
+$line-height-base:              1.428571429 !default;
+// 计算为 px 单位的行高
+$line-height-computed:          if(unit($line-height-base) == 'px', $line-height-base, floor($font-size-base * $line-height-base)) !default;

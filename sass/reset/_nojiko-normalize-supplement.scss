@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+// ===========================================================================================================
+// normalize 现在已经不再支持 IE6 和 IE7 了，但目前在中国的大环境下，有时候还是需要兼容这些浏览器版本的，
+// 而该混入类就是增补 normalize 中所没有的兼容 IE6 和 IE7 的部分。
+// 如果项目配置不兼容这两个版本的浏览器，则调用该混入类不会输出任何内容。
+// ===========================================================================================================
+
+@mixin nojiko-normalize-supplement() {
+    @if support-legacy-browser(ie, '6', '7') {
+        audio,
+        canvas,
+        progress,
+        video {
+            *zoom: 1;
+            *display: inline;
+        }
+
+        // 清除 IE6/7 中表单的奇怪的外边距
+        form {
+            margin: 0;
+        }
+
+        // IE6 7 8(q) 中为行内样式
+        iframe {
+            display: block;
+        }
+
+        // 1. 清除 IE6 中链接内图片的蓝色边框
+        // 2. 优化在 IE7 中图片缩放的效果
+        img {
+            @include reset-image-anchor-border;
+            -ms-interpolation-mode: bicubic; // 2
+        }
+    }
+}
