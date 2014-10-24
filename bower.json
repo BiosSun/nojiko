@@ -4,8 +4,12 @@
     "main": "sass/_nojiko.scss",
     "license": "MIT",
     "ignore": [
-        ".jshintrc",
         "**/*.txt",
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        ".jshintrc",
         "doc/",
         "test/",
         "bin/"
