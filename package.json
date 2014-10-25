@@ -1,20 +1,15 @@
 {
-    "name": "nojiko",
-    "version": "0.1.0",
-    "description": "a base style lib.",
-
-    "bin": {
-        "nojiko": "bin/nojiko"
-    },
-
-    "dependencies": {},
-    "devDependencies": {
-        "commander": "^2.4.0",
-        "grunt": "~0.4.1",
-        "grunt-contrib-sass": "^0.7.3",
-        "grunt-contrib-watch": "^0.6.1",
-        "grunt-init": "^0.3.2",
-        "load-grunt-tasks": "^0.6.0",
-        "time-grunt": "^0.4.0"
-    }
+  "name": "nojiko",
+  "version": "0.1.0",
+  "description": "a base style lib.",
+  "dependencies": {},
+  "devDependencies": {
+    "commander": "^2.5.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "^0.7.4",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-init": "^0.3.2",
+    "load-grunt-tasks": "^0.6.0",
+    "time-grunt": "^0.4.0"
+  }
 }

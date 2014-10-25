@@ -3,7 +3,6 @@
 module.exports = function (grunt) {
 
     require('load-grunt-tasks')(grunt);
-    grunt.loadNpmTasks('bootcamp');
 
     require('time-grunt')(grunt);
 
@@ -16,13 +15,12 @@ module.exports = function (grunt) {
         sass: {
             test: {
                 options: {
-                    style: 'expanded',
-                    sourcemap: 'none'
+                    style: 'expanded'
                 },
                 files: [{
                     expand: true,
                     cwd: 'test',
-                    src: ['*.scss', '*.sass'],
+                    src: ['**/*.scss', '**/*.sass'],
                     dest: 'test',
                     ext: '.css'
                 }]

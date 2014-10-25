@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/*!
+ * Nojiko - 0.1.0
+ * @license: MIT
+ * @url: http://github.com/biossun/nojiko
+ */
+.nojiko-expand {
+  margin: 1px 1px 1px 1px;
+  margin: 1px 2px 1px 2px;
+  margin: 1px 2px 3px 2px;
+  margin: 1px 2px 3px 4px;
+}
+
+.nojiko-attach-inputs {
+  inputs: input[text], input[password];
+  inputs: input[text]::hover, input[password]::hover;
+  inputs: input[text]::focus, input[password]::focus;
+}
+
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
+  color: #777;
+}
+
+input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover {
+  color: #777;
+}
+
+input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus {
+  color: #777;
+}
+
+input[type="button"], input[type="reset"], input[type="submit"] {
+  color: #777;
+}
+
+input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+  color: #777;
+}
+
+input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
+  color: #777;
+}
+
+input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active {
+  color: #777;
+}
+
+.font-familys {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti, sans-serif;
+}
+
+.size {
+  width: 10px;
+  height: 10px;
+  width: 10px;
+  height: 20px;
+  width: 10px;
+}
+
+.position {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  _zoom: 1;
+  z-index: 1000;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  _zoom: 1;
+}
+
+.translucent-background {
+  background: rgba(0, 0, 0, 0.2);
+  zoom: 1\9;
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#33000000', EndColorStr='#33000000');
+  background: rgba(255, 255, 255, 0.2);
+  zoom: 1\9;
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#33FFFFFF', EndColorStr='#33FFFFFF');
+}
+
+.float {
+  float: left;
+  _display: inline;
+  float: right;
+  _display: inline;
+}
+
+/*# sourceMappingURL=nojiko.css.map */

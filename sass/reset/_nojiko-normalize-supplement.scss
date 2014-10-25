@@ -29,7 +29,7 @@
         // 1. 清除 IE6 中链接内图片的蓝色边框
         // 2. 优化在 IE7 中图片缩放的效果
         img {
-            @include reset-image-anchor-border;
+            border: 0;
             -ms-interpolation-mode: bicubic; // 2
         }
     }

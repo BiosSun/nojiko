@@ -13,10 +13,12 @@
     }
 
     h1, h2, h3, h4, h5, h6, big, small {
-        @include reset-font;
+        font: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
     }
 
     ol, ul {
-        @include reset-list-style;
+        list-style: none;
     }
 }
