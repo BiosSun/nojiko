@@ -8,11 +8,15 @@ $font-family-monspace:          $FONT-FAMILY-FIXED-FONT !default;
 // 默认文字大小
 $font-size-base:                14px !default;
 // 较大文字大小
-$font-size-large:               ceil($font-size-base * 1.25) !default;
+$font-size-large:               ceil($font-size-base * 1.3) !default;  // 12: 15, 13: 16, 14: 18
 // 较小文字大小
-$font-size-small:               ceil($font-size-base * 0.85) !default;
+$font-size-small:               ceil($font-size-base * 0.88) !default; // 12: 10, 13: 11, 14: 12
 
 // 默认文字行高
 $line-height-base:              1.428571429 !default;
-// 计算为 px 单位的行高
+// 计算为 px 单位的默认行高
 $line-height-computed:          if(unit($line-height-base) == 'px', $line-height-base, floor($font-size-base * $line-height-base)) !default;
+// 较大文字行高
+$line-height-large:             1.34 !default;
+// 较小文字行高
+$line-height-large:             1.5 !default;
