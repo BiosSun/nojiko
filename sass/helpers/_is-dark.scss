@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+// =============================================================================
+// Programatically determines whether a color is dark
+// Returns a boolean
+// More details here http://robots.thoughtbot.com/closer-look-color-lightness
+// =============================================================================
+
+@function is-dark($hex-color) {
+    @return not is-light($hex-color);
+}
