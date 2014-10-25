@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+// =============================================================================
+// 清除元素左右浮动
+//
+// Originated from:
+//   Micro clearfix: [http://nicolasgallagher.com/micro-clearfix-hack/]
+// =============================================================================
+
+@mixin clearfix {
+    @if $support-for-ie6 or $support-for-ie7 {
+        *zoom: 1;
+    }
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}

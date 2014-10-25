@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Nojiko - 0.1.0
+ * Nojiko - 0.1.2
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
@@ -90,6 +90,17 @@ input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:ac
   _display: inline;
   float: right;
   _display: inline;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
 }
 
 /*# sourceMappingURL=nojiko.css.map */
