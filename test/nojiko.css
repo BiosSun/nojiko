@@ -52,6 +52,13 @@ input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:ac
   font-family: "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti, sans-serif;
 }
 
+.is-light {
+  color: true;
+  color: false;
+  color: false;
+  color: true;
+}
+
 .size {
   width: 10px;
   height: 10px;
@@ -101,6 +108,13 @@ input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:ac
 }
 .clearfix:after {
   clear: both;
+}
+
+.hide-text {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=nojiko.css.map */
