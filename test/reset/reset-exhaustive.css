@@ -1,5 +1,13 @@
 /*!
- * Nojiko - 0.1.4
+ * Nojiko - 0.2.0
+ * @license: MIT
+ * @url: http://github.com/biossun/nojiko
+ */
+/*!
+ * Nojiko Reset - 0.0.1
+ *
+ * normalize.css v3.0.1
+ *
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
@@ -263,4 +271,4 @@ ol, ul {
   list-style: none;
 }
 
-/*# sourceMappingURL=reset-plain.css.map */
+/*# sourceMappingURL=reset-exhaustive.css.map */

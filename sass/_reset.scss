@@ -1,0 +1,30 @@
+@charset 'utf-8';
+
+/*!
+ * Nojiko Reset - 0.0.1
+ *
+ * normalize.css v3.0.1
+ *
+ * @license: MIT
+ * @url: http://github.com/biossun/nojiko
+ */
+
+$is-exhaustive-reset: false !default;
+
+@import
+
+"reset/nojiko-normalize",
+"reset/nojiko-normalize-supplement",
+"reset/nojiko-exhaustive"
+
+;
+
+@include nojiko-normalize;
+
+@if $support-for-ie6 or $support-for-ie7 {
+    @include nojiko-normalize-supplement;
+}
+
+@if $is-exhaustive-reset {
+    @include nojiko-exhaustive;
+}
