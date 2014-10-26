@@ -33,3 +33,8 @@ $link-visited-color:            $link-color                !default;
 
 // 线条颜色
 $line-color:                      $gray-lighter            !default;
+
+// 颜色集合
+$color-maps: (
+    primary: $brand-primary
+);
