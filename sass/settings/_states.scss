@@ -1,30 +1,32 @@
 @charset "utf-8";
 
-// 成功
-$success:                       #5cb85c !default;
-// 消息
-$info:                          #5bc0de !default;
-// 警告
-$warning:                       #f0ad4e !default;
-// 错误
-$danger:                        #d9534f !default;
+@function set-state-map($name, $baseColor, $text, $bg, $border: false) {
+    @if not global-variable-exists(state-maps) {
+      $state-maps: () !global;
+    }
+
+    $map: (
+        base: $baseColor,
+        text: $text,
+        bg: $bg,
+        border: $border
+    );
+
+    @if map-has-key($state-maps, $name) {
+        $map: map-merge(map-get($state-maps, $name), $map);
+    }
+
+    @return map-merge($state-maps, ($name: $map));
+}
 
 // 成功状态配色
-$nojiko-success-text:           #468847 !default;
-$nojiko-success-bg:             #dff0d8 !default;
-$nojiko-success-border:         darken(adjust-hue($nojiko-success-bg, -10), 5%) !default;
+$state-maps: set-state-map(success, #5cb85c, #468847, #dff0d8, darken(adjust-hue(#dff0d8, -10), 5%));
 
-// 消息状态配色
-$nojiko-info-text:              #3a87ad !default;
-$nojiko-info-bg:                #d9edf7 !default;
-$nojiko-info-border:            darken(adjust-hue($nojiko-info-bg, -10), 5%) !default;
+// 信息状态配色
+$state-maps: set-state-map(info,    #3a87ad, #d9edf7, #d9edf7, darken(adjust-hue(#d9edf7, -10), 5%));
 
 // 警告状态配色
-$nojiko-warning-text:           #c09853 !default;
-$nojiko-warning-bg:             #fcf8e3 !default;
-$nojiko-warning-border:         darken(adjust-hue($nojiko-warning-bg, -10), 5%) !default;
+$state-maps: set-state-map(warning, #f0ad4e, #c09853, #fcf8e3, darken(adjust-hue(#fcf8e3, -10), 5%));
 
 // 错误状态配色
-$nojiko-danger-text:            #b94a48 !default;
-$nojiko-danger-bg:              #f2dede !default;
-$nojiko-danger-border:          darken(adjust-hue($nojiko-danger-bg, -10), 5%) !default;
+$state-maps: set-state-map(danger,  #d9534f, #b94a48, #f2dede, darken(adjust-hue(#f2dede, -10), 5%));
