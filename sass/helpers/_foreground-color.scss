@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+// -----------------------------------------------------------------------------
+// foreground-color 用于设置元素内的前景色，同时它也会更改链接的样式。
+// -----------------------------------------------------------------------------
+
+@mixin foreground-color($color) {
+    color: $color;
+
+    // in IE6/7，not support inherit to color property.
+    a {
+        color: $color;
+        font-weight: 700;
+        margin: {
+            left: 1px;
+            right: 1px;
+        }
+    }
+
+}

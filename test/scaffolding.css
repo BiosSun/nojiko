@@ -1,0 +1,42 @@
+/*!
+ * Nojiko - 0.1.4
+ * @license: MIT
+ * @url: http://github.com/biossun/nojiko
+ */
+/*!
+ * Nojiko Scaffolding - 0.0.1
+ * @license: MIT
+ * @url: http://github.com/biossun/nojiko
+ */
+body {
+  font: 14px/1.42857 Georgia, "Times New Roman", Times, serif;
+  color: #333333;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #4BB2F7;
+}
+a:visited {
+  color: #4BB2F7;
+}
+a:focus, a:hover {
+  color: #0a91eb;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  vertical-align: middle;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+
+/*# sourceMappingURL=scaffolding.css.map */

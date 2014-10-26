@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+// =============================================================================
+// 小三角箭头样式
+// =============================================================================
+
+%arrows-style {
+    @include inline-block(middle);
+
+    width: 0;
+    height: 0;
+    font: 0/0 a;
+
+    @include position(relative, -1px false false false);
+    @if $support-for-ie6 or $support-for-ie7 {
+        *top: 0;
+    }
+}
+
+@mixin arrows-style($width, $orientation : bottom, $color : inherit) {
+    @extend %arrows-style;
+
+    @if $color == inherit {
+        $color: unquote('');
+    }
+
+    @if $orientation == bottom {
+        border-top: $width solid $color;
+        border-right: $width dashed transparent;
+        border-left: $width dashed transparent;
+    }
+    @else if $orientation == top {
+        border-bottom: $width solid $color;
+        border-right: $width dashed transparent;
+        border-left: $width dashed transparent;
+    }
+    @else if $orientation == right {
+        border-left: $width solid $color;
+        border-top: $width dashed transparent;
+        border-bottom: $width dashed transparent;
+    }
+    @else if $orientation == left {
+        border-right: $width solid $color;
+        border-top: $width dashed transparent;
+        border-bottom: $width dashed transparent;
+    }
+}

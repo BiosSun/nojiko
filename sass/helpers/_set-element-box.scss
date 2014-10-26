@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+// =============================================================================
+// 设置元素盒模型
+// @param width 宽度
+// @param height 高度
+// @param $padding-vertical 垂直内边距
+// @param $padding-horizontal 水平内边距
+// @param $font-size 文字大小
+// @param $line-height 文字行高
+// @param border-width 边框宽度
+// @param border-radius 圆角
+// =============================================================================
+
+@mixin set-element-box(
+    $width,
+    $height,
+    $padding-vertical,
+    $padding-horizontal,
+    $font-size,
+    $line-height,
+    $border-width,
+    $border-radius ) {
+
+    @if $width {
+        width: $width;
+    }
+
+    @if $height {
+        height: $height;
+    }
+
+    @if $padding-vertical && $padding-horizontal {
+        padding: $padding-vertical $padding-horizontal;
+    }
+    @else if $padding-vertical {
+        padding: {
+            top: $padding-vertical;
+            bottom: $padding-vertical;
+        }
+    }
+    @else if $padding-horizontal {
+        padding: {
+            left: $padding-horizontal;
+            right: $padding-horizontal;
+        }
+    }
+
+    @if $font-size {
+        font-size: $font-size;
+    }
+
+    @if $line-height {
+        line-height: $line-height;
+    }
+
+    @if $border-width {
+        border-width: $border-width;
+    }
+
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+}
+
+
+@mixin set-element-box-for-xl (
+    $w: false,
+    $h: false,
+    $pv: $xl-padding-vertical,
+    $ph: $xl-padding-horizontal,
+    $fs: $xl-font-size,
+    $lh: $xl-line-height,
+    $bw: $xl-border-width,
+    $br: $xl-border-radius ) {
+    @include set-element-box($w, $h, $pv, $ph, $fs, $lh, $bw, $br);
+}
+
+@mixin set-element-box-for-xl-no-border (
+    $w: false,
+    $h: false,
+    $pv: $xl-padding-vertical + $xl-border-width,
+    $ph: $xl-padding-horizontal + $xl-border-width,
+    $fs: $xl-font-size,
+    $lh: $xl-line-height,
+    $bw: 0,
+    $br: $xl-border-radius ) {
+    @include set-element-box($w, $h, $pv, $ph, $fs, $lh, $bw, $br);
+}
+
+
+@mixin set-element-box-for-l (
+    $w: false,
+    $h: false,
+    $pv: $l-padding-vertical,
+    $ph: $l-padding-horizontal,
+    $fs: $l-font-size,
+    $lh: $l-line-height,
+    $bw: $l-border-width,
+    $br: $l-border-radius ) {
+    @include set-element-box($w, $h, $pv, $ph, $fs, $lh, $bw, $br);
+}
+
+@mixin set-element-box-for-l-no-border (
+    $w: false,
+    $h: false,
+    $pv: $l-padding-vertical + $l-border-width,
+    $ph: $l-padding-horizontal + $l-border-width,
+    $fs: $l-font-size,
+    $lh: $l-line-height,
+    $bw: 0,
+    $br: $l-border-radius ) {
+    @include set-element-box($w, $h, $pv, $ph, $fs, $lh, $bw, $br);
+}
+
+
+@mixin set-element-box-for-m (
+    $w: false,
+    $h: false,
+    $pv: $m-padding-vertical,
+    $ph: $m-padding-horizontal,
+    $fs: $m-font-size,
+    $lh: $m-line-height,
+    $bw: $m-border-width,
+    $br: $m-border-radius ) {
+    @include set-element-box($w, $h, $pv, $ph, $fs, $lh, $bw, $br);
+}
+
+@mixin set-element-box-for-m-no-border (
+    $w: false,
+    $h: false,
+    $pv: $m-padding-vertical + $m-border-width,
+    $ph: $m-padding-horizontal + $m-border-width,
+    $fs: $m-font-size,
+    $lh: $m-line-height,
+    $bw: 0,
+    $br: $m-border-radius ) {
+    @include set-element-box($w, $h, $pv, $ph, $fs, $lh, $bw, $br);
+}
+
+
+@mixin set-element-box-for-s (
+    $w: false,
+    $h: false,
+    $pv: $s-padding-vertical,
+    $ph: $s-padding-horizontal,
+    $fs: $s-font-size,
+    $lh: $s-line-height,
+    $bw: $s-border-width,
+    $br: $s-border-radius ) {
+    @include set-element-box($w, $h, $pv, $ph, $fs, $lh, $bw, $br);
+}
+
+@mixin set-element-box-for-s-no-border (
+    $w: false,
+    $h: false,
+    $pv: $s-padding-vertical + $s-border-width,
+    $ph: $s-padding-horizontal + $s-border-width,
+    $fs: $s-font-size,
+    $lh: $s-line-height,
+    $bw: 0,
+    $br: $s-border-radius ) {
+    @include set-element-box($w, $h, $pv, $ph, $fs, $lh, $bw, $br);
+}
+
+
+@mixin set-element-box-for-xs (
+    $w: false,
+    $h: false,
+    $pv: $xs-padding-vertical,
+    $ph: $xs-padding-horizontal,
+    $fs: $xs-font-size,
+    $lh: $xs-line-height,
+    $bw: $xs-border-width,
+    $br: $xs-border-radius ) {
+    @include set-element-box($w, $h, $pv, $ph, $fs, $lh, $bw, $br);
+}
+
+@mixin set-element-box-for-xs-no-border (
+    $w: false,
+    $h: false,
+    $pv: $xs-padding-vertical + $xs-border-width,
+    $ph: $xs-padding-horizontal + $xs-border-width,
+    $fs: $xs-font-size,
+    $lh: $xs-line-height,
+    $bw: 0,
+    $br: $xs-border-radius ) {
+    @include set-element-box($w, $h, $pv, $ph, $fs, $lh, $bw, $br);
+}

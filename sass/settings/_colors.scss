@@ -36,5 +36,12 @@ $line-color:                      $gray-lighter            !default;
 
 // 颜色集合
 $color-maps: (
-    primary: $brand-primary
+    'primary': $brand-primary,
+    'gray-darker': $gray-darker,
+    'gray-dark': $gray-dark,
+    'gray': $gray,
+    'gray-light': $gray-light,
+    'gray-lighter': $gray-lighter,
+    'white': #fff,
+    'black': #000
 );
