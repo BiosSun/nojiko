@@ -397,12 +397,20 @@
   width: 12em;
 }
 
+.w0p {
+  width: 0%;
+}
+
 .w25p {
   width: 25%;
 }
 
 .w50p {
   width: 50%;
+}
+
+.w75p {
+  width: 75%;
 }
 
 .w100p {
