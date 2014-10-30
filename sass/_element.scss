@@ -312,7 +312,7 @@ $el-class-name-style: 'long' !default;
     }
 
     .#{$nojiko-el-background-color}common {
-        @include foreground-color($brand-background);
+        @include foreground-color($background-color);
     }
 }
 

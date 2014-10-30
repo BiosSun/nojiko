@@ -19,7 +19,7 @@
 body {
     font: unquote('#{$font-size-base}/#{$line-height-base}') $font-family;
     color: $font-color;
-    background: $brand-background;
+    background: $background-color;
 }
 
 a {

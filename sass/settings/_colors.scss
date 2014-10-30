@@ -12,10 +12,10 @@ $gray-light:                    lighten(#000, 60%)         !default;   // #999
 $gray-lighter:                  lighten(#000, 93.5%)       !default;   // #eee
 
 // 主色
-$brand-primary:                 #4BB2F7                    !default;
+$primary-color:                 #4BB2F7                    !default;
 
 // 背景色
-$brand-background:              #fff                       !default;
+$background-color:              #fff                       !default;
 
 // 文本颜色
 $font-color:                    $gray-dark                 !default;
@@ -27,7 +27,7 @@ $quiet-font-color:              $gray-light                !default;
 $loud-font-color:               $gray-dark                 !default;
 
 // 链接颜色
-$link-color:                    $brand-primary             !default;
+$link-color:                    $primary-color             !default;
 $link-focus-color:              darken($link-color, 15%)   !default;
 $link-visited-color:            $link-color                !default;
 
@@ -36,7 +36,7 @@ $line-color:                      $gray-lighter            !default;
 
 // 颜色集合
 $color-maps: (
-    'primary': $brand-primary,
+    'primary': $primary-color,
     'gray-darker': $gray-darker,
     'gray-dark': $gray-dark,
     'gray': $gray,
