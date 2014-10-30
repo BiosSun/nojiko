@@ -8,20 +8,14 @@ Nojiko 是一个使用 SCSS 编写的基础样式库，它提供如下一些内�
 - 一套基础全局样式
 - 一套元素样式
 
-Nojiko 旨在帮助人们快速开始使用 SCSS 进行样式开发。
+Nojiko 用于辅助开发人员快速开始使用 SCSS 进行样式开发。
 
 ## 使用
 
-首先，安装 nojiko：
+首先，在项目中安装 nojiko：
 
 ```bash
-$ gem install nojiko
-```
-
-然后，在自己的应用中添加 nojiko：
-
-```bash
-$ nojiko install
+$ bower install nojiko
 ```
 
 之后，就可以使用 Nojiko 了：
