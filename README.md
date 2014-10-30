@@ -18,8 +18,11 @@ Nojiko 用于辅助开发人员快速开始使用 SCSS 进行样式开发。
 $ bower install nojiko
 ```
 
-之后，就可以使用 Nojiko 了：
+之后，就可以引入并使用 nojiko 了：
 
 ```scss
 @import "nojiko/nojiko";
+@import "nojiko/reset";
+@import "nojiko/scaffolding";
+@import "nojiko/elements";
 ```
