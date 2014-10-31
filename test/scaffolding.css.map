@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": ";;;;;;;;;;AAkBA,IAAK;EACD,IAAI,EAAE,qDAA+D;EACrE,KAAK,ECMuB,OAAU;EDLtC,UAAU,ECJkB,IAAI;;;ADOpC,CAAE;EACE,eAAe,EAAE,IAAI;EACrB,KAAK,ECKuB,OAAW;;ADHvC,SAAU;EACN,KAAK,ECEmB,OAAW;;ADCvC,gBAAiB;EACb,KAAK,ECHmB,OAAwB;;ADMpD,OAAQ;EACJ,eAAe,EAAE,SAAS;;;AAIlC,GAAI;EACF,cAAc,EAAE,MAAM;;;AAGxB,EAAG;EACD,UAAU,EE7BoB,IAAkG;EF8BhI,aAAa,EE9BiB,IAAkG;EF+BhI,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,iBAAqB",
-"sources": ["../sass/_scaffolding.scss","../sass/settings/_colors.scss","../sass/settings/_fonts.scss"],
+"mappings": ";;;;;;;;;;AAkBA,IAAK;EACD,IAAI,EAAE,qDAA+D;EACrE,KAAK,EC6CuB,OAAU;ED5CtC,UAAU,ECqCkB,IAAI;;;ADlCpC,CAAE;EACE,eAAe,EAAE,IAAI;EACrB,KAAK,EC4CuB,OAAW;;AD1CvC,SAAU;EACN,KAAK,ECyCmB,OAAW;;ADtCvC,gBAAiB;EACb,KAAK,ECoCmB,OAAwB;;ADjCpD,OAAQ;EACJ,eAAe,EAAE,SAAS;;;AAIlC,GAAI;EACF,cAAc,EAAE,MAAM;;;AAGxB,EAAG;EACD,UAAU,ECboB,IAAkG;EDchI,aAAa,ECdiB,IAAkG;EDehI,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,iBAAqB",
+"sources": ["../sass/_scaffolding.scss","../sass/_settings.scss"],
 "names": [],
 "file": "scaffolding.css"
 }
