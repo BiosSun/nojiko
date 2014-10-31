@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+// 兼容浏览器
+// ---------------------------
+
+// 是否支持 IE6
+$support-for-ie6:               true !default;
+
+// 是否支持 IE7
+$support-for-ie7:               true !default;
+
+// 是否支持 IE8
+$support-for-ie8:               true !default;
+
+
+// 文字
+// ---------------------------
+
+// 默认字体集
+$font-family:                   $FONT-FAMILY-SERIF !default;
+// 默认代码字体集
+$font-family-monspace:          $FONT-FAMILY-FIXED-FONT !default;
+
+// 默认文字大小
+$font-size-base:                14px !default;
+// 较大文字大小
+$font-size-large:               ceil($font-size-base * 1.3) !default;  // 12: 15, 13: 16, 14: 18
+// 较小文字大小
+$font-size-small:               ceil($font-size-base * 0.88) !default; // 12: 10, 13: 11, 14: 12
+
+// 默认文字行高
+$line-height-base:              1.428571429 !default;
+// 计算为 px 单位的默认行高
+$line-height-computed:          if(unit($line-height-base) == 'px', $line-height-base, floor($font-size-base * $line-height-base)) !default;
+// 较大文字行高
+$line-height-large:             1.34 !default;
+// 较小文字行高
+$line-height-small:             1.5 !default;
+
+
+// 配色
+// ---------------------------
+
+// 深灰色
+$gray-darker:                   lighten(#000, 13.5%)       !default;   // #222
+// 暗灰色
+$gray-dark:                     lighten(#000, 20%)         !default;   // #333
+// 灰色
+$gray:                          lighten(#000, 33.5%)       !default;   // #555
+// 淡灰色
+$gray-light:                    lighten(#000, 60%)         !default;   // #999
+// 浅灰色
+$gray-lighter:                  lighten(#000, 93.5%)       !default;   // #eee
+
+// 主色
+$primary-color:                 #4BB2F7                    !default;
+
+// 背景色
+$background-color:              #fff                       !default;
+
+// 文本颜色
+$font-color:                    $gray-dark                 !default;
+// 次要文本颜色
+$quiet-font-color:              $gray-light                !default;
+// 强调文本颜色
+$loud-font-color:               $gray-dark                 !default;
+
+// 链接颜色
+$link-color:                    $primary-color             !default;
+$link-focus-color:              darken($link-color, 15%)   !default;
+$link-visited-color:            $link-color                !default;
+
+// 线条颜色
+$line-color:                    $gray-lighter            !default;
+
+// 成功状态配色
+$state-maps:                    set-state-map(success, #5cb85c, #468847, #dff0d8, darken(adjust-hue(#dff0d8, -10), 5%));
+
+// 信息状态配色
+$state-maps:                    set-state-map(info,    #3a87ad, #d9edf7, #d9edf7, darken(adjust-hue(#d9edf7, -10), 5%));
+
+// 警告状态配色
+$state-maps:                    set-state-map(warning, #f0ad4e, #c09853, #fcf8e3, darken(adjust-hue(#fcf8e3, -10), 5%));
+
+// 错误状态配色
+$state-maps:                    set-state-map(danger,  #d9534f, #b94a48, #f2dede, darken(adjust-hue(#f2dede, -10), 5%));
+
+// 颜色集合
+$color-maps: (
+    'primary':                  $primary-color,
+    'gray-darker':              $gray-darker,
+    'gray-dark':                $gray-dark,
+    'gray':                     $gray,
+    'gray-light':               $gray-light,
+    'gray-lighter':             $gray-lighter,
+    'white':                    #fff,
+    'black':                    #000
+);
+
+
+// 尺寸
+// ---------------------------
+
+// 全局盒尺寸计算模式
+$default-box-sizing:            content-box               !default;
+
+// 默认尺寸
+$m-padding-vertical:            6px                       !default;
+$m-padding-horizontal:          12px                      !default;
+$m-border-width:                1px                       !default;
+$m-border-radius:               3px                       !default;
+$m-line-height:                 $line-height-base         !default;
+$m-font-size:                   $font-size-base           !default;
+
+// 较大尺寸
+$l-padding-vertical:            10px                      !default;
+$l-padding-horizontal:          16px                      !default;
+$l-border-width:                $m-border-width           !default;
+$l-border-radius:               $m-border-radius          !default;
+$l-font-size:                   $font-size-large          !default;
+$l-line-height:                 $line-height-large        !default;
+
+// 超大尺寸
+$xl-padding-vertical:           13px                      !default;
+$xl-padding-horizontal:         22px                      !default;
+$xl-border-width:               $l-border-width           !default;
+$xl-border-radius:              $l-border-radius          !default;
+$xl-font-size:                  ceil($l-font-size * 1.2)  !default;
+$xl-line-height:                $l-line-height            !default;
+
+// 较小尺寸
+$s-padding-vertical:            4px                       !default;
+$s-padding-horizontal:          9px                       !default;
+$s-border-width:                $m-border-width           !default;
+$s-border-radius:               $m-border-radius          !default;
+$s-font-size:                   $font-size-small          !default;
+$s-line-height:                 $line-height-small        !default;
+
+// 超小尺寸
+$xs-padding-vertical:           2px                       !default;
+$xs-padding-horizontal:         6px                       !default;
+$xs-border-width:               $s-border-width           !default;
+$xs-border-radius:              $s-border-radius          !default;
+$xs-font-size:                  $s-font-size              !default;
+$xs-line-height:                $s-line-height            !default;
+
+
+// 布局
+// ---------------------------
+
+// 页面宽度
+$page-width:                    false;
+
+// 模块之间的垂直间距
+$distance-vertical:             20px;
+
+// 模块之间的水平间距
+$distance-horizontal:           20px;

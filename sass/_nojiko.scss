@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*!
- * Nojiko - 0.3.3
+ * Nojiko - 0.3.4
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
@@ -15,13 +15,9 @@
 "helpers/button-inputs",
 "helpers/font-family",
 "helpers/map-set",
+"helpers/set-state-map",
 
-"settings/supports",
-"settings/fonts",
-"settings/states",
-"settings/colors",
-"settings/boxes",
-"settings/layouts",
+"settings",
 
 "helpers/size",
 "helpers/float",
