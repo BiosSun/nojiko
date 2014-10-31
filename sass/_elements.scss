@@ -1,14 +1,28 @@
 @charset "utf-8";
 
 /*!
- * Nojiko Elements - 0.0.1
+ * Nojiko Elements - 0.3.2
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
 
-$el-class-name-style: 'long' !default;
+// 元素类名风格
+$nojiko-el-class-style: 'long' !default;
 
-@if $el-class-name-style == 'long' {
+// 外边距值
+$nojiko-el-margin-values: () !default;
+
+// 像素宽度值
+$nojiko-el-width-values: (1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 150, 200, 300, 400, 500, 600, 700) !default;
+
+// 字宽宽度值
+$nojiko-el-em-width-values: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
+
+// 百分比宽度值
+$nojiko-el-per-width-values: (25, 50, 75, 100) !default;
+
+// 类名配置
+@if $nojiko-el-class-style == 'long' {
     // 尺寸
     $nojiko-el-size:                          size-                      !default !global;
 
@@ -74,7 +88,7 @@ $el-class-name-style: 'long' !default;
     // 单行文本，且内容溢出时显示省略号的元素（需要设置宽度）
     $nojiko-el-text-overflow:                 text-overflow              !default !global;
 
-    // 包含一个字符 '|' 的元素，通常用过分隔其他行内元素。
+    // 包含一个字符 '|' 的元素，通常用于分隔其他行内元素
     $nojiko-el-separator-line:                text-line                  !default !global;
 
     // 小三角箭头
@@ -146,7 +160,7 @@ $el-class-name-style: 'long' !default;
     // 单行文本，且内容溢出时显示省略号的元素（需要设置宽度）
     $nojiko-el-text-overflow:                 to                         !default !global;
 
-    // 包含一个字符 '|' 的元素，通常用过分隔其他行内元素。
+    // 包含一个字符 '|' 的元素，通常用于分隔其他行内元素
     $nojiko-el-separator-line:                el                         !default !global;
 
     // 小三角箭头
@@ -183,7 +197,7 @@ $el-class-name-style: 'long' !default;
 // 外边距
 // ---------------------------
 
-@each $name in m, d, x, 0, 5, 10, 20, 30, 40, 50, 60, 80, 100 {
+@each $name in join((m, d, x, 0), $nojiko-el-margin-values) {
     $v: 0;
     $h: 0;
 
@@ -244,15 +258,15 @@ $el-class-name-style: 'long' !default;
 
 
 @if $nojiko-el-width {
-    @each $length in 0, 1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 150, 200, 300, 400, 500, 600, 700 {
+    @each $length in join((0), $nojiko-el-width-values) {
         .#{$nojiko-el-width}#{$length} { width: $length + 0px; }
     }
 
-    @each $length in 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
+    @each $length in join((0), $nojiko-el-em-width-values) {
         .#{$nojiko-el-width}#{$length}em { width: $length + 0em; }
     }
 
-    @each $length in 25, 50, 100 {
+    @each $length in join((0), $nojiko-el-per-width-values) {
         .#{$nojiko-el-width}#{$length}p { width: $length + 0%; }
     }
 }
