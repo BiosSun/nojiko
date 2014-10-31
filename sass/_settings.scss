@@ -31,7 +31,7 @@ $font-size-small:               ceil($font-size-base * 0.88) !default; // 12: 10
 // 默认文字行高
 $line-height-base:              1.428571429 !default;
 // 计算为 px 单位的默认行高
-$line-height-computed:          if(unit($line-height-base) == 'px', $line-height-base, floor($font-size-base * $line-height-base)) !default;
+$line-height-computed:          if(unit($line-height-base) == 'px', $line-height-base, floor($font-size-base * $line-height-base));
 // 较大文字行高
 $line-height-large:             1.34 !default;
 // 较小文字行高
@@ -71,7 +71,7 @@ $link-focus-color:              darken($link-color, 15%)   !default;
 $link-visited-color:            $link-color                !default;
 
 // 线条颜色
-$line-color:                    $gray-lighter            !default;
+$line-color:                    $gray-lighter              !default;
 
 // 成功状态配色
 $state-maps:                    set-state-map(success, #5cb85c, #468847, #dff0d8, darken(adjust-hue(#dff0d8, -10), 5%));
@@ -142,10 +142,10 @@ $xs-line-height:                $s-line-height            !default;
 // ---------------------------
 
 // 页面宽度
-$page-width:                    false;
+$page-width:                    false                     !default;
 
 // 模块之间的垂直间距
-$distance-vertical:             20px;
+$distance-vertical:             20px                      !default;
 
 // 模块之间的水平间距
-$distance-horizontal:           20px;
+$distance-horizontal:           20px                      !default;
