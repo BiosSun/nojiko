@@ -87,14 +87,7 @@ $state-maps:                    set-state-map(danger,  #d9534f, #b94a48, #f2dede
 
 // 颜色集合
 $color-maps: (
-    'primary':                  $primary-color,
-    'gray-darker':              $gray-darker,
-    'gray-dark':                $gray-dark,
-    'gray':                     $gray,
-    'gray-light':               $gray-light,
-    'gray-lighter':             $gray-lighter,
-    'white':                    #fff,
-    'black':                    #000
+    'primary':                  $primary-color
 );
 
 

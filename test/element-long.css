@@ -1,5 +1,5 @@
 /*!
- * Nojiko - 0.3.3
+ * Nojiko - 0.3.5
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
@@ -17,7 +17,7 @@
 }
 
 /*!
- * Nojiko Elements - 0.3.3
+ * Nojiko Elements - 0.3.5
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
@@ -466,34 +466,6 @@
   background: #4BB2F7;
 }
 
-.background-gray-darker {
-  background: #222222;
-}
-
-.background-gray-dark {
-  background: #333333;
-}
-
-.background-gray {
-  background: #555555;
-}
-
-.background-gray-light {
-  background: #999999;
-}
-
-.background-gray-lighter {
-  background: #eeeeee;
-}
-
-.background-white {
-  background: #fff;
-}
-
-.background-black {
-  background: #000;
-}
-
 .background-success {
   background: #dff0d8;
 }
@@ -525,76 +497,6 @@
 }
 .foreground-primary a {
   color: #4BB2F7;
-  font-weight: 700;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-
-.foreground-gray-darker {
-  color: #222222;
-}
-.foreground-gray-darker a {
-  color: #222222;
-  font-weight: 700;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-
-.foreground-gray-dark {
-  color: #333333;
-}
-.foreground-gray-dark a {
-  color: #333333;
-  font-weight: 700;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-
-.foreground-gray {
-  color: #555555;
-}
-.foreground-gray a {
-  color: #555555;
-  font-weight: 700;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-
-.foreground-gray-light {
-  color: #999999;
-}
-.foreground-gray-light a {
-  color: #999999;
-  font-weight: 700;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-
-.foreground-gray-lighter {
-  color: #eeeeee;
-}
-.foreground-gray-lighter a {
-  color: #eeeeee;
-  font-weight: 700;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-
-.foreground-white {
-  color: #fff;
-}
-.foreground-white a {
-  color: #fff;
-  font-weight: 700;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-
-.foreground-black {
-  color: #000;
-}
-.foreground-black a {
-  color: #000;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
