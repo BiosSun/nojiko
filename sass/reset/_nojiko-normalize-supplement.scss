@@ -7,7 +7,7 @@
 // ===========================================================================================================
 
 @mixin nojiko-normalize-supplement() {
-    @if support-legacy-browser(ie, '6', '7') {
+    @if $support-for-ie6 or $support-for-ie7 {
         audio,
         canvas,
         progress,
