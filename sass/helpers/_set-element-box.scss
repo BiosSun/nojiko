@@ -30,7 +30,7 @@
         height: $height;
     }
 
-    @if $padding-vertical && $padding-horizontal {
+    @if $padding-vertical and $padding-horizontal {
         padding: $padding-vertical $padding-horizontal;
     }
     @else if $padding-vertical {
