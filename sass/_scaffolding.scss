@@ -18,7 +18,7 @@
 
 body {
     font: unquote('#{$font-size-base}/#{$line-height-base}') $font-family;
-    color: $font-color;
+    color: $text-color;
     background: $background-color;
 }
 

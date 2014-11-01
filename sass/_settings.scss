@@ -57,11 +57,11 @@ $primary-color:                 #4BB2F7                    !default;
 $background-color:              #fff                       !default;
 
 // 文本颜色
-$font-color:                    $gray-dark                 !default;
+$text-color:                    $gray-dark                 !default;
 // 次要文本颜色
-$quiet-font-color:              $gray-light                !default;
+$quiet-text-color:              $gray-light                !default;
 // 强调文本颜色
-$loud-font-color:               $gray-dark                 !default;
+$loud-text-color:               $gray-dark                 !default;
 
 // 链接颜色
 $link-color:                    $primary-color             !default;

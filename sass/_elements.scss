@@ -343,16 +343,16 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
         }
     }
 
-    .#{$nojiko-el-foreground-color}common {
-        @include foreground-color($font-color);
+    .#{$nojiko-el-foreground-color}text {
+        @include foreground-color($text-color);
     }
 
     .#{$nojiko-el-foreground-color}quiet {
-        @include foreground-color($quiet-font-color);
+        @include foreground-color($quiet-text-color);
     }
 
     .#{$nojiko-el-foreground-color}loud {
-        @include foreground-color($loud-font-color);
+        @include foreground-color($loud-text-color);
     }
 
     .#{$nojiko-el-foreground-color}link {

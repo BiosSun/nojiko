@@ -542,10 +542,10 @@
   margin-right: 1px;
 }
 
-.foreground-common {
+.foreground-text {
   color: #333333;
 }
-.foreground-common a {
+.foreground-text a {
   color: #333333;
   font-weight: 700;
   margin-left: 1px;
