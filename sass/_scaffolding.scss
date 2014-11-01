@@ -44,8 +44,8 @@ img {
 }
 
 hr {
-  margin-top:    $line-height-computed;
-  margin-bottom: $line-height-computed;
+  margin-top: computed-line-height();
+  margin-bottom: computed-line-height();
   border: 0;
   border-top: 1px solid $line-color;
 }

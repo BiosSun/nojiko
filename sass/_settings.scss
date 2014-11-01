@@ -30,8 +30,6 @@ $font-size-small:               ceil($font-size-base * 0.88) !default; // 12: 10
 
 // 默认文字行高
 $line-height-base:              1.428571429 !default;
-// 计算为 px 单位的默认行高
-$line-height-computed:          if(unit($line-height-base) == 'px', $line-height-base, floor($font-size-base * $line-height-base));
 // 较大文字行高
 $line-height-large:             1.34 !default;
 // 较小文字行高
