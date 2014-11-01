@@ -1,6 +1,6 @@
 {
     "name": "nojiko",
-    "version": "0.3.6",
+    "version": "0.3.7",
     "main": "sass/_nojiko.scss",
     "license": "MIT",
     "ignore": [
