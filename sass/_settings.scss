@@ -69,7 +69,7 @@ $link-focus-color:              darken($link-color, 15%)   !default;
 $link-visited-color:            $link-color                !default;
 
 // 线条颜色
-$line-color:                    $gray-lighter              !default;
+$line-color:                    #d7d7d7                    !default;
 
 // 配色集合
 $color-maps:                    set-color-map(primary, $primary-color);
