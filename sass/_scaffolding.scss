@@ -8,11 +8,11 @@
 
 @if $default-box-sizing == border-box {
     * {
-        @include box-sizing($default-box-sizing);
+        box-sizing: $default-box-sizing;
     }
 
     *:before, *:after {
-        @include box-sizing($default-box-sizing);
+        box-sizing: $default-box-sizing;
     }
 }
 
