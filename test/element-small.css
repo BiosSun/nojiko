@@ -463,23 +463,23 @@
 }
 
 .bg-primary {
-  background: #4BB2F7;
+  background: #428bca;
 }
 
 .bg-success {
-  background: #dff0d8;
+  background: #5cb85c;
 }
 
 .bg-info {
-  background: #d9edf7;
+  background: #5bc0de;
 }
 
 .bg-warning {
-  background: #fcf8e3;
+  background: #f0ad4e;
 }
 
 .bg-danger {
-  background: #f2dede;
+  background: #d9534f;
 }
 
 .bg-common {
@@ -493,50 +493,50 @@
 }
 
 .fg-primary {
-  color: #4BB2F7;
+  color: #428bca;
 }
 .fg-primary a {
-  color: #4BB2F7;
+  color: #428bca;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
 }
 
 .fg-success {
-  color: #468847;
+  color: #5cb85c;
 }
 .fg-success a {
-  color: #468847;
+  color: #5cb85c;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
 }
 
 .fg-info {
-  color: #d9edf7;
+  color: #5bc0de;
 }
 .fg-info a {
-  color: #d9edf7;
+  color: #5bc0de;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
 }
 
 .fg-warning {
-  color: #c09853;
+  color: #f0ad4e;
 }
 .fg-warning a {
-  color: #c09853;
+  color: #f0ad4e;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
 }
 
 .fg-danger {
-  color: #b94a48;
+  color: #d9534f;
 }
 .fg-danger a {
-  color: #b94a48;
+  color: #d9534f;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
@@ -573,10 +573,10 @@
 }
 
 .fg-link {
-  color: #4BB2F7;
+  color: #428bca;
 }
 .fg-link a {
-  color: #4BB2F7;
+  color: #428bca;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;

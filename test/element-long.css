@@ -463,23 +463,23 @@
 }
 
 .background-primary {
-  background: #4BB2F7;
+  background: #428bca;
 }
 
 .background-success {
-  background: #dff0d8;
+  background: #5cb85c;
 }
 
 .background-info {
-  background: #d9edf7;
+  background: #5bc0de;
 }
 
 .background-warning {
-  background: #fcf8e3;
+  background: #f0ad4e;
 }
 
 .background-danger {
-  background: #f2dede;
+  background: #d9534f;
 }
 
 .background-common {
@@ -493,50 +493,50 @@
 }
 
 .foreground-primary {
-  color: #4BB2F7;
+  color: #428bca;
 }
 .foreground-primary a {
-  color: #4BB2F7;
+  color: #428bca;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
 }
 
 .foreground-success {
-  color: #468847;
+  color: #5cb85c;
 }
 .foreground-success a {
-  color: #468847;
+  color: #5cb85c;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
 }
 
 .foreground-info {
-  color: #d9edf7;
+  color: #5bc0de;
 }
 .foreground-info a {
-  color: #d9edf7;
+  color: #5bc0de;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
 }
 
 .foreground-warning {
-  color: #c09853;
+  color: #f0ad4e;
 }
 .foreground-warning a {
-  color: #c09853;
+  color: #f0ad4e;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
 }
 
 .foreground-danger {
-  color: #b94a48;
+  color: #d9534f;
 }
 .foreground-danger a {
-  color: #b94a48;
+  color: #d9534f;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
@@ -573,10 +573,10 @@
 }
 
 .foreground-link {
-  color: #4BB2F7;
+  color: #428bca;
 }
 .foreground-link a {
-  color: #4BB2F7;
+  color: #428bca;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;

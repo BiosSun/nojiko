@@ -71,22 +71,20 @@ $link-visited-color:            $link-color                !default;
 // 线条颜色
 $line-color:                    $gray-lighter              !default;
 
+// 配色集合
+$color-maps:                    set-color-map(primary, $primary-color);
+
 // 成功状态配色
-$state-maps:                    set-state-map(success, #5cb85c, darken(adjust-hue(#5cb85c, -10), 5%), #fff);
+$color-maps:                    set-color-map(success, #5cb85c);
 
 // 信息状态配色
-$state-maps:                    set-state-map(info,    #5bc0de, darken(adjust-hue(#5bc0de, -10), 5%), #fff);
+$color-maps:                    set-color-map(info,    #5bc0de);
 
 // 警告状态配色
-$state-maps:                    set-state-map(warning, #f0ad4e, darken(adjust-hue(#f0ad4e, -10), 5%), #fff);
+$color-maps:                    set-color-map(warning, #f0ad4e);
 
 // 错误状态配色
-$state-maps:                    set-state-map(danger,  #d9534f, darken(adjust-hue(#d9534f, -10), 5%), #fff);
-
-// 颜色集合
-$color-maps: (
-    'primary':                  $primary-color
-);
+$color-maps:                    set-color-map(danger,  #d9534f);
 
 
 // 尺寸

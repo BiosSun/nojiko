@@ -315,13 +315,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 @if $nojiko-el-background-color {
     @each $key, $color in $color-maps {
         .#{$nojiko-el-background-color}#{$key} {
-            background: $color;
-        }
-    }
-
-    @each $key, $map in $state-maps {
-        .#{$nojiko-el-background-color}#{$key} {
-            background: map-get($map, bg);
+            background: map-get($color, color);
         }
     }
 
@@ -333,13 +327,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 @if $nojiko-el-foreground-color {
     @each $key, $color in $color-maps {
         .#{$nojiko-el-foreground-color}#{$key} {
-            @include foreground-color($color);
-        }
-    }
-
-    @each $key, $map in $state-maps {
-        .#{$nojiko-el-foreground-color}#{$key} {
-            @include foreground-color(map-get($map, text));
+            @include foreground-color(map-get($color, color));
         }
     }
 

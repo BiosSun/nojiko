@@ -4,13 +4,18 @@
 // 该方法用于操纵全局状态配色集合
 // -----------------------------------------------------------------------------
 
-@function set-state-map($name, $text, $border, $bg) {
-    @if global-variable-exists(state-maps) == false {
-      $state-maps: () !global;
+@function set-color-map(
+    $name,
+    $color,
+    $text: #fff,
+    $border: darken(adjust-hue($color, -10), 5%)
+) {
+    @if global-variable-exists(color-maps) == false {
+        $color-maps: () !global;
     }
 
-    @return map-set($state-maps, $name, (
-                        bg: $bg,
+    @return map-set($color-maps, $name, (
+                        color: $color,
                         border: $border,
                         text: $text
                     ));
