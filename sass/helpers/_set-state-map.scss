@@ -3,21 +3,15 @@
 // -----------------------------------------------------------------------------
 // 该方法用于操纵全局状态配色集合
 // -----------------------------------------------------------------------------
-@function set-state-map($name, $baseColor, $text, $bg, $border: false) {
+
+@function set-state-map($name, $text, $border, $bg) {
     @if global-variable-exists(state-maps) == false {
       $state-maps: () !global;
     }
 
-    $map: (
-        base: $baseColor,
-        text: $text,
-        bg: $bg,
-        border: $border
-    );
-
-    @if map-has-key($state-maps, $name) {
-        $map: map-merge(map-get($state-maps, $name), $map);
-    }
-
-    @return map-merge($state-maps, ($name: $map));
+    @return map-set($state-maps, $name, (
+                        bg: $bg,
+                        border: $border,
+                        text: $text
+                    ));
 }

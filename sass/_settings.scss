@@ -72,16 +72,16 @@ $link-visited-color:            $link-color                !default;
 $line-color:                    $gray-lighter              !default;
 
 // 成功状态配色
-$state-maps:                    set-state-map(success, #5cb85c, #468847, #dff0d8, darken(adjust-hue(#dff0d8, -10), 5%));
+$state-maps:                    set-state-map(success, #5cb85c, darken(adjust-hue(#5cb85c, -10), 5%), #fff);
 
 // 信息状态配色
-$state-maps:                    set-state-map(info,    #5bc0de, #31708f, #d9edf7, darken(adjust-hue(#d9edf7, -10), 5%));
+$state-maps:                    set-state-map(info,    #5bc0de, darken(adjust-hue(#5bc0de, -10), 5%), #fff);
 
 // 警告状态配色
-$state-maps:                    set-state-map(warning, #f0ad4e, #c09853, #fcf8e3, darken(adjust-hue(#fcf8e3, -10), 5%));
+$state-maps:                    set-state-map(warning, #f0ad4e, darken(adjust-hue(#f0ad4e, -10), 5%), #fff);
 
 // 错误状态配色
-$state-maps:                    set-state-map(danger,  #d9534f, #b94a48, #f2dede, darken(adjust-hue(#f2dede, -10), 5%));
+$state-maps:                    set-state-map(danger,  #d9534f, darken(adjust-hue(#d9534f, -10), 5%), #fff);
 
 // 颜色集合
 $color-maps: (
