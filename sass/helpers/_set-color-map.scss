@@ -8,7 +8,7 @@
     $name,
     $color,
     $text: #fff,
-    $border: darken(adjust-hue($color, -10), 5%)
+    $border: darken($color, 7%)
 ) {
     @if global-variable-exists(color-maps) == false {
         $color-maps: () !global;
