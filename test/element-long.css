@@ -1,5 +1,5 @@
 /*!
- * Nojiko - 0.3.11
+ * Nojiko - 0.3.12
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
@@ -17,7 +17,7 @@
 }
 
 /*!
- * Nojiko Elements - 0.3.11
+ * Nojiko Elements - 0.3.12
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
@@ -462,10 +462,6 @@
   clear: both;
 }
 
-.background-primary {
-  background: #428bca;
-}
-
 .background-success {
   background: #5cb85c;
 }
@@ -487,16 +483,6 @@
 }
 .background-common a {
   color: #fff;
-  font-weight: 700;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-
-.foreground-primary {
-  color: #428bca;
-}
-.foreground-primary a {
-  color: #428bca;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;

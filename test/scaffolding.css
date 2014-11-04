@@ -1,10 +1,10 @@
 /*!
- * Nojiko - 0.3.11
+ * Nojiko - 0.3.12
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
 /*!
- * Nojiko Scaffolding - 0.3.11
+ * Nojiko Scaffolding - 0.3.12
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
@@ -36,7 +36,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #d7d7d7;
 }
 
 /*# sourceMappingURL=scaffolding.css.map */
