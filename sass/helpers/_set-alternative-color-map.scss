@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+// -----------------------------------------------------------------------------
+// 该方法用于操纵全局备选配色集合
+// -----------------------------------------------------------------------------
+
+@function set-alternative-color-map(
+    $name,
+    $color,
+    $text: #fff,
+    $border: darken($color, 7%)
+) {
+    @if global-variable-exists(alternative-color-map) == false {
+        $alternative-color-map: () !global;
+    }
+
+    @return map-set($alternative-color-map, $name, (
+                        color: $color,
+                        border: $border,
+                        text: $text
+                    ));
+}
