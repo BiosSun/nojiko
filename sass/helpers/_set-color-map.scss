@@ -9,19 +9,19 @@
     $color,
     $text: null,
     $border: null,
-    $isDefault: false
+    $is-default: false
 ) {
     @if global-variable-exists(color-maps) == false {
         $color-maps: () !global;
     }
 
     @if is-default($text) {
-        $isDefault: true;
+        $is-default: true;
         $text: null;
     }
 
     @if is-default($border) {
-        $isDefault: true;
+        $is-default: true;
         $border: null;
     }
 
@@ -32,7 +32,7 @@
     $border: if($border, $border, darken($color, 7));
 
     // set map
-    @if (is-default($isDefault) and map-has-key($color-maps, $name)) == false {
+    @if (is-default($is-default) and map-has-key($color-maps, $name)) == false {
         @return map-set($color-maps, $name, (
                             color: $color,
                             border: $border,

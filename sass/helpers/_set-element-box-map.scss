@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+// =============================================================================
+// 设置盒模型集合
+// =============================================================================
+
+@function set-element-box-map(
+    $name,
+    $padding-vertical,
+    $padding-horizontal,
+    $border-width,
+    $border-radius,
+    $font-size,
+    $line-height,
+    $is-default: false
+) {
+    @if global-variable-exists(element-box-map) == false {
+        $element-box-map: () !global;
+    }
+
+    // set map
+    @if (is-default($is-default) and map-has-key($element-box-map, $name)) == false {
+        @return map-set($element-box-map, $name, (
+                            padding-vertical: $padding-vertical,
+                            padding-horizontal: $padding-horizontal,
+                            border-width: $border-width,
+                            font-size: $font-size,
+                            line-height: $line-height,
+                            border-radius: $border-radius
+                        ));
+    }
+    @else {
+        @return $element-box-map;
+    }
+}

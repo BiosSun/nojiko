@@ -172,25 +172,31 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 // ---------------------------
 
     @if $nojiko-el-size {
-        .#{$nojiko-el-size}xl    { @include set-element-box-for-xl;                   }
-        .#{$nojiko-el-size}xl-b  { @include set-element-box-for-xl-no-border;         }
-        .#{$nojiko-el-size}xl-bh { @include set-element-box-for-xl-no-border($ph: 0); }
+        @each $k, $v in $element-box-map {
+            $bw: map-get($v, border-width);
+            $pv: map-get($v, padding-vertical);
+            $ph: map-get($v, padding-horizontal);
 
-        .#{$nojiko-el-size}l     { @include set-element-box-for-l;                    }
-        .#{$nojiko-el-size}l-b   { @include set-element-box-for-l-no-border;          }
-        .#{$nojiko-el-size}l-bh  { @include set-element-box-for-l-no-border($ph: 0);  }
+            .#{$nojiko-el-size}#{$k}    {
+                @include set-element-box-by-name($k);
+            }
 
-        .#{$nojiko-el-size}m     { @include set-element-box-for-m;                    }
-        .#{$nojiko-el-size}m-b   { @include set-element-box-for-m-no-border;          }
-        .#{$nojiko-el-size}m-bh  { @include set-element-box-for-m-no-border($ph: 0);  }
+            .#{$nojiko-el-size}#{$k}-b  {
+                @extend .#{$nojiko-el-size}#{$k};
+                @include set-element-box(
+                    $border-width: 0,
+                    $padding-vertical: $pv + $bw,
+                    $padding-horizontal: $ph + $bw
+                );
+            }
 
-        .#{$nojiko-el-size}s     { @include set-element-box-for-s;                    }
-        .#{$nojiko-el-size}s-b   { @include set-element-box-for-s-no-border;          }
-        .#{$nojiko-el-size}s-bh  { @include set-element-box-for-s-no-border($ph: 0);  }
-
-        .#{$nojiko-el-size}xs    { @include set-element-box-for-xs;                   }
-        .#{$nojiko-el-size}xs-b  { @include set-element-box-for-xs-no-border;         }
-        .#{$nojiko-el-size}xs-bh { @include set-element-box-for-xs-no-border($ph: 0); }
+            .#{$nojiko-el-size}#{$k}-bh  {
+                @extend .#{$nojiko-el-size}#{$k}-b;
+                @include set-element-box(
+                    $padding-horizontal: 0
+                );
+            }
+        }
 }
 
 
