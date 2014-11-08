@@ -22,6 +22,8 @@ $ bower install nojiko
 
 ```scss
 @import "nojiko/nojiko";
+@import "nojiko/settings";
+
 @import "nojiko/reset";
 @import "nojiko/scaffolding";
 @import "nojiko/elements";
