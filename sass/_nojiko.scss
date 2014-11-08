@@ -8,23 +8,24 @@
 
 @import
 
+// 内部混入，函数
 "helpers/nojiko-expand",
 "helpers/nojiko-attach-inputs",
 
+// 辅助函数，变量
 "helpers/text-inputs",
 "helpers/button-inputs",
 "helpers/font-family",
+"helpers/is-dark",
+"helpers/is-light",
 "helpers/map-set",
 "helpers/set-color-map",
 "helpers/set-alternative-color-map",
 "helpers/computed-line-height",
 
-"settings",
-
+// 混入类
 "helpers/size",
 "helpers/float",
-"helpers/is-dark",
-"helpers/is-light",
 "helpers/position",
 "helpers/clearfix",
 "helpers/hide-text",

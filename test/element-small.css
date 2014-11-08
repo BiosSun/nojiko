@@ -3,19 +3,6 @@
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
-.ar-b, .ar-t, .ar-l, .ar-r {
-  display: inline-block;
-  vertical-align: middle;
-  *zoom: 1;
-  *display: inline;
-  width: 0;
-  height: 0;
-  font: 0/0 a;
-  position: relative;
-  top: -1px;
-  *top: 0;
-}
-
 /*!
  * Nojiko Elements - 0.3.12
  * @license: MIT
@@ -612,6 +599,16 @@
 }
 
 .ar-b {
+  display: inline-block;
+  vertical-align: middle;
+  *zoom: 1;
+  *display: inline;
+  width: 0;
+  height: 0;
+  font: 0/0 a;
+  position: relative;
+  top: -1px;
+  *top: 0;
   border-top: 4px solid ;
   border-right: 4px dashed transparent;
   border-left: 4px dashed transparent;
@@ -619,6 +616,16 @@
 }
 
 .ar-t {
+  display: inline-block;
+  vertical-align: middle;
+  *zoom: 1;
+  *display: inline;
+  width: 0;
+  height: 0;
+  font: 0/0 a;
+  position: relative;
+  top: -1px;
+  *top: 0;
   border-bottom: 4px solid ;
   border-right: 4px dashed transparent;
   border-left: 4px dashed transparent;
@@ -626,6 +633,16 @@
 }
 
 .ar-l {
+  display: inline-block;
+  vertical-align: middle;
+  *zoom: 1;
+  *display: inline;
+  width: 0;
+  height: 0;
+  font: 0/0 a;
+  position: relative;
+  top: -1px;
+  *top: 0;
   border-right: 4px solid ;
   border-top: 4px dashed transparent;
   border-bottom: 4px dashed transparent;
@@ -633,6 +650,16 @@
 }
 
 .ar-r {
+  display: inline-block;
+  vertical-align: middle;
+  *zoom: 1;
+  *display: inline;
+  width: 0;
+  height: 0;
+  font: 0/0 a;
+  position: relative;
+  top: -1px;
+  *top: 0;
   border-left: 4px solid ;
   border-top: 4px dashed transparent;
   border-bottom: 4px dashed transparent;

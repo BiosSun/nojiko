@@ -4,7 +4,7 @@
 // 小三角箭头样式
 // =============================================================================
 
-%arrows-style {
+@mixin arrows-style($width, $orientation : bottom, $color : inherit) {
     @include inline-block(middle);
 
     width: 0;
@@ -12,13 +12,10 @@
     font: 0/0 a;
 
     @include position(relative, -1px false false false);
+
     @if $support-for-ie6 or $support-for-ie7 {
         *top: 0;
     }
-}
-
-@mixin arrows-style($width, $orientation : bottom, $color : inherit) {
-    @extend %arrows-style;
 
     @if $color == inherit {
         $color: unquote('');
