@@ -449,6 +449,10 @@
   clear: both;
 }
 
+.bg-primary {
+  background: #428bca;
+}
+
 .bg-success {
   background: #5cb85c;
 }
@@ -470,6 +474,16 @@
 }
 .bg-common a {
   color: #fff;
+  font-weight: 700;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.fg-primary {
+  color: #428bca;
+}
+.fg-primary a {
+  color: #428bca;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
