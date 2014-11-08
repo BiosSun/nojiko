@@ -450,11 +450,11 @@
 }
 
 .bg-primary {
-  background: #428bca;
+  background: #fff;
 }
 
 .bg-success {
-  background: #5cb85c;
+  background: #428bca;
 }
 
 .bg-info {
@@ -480,20 +480,20 @@
 }
 
 .fg-primary {
-  color: #428bca;
+  color: #fff;
 }
 .fg-primary a {
-  color: #428bca;
+  color: #fff;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
 }
 
 .fg-success {
-  color: #5cb85c;
+  color: #428bca;
 }
 .fg-success a {
-  color: #5cb85c;
+  color: #428bca;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;

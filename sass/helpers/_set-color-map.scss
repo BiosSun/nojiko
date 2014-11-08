@@ -7,16 +7,39 @@
 @function set-color-map(
     $name,
     $color,
-    $text: #fff,
-    $border: darken($color, 7%)
+    $text: null,
+    $border: null,
+    $isDefault: false
 ) {
     @if global-variable-exists(color-maps) == false {
         $color-maps: () !global;
     }
 
-    @return map-set($color-maps, $name, (
-                        color: $color,
-                        border: $border,
-                        text: $text
-                    ));
+    @if is-default($text) {
+        $isDefault: true;
+        $text: null;
+    }
+
+    @if is-default($border) {
+        $isDefault: true;
+        $border: null;
+    }
+
+    // $text default value.
+    $text: if($text, $text, #fff);
+
+    // border default value.
+    $border: if($border, $border, darken($color, 7));
+
+    // set map
+    @if (is-default($isDefault) and map-has-key($color-maps, $name)) == false {
+        @return map-set($color-maps, $name, (
+                            color: $color,
+                            border: $border,
+                            text: $text
+                        ));
+    }
+    @else {
+        @return $color-maps;
+    }
 }

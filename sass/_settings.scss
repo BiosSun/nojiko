@@ -72,31 +72,31 @@ $link-visited-color:            $link-color                !default;
 $line-color:                    #d7d7d7                    !default;
 
 // 配色集合
-$color-maps:                    set-color-map(primary, $primary-color);
+$color-maps:                    set-color-map(success, $primary-color, default);
 
 // 成功状态配色
-$color-maps:                    set-color-map(success, #5cb85c);
+$color-maps:                    set-color-map(success, #5cb85c, default);
 
 // 信息状态配色
-$color-maps:                    set-color-map(info,    #5bc0de);
+$color-maps:                    set-color-map(info,    #5bc0de, default);
 
 // 警告状态配色
-$color-maps:                    set-color-map(warning, #f0ad4e);
+$color-maps:                    set-color-map(warning, #f0ad4e, default);
 
 // 错误状态配色
-$color-maps:                    set-color-map(danger,  #d9534f);
+$color-maps:                    set-color-map(danger,  #d9534f, default);
 
 // 成功状态备选色
-$alternative-color-map:         set-alternative-color-map(success, #dff0d8, #3c763d);
+$alternative-color-map:         set-alternative-color-map(success, #dff0d8, #3c763d, default);
 
 // 信息状态备选色
-$alternative-color-map:         set-alternative-color-map(info,    #d9edf7, #31708f);
+$alternative-color-map:         set-alternative-color-map(info,    #d9edf7, #31708f, default);
 
 // 警告状态备选色
-$alternative-color-map:         set-alternative-color-map(warning, #fcf8e3, #8a6d3b);
+$alternative-color-map:         set-alternative-color-map(warning, #fcf8e3, #8a6d3b, default);
 
 // 异常状态备选色
-$alternative-color-map:         set-alternative-color-map(danger,  #f2dede, #a94442);
+$alternative-color-map:         set-alternative-color-map(danger,  #f2dede, #a94442, default);
 
 
 // 尺寸
