@@ -26,15 +26,8 @@ a {
     text-decoration: none;
     color: $link-color;
 
-    &:visited {
-        color: $link-color;
-    }
-
     &:focus, &:hover {
         color: $link-focus-color;
-    }
-
-    &:hover {
         text-decoration: underline;
     }
 }
