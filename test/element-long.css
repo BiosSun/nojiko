@@ -4,7 +4,7 @@
  * @license: MIT
  * @url: http://github.com/biossun/nojiko
  */
-.size-m, .size-m-b, .size-m-bh {
+.size-m {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
@@ -12,17 +12,23 @@
   border-radius: 3px;
 }
 
-.size-m-b, .size-m-bh {
+.size-m-b {
   padding: 7px 13px;
+  font-size: 14px;
+  line-height: 1.42857;
   border-width: 0;
+  border-radius: 3px;
 }
 
 .size-m-bh {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 7px 0;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-width: 0;
+  border-radius: 3px;
 }
 
-.size-l, .size-l-b, .size-l-bh {
+.size-l {
   padding: 10px 16px;
   font-size: 19px;
   line-height: 1.34;
@@ -30,17 +36,23 @@
   border-radius: 3px;
 }
 
-.size-l-b, .size-l-bh {
+.size-l-b {
   padding: 11px 17px;
+  font-size: 19px;
+  line-height: 1.34;
   border-width: 0;
+  border-radius: 3px;
 }
 
 .size-l-bh {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 11px 0;
+  font-size: 19px;
+  line-height: 1.34;
+  border-width: 0;
+  border-radius: 3px;
 }
 
-.size-xl, .size-xl-b, .size-xl-bh {
+.size-xl {
   padding: 13px 22px;
   font-size: 23px;
   line-height: 1.34;
@@ -48,17 +60,23 @@
   border-radius: 3px;
 }
 
-.size-xl-b, .size-xl-bh {
+.size-xl-b {
   padding: 14px 23px;
+  font-size: 23px;
+  line-height: 1.34;
   border-width: 0;
+  border-radius: 3px;
 }
 
 .size-xl-bh {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 14px 0;
+  font-size: 23px;
+  line-height: 1.34;
+  border-width: 0;
+  border-radius: 3px;
 }
 
-.size-s, .size-s-b, .size-s-bh {
+.size-s {
   padding: 4px 9px;
   font-size: 13px;
   line-height: 1.5;
@@ -66,17 +84,23 @@
   border-radius: 3px;
 }
 
-.size-s-b, .size-s-bh {
+.size-s-b {
   padding: 5px 10px;
+  font-size: 13px;
+  line-height: 1.5;
   border-width: 0;
+  border-radius: 3px;
 }
 
 .size-s-bh {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 5px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  border-width: 0;
+  border-radius: 3px;
 }
 
-.size-xs, .size-xs-b, .size-xs-bh {
+.size-xs {
   padding: 2px 6px;
   font-size: 13px;
   line-height: 1.5;
@@ -84,14 +108,20 @@
   border-radius: 3px;
 }
 
-.size-xs-b, .size-xs-bh {
+.size-xs-b {
   padding: 3px 7px;
+  font-size: 13px;
+  line-height: 1.5;
   border-width: 0;
+  border-radius: 3px;
 }
 
 .size-xs-bh {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 3px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  border-width: 0;
+  border-radius: 3px;
 }
 
 .margin-m {

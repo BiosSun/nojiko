@@ -1,6 +1,84 @@
 @charset "utf-8";
 
 // =============================================================================
+// 一个尺寸配置对象中包含如下属性：
+//   padding-vertical: 垂直内边距
+//   padding-horizontal: 水平内边距
+//   border-width: 边框宽度
+//   border-radius: 边框圆角
+//   font-size: 文字大小
+//   line-height: 行高
+//   width: 元素宽度，一般不指定
+//   height: 元素高度，一般不指定
+// =============================================================================
+
+
+// =============================================================================
+// 私有函数
+// 以 $element-box-map 中的某个尺寸配置为基础生成一个新的定制的尺寸配置。
+// =============================================================================
+@function nojiko-get-distinctive-element-box-by-name(
+    $name:                 null,
+    $width:                null,
+    $height:               null,
+    $padding-vertical:     null,
+    $padding-horizontal:   null,
+    $border-width:         null,
+    $border-radius:        null,
+    $font-size:            null,
+    $line-height:          null
+) {
+    $eb:  map-get($element-box-map, $name);
+    $eb:  if($eb, $eb, ());
+    $deb: ();
+
+    @if $width              { $deb: map-set($deb, width,              $width);              }
+    @if $height             { $deb: map-set($deb, height,             $height);             }
+    @if $padding-vertical   { $deb: map-set($deb, padding-vertical,   $padding-vertical);   }
+    @if $padding-horizontal { $deb: map-set($deb, padding-horizontal, $padding-horizontal); }
+    @if $border-width       { $deb: map-set($deb, border-width,       $border-width);       }
+    @if $border-radius      { $deb: map-set($deb, border-radius,      $border-radius);      }
+    @if $font-size          { $deb: map-set($deb, font-size,          $font-size);          }
+    @if $line-height        { $deb: map-set($deb, line-height,        $line-height);        }
+
+    @return map-merge( map-merge( (), $eb ), $deb );
+};
+
+// =============================================================================
+// 私有函数
+// 将一个尺寸配置中的边框宽度转移给内边据
+// =============================================================================
+@function nojiko-transfer-element-box-border-width($element-box) {
+    $bw: map-get($element-box, border-width);
+    $pv: map-get($element-box, padding-vertical);
+    $ph: map-get($element-box, padding-horizontal);
+
+    @if $bw {
+        $pv: if($pv, $pv + $bw, $bw);
+        $ph: if($ph, $ph + $bw, $bw);
+    }
+
+    @return map-merge(
+        $element-box,
+        (
+            border-width: 0,
+            padding-vertical: $pv,
+            padding-horizontal: $ph
+        )
+    );
+}
+
+// =============================================================================
+// 私有函数
+// 除去一个尺寸配置中的水平内边距
+// =============================================================================
+@function nojiko-trim-element-box-padding-horizontal($element-box) {
+    @return map-merge($element-box,
+        (padding-horizontal: 0)
+    );
+}
+
+// =============================================================================
 // 设置元素盒模型
 // @param width 宽度
 // @param height 高度
@@ -64,6 +142,21 @@
     }
 }
 
+@mixin set-element-box-by-map(
+    $map
+) {
+    @include set-element-box(
+        map-get($map, width),
+        map-get($map, height),
+        map-get($map, padding-vertical),
+        map-get($map, padding-horizontal),
+        map-get($map, border-width),
+        map-get($map, border-radius),
+        map-get($map, font-size),
+        map-get($map, line-height)
+    );
+}
+
 @mixin set-element-box-by-name(
     $name:                 null,
     $width:                null,
@@ -75,17 +168,76 @@
     $font-size:            null,
     $line-height:          null
 ) {
-    $element-box: map-get($element-box-map, $name);
-    $element-box: if($element-box, $element-box, ());
+    @include set-element-box-by-map(nojiko-get-distinctive-element-box-by-name(
+        $name,
+        $width,
+        $height,
+        $padding-vertical,
+        $padding-horizontal,
+        $border-width,
+        $border-radius,
+        $font-size,
+        $line-height
+    ));
+}
 
-    @include set-element-box(
-        $width:              $width,
-        $height:             $height,
-        $padding-vertical:   if($padding-vertical, $padding-vertical, map-get($element-box, padding-vertical)),
-        $padding-horizontal: if($padding-horizontal, $padding-horizontal, map-get($element-box, padding-horizontal)),
-        $border-width:       if($border-width, $border-width, map-get($element-box, border-width)),
-        $border-radius:      if($border-radius, $border-radius, map-get($element-box, border-radius)),
-        $font-size:          if($font-size, $font-size, map-get($element-box, font-size)),
-        $line-height:        if($line-height, $line-height, map-get($element-box, line-height))
+
+// =============================================================================
+// 设置一个无边框的盒模型尺寸
+// 将该盒模型的边框设置为 0，并将原边框宽度分配到水平及垂直内边距上。
+// =============================================================================
+@mixin set-element-box-by-name-b(
+    $name:                 null,
+    $width:                null,
+    $height:               null,
+    $padding-vertical:     null,
+    $padding-horizontal:   null,
+    $border-radius:        null,
+    $font-size:            null,
+    $line-height:          null
+) {
+    $element-box: nojiko-get-distinctive-element-box-by-name(
+        $name,
+        $width,
+        $height,
+        $padding-vertical,
+        $padding-horizontal,
+        $border-radius,
+        $font-size,
+        $line-height
     );
+
+    $element-box: nojiko-transfer-element-box-border-width($element-box);
+
+    @include set-element-box-by-map($element-box);
+}
+
+// =============================================================================
+// 设置一个无边框的且无水平内边距的盒模型尺寸
+// =============================================================================
+@mixin set-element-box-by-name-bh(
+    $name:                 null,
+    $width:                null,
+    $height:               null,
+    $padding-vertical:     null,
+    $padding-horizontal:   null,
+    $border-radius:        null,
+    $font-size:            null,
+    $line-height:          null
+) {
+    $element-box: nojiko-get-distinctive-element-box-by-name(
+        $name,
+        $width,
+        $height,
+        $padding-vertical,
+        $padding-horizontal,
+        $border-radius,
+        $font-size,
+        $line-height
+    );
+
+    $element-box: nojiko-transfer-element-box-border-width($element-box);
+    $element-box: nojiko-trim-element-box-padding-horizontal($element-box);
+
+    @include set-element-box-by-map($element-box);
 }

@@ -167,29 +167,9 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 
     @if $nojiko-el-size {
         @each $k, $v in $element-box-map {
-            $bw: map-get($v, border-width);
-            $pv: map-get($v, padding-vertical);
-            $ph: map-get($v, padding-horizontal);
-
-            .#{$nojiko-el-size}#{$k}    {
-                @include set-element-box-by-name($k);
-            }
-
-            .#{$nojiko-el-size}#{$k}-b  {
-                @extend .#{$nojiko-el-size}#{$k};
-                @include set-element-box(
-                    $border-width: 0,
-                    $padding-vertical: $pv + $bw,
-                    $padding-horizontal: $ph + $bw
-                );
-            }
-
-            .#{$nojiko-el-size}#{$k}-bh  {
-                @extend .#{$nojiko-el-size}#{$k}-b;
-                @include set-element-box(
-                    $padding-horizontal: 0
-                );
-            }
+            .#{$nojiko-el-size}#{$k}    { @include set-element-box-by-name($k);    }
+            .#{$nojiko-el-size}#{$k}-b  { @include set-element-box-by-name-b($k);  }
+            .#{$nojiko-el-size}#{$k}-bh { @include set-element-box-by-name-bh($k); }
         }
 }
 
