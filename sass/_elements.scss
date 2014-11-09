@@ -226,7 +226,8 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
         $h: -$distance-horizontal / 2;
     }
     @else {
-        $num: $name;
+        $v: $name;
+        $h: $name;
     }
 
     // 如果类名使用简写方式，则隐去普通边距的尺寸名称
