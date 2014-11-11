@@ -551,6 +551,21 @@
   margin-right: 1px;
 }
 
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+  vertical-align: baseline;
+  *zoom: 1;
+  *display: inline;
+}
+
 .text-bold {
   font-weight: bold;
 }

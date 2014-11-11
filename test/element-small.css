@@ -551,6 +551,21 @@
   margin-right: 1px;
 }
 
+.db {
+  display: block;
+}
+
+.di {
+  display: inline;
+}
+
+.dib {
+  display: inline-block;
+  vertical-align: baseline;
+  *zoom: 1;
+  *display: inline;
+}
+
 .b {
   font-weight: bold;
 }
