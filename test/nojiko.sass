@@ -64,3 +64,11 @@
 
 .hide-text
     +hide-text
+
+.map-extend
+    $map: map-extend((a: 1px), (a: null, b: 2px))
+    color: map-get($map, a)
+    color: map-get($map, b)
+    $map: map-extend((a: 1px), (a: 2px, b: 2px))
+    color: map-get($map, a)
+    color: map-get($map, b)
