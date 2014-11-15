@@ -4,10 +4,10 @@
 // 判断一个值是否是 default
 // =============================================================================
 
-@function is-default(val) {
-    return val == true or val == default;
+@function is-default($val) {
+    @return $val == true or $val == default;
 }
 
-@function not-default(val) {
-    return if(is-default(val), false, true);
+@function not-default($val) {
+    @return if(is-default($val), false, true);
 }
