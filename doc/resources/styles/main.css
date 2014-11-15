@@ -70,6 +70,14 @@ pre > code {
     font-size: 12px;
 }
 
+table pre {
+    margin: 0;
+}
+
+table pre > code {
+    padding: 0;
+}
+
 .code-paratactic {
     *zoom: 1;
                 overflow: hidden;
@@ -172,7 +180,7 @@ pre > code {
 .highlight  { background: #ffffff; color: #606060; }
 .highlight .lineno { color: #a0a0a0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 .highlight .c { color: #aaa; } /* Comment */
-.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .err { color: #a61717 } /* Error */
 .highlight .k { color: #53A8F7; font-weight: bold; } /* Keyword */
 .highlight .o { } /* Operator */
 .highlight .cm { color: #a0a0a0; font-style: italic } /* Comment.Multiline */

@@ -46,6 +46,340 @@ $ bower install nojiko
 - Safari 5.0+
 - Opera 12.0+
 
+## 全局配置
+
+nojiko 精心设计了一组 SCSS 的全局变量，以此来定义项目的文字，配色，尺寸及布局方式。
+
+<table>
+<tr><th colspan="3">浏览器兼容</th></tr>
+<tr>
+<td width="200">{% highlight scss %}$support-for-ie6{% endhighlight %}</td>
+<td width="300">是否兼容 IE6 浏览器</td>
+<td>{% highlight scss %}true{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$support-for-ie7{% endhighlight %}</td>
+<td>是否兼容 IE7 浏览器</td>
+<td>{% highlight scss %}true{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$support-for-ie8{% endhighlight %}</td>
+<td>是否兼容 IE8 浏览器</td>
+<td>{% highlight scss %}true{% endhighlight %}</td>
+</tr>
+
+<tr><th colspan="3">文字</th></tr>
+<tr>
+<td>{% highlight scss %}$font-family{% endhighlight %}</td>
+<td>默认字体集</td>
+<td>{% highlight scss %}$FONT-FAMILY-SERIF{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$font-family-monspace{% endhighlight %}</td>
+<td>代码字体集</td>
+<td>{% highlight scss %}$FONT-FAMILY-FIXED-FONT{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$font-size-base{% endhighlight %}</td>
+<td>默认文字大小</td>
+<td>{% highlight scss %}14px{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$font-size-large{% endhighlight %}</td>
+<td>较大文字大小</td>
+<td>{% highlight scss %}ceil($font-size-base * 1.3){% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$font-size-small{% endhighlight %}</td>
+<td>较小文字大小</td>
+<td>{% highlight scss %}ceil($font-size-base * 0.88){% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$line-height-base{% endhighlight %}</td>
+<td>默认文字行高</td>
+<td>{% highlight scss %}1.428571429{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$line-height-large{% endhighlight %}</td>
+<td>较大文字行高</td>
+<td>{% highlight scss %}1.34{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$line-height-small{% endhighlight %}</td>
+<td>较小文字行高</td>
+<td>{% highlight scss %}1.5{% endhighlight %}</td>
+</tr>
+
+<tr><th colspan="3">配色</th></tr>
+<tr>
+<td>{% highlight scss %}$gray-darke{% endhighlight %}</td>
+<td>深灰色</td>
+<td>{% highlight scss %}lighten(#000, 13.5%){% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$gray-dar{% endhighlight %}</td>
+<td>暗灰色</td>
+<td>{% highlight scss %}lighten(#000, 20%){% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$gray{% endhighlight %}</td>
+<td>灰色</td>
+<td>{% highlight scss %}lighten(#000, 33.5%){% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$gray-light{% endhighlight %}</td>
+<td>淡灰色</td>
+<td>{% highlight scss %}lighten(#000, 60%){% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$gray-lighter{% endhighlight %}</td>
+<td>浅灰色</td>
+<td>{% highlight scss %}lighten(#000, 93.5%){% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$primary-color{% endhighlight %}</td>
+<td>主体色</td>
+<td>{% highlight scss %}#428BCA{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$primary-color{% endhighlight %}</td>
+<td>背景色</td>
+<td>{% highlight scss %}#FFF{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$text-color{% endhighlight %}</td>
+<td>文字颜色</td>
+<td>{% highlight scss %}$gray-dark{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$quiet-text-color{% endhighlight %}</td>
+<td>次要文字颜色</td>
+<td>{% highlight scss %}$gray-light{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$loud-text-color{% endhighlight %}</td>
+<td>强调文字颜色</td>
+<td>{% highlight scss %}$gray-dark{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$link-color{% endhighlight %}</td>
+<td>链接文字颜色</td>
+<td>{% highlight scss %}$primary-color{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$link-focus-color{% endhighlight %}</td>
+<td>链接得到焦点时的文字颜色</td>
+<td>{% highlight scss %}darken($primary-color, 15%){% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$link-visited-color{% endhighlight %}</td>
+<td>已访问链接的文字颜色</td>
+<td>{% highlight scss %}$link-color{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$line-color{% endhighlight %}</td>
+<td>线条颜色</td>
+<td>{% highlight scss %}#d7d7d7{% endhighlight %}</td>
+</tr>
+<tr><th colspan="3">布局</th></td>
+<tr>
+<td>{% highlight scss %}$page-width{% endhighlight %}</td>
+<td>页面宽度</td>
+<td>{% highlight scss %}false{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$distance-vertical{% endhighlight %}</td>
+<td>模块之间的垂直间距</td>
+<td>{% highlight scss %}20px{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$distance-horizontal{% endhighlight %}</td>
+<td>模块之间的水平间距</td>
+<td>{% highlight scss %}20px{% endhighlight %}</td>
+</tr>
+
+<tr><th colspan="3">盒尺寸</th></tr>
+<tr>
+<td>{% highlight scss %}$default-box-sizing{% endhighlight %}</td>
+<td>全局盒尺寸计算模型</td>
+<td>{% highlight scss %}content-box{% endhighlight %}</td>
+</tr>
+<tr>
+<td>{% highlight scss %}$default-element-box-name{% endhighlight %}</td>
+<td>默认盒尺寸名称</td>
+<td>{% highlight scss %}m{% endhighlight %}</td>
+</tr>
+
+<tr><th colspan="3">配色集合 <small>（使用 set-color-map 函数设置）</small></th></tr>
+<tr>
+<td>主体色</td>
+<td colspan="2">
+{% highlight scss %}
+color-maps: set-color-map(primary, $primary-color);
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>成功状态色</td>
+<td colspan="2">
+{% highlight scss %}
+color-maps: set-color-map(success, #5cb85c);
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>信息状态色</td>
+<td colspan="2">
+{% highlight scss %}
+color-maps: set-color-map(info, #5bc0de);
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>警告状态色</td>
+<td colspan="2">
+{% highlight scss %}
+color-maps: set-color-map(warning, #f0ad4e);
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>危险状态色</td>
+<td colspan="2">
+{% highlight scss %}
+color-maps: set-color-map(danger, #d9534f);
+{% endhighlight %}
+</td>
+</tr>
+
+<tr><th colspan="3">备选配色集合 <small>（使用 set-alternative-color-map 函数设置）</small></th></tr>
+<tr>
+<td>成功状态色</td>
+<td colspan="2">
+{% highlight scss %}
+color-maps: set-alternative-color-map(success, #dff0d8, #3c763d);
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>信息状态色</td>
+<td colspan="2">
+{% highlight scss %}
+color-maps: set-alternative-color-map(info, #d9edf7, #31708f);
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>警告状态色</td>
+<td colspan="2">
+{% highlight scss %}
+color-maps: set-alternative-color-map(warning, #fcf8e3, #8a6d3b);
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>危险状态色</td>
+<td colspan="2">
+{% highlight scss %}
+color-maps: set-alternative-color-map(danger,  #f2dede, #a94442);
+{% endhighlight %}
+</td>
+</tr>
+
+<tr><th colspan="3">盒尺寸定义集合<small>（使用 set-element-box-map 函数定义）</small></th></tr>
+<tr>
+<td>普通尺寸（默认尺寸）</td>
+<td colspan="2">
+{% highlight scss %}
+$element-box-map: set-element-box-map(
+    $name:                      m,
+    $padding-vertical:          6px,
+    $padding-horizontal:        12px,
+    $border-width:              1px,
+    $border-radius:             3px,
+    $font-size:                 $font-size-base,
+    $line-height:               $line-height-base,
+    $is-default:                true
+);
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>较大尺寸</td>
+<td colspan="2">
+{% highlight scss %}
+$element-box-map: set-element-box-map(
+    $name:                      l,
+    $padding-vertical:          10px,
+    $padding-horizontal:        16px,
+    $border-width:              1px,
+    $border-radius:             3px,
+    $font-size:                 $font-size-large,
+    $line-height:               $line-height-large,
+    $is-default:                true
+);
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>超大尺寸</td>
+<td colspan="2">
+{% highlight scss %}
+$element-box-map: set-element-box-map(
+    $name:                      xl,
+    $padding-vertical:          13px,
+    $padding-horizontal:        22px,
+    $border-width:              1px,
+    $border-radius:             3px,
+    $font-size:                 ceil($font-size-large * 1.2),
+    $line-height:               $line-height-large,
+    $is-default:                true
+);
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>较小尺寸</td>
+<td colspan="2">
+{% highlight scss %}
+$element-box-map: set-element-box-map(
+    $name:                      s,
+    $padding-vertical:          4px,
+    $padding-horizontal:        9px,
+    $border-width:              1px,
+    $border-radius:             3px,
+    $font-size:                 $font-size-small,
+    $line-height:               $line-height-small,
+    $is-default:                true
+);
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>超小尺寸</td>
+<td colspan="2">
+{% highlight scss %}
+$element-box-map: set-element-box-map(
+    $name:                      xs,
+    $padding-vertical:          2px,
+    $padding-horizontal:        6px,
+    $border-width:              1px,
+    $border-radius:             3px,
+    $font-size:                 $font-size-small,
+    $line-height:               $line-height-small,
+    $is-default:                true
+);
+{% endhighlight %}
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
 ## Setings, Functions, Mixins
 
 ### size
