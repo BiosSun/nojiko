@@ -6,28 +6,36 @@
 
 @function set-element-box-map(
     $name,
-    $padding-vertical,
-    $padding-horizontal,
-    $border-width,
-    $border-radius,
-    $font-size,
-    $line-height,
-    $is-default: false
+    $padding-vertical: null,
+    $padding-horizontal: null,
+    $border-width: null,
+    $border-radius: null,
+    $font-size: null,
+    $line-height: null,
+    $is-default: false,
+    $is-merge: false
 ) {
+
     @if global-variable-exists(element-box-map) == false {
         $element-box-map: () !global;
     }
 
     // set map
     @if (is-default($is-default) and map-has-key($element-box-map, $name)) == false {
-        @return map-set($element-box-map, $name, (
-                            padding-vertical: $padding-vertical,
-                            padding-horizontal: $padding-horizontal,
-                            border-width: $border-width,
-                            font-size: $font-size,
-                            line-height: $line-height,
-                            border-radius: $border-radius
-                        ));
+        $map: (
+            padding-vertical: $padding-vertical,
+            padding-horizontal: $padding-horizontal,
+            border-width: $border-width,
+            font-size: $font-size,
+            line-height: $line-height,
+            border-radius: $border-radius
+        );
+
+        @if is-merge($is-merge) {
+            $map: map-merge(map-get($element-box-map, $name), map);
+        }
+
+        @return map-set($element-box-map, $name, $map);
     }
     @else {
         @return $element-box-map;
