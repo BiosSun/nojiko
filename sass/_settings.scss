@@ -72,31 +72,31 @@ $link-visited-color:            $link-color                !default;
 $line-color:                    #d7d7d7                    !default;
 
 // 配色集合
-$color-maps:                    set-color-map(success, $primary-color, default);
+$color-maps:                    set-color-maps(success, $primary-color, default);
 
 // 成功状态配色
-$color-maps:                    set-color-map(success, #5cb85c, default);
+$color-maps:                    set-color-maps(success, #5cb85c, default);
 
 // 信息状态配色
-$color-maps:                    set-color-map(info,    #5bc0de, default);
+$color-maps:                    set-color-maps(info,    #5bc0de, default);
 
 // 警告状态配色
-$color-maps:                    set-color-map(warning, #f0ad4e, default);
+$color-maps:                    set-color-maps(warning, #f0ad4e, default);
 
 // 错误状态配色
-$color-maps:                    set-color-map(danger,  #d9534f, default);
+$color-maps:                    set-color-maps(danger,  #d9534f, default);
 
 // 成功状态备选色
-$alternative-color-map:         set-alternative-color-map(success, #dff0d8, #3c763d, default);
+$alternative-color-maps:        set-alternative-color-maps(success, #dff0d8, #3c763d, default);
 
 // 信息状态备选色
-$alternative-color-map:         set-alternative-color-map(info,    #d9edf7, #31708f, default);
+$alternative-color-maps:        set-alternative-color-maps(info,    #d9edf7, #31708f, default);
 
 // 警告状态备选色
-$alternative-color-map:         set-alternative-color-map(warning, #fcf8e3, #8a6d3b, default);
+$alternative-color-maps:        set-alternative-color-maps(warning, #fcf8e3, #8a6d3b, default);
 
 // 异常状态备选色
-$alternative-color-map:         set-alternative-color-map(danger,  #f2dede, #a94442, default);
+$alternative-color-maps:        set-alternative-color-maps(danger,  #f2dede, #a94442, default);
 
 
 // 尺寸
@@ -109,7 +109,7 @@ $default-box-sizing:            content-box               !default;
 $default-element-box-name:      m                         !default;
 
 // 普通尺寸
-$element-box-map: set-element-box-map(
+$element-box-maps: set-element-box-maps(
     $name:                      m,
     $padding-vertical:          6px,
     $padding-horizontal:        12px,
@@ -121,7 +121,7 @@ $element-box-map: set-element-box-map(
 );
 
 // 较大尺寸
-$element-box-map: set-element-box-map(
+$element-box-maps: set-element-box-maps(
     $name:                      l,
     $padding-vertical:          10px,
     $padding-horizontal:        16px,
@@ -133,7 +133,7 @@ $element-box-map: set-element-box-map(
 );
 
 // 超大尺寸
-$element-box-map: set-element-box-map(
+$element-box-maps: set-element-box-maps(
     $name:                      xl,
     $padding-vertical:          13px,
     $padding-horizontal:        22px,
@@ -145,7 +145,7 @@ $element-box-map: set-element-box-map(
 );
 
 // 较小尺寸
-$element-box-map: set-element-box-map(
+$element-box-maps: set-element-box-maps(
     $name:                      s,
     $padding-vertical:          4px,
     $padding-horizontal:        9px,
@@ -157,7 +157,7 @@ $element-box-map: set-element-box-map(
 );
 
 // 超小尺寸
-$element-box-map: set-element-box-map(
+$element-box-maps: set-element-box-maps(
     $name:                      xs,
     $padding-vertical:          2px,
     $padding-horizontal:        6px,

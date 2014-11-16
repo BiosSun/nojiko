@@ -5,22 +5,31 @@
 
 ## 0.4.4
 
+- **[danger]** 将 `set-alternative-color-map` 函数改为 `set-alternative-color-maps`；
+- **[danger]** 将 `alternative-color-map` 配置变量改为 `alternative-color-maps`；
+- **[danger]** 将 `set-color-map` 函数改为 `set-color-maps`；
+- **[danger]** 将 `set-element-box-map` 函数改为 `set-element-box-maps`；
+- **[danger]** 将 `element-box-map` 配置变量改为 `element-box-maps`；
 - 添加元类 `.block`（`.db`），设置元素 display 为 block；
 - 添加元类 `.inline`（`.di`），设置元素 display 为 inline；
-- 添加元类 `.inline-block`（`.dib`），设置元素 display 为 inline-block。
+- 添加元类 `.inline-block`（`.dib`），设置元素 display 为 inline-block；
+
 
 ## 0.4.3
 
 - 添加混入类 `set-element-box-by-name-b`，用于在设置元素盒尺寸的同时移除边框。
 - 添加混入类 `set-element-box-by-name-bh`，用于在设置元素盒尺寸的同时移除边框及水平外边距。
 
+
 ## 0.4.2
 
 - **[debug]** 外边距元类使用像素值时，外边距都为 0。
 
+
 ## 0.4.1
 
 - **[danger]** scaffolding 中不再设置链接的 `:visited` 样式。
+
 
 ## 0.4.0
 

@@ -1,18 +1,18 @@
 @charset "utf-8";
 
 // -----------------------------------------------------------------------------
-// 该方法用于操纵全局备选配色集合
+// 该方法用于操纵全局配色集合
 // -----------------------------------------------------------------------------
 
-@function set-alternative-color-map(
+@function set-color-maps(
     $name,
     $color,
     $text: null,
     $border: null,
     $is-default: false
 ) {
-    @if global-variable-exists(alternative-color-map) == false {
-        $alternative-color-map: () !global;
+    @if global-variable-exists(color-maps) == false {
+        $color-maps: () !global;
     }
 
     @if is-default($text) {
@@ -33,13 +33,13 @@
 
     // set map
     @if (is-default($is-default) and map-has-key($color-maps, $name)) == false {
-        @return map-set($alternative-color-map, $name, (
+        @return map-set($color-maps, $name, (
                             color: $color,
                             border: $border,
                             text: $text
                         ));
     }
     @else {
-        @return $alternative-color-map;
+        @return $color-maps;
     }
 }

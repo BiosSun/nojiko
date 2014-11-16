@@ -4,7 +4,7 @@
 // 设置盒模型集合
 // =============================================================================
 
-@function set-element-box-map(
+@function set-element-box-maps(
     $name,
     $padding-vertical: null,
     $padding-horizontal: null,
@@ -16,12 +16,12 @@
     $is-merge: false
 ) {
 
-    @if global-variable-exists(element-box-map) == false {
-        $element-box-map: () !global;
+    @if global-variable-exists(element-box-maps) == false {
+        $element-box-maps: () !global;
     }
 
     // set map
-    @if (is-default($is-default) and map-has-key($element-box-map, $name)) == false {
+    @if (is-default($is-default) and map-has-key($element-box-maps, $name)) == false {
         $map: (
             padding-vertical: $padding-vertical,
             padding-horizontal: $padding-horizontal,
@@ -32,12 +32,12 @@
         );
 
         @if is-merge($is-merge) {
-            $map: map-merge(map-get($element-box-map, $name), map);
+            $map: map-merge(map-get($element-box-maps, $name), map);
         }
 
-        @return map-set($element-box-map, $name, $map);
+        @return map-set($element-box-maps, $name, $map);
     }
     @else {
-        @return $element-box-map;
+        @return $element-box-maps;
     }
 }
