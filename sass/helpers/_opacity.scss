@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    @if $support-for-ie6 or $support-for-ie7 or $support-for-ie8 {
+        filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
+    }
+}
+
+@mixin transparent {
+    @include opacity(0);
+}
+
+@mixin opaque {
+    @include opacity(1);
+}
