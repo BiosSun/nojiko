@@ -10,6 +10,7 @@
 - **[danger]** 将 `set-element-box-by-name` 混入类改为 `element-box-by-name`；
 - **[danger]** 将 `set-element-box-by-name-b` 混入类改为 `element-box-by-name-b`；
 - **[danger]** 将 `set-element-box-by-name-bh` 混入类改为 `element-box-by-name-bh`；
+- 添加一个 `get-element-box-height-by-name` 函数
 
 
 ## 0.4.4
