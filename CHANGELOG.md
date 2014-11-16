@@ -3,6 +3,13 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [debug] 前缀的更新建议尽快更新。*
 
+## 0.4.6
+
+- **[debug]** `$primary-color` 在添加到 `$color-maps` 中的名称有误
+- 添加 `block-formatting-context` 混入类，用于给一个元素激活块级格式化上下文
+- 添加元类 `.block-formatting-context`（`.bfc`），用于给一个元素激活块级格式化上下文
+
+
 ## 0.4.5
 
 - **[danger]** 将 `set-element-box` 混入类改为 `element-box`；
