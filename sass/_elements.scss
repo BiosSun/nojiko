@@ -191,9 +191,9 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 
     @if $nojiko-el-size {
         @each $k, $v in $element-box-maps {
-            .#{$nojiko-el-size}#{$k}    { @include set-element-box-by-name($k);    }
-            .#{$nojiko-el-size}#{$k}-b  { @include set-element-box-by-name-b($k);  }
-            .#{$nojiko-el-size}#{$k}-bh { @include set-element-box-by-name-bh($k); }
+            .#{$nojiko-el-size}#{$k}    { @include element-box-by-name($k);    }
+            .#{$nojiko-el-size}#{$k}-b  { @include element-box-by-name-b($k);  }
+            .#{$nojiko-el-size}#{$k}-bh { @include element-box-by-name-bh($k); }
         }
 }
 

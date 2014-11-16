@@ -3,6 +3,15 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [debug] 前缀的更新建议尽快更新。*
 
+## 0.4.5
+
+- **[danger]** 将 `set-element-box` 混入类改为 `element-box`；
+- **[danger]** 将 `set-element-box-by-map` 混入类改为 `element-box-by-map`；
+- **[danger]** 将 `set-element-box-by-name` 混入类改为 `element-box-by-name`；
+- **[danger]** 将 `set-element-box-by-name-b` 混入类改为 `element-box-by-name-b`；
+- **[danger]** 将 `set-element-box-by-name-bh` 混入类改为 `element-box-by-name-bh`；
+
+
 ## 0.4.4
 
 - **[danger]** 将 `set-alternative-color-map` 函数改为 `set-alternative-color-maps`；

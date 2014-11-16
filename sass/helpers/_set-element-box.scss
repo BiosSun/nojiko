@@ -90,7 +90,7 @@
 // @param border-radius 圆角
 // =============================================================================
 
-@mixin set-element-box(
+@mixin element-box(
     $width:                null,
     $height:               null,
     $padding-vertical:     null,
@@ -142,10 +142,10 @@
     }
 }
 
-@mixin set-element-box-by-map(
+@mixin element-box-by-map(
     $map
 ) {
-    @include set-element-box(
+    @include element-box(
         map-get($map, width),
         map-get($map, height),
         map-get($map, padding-vertical),
@@ -157,7 +157,7 @@
     );
 }
 
-@mixin set-element-box-by-name(
+@mixin element-box-by-name(
     $name:                 null,
     $width:                null,
     $height:               null,
@@ -168,7 +168,7 @@
     $font-size:            null,
     $line-height:          null
 ) {
-    @include set-element-box-by-map(nojiko-get-distinctive-element-box-by-name(
+    @include element-box-by-map(nojiko-get-distinctive-element-box-by-name(
         $name,
         $width,
         $height,
@@ -186,7 +186,7 @@
 // 设置一个无边框的盒模型尺寸
 // 将该盒模型的边框设置为 0，并将原边框宽度分配到水平及垂直内边距上。
 // =============================================================================
-@mixin set-element-box-by-name-b(
+@mixin element-box-by-name-b(
     $name:                 null,
     $width:                null,
     $height:               null,
@@ -209,13 +209,13 @@
 
     $element-box: nojiko-transfer-element-box-border-width($element-box);
 
-    @include set-element-box-by-map($element-box);
+    @include element-box-by-map($element-box);
 }
 
 // =============================================================================
 // 设置一个无边框的且无水平内边距的盒模型尺寸
 // =============================================================================
-@mixin set-element-box-by-name-bh(
+@mixin element-box-by-name-bh(
     $name:                 null,
     $width:                null,
     $height:               null,
@@ -239,5 +239,5 @@
     $element-box: nojiko-transfer-element-box-border-width($element-box);
     $element-box: nojiko-trim-element-box-padding-horizontal($element-box);
 
-    @include set-element-box-by-map($element-box);
+    @include element-box-by-map($element-box);
 }
