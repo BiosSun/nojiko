@@ -72,7 +72,7 @@ $link-visited-color:            $link-color                !default;
 $line-color:                    #d7d7d7                    !default;
 
 // 配色集合
-$color-maps:                    set-color-maps(success, $primary-color, default);
+$color-maps:                    set-color-maps(primary, $primary-color, default);
 
 // 成功状态配色
 $color-maps:                    set-color-maps(success, #5cb85c, default);

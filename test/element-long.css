@@ -445,8 +445,12 @@
   clear: both;
 }
 
-.background-success {
+.background-primary {
   background: #428bca;
+}
+
+.background-success {
+  background: #5cb85c;
 }
 
 .background-info {
@@ -471,11 +475,21 @@
   margin-right: 1px;
 }
 
-.foreground-success {
+.foreground-primary {
   color: #428bca;
 }
-.foreground-success a {
+.foreground-primary a {
   color: #428bca;
+  font-weight: 700;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.foreground-success {
+  color: #5cb85c;
+}
+.foreground-success a {
+  color: #5cb85c;
   font-weight: 700;
   margin-left: 1px;
   margin-right: 1px;
