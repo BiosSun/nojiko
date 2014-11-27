@@ -4,6 +4,8 @@
 // 该方法用于操纵全局配色集合
 // -----------------------------------------------------------------------------
 
+$color-maps: () !default;
+
 @function set-color-maps(
     $name,
     $color,
@@ -11,10 +13,6 @@
     $border: null,
     $is-default: false
 ) {
-    @if global-variable-exists(color-maps) == false {
-        $color-maps: () !global;
-    }
-
     @if is-default($text) {
         $is-default: true;
         $text: null;

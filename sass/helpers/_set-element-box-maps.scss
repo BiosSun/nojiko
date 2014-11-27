@@ -4,6 +4,8 @@
 // 设置盒模型集合
 // =============================================================================
 
+$element-box-maps: () !default;
+
 @function set-element-box-maps(
     $name,
     $padding-vertical: null,
@@ -15,11 +17,6 @@
     $is-default: false,
     $is-merge: false
 ) {
-
-    @if global-variable-exists(element-box-maps) == false {
-        $element-box-maps: () !global;
-    }
-
     // set map
     @if (is-default($is-default) and map-has-key($element-box-maps, $name)) == false {
         $map: (

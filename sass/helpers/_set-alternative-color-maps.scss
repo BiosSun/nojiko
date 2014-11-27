@@ -4,6 +4,8 @@
 // 该方法用于操纵全局备选配色集合
 // -----------------------------------------------------------------------------
 
+$alternative-color-maps: () !default;
+
 @function set-alternative-color-maps(
     $name,
     $color,
@@ -11,10 +13,6 @@
     $border: null,
     $is-default: false
 ) {
-    @if global-variable-exists(alternative-color-maps) == false {
-        $alternative-color-maps: () !global;
-    }
-
     @if is-default($text) {
         $is-default: true;
         $text: null;
