@@ -7,7 +7,7 @@
 //    position(absolute, 20px 0 0, 1000);
 // ===========================================================================================================
 
-@mixin position($position: relative, $coordinates: false false false false, $z-index: false) {
+@mixin position($position: relative, $coordinates: null null null null, $z-index: null) {
     position: $position;
 
     $coordinates: nojiko-expand($coordinates);
