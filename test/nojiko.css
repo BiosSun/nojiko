@@ -143,4 +143,26 @@ input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:ac
   height: 44px;
 }
 
+.padding {
+  padding: 1px;
+  padding: 1px 2px;
+  padding: 1px 2px 3px;
+  padding: 1px 2px 3px 4px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  padding-top: 1px;
+}
+
+.margin {
+  margin: 1px;
+  margin: 1px 2px;
+  margin: 1px 2px 3px;
+  margin: 1px 2px 3px 4px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  margin-top: 1px;
+}
+
 /*# sourceMappingURL=nojiko.css.map */

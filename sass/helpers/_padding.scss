@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+// ===========================================================================================================
+// padding 的速写格式
+//
+// example:
+//   padding(1px);               // 1px 1px 1px 1px
+//   padding(1px null);          // 1px 2px 1px 2px
+// ===========================================================================================================
+
+@mixin padding($vals) {
+    $coordinates: nojiko-expand($vals);
+
+    $top:    nth($coordinates, 1);
+    $right:  nth($coordinates, 2);
+    $bottom: nth($coordinates, 3);
+    $left:   nth($coordinates, 4);
+
+    @if $top and $right and $bottom and $left {
+        padding: $vals;
+    }
+    @else {
+        @if $top {
+            padding-top: $top;
+        }
+
+        @if $right {
+            padding-right: $right;
+        }
+        @if $bottom {
+            padding-bottom: $bottom;
+        }
+        @if $left {
+            padding-left: $left;
+        }
+    }
+}

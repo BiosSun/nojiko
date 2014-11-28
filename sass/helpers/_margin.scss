@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+// ===========================================================================================================
+// margin 的速写格式
+//
+// example:
+//   margin(1px);               // 1px 1px 1px 1px
+//   margin(1px null);          // 1px 2px 1px 2px
+// ===========================================================================================================
+
+@mixin margin($vals) {
+    $coordinates: nojiko-expand($vals);
+
+    $top:    nth($coordinates, 1);
+    $right:  nth($coordinates, 2);
+    $bottom: nth($coordinates, 3);
+    $left:   nth($coordinates, 4);
+
+    @if $top and $right and $bottom and $left {
+        margin: $vals;
+    }
+    @else {
+        @if $top {
+            margin-top: $top;
+        }
+
+        @if $right {
+            margin-right: $right;
+        }
+        @if $bottom {
+            margin-bottom: $bottom;
+        }
+        @if $left {
+            margin-left: $left;
+        }
+    }
+}
