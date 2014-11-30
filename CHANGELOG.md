@@ -3,9 +3,16 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [debug] 前缀的更新建议尽快更新。*
 
+## 0.4.9
+
+- 更新 normalize.css 到最新的 3.0.2
+- 添加 margin 混入类
+- 添加 padding 混入类
+- position 混入类中的参数的默认值由 false 改为 null
+
 ## 0.4.8
 
-- **[debug]** 解决在 windows 版本的 node-sass 中，不支持在函数内的 @if 条件语句内使用 !global 标签定义变量，抛出空指针异常的问题。
+- **[debug]** 解决在 windows 版本的 node-sass 中，不支持在函数内的 @if 条件语句内使用 !global 标签定义变量，抛出空指针异常的问题
 
 ## 0.4.7
 
