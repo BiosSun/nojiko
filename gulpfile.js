@@ -60,19 +60,7 @@ gulp.task('nojiko', function() {
     .pipe(gulp.dest('./sass'));
 });
 
-gulp.task('reset', function() {
-    gulp.src([
-        './sass/reset/_nojiko-normalize.scss',
-        './sass/reset/_nojiko-normalize-supplement.scss',
-        './sass/reset/_nojiko-exhaustive.scss',
-        './sass/reset/_reset.scss'
-    ])
-    .pipe(concat('_reset.scss'))
-    .pipe(header('@charset "utf-8";\n\n'))
-    .pipe(gulp.dest('./sass'));
-});
-
-gulp.task('test', ['nojiko', 'reset'], function() {
+gulp.task('test', ['nojiko'], function() {
     gulp.src('./test/**/*.{scss,sass}')
         .pipe(sass())
         .pipe(gulp.dest('./test'));
@@ -82,4 +70,4 @@ gulp.task('test', ['nojiko', 'reset'], function() {
 gulp.task('watch', function() {
 });
 
-gulp.task('default', ['nojiko', 'reset', 'test']);
+gulp.task('default', ['nojiko', 'test']);
