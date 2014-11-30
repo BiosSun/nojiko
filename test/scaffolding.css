@@ -1,33 +1,26 @@
 /*!
- * Nojiko - 0.4.8
+ * nojiko - 0.4.8
  * normalize.css - 3.0.1
- * @license: MIT
- * @url: http://github.com/biossun/nojiko
+ * @license: MIT  - https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT
+ * @url: https://github.com/BiosSun/nojiko
  */
 body {
   font: 14px/1.42857 Georgia, "Times New Roman", Times, serif;
   color: #333333;
-  background: #fff;
-}
+  background: #fff; }
 
 a {
   text-decoration: none;
-  color: #428bca;
-}
-a:focus, a:hover {
-  color: #2a6496;
-  text-decoration: underline;
-}
+  color: #428bca; }
+  a:focus, a:hover {
+    color: #2a6496;
+    text-decoration: underline; }
 
 img {
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #d7d7d7;
-}
-
-/*# sourceMappingURL=scaffolding.css.map */
+  border-top: 1px solid #d7d7d7; }

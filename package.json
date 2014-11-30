@@ -2,13 +2,21 @@
   "name": "nojiko",
   "version": "0.4.8",
   "description": "a base style lib.",
+  "homepage": "https://github.com/BiosSun/nojiko",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT"
+    }
+  ],
   "dependencies": {},
   "devDependencies": {
     "commander": "^2.5.0",
-    "grunt": "~0.4.1",
-    "grunt-contrib-sass": "^0.7.4",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-init": "^0.3.2",
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.2",
+    "gulp-header": "^1.2.2",
+    "gulp-sass": "^1.2.3",
+    "gulp-watch": "^2.0.0",
     "load-grunt-tasks": "^0.6.0",
     "time-grunt": "^0.4.0"
   }

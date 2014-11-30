@@ -1,0 +1,130 @@
+@charset "utf-8"
+
+@import '../sass/nojiko';
+@import '../sass/settings';
+
+.nojiko-expand {
+    margin: nojiko-expand(1px);
+    margin: nojiko-expand(1px 2px);
+    margin: nojiko-expand(1px 2px 3px);
+    margin: nojiko-expand(1px 2px 3px 4px);
+}
+
+.nojiko-attach-inputs {
+    inputs: nojiko-attach-inputs('input[text]' 'input[password]');
+    inputs: nojiko-attach-inputs('input[text]' 'input[password]', ':hover');
+    inputs: nojiko-attach-inputs('input[text]' 'input[password]', ':focus');
+}
+
+#{$ALL-TEXT-INPUTS} {
+    color: #777;
+}
+#{$ALL-TEXT-INPUTS-HOVER} {
+    color: #777;
+}
+#{$ALL-TEXT-INPUTS-FOCUS} {
+    color: #777;
+}
+
+#{$ALL-BUTTON-INPUTS} {
+    color: #777;
+}
+#{$ALL-BUTTON-INPUTS-HOVER} {
+    color: #777;
+}
+#{$ALL-BUTTON-INPUTS-FOCUS} {
+    color: #777;
+}
+#{$ALL-BUTTON-INPUTS-ACTIVE} {
+    color: #777;
+}
+
+.font-familys {
+    font-family: $FONT-FAMILY-SANS-SERIF;
+    font-family: $FONT-FAMILY-SERIF;
+    font-family: $FONT-FAMILY-FIXED-FONT;
+    font-family: $FONT-FAMILY-CHINESE-SANS-SERIF;
+}
+
+.is-light {
+    color: is-light(#fff);
+    color: is-light(#000);
+    color: is-dark(#fff);
+    color: is-dark(#000);
+}
+
+.size {
+    @include size(10px);
+    @include size(10px, 20px);
+    @include size(10px, false);
+}
+
+.position {
+    @include position(absolute, 20px 0 0, 1000);
+    @include position(absolute, 20px 0 0);
+}
+
+.translucent-background {
+    @include translucent-bgcolor(rgba(0, 0, 0, .2));
+    @include translucent-bgcolor(#fff, 0.2);
+}
+
+.float {
+    @include float(left);
+    @include float(right);
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.hide-text {
+    @include hide-text;
+}
+
+.map-extend {
+    $map: map-extend((a: 1px), (a: null, b: 2px));
+    color: map-get($map, a);
+    color: map-get($map, b);
+    $map: map-extend((a: 1px), (a: 2px, b: 2px));
+    color: map-get($map, a);
+    color: map-get($map, b);
+}
+
+.get-element-box-height-by-name {
+    height: get-element-box-height-by-name(m);
+    height: get-element-box-height-by-name(l);
+    height: get-element-box-height-by-name(xl);
+    height: get-element-box-height-by-name(s);
+    height: get-element-box-height-by-name(xs);
+    height: get-element-box-height-by-name(m, border-box);
+    height: get-element-box-height-by-name(l, border-box);
+    height: get-element-box-height-by-name(xl, border-box);
+    height: get-element-box-height-by-name(s, border-box);
+    height: get-element-box-height-by-name(xs, border-box);
+    height: get-element-box-height-by-name(m, border-box, 2);
+    height: get-element-box-height-by-name(l, border-box, 2);
+    height: get-element-box-height-by-name(xl, border-box, 2);
+    height: get-element-box-height-by-name(s, border-box, 2);
+    height: get-element-box-height-by-name(xs, border-box, 2);
+}
+
+.padding {
+    @include padding(1px);
+    @include padding(1px 2px);
+    @include padding(1px 2px 3px);
+    @include padding(1px 2px 3px 4px);
+    @include padding(1px null);
+    @include padding(1px null null);
+    @include padding(1px null null null);
+}
+
+.margin {
+    @include margin(1px);
+    @include margin(1px 2px);
+    @include margin(1px 2px 3px);
+    @include margin(1px 2px 3px 4px);
+    @include margin(1px null);
+    @include margin(1px null null);
+    @include margin(1px null null null);
+}
