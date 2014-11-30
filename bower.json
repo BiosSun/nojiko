@@ -12,7 +12,8 @@
         ".jshintrc",
         "doc/",
         "test/",
-        "bin/"
+        "bin/",
+        "sass/helpers/"
     ],
     "keywords": [
         "nojiko",
