@@ -11,7 +11,7 @@ var banner =
         '\n' +
         '/*!\n' +
         ' * <%= pkg.name %> - <%= pkg.version %>\n' +
-        ' * normalize.css - 3.0.1\n' +
+        ' * normalize.css - 3.0.2\n' +
         ' * @license: <%= pkg.licenses[0].type %>  - <%= pkg.licenses[0].url %>\n' +
         ' * @url: <%= pkg.homepage %>\n' +
         ' */\n\n';
