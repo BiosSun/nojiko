@@ -11,7 +11,7 @@
     height: 0;
     font: 0/0 a;
 
-    @include position(relative, -1px false false false);
+    @include position(relative, -1px false false);
 
     @if $support-for-ie6 or $support-for-ie7 {
         *top: 0;
