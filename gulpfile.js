@@ -61,7 +61,7 @@ gulp.task('nojiko', function() {
 });
 
 gulp.task('test', ['nojiko'], function() {
-    gulp.src('./test/**/*.{scss,sass}')
+    gulp.src('./test/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('./test'));
 });
