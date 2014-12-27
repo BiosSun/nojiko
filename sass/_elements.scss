@@ -92,6 +92,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     $nojiko-el-text-bold:                     text-bold                  !default !global;
     $nojiko-el-text-italic:                   text-italic                !default !global;
     $nojiko-el-text-underline:                text-underline             !default !global;
+    $nojiko-el-text-del:                      text-del                   !default !global;
 
     // 其它
     // -----------------
@@ -181,6 +182,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     $nojiko-el-text-bold:                     b                          !default !global;
     $nojiko-el-text-italic:                   i                          !default !global;
     $nojiko-el-text-underline:                u                          !default !global;
+    $nojiko-el-text-del:                      d                          !default !global;
 
     // 其它
     // -----------------
@@ -381,9 +383,10 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 
 // 文字样式
 // ---------------------------
-@if $nojiko-el-text-bold      { .#{$nojiko-el-text-bold}       { font-weight: bold;           } }
-@if $nojiko-el-text-italic    { .#{$nojiko-el-text-italic}     { font-style: italic;          } }
-@if $nojiko-el-text-underline { .#{$nojiko-el-text-underline}  { text-decoration: underline;  } }
+@if $nojiko-el-text-bold      { .#{$nojiko-el-text-bold}       { font-weight: bold;              } }
+@if $nojiko-el-text-italic    { .#{$nojiko-el-text-italic}     { font-style: italic;             } }
+@if $nojiko-el-text-underline { .#{$nojiko-el-text-underline}  { text-decoration: underline;     } }
+@if $nojiko-el-text-del       { .#{$nojiko-el-text-del}        { text-decoration: line-through;  } }
 
 
 // 文字对齐

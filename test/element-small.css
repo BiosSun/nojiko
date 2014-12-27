@@ -489,6 +489,9 @@
 .u {
   text-decoration: underline; }
 
+.d {
+  text-decoration: line-through; }
+
 .tl {
   text-align: left; }
 
