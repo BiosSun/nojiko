@@ -13,6 +13,14 @@ $support-for-ie7:               true !default;
 $support-for-ie8:               true !default;
 
 
+// 目录路径
+// ---------------------------
+
+// 存放图片文件的目录的路径
+$images-path:                   '../images/';
+// 存放字体文件的目录的路径
+$fonts-path:                    '../fonts/';
+
 // 文字
 // ---------------------------
 
