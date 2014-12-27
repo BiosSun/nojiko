@@ -100,7 +100,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     $nojiko-el-text-overflow:                 text-overflow              !default !global;
 
     // 包含一个字符 '|' 的元素，通常用于分隔其他行内元素
-    $nojiko-el-separator-line:                text-line                  !default !global;
+    $nojiko-el-separator-line:                separator-line             !default !global;
 
     // 小三角箭头
     $nojiko-el-arrow:                         arrow                      !default !global;
@@ -189,7 +189,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     $nojiko-el-text-overflow:                 to                         !default !global;
 
     // 包含一个字符 '|' 的元素，通常用于分隔其他行内元素
-    $nojiko-el-separator-line:                el                         !default !global;
+    $nojiko-el-separator-line:                sl                         !default !global;
 
     // 小三角箭头
     $nojiko-el-arrow:                         ar                         !default !global;

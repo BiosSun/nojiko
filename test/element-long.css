@@ -503,7 +503,7 @@
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-line {
+.separator-line {
   display: inline-block;
   vertical-align: middle;
   *zoom: 1;
