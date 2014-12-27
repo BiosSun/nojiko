@@ -318,10 +318,11 @@
 .width-100p {
   width: 100%; }
 
-.hide {
-  display: none; }
+.hidden {
+  display: none !important;
+  visibility: hidden; }
 
-.visually-hide {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -331,13 +332,16 @@
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
-.visually-hide-focused:active, .visually-hide-focused:focus {
+.visually-hidden-focusable:active, .visually-hidden-focusable:focus {
   position: static;
   width: auto;
   height: auto;
   margin: 0;
   overflow: visible;
   clip: auto; }
+
+.invisible {
+  visibility: hidden; }
 
 .float-left {
   float: left;

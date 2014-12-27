@@ -319,7 +319,8 @@
   width: 100%; }
 
 .h {
-  display: none; }
+  display: none !important;
+  visibility: hidden; }
 
 .hv {
   position: absolute;
@@ -331,13 +332,16 @@
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
-.hv-focused:active, .hv-focused:focus {
+.hv-focusable:active, .hv-focusable:focus {
   position: static;
   width: auto;
   height: auto;
   margin: 0;
   overflow: visible;
   clip: auto; }
+
+.hi {
+  visibility: hidden; }
 
 .fl {
   float: left;

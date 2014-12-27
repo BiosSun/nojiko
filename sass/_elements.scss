@@ -36,9 +36,11 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     // -----------------
 
     // 完全隐藏
-    $nojiko-el-hide:                          hide                       !default !global;
-    // 视觉隐藏，只在屏幕阅读器中显示
-    $nojiko-el-visually-hide:                 visually-hide              !default !global;
+    $nojiko-el-hidden:                        hidden                     !default !global;
+    // 视觉隐藏，但在屏幕阅读器中显示
+    $nojiko-el-visually-hidden:               visually-hidden            !default !global;
+    // 在视觉及屏幕阅读器中隐藏，但保持布局结构
+    $nojiko-el-invisible:                     invisible                  !default !global;
 
     // 浮动
     // -----------------
@@ -123,9 +125,11 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     // -----------------
 
     // 完全隐藏
-    $nojiko-el-hide:                          h                          !default !global;
+    $nojiko-el-hidden:                        h                          !default !global;
     // 视觉隐藏，只在屏幕阅读器中显示
-    $nojiko-el-visually-hide:                 hv                         !default !global;
+    $nojiko-el-visually-hidden:               hv                         !default !global;
+    // 在视觉及屏幕阅读器中隐藏，但保持布局结构
+    $nojiko-el-invisible:                     hi                         !default !global;
 
     // 浮动
     // -----------------
@@ -285,10 +289,10 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 // 隐藏元素
 // ---------------------------
 
-@if $nojiko-el-hide { .#{$nojiko-el-hide} { display: none; } }
+@if $nojiko-el-hidden { .#{$nojiko-el-hidden} { display: none !important; visibility: hidden; } }
 
-@if $nojiko-el-visually-hide {
-    .#{$nojiko-el-visually-hide} {
+@if $nojiko-el-visually-hidden {
+    .#{$nojiko-el-visually-hidden} {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -299,7 +303,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
         border: 0;
     }
 
-    .#{$nojiko-el-visually-hide}-focused {
+    .#{$nojiko-el-visually-hidden}-focusable {
         &:active,
         &:focus {
             position: static;
@@ -309,6 +313,12 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
             overflow: visible;
             clip: auto;
         }
+    }
+}
+
+@if $nojiko-el-invisible {
+    .#{$nojiko-el-invisible} {
+        visibility: hidden;
     }
 }
 
