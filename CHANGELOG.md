@@ -3,6 +3,19 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [debug] 前缀的更新建议尽快更新。*
 
+## 0.4.10
+
+- **[danger]** 重构隐藏元素类，其修改细节如下：
+  - 元素类配置变量名 $nojiko-el-hide 改为 $nojiko-el-hidden
+  - 元素类配置变量名 $nojiko-el-visually-hide 改为 $nojiko-el-visually-hidden
+  - 长元素类名 .hide 改为 .hidden
+  - 长元素类名 .visually-hide 改为 .visually-hidden
+  - .hide 元素类中的 `display: none;` 添加 `!important`，并添加设置 `visibility: hidden;`
+- 添加元素类 .invisible 用于将一个元素从视觉及屏幕阅读器中隐藏，但仍保留布局
+- 添加 $images-path 用于设置图片目录路径
+- 添加 $fonts-path 用于设置字体目录路径
+
+
 ## 0.4.9
 
 - 更新 normalize.css 到最新的 3.0.2
@@ -25,7 +38,7 @@
 
 - **[debug]** `$primary-color` 在添加到 `$color-maps` 中的名称有误
 - 添加 `block-formatting-context` 混入类，用于给一个元素激活块级格式化上下文
-- 添加元类 `.block-formatting-context`（`.bfc`），用于给一个元素激活块级格式化上下文
+- 添加元素类 `.block-formatting-context`（`.bfc`），用于给一个元素激活块级格式化上下文
 
 
 ## 0.4.5
@@ -45,9 +58,9 @@
 - **[danger]** 将 `set-color-map` 函数改为 `set-color-maps`；
 - **[danger]** 将 `set-element-box-map` 函数改为 `set-element-box-maps`；
 - **[danger]** 将 `element-box-map` 配置变量改为 `element-box-maps`；
-- 添加元类 `.block`（`.db`），设置元素 display 为 block；
-- 添加元类 `.inline`（`.di`），设置元素 display 为 inline；
-- 添加元类 `.inline-block`（`.dib`），设置元素 display 为 inline-block；
+- 添加元素类 `.block`（`.db`），设置元素 display 为 block；
+- 添加元素类 `.inline`（`.di`），设置元素 display 为 inline；
+- 添加元素类 `.inline-block`（`.dib`），设置元素 display 为 inline-block；
 
 
 ## 0.4.3
@@ -58,7 +71,7 @@
 
 ## 0.4.2
 
-- **[debug]** 外边距元类使用像素值时，外边距都为 0。
+- **[debug]** 外边距元素类使用像素值时，外边距都为 0。
 
 
 ## 0.4.1
