@@ -3,6 +3,19 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [debug] 前缀的更新建议尽快更新。*
 
+## 0.4.11
+
+- **[danger]** 修改分隔符元素类的类名，其长类名由 `text-line` 改为 `separator-line`，短类名由 `el` 改为 `sl`
+- **[danger]** 修改文字加粗元素类的类名，其短类名由 `b` 改为 `tb`
+- **[danger]** 修改文字倾斜元素类的类名，其短类名由 `i` 改为 `ti`
+- **[danger]** 修改文字下划线元素类的类名，其短类名由 `u` 改为 `tu`
+- **[danger]** 修改默认图片路径为 `"../images"`
+- **[danger]** 修改默认字体文件路径为 `"../fonts"`
+- 添加删除线元素类 - `$nojiko-el-text-del`，长类名为 `text-del`，短类名为 `.td`
+- 添加文本两端对齐元素类 - `$nojiko-el-text-justify`，长类名为 `text-justify`，短类名为 `.tj`
+- 添加较大文本元素类 - `$nojiko-el-text-large`，长类名为 `text-large`，短类名为 `.tp`
+- 添加较小文本元素类 - `$nojiko-el-text-small`，长类名为 `text-small`，短类名为 `.tm`
+
 ## 0.4.10
 
 - **[danger]** 重构隐藏元素类，其修改细节如下：
