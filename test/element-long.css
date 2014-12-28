@@ -480,6 +480,15 @@
     display: block;
     line-height: 0; }
 
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
 .text-bold {
   font-weight: bold; }
 
@@ -492,14 +501,11 @@
 .text-del {
   text-decoration: line-through; }
 
-.text-left {
-  text-align: left; }
+.text-large {
+  font-size: 19px; }
 
-.text-right {
-  text-align: right; }
-
-.text-center {
-  text-align: center; }
+.text-small {
+  font-size: 13px; }
 
 .text-overflow {
   overflow: hidden;

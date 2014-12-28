@@ -79,20 +79,31 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     // 文字对齐
     // -----------------
 
-    // 内部文本左对齐的元素
+    // 文字左对齐
     $nojiko-el-text-left:                     text-left                  !default !global;
-    // 内部文本右对齐的元素
+    // 文字右对齐
     $nojiko-el-text-right:                    text-right                 !default !global;
-    // 内部文本居中对齐的元素
+    // 文字居中对齐
     $nojiko-el-text-center:                   text-center                !default !global;
+    // 文字两端对齐
+    $nojiko-el-text-justify:                  text-justify               !default !global;
 
     // 文字样式
     // -----------------
 
+    // 文字加粗
     $nojiko-el-text-bold:                     text-bold                  !default !global;
+    // 文字倾斜
     $nojiko-el-text-italic:                   text-italic                !default !global;
+    // 文字下划线
     $nojiko-el-text-underline:                text-underline             !default !global;
+    // 文字删除线
     $nojiko-el-text-del:                      text-del                   !default !global;
+
+    // 文字较大
+    $nojiko-el-text-large:                    text-large                 !default !global;
+    // 文字较小
+    $nojiko-el-text-small:                    text-small                 !default !global;
 
     // 其它
     // -----------------
@@ -169,20 +180,31 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     // 文字对齐
     // -----------------
 
-    // 内部文本左对齐的元素
+    // 文字左对齐
     $nojiko-el-text-left:                     tl                         !default !global;
-    // 内部文本右对齐的元素
+    // 文字右对齐
     $nojiko-el-text-right:                    tr                         !default !global;
-    // 内部文本居中对齐的元素
+    // 文字居中对齐
     $nojiko-el-text-center:                   tc                         !default !global;
+    // 文字两端对齐
+    $nojiko-el-text-justify:                  tj                         !default !global;
 
     // 文字样式
     // -----------------
 
-    $nojiko-el-text-bold:                     b                          !default !global;
-    $nojiko-el-text-italic:                   i                          !default !global;
-    $nojiko-el-text-underline:                u                          !default !global;
-    $nojiko-el-text-del:                      d                          !default !global;
+    // 文字加粗
+    $nojiko-el-text-bold:                     tb                         !default !global;
+    // 文字倾斜
+    $nojiko-el-text-italic:                   ti                         !default !global;
+    // 文字下划线
+    $nojiko-el-text-underline:                tu                         !default !global;
+    // 文字删除线
+    $nojiko-el-text-del:                      td                         !default !global;
+
+    // 文字较大
+    $nojiko-el-text-large:                    tp                         !default !global;
+    // 文字较小
+    $nojiko-el-text-small:                    tm                         !default !global;
 
     // 其它
     // -----------------
@@ -381,6 +403,14 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 @if $nojiko-el-block-formatting-context { .#{$nojiko-el-block-formatting-context} { @include block-formatting-context; } }
 
 
+// 文字对齐
+// ---------------------------
+
+@if $nojiko-el-text-left   { .#{$nojiko-el-text-left}   { text-align: left;   } }
+@if $nojiko-el-text-right  { .#{$nojiko-el-text-right}  { text-align: right;  } }
+@if $nojiko-el-text-center { .#{$nojiko-el-text-center} { text-align: center; } }
+
+
 // 文字样式
 // ---------------------------
 @if $nojiko-el-text-bold      { .#{$nojiko-el-text-bold}       { font-weight: bold;              } }
@@ -388,13 +418,8 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 @if $nojiko-el-text-underline { .#{$nojiko-el-text-underline}  { text-decoration: underline;     } }
 @if $nojiko-el-text-del       { .#{$nojiko-el-text-del}        { text-decoration: line-through;  } }
 
-
-// 文字对齐
-// ---------------------------
-
-@if $nojiko-el-text-left   { .#{$nojiko-el-text-left}   { text-align: left;   } }
-@if $nojiko-el-text-right  { .#{$nojiko-el-text-right}  { text-align: right;  } }
-@if $nojiko-el-text-center { .#{$nojiko-el-text-center} { text-align: center; } }
+@if $nojiko-el-text-large     { .#{$nojiko-el-text-large}      { font-size: $font-size-large;    } }
+@if $nojiko-el-text-small     { .#{$nojiko-el-text-small}      { font-size: $font-size-small;    } }
 
 
 // 文字单行，溢出显示省略号；需设定宽度

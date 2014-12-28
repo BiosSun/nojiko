@@ -480,18 +480,6 @@
     display: block;
     line-height: 0; }
 
-.b {
-  font-weight: bold; }
-
-.i {
-  font-style: italic; }
-
-.u {
-  text-decoration: underline; }
-
-.d {
-  text-decoration: line-through; }
-
 .tl {
   text-align: left; }
 
@@ -500,6 +488,24 @@
 
 .tc {
   text-align: center; }
+
+.tb {
+  font-weight: bold; }
+
+.ti {
+  font-style: italic; }
+
+.tu {
+  text-decoration: underline; }
+
+.td {
+  text-decoration: line-through; }
+
+.tp {
+  font-size: 19px; }
+
+.tm {
+  font-size: 13px; }
 
 .to {
   overflow: hidden;
