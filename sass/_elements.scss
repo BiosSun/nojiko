@@ -367,6 +367,26 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     .#{$nojiko-el-background-color}common {
         background: $background-color;
     }
+
+    .#{$nojiko-el-background-color}gray-darker {
+        background: $gray-darker;
+    }
+
+    .#{$nojiko-el-background-color}gray-dark {
+        background: $gray-dark;
+    }
+
+    .#{$nojiko-el-background-color}gray {
+        background: $gray;
+    }
+
+    .#{$nojiko-el-background-color}gray-light {
+        background: $gray-light;
+    }
+
+    .#{$nojiko-el-background-color}gray-lighter {
+        background: $gray-lighter;
+    }
 }
 
 @if $nojiko-el-foreground-color {

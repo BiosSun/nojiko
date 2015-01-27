@@ -377,6 +377,21 @@
 .background-common {
   background: #fff; }
 
+.background-gray-darker {
+  background: #222222; }
+
+.background-gray-dark {
+  background: #333333; }
+
+.background-gray {
+  background: #555555; }
+
+.background-gray-light {
+  background: #999999; }
+
+.background-gray-lighter {
+  background: #eeeeee; }
+
 .foreground-primary {
   color: #428bca; }
   .foreground-primary a {

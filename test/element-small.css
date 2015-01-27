@@ -377,6 +377,21 @@
 .bg-common {
   background: #fff; }
 
+.bg-gray-darker {
+  background: #222222; }
+
+.bg-gray-dark {
+  background: #333333; }
+
+.bg-gray {
+  background: #555555; }
+
+.bg-gray-light {
+  background: #999999; }
+
+.bg-gray-lighter {
+  background: #eeeeee; }
+
 .fg-primary {
   color: #428bca; }
   .fg-primary a {
