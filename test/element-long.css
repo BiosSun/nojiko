@@ -375,12 +375,7 @@
   background: #d9534f; }
 
 .background-common {
-  color: #fff; }
-  .background-common a {
-    color: #fff;
-    font-weight: 700;
-    margin-left: 1px;
-    margin-right: 1px; }
+  background: #fff; }
 
 .foreground-primary {
   color: #428bca; }

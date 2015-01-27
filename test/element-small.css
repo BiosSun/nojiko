@@ -375,12 +375,7 @@
   background: #d9534f; }
 
 .bg-common {
-  color: #fff; }
-  .bg-common a {
-    color: #fff;
-    font-weight: 700;
-    margin-left: 1px;
-    margin-right: 1px; }
+  background: #fff; }
 
 .fg-primary {
   color: #428bca; }

@@ -365,7 +365,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     }
 
     .#{$nojiko-el-background-color}common {
-        @include foreground-color($background-color);
+        background: $background-color;
     }
 }
 
