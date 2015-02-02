@@ -1,5 +1,5 @@
 /*!
- * nojiko - 0.4.11
+ * nojiko - 0.4.13
  * normalize.css - 3.0.2
  * @license: MIT  - https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT
  * @url: https://github.com/BiosSun/nojiko
@@ -110,96 +110,124 @@
   border-radius: 3px; }
 
 .m {
-  margin: 20px 20px; }
+  margin: 20px; }
 
-.mt {
+.mt, .mv {
   margin-top: 20px; }
 
-.mb {
+.mb, .mv {
   margin-bottom: 20px; }
 
-.ml {
+.ml, .mh {
   margin-left: 20px; }
 
-.mr {
-  margin-right: 20px; }
-
-.mv {
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
-.mh {
-  margin-left: 20px;
+.mr, .mh {
   margin-right: 20px; }
 
 .md {
-  margin: 40px 40px; }
+  margin: 40px; }
 
-.mtd {
+.mtd, .mvd {
   margin-top: 40px; }
 
-.mbd {
+.mbd, .mvd {
   margin-bottom: 40px; }
 
-.mld {
+.mld, .mhd {
   margin-left: 40px; }
 
-.mrd {
-  margin-right: 40px; }
-
-.mvd {
-  margin-top: 40px;
-  margin-bottom: 40px; }
-
-.mhd {
-  margin-left: 40px;
+.mrd, .mhd {
   margin-right: 40px; }
 
 .mx {
-  margin: 10px 10px; }
+  margin: 10px; }
 
-.mtx {
+.mtx, .mvx {
   margin-top: 10px; }
 
-.mbx {
+.mbx, .mvx {
   margin-bottom: 10px; }
 
-.mlx {
+.mlx, .mhx {
   margin-left: 10px; }
 
-.mrx {
-  margin-right: 10px; }
-
-.mvx {
-  margin-top: 10px;
-  margin-bottom: 10px; }
-
-.mhx {
-  margin-left: 10px;
+.mrx, .mhx {
   margin-right: 10px; }
 
 .m0 {
-  margin: 0px 0px; }
+  margin: 0px; }
 
-.mt0 {
+.mt0, .mv0 {
   margin-top: 0px; }
 
-.mb0 {
+.mb0, .mv0 {
   margin-bottom: 0px; }
 
-.ml0 {
+.ml0, .mh0 {
   margin-left: 0px; }
 
-.mr0 {
+.mr0, .mh0 {
   margin-right: 0px; }
 
-.mv0 {
-  margin-top: 0px;
-  margin-bottom: 0px; }
+.p {
+  padding: 20px; }
 
-.mh0 {
-  margin-left: 0px;
-  margin-right: 0px; }
+.pt, .pv {
+  padding-top: 20px; }
+
+.pb, .pv {
+  padding-bottom: 20px; }
+
+.pl, .ph {
+  padding-left: 20px; }
+
+.pr, .ph {
+  padding-right: 20px; }
+
+.pd {
+  padding: 40px; }
+
+.ptd, .pvd {
+  padding-top: 40px; }
+
+.pbd, .pvd {
+  padding-bottom: 40px; }
+
+.pld, .phd {
+  padding-left: 40px; }
+
+.prd, .phd {
+  padding-right: 40px; }
+
+.px {
+  padding: 10px; }
+
+.ptx, .pvx {
+  padding-top: 10px; }
+
+.pbx, .pvx {
+  padding-bottom: 10px; }
+
+.plx, .phx {
+  padding-left: 10px; }
+
+.prx, .phx {
+  padding-right: 10px; }
+
+.p0 {
+  padding: 0px; }
+
+.pt0, .pv0 {
+  padding-top: 0px; }
+
+.pb0, .pv0 {
+  padding-bottom: 0px; }
+
+.pl0, .ph0 {
+  padding-left: 0px; }
+
+.pr0, .ph0 {
+  padding-right: 0px; }
 
 .w0 {
   width: 0px; }

@@ -1,5 +1,5 @@
 /*!
- * nojiko - 0.4.11
+ * nojiko - 0.4.13
  * normalize.css - 3.0.2
  * @license: MIT  - https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT
  * @url: https://github.com/BiosSun/nojiko
@@ -110,96 +110,124 @@
   border-radius: 3px; }
 
 .margin-m {
-  margin: 20px 20px; }
+  margin: 20px; }
 
-.margin-top-m {
+.margin-top-m, .margin-vertical-m {
   margin-top: 20px; }
 
-.margin-bottom-m {
+.margin-bottom-m, .margin-vertical-m {
   margin-bottom: 20px; }
 
-.margin-left-m {
+.margin-left-m, .margin-horizontal-m {
   margin-left: 20px; }
 
-.margin-right-m {
-  margin-right: 20px; }
-
-.margin-vertical-m {
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
-.margin-horizontal-m {
-  margin-left: 20px;
+.margin-right-m, .margin-horizontal-m {
   margin-right: 20px; }
 
 .margin-d {
-  margin: 40px 40px; }
+  margin: 40px; }
 
-.margin-top-d {
+.margin-top-d, .margin-vertical-d {
   margin-top: 40px; }
 
-.margin-bottom-d {
+.margin-bottom-d, .margin-vertical-d {
   margin-bottom: 40px; }
 
-.margin-left-d {
+.margin-left-d, .margin-horizontal-d {
   margin-left: 40px; }
 
-.margin-right-d {
-  margin-right: 40px; }
-
-.margin-vertical-d {
-  margin-top: 40px;
-  margin-bottom: 40px; }
-
-.margin-horizontal-d {
-  margin-left: 40px;
+.margin-right-d, .margin-horizontal-d {
   margin-right: 40px; }
 
 .margin-x {
-  margin: 10px 10px; }
+  margin: 10px; }
 
-.margin-top-x {
+.margin-top-x, .margin-vertical-x {
   margin-top: 10px; }
 
-.margin-bottom-x {
+.margin-bottom-x, .margin-vertical-x {
   margin-bottom: 10px; }
 
-.margin-left-x {
+.margin-left-x, .margin-horizontal-x {
   margin-left: 10px; }
 
-.margin-right-x {
-  margin-right: 10px; }
-
-.margin-vertical-x {
-  margin-top: 10px;
-  margin-bottom: 10px; }
-
-.margin-horizontal-x {
-  margin-left: 10px;
+.margin-right-x, .margin-horizontal-x {
   margin-right: 10px; }
 
 .margin-0 {
-  margin: 0px 0px; }
+  margin: 0px; }
 
-.margin-top-0 {
+.margin-top-0, .margin-vertical-0 {
   margin-top: 0px; }
 
-.margin-bottom-0 {
+.margin-bottom-0, .margin-vertical-0 {
   margin-bottom: 0px; }
 
-.margin-left-0 {
+.margin-left-0, .margin-horizontal-0 {
   margin-left: 0px; }
 
-.margin-right-0 {
+.margin-right-0, .margin-horizontal-0 {
   margin-right: 0px; }
 
-.margin-vertical-0 {
-  margin-top: 0px;
-  margin-bottom: 0px; }
+.padding-p {
+  padding: 20px; }
 
-.margin-horizontal-0 {
-  margin-left: 0px;
-  margin-right: 0px; }
+.padding-top-p, .padding-vertical-p {
+  padding-top: 20px; }
+
+.padding-bottom-p, .padding-vertical-p {
+  padding-bottom: 20px; }
+
+.padding-left-p, .padding-horizontal-p {
+  padding-left: 20px; }
+
+.padding-right-p, .padding-horizontal-p {
+  padding-right: 20px; }
+
+.padding-d {
+  padding: 40px; }
+
+.padding-top-d, .padding-vertical-d {
+  padding-top: 40px; }
+
+.padding-bottom-d, .padding-vertical-d {
+  padding-bottom: 40px; }
+
+.padding-left-d, .padding-horizontal-d {
+  padding-left: 40px; }
+
+.padding-right-d, .padding-horizontal-d {
+  padding-right: 40px; }
+
+.padding-x {
+  padding: 10px; }
+
+.padding-top-x, .padding-vertical-x {
+  padding-top: 10px; }
+
+.padding-bottom-x, .padding-vertical-x {
+  padding-bottom: 10px; }
+
+.padding-left-x, .padding-horizontal-x {
+  padding-left: 10px; }
+
+.padding-right-x, .padding-horizontal-x {
+  padding-right: 10px; }
+
+.padding-0 {
+  padding: 0px; }
+
+.padding-top-0, .padding-vertical-0 {
+  padding-top: 0px; }
+
+.padding-bottom-0, .padding-vertical-0 {
+  padding-bottom: 0px; }
+
+.padding-left-0, .padding-horizontal-0 {
+  padding-left: 0px; }
+
+.padding-right-0, .padding-horizontal-0 {
+  padding-right: 0px; }
 
 .width-0 {
   width: 0px; }

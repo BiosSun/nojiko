@@ -42,6 +42,10 @@ h3 {
     padding-bottom: 0.7em;
 }
 
+h4 {
+    font-size: 1.4em;
+}
+
 table {
     width: 100%;
     border-collapse: inherit;
@@ -61,6 +65,14 @@ th {
 td {
     background: #f7f7f7;
     border-bottom: 1px solid #eee;
+}
+
+thead th {
+    background: #ddd;
+}
+
+pre {
+    margin: 0;
 }
 
 pre > code {
@@ -95,6 +107,16 @@ table pre > code {
     clear: both;
 }
 
+.code-left .title,
+.code-right .title {
+    display: block;
+    background: #e7e7e7;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 17px;
+}
+
 .code-left pre,
 .code-right pre {
     margin: 0;
@@ -111,6 +133,7 @@ table pre > code {
     float: left;
 }
 
+.code-left .title,
 .code-left code {
     border-right: 1px dashed #ccc;
 }
@@ -121,13 +144,12 @@ table pre > code {
 }
 
 #content {
-    margin-left: 200px;
+    margin-left: 271px;
     padding: 20px;
-    max-width: 900px;
 }
 
 #toc {
-    width: 199px;
+    width: 270px;
     padding: 20px 0;
 
     position: fixed;
