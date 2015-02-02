@@ -281,13 +281,52 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     $v: $v + 0px;
     $h: $h + 0px;
 
-    @if $nojiko-el-margin            { .#{$nojiko-el-margin}#{$name}            { margin:        $v $h;                     } }
-    @if $nojiko-el-margin-top        { .#{$nojiko-el-margin-top}#{$name}        { margin-top:    $v;                        } }
-    @if $nojiko-el-margin-bottom     { .#{$nojiko-el-margin-bottom}#{$name}     { margin-bottom: $v;                        } }
-    @if $nojiko-el-margin-left       { .#{$nojiko-el-margin-left}#{$name}       { margin-left:   $h;                        } }
-    @if $nojiko-el-margin-right      { .#{$nojiko-el-margin-right}#{$name}      { margin-right:  $h;                        } }
-    @if $nojiko-el-margin-vertical   { .#{$nojiko-el-margin-vertical}#{$name}   { margin-top:    $v;     margin-bottom: $v; } }
-    @if $nojiko-el-margin-horizontal { .#{$nojiko-el-margin-horizontal}#{$name} { margin-left:   $h;     margin-right:  $h; } }
+    @if $nojiko-el-margin {
+        .#{$nojiko-el-margin}#{$name} {
+            @if $v eq $h {
+                margin: $v;
+            }
+            @else {
+                margin: $v $h;
+            }
+        }
+    }
+
+    $ct: ();
+    $cb: ();
+    $cl: ();
+    $cr: ();
+
+    @if $nojiko-el-margin-top {
+        $ct: append($ct, unquote('.#{$nojiko-el-margin-top}#{$name}'), comma);
+    }
+
+    @if $nojiko-el-margin-bottom {
+        $cb: append($cb, unquote('.#{$nojiko-el-margin-bottom}#{$name}'), comma);
+    }
+
+    @if $nojiko-el-margin-left {
+        $cl: append($cl, unquote('.#{$nojiko-el-margin-left}#{$name}'), comma);
+    }
+
+    @if $nojiko-el-margin-right {
+        $cr: append($cr, unquote('.#{$nojiko-el-margin-right}#{$name}'), comma);
+    }
+
+    @if $nojiko-el-margin-vertical {
+        $ct: append($ct, unquote('.#{$nojiko-el-margin-vertical}#{$name}'), comma);
+        $cb: append($cb, unquote('.#{$nojiko-el-margin-vertical}#{$name}'), comma);
+    }
+
+    @if $nojiko-el-margin-horizontal {
+        $cl: append($cl, unquote('.#{$nojiko-el-margin-horizontal}#{$name}'), comma);
+        $cr: append($cr, unquote('.#{$nojiko-el-margin-horizontal}#{$name}'), comma);
+    }
+
+    @if length($ct) > 0 { #{$ct} { margin-top    : $v; } }
+    @if length($cb) > 0 { #{$cb} { margin-bottom : $v; } }
+    @if length($cl) > 0 { #{$cl} { margin-left   : $h; } }
+    @if length($cr) > 0 { #{$cr} { margin-right  : $h; } }
 }
 
 
