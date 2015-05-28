@@ -1,0 +1,6 @@
+port: 4008
+exclude: [.git, .gitignore, .sass-cache, node_modules, test, sass, "doc/"]
+
+markdown: redcarpet
+redcarpet:
+  extensions: [footnotes, fenced_code_blocks, autolink, tables, strikethrough, underline, superscript]
