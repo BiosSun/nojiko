@@ -1,8 +1,12 @@
+@charset "UTF-8";
 /*!
- * nojiko - 0.4.13
+ * nojiko - 0.4.14
  * normalize.css - 3.0.2
  * @license: MIT  - https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT
  * @url: https://github.com/BiosSun/nojiko
+ */
+/**
+ * 使用 SVG 背景图片来模拟实现超细边框
  */
 .size-m {
   padding: 6px 12px;
@@ -360,7 +364,8 @@
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
-.visually-hidden-focusable:active, .visually-hidden-focusable:focus {
+.visually-hidden-focusable:active,
+.visually-hidden-focusable:focus {
   position: static;
   width: auto;
   height: auto;
@@ -381,7 +386,8 @@
 
 .clear-float {
   *zoom: 1; }
-  .clear-float:before, .clear-float:after {
+  .clear-float:before,
+  .clear-float:after {
     content: " ";
     display: table; }
   .clear-float:after {

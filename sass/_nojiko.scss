@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*!
- * nojiko - 0.4.13
+ * nojiko - 0.4.14
  * normalize.css - 3.0.2
  * @license: MIT  - https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT
  * @url: https://github.com/BiosSun/nojiko
@@ -341,15 +341,17 @@ $element-box-maps: () !default;
     @return if(unit($line-height) == 'px', $line-height, floor($font-size * $line-height));
 }
 
-// ===========================================================================================================
-// 设置元素的宽度和高度
-//
-// @example:
-//    size(10px);
-//    size(10px, 20px);
-//    size(10px, false);
-// ===========================================================================================================
-
+/// 设置元素的宽度和高度
+///
+/// @output
+/// 如果只传入一个参数，则该参数将作为所设置元素的宽度及高度值；
+/// 如果传入两个参数，则第一个作为宽度值，而第二个作为高度值；
+/// 如果某一个值为 null，则不设置其对应的属性。
+///
+/// @example
+/// size(10px);
+/// size(10px, 20px);
+/// size(10px, false);
 @mixin size($w, $h: $w) {
     @if $w { width: $w;  }
     @if $h { height: $h; }
@@ -833,6 +835,40 @@ $element-box-maps: () !default;
         }
     }
 
+}
+
+@charset "utf-8";
+
+/**
+ * 使用 SVG 背景图片来模拟实现超细边框
+ */
+@function superfine-border($colors) {
+    $colors: nojiko-expand($colors);
+
+    $top-color:    nth($colors, 1);
+    $right-color:  nth($colors, 2);
+    $bottom-color: nth($colors, 3);
+    $left-color:   nth($colors, 4);
+
+    $result: ();
+
+    @if $top-color {
+        $result: append($result, unquote("top center/100% 1px no-repeat linear-gradient(180deg, #{$top-color}, #{$top-color} 50%, transparent 50%)"), comma);
+    }
+
+    @if $bottom-color {
+        $result: append($result, unquote("bottom center/100% 1px no-repeat linear-gradient(0deg, #{$bottom-color}, #{$bottom-color} 50%, transparent 50%)"), comma);
+    }
+
+    @if $left-color {
+        $result: append($result, unquote("center left/1px 100% no-repeat linear-gradient(90deg, #{$left-color}, #{$left-color} 50%, transparent 50%)"), comma);
+    }
+
+    @if $right-color {
+        $result: append($result, unquote("center right/1px 100% no-repeat linear-gradient(270deg, #{$right-color}, #{$right-color} 50%, transparent 50%)"), comma);
+    }
+
+    @return $result;
 }
 
 // ===========================================================================================================

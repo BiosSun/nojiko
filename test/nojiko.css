@@ -1,8 +1,12 @@
+@charset "UTF-8";
 /*!
- * nojiko - 0.4.13
+ * nojiko - 0.4.14
  * normalize.css - 3.0.2
  * @license: MIT  - https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT
  * @url: https://github.com/BiosSun/nojiko
+ */
+/**
+ * 使用 SVG 背景图片来模拟实现超细边框
  */
 .nojiko-expand {
   margin: 1px 1px 1px 1px;
@@ -86,7 +90,8 @@ input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:ac
 
 .clearfix {
   *zoom: 1; }
-  .clearfix:before, .clearfix:after {
+  .clearfix:before,
+  .clearfix:after {
     content: " ";
     display: table; }
   .clearfix:after {

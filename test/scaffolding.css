@@ -1,8 +1,12 @@
+@charset "UTF-8";
 /*!
- * nojiko - 0.4.13
+ * nojiko - 0.4.14
  * normalize.css - 3.0.2
  * @license: MIT  - https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT
  * @url: https://github.com/BiosSun/nojiko
+ */
+/**
+ * 使用 SVG 背景图片来模拟实现超细边框
  */
 body {
   font: 14px/1.42857 Georgia, "Times New Roman", Times, serif;

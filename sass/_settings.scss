@@ -1,9 +1,14 @@
 @charset "utf-8";
 
+////
+/// @group settings
+////
+
 // 兼容浏览器
 // ---------------------------
 
-// 是否支持 IE6
+/// 是否支持 IE6
+/// @type Boolean
 $support-for-ie6:               true !default;
 
 // 是否支持 IE7
