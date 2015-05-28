@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/**
+ * 使用 SVG 背景图片来模拟实现超细边框
+ */
+@function superfine-border($colors) {
+    $colors: nojiko-expand($colors);
+
+    $top-color:    nth($colors, 1);
+    $right-color:  nth($colors, 2);
+    $bottom-color: nth($colors, 3);
+    $left-color:   nth($colors, 4);
+
+    $result: ();
+
+    @if $top-color {
+        $result: append($result, unquote("top center/100% 1px no-repeat linear-gradient(180deg, #{$top-color}, #{$top-color} 50%, transparent 50%)"), comma);
+    }
+
+    @if $bottom-color {
+        $result: append($result, unquote("bottom center/100% 1px no-repeat linear-gradient(0deg, #{$bottom-color}, #{$bottom-color} 50%, transparent 50%)"), comma);
+    }
+
+    @if $left-color {
+        $result: append($result, unquote("center left/1px 100% no-repeat linear-gradient(90deg, #{$left-color}, #{$left-color} 50%, transparent 50%)"), comma);
+    }
+
+    @if $right-color {
+        $result: append($result, unquote("center right/1px 100% no-repeat linear-gradient(270deg, #{$right-color}, #{$right-color} 50%, transparent 50%)"), comma);
+    }
+
+    @return $result;
+}
