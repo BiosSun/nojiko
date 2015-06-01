@@ -2,6 +2,7 @@
 
 /**
  * 使用 SVG 背景图片来模拟实现超细边框
+ * @param $colors {<Color>} 四个边框颜色，支持缩写
  */
 @function superfine-border($colors) {
     $colors: nojiko-expand($colors);
@@ -30,4 +31,52 @@
     }
 
     @return $result;
+}
+
+/*
+ * 使用 SVG 背景图片来模拟实现顶部超细边框
+ * @param $color {Color} 边框颜色
+ */
+@function superfine-border-top($color) {
+    @return superfine-border($color null null);
+}
+
+/*
+ * 使用 SVG 背景图片来模拟实现底部超细边框
+ * @param $color {Color} 边框颜色
+ */
+@function superfine-border-bottom($color) {
+    @return superfine-border(null null $color);
+}
+
+/*
+ * 使用 SVG 背景图片来模拟实现左边超细边框
+ * @param $color {Color} 边框颜色
+ */
+@function superfine-border-left($color) {
+    @return superfine-border(null null null $color);
+}
+
+/*
+ * 使用 SVG 背景图片来模拟实现右边超细边框
+ * @param $color {Color} 边框颜色
+ */
+@function superfine-border-right($color) {
+    @return superfine-border(null $color null null);
+}
+
+/*
+ * 使用 SVG 背景图片来模拟实现顶部及底部超细边框
+ * @param $color {Color} 边框颜色
+ */
+@function superfine-border-vertical($color) {
+    @return superfine-border($color null);
+}
+
+/*
+ * 使用 SVG 背景图片来模拟实现左边及右边超细边框
+ * @param $color {Color} 边框颜色
+ */
+@function superfine-border-horizontal($color) {
+    @return superfine-border(null $color);
 }
