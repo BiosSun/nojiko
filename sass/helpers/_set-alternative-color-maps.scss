@@ -11,12 +11,12 @@ $alternative-color-maps: () !default;
     $border: null,
     $is-default: false
 ) {
-    @if is-default($text) {
+    @if $text {
         $is-default: true;
         $text: null;
     }
 
-    @if is-default($border) {
+    @if $border {
         $is-default: true;
         $border: null;
     }
@@ -28,7 +28,7 @@ $alternative-color-maps: () !default;
     $border: if($border, $border, darken($color, 7));
 
     // set map
-    @if (is-default($is-default) and map-has-key($alternative-color-maps, $name)) == false {
+    @if ($is-default and map-has-key($alternative-color-maps, $name)) == false {
         @return map-set($alternative-color-maps, $name, (
                             color: $color,
                             border: $border,

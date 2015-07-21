@@ -16,7 +16,7 @@ $element-box-maps: () !default;
     $is-merge: false
 ) {
     // set map
-    @if (is-default($is-default) and map-has-key($element-box-maps, $name)) == false {
+    @if ($is-default and map-has-key($element-box-maps, $name)) == false {
         $map: (
             padding-vertical: $padding-vertical,
             padding-horizontal: $padding-horizontal,
@@ -26,7 +26,7 @@ $element-box-maps: () !default;
             border-radius: $border-radius
         );
 
-        @if is-merge($is-merge) {
+        @if $is-merge {
             $map: map-merge(map-get($element-box-maps, $name), map);
         }
 
