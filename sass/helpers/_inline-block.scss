@@ -2,9 +2,15 @@
 // 支持 IE6/7 的行内块元素
 // =============================================================================
 
-@mixin inline-block ($vertical-align : baseline) {
+@mixin inline-block ($vertical-align : null) {
     display: inline-block;
-    vertical-align: $vertical-align;
-    *zoom: 1;
-    *display: inline;
+
+    @if $support-for-ie6 or $support-for-ie7 {
+        *zoom: 1;
+        *display: inline;
+    }
+
+    @if $vertical-align {
+        vertical-align: $vertical-align;
+    }
 }
