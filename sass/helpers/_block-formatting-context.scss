@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 /// 触发一个元素的块级格式化上下文
+/// @deprecated
 @mixin block-formatting-context {
     display: table-cell;
     @if $support-for-ie6 or $support-for-ie7 {

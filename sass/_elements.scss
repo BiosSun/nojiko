@@ -91,9 +91,6 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     // 行内块级元素
     $nojiko-el-display-inline-block:          inline-block               !default !global;
 
-    // 块级格式化上下文
-    $nojiko-el-block-formatting-context:      block-formatting-context   !default !global;
-
     // 文字对齐
     // -----------------
 
@@ -200,9 +197,6 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 
     // 行内块级元素
     $nojiko-el-display-inline-block:          dib                        !default !global;
-
-    // 块级格式化上下文
-    $nojiko-el-block-formatting-context:      bfc                        !default !global;
 
     // 文字对齐
     // -----------------
@@ -583,8 +577,6 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 @if $nojiko-el-display-block            { .#{$nojiko-el-display-block}            { display: block;                    } }
 @if $nojiko-el-display-inline           { .#{$nojiko-el-display-inline}           { display: inline;                   } }
 @if $nojiko-el-display-inline-block     { .#{$nojiko-el-display-inline-block}     { @include inline-block;             } }
-
-@if $nojiko-el-block-formatting-context { .#{$nojiko-el-block-formatting-context} { @include block-formatting-context; } }
 
 
 // 文字对齐
