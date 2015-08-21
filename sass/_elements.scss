@@ -563,7 +563,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     }
 
     .#{$nojiko-el-foreground-color}loud {
-        @include foreground-color($loud-text-color);
+        @include foreground-color($text-color-loud);
     }
 
     .#{$nojiko-el-foreground-color}link {
