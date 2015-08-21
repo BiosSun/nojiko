@@ -597,25 +597,19 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 
 // 文字样式
 // ---------------------------
-@if $nojiko-el-text-bold      { .#{$nojiko-el-text-bold}       { font-weight: bold;              } }
-@if $nojiko-el-text-italic    { .#{$nojiko-el-text-italic}     { font-style: italic;             } }
-@if $nojiko-el-text-underline { .#{$nojiko-el-text-underline}  { text-decoration: underline;     } }
-@if $nojiko-el-text-del       { .#{$nojiko-el-text-del}        { text-decoration: line-through;  } }
+@if $nojiko-el-text-bold      { .#{$nojiko-el-text-bold}       { font-weight: bold;               } }
+@if $nojiko-el-text-italic    { .#{$nojiko-el-text-italic}     { font-style: italic;              } }
+@if $nojiko-el-text-underline { .#{$nojiko-el-text-underline}  { text-decoration: underline;      } }
+@if $nojiko-el-text-del       { .#{$nojiko-el-text-del}        { text-decoration: line-through;   } }
 
-@if $nojiko-el-text-large     { .#{$nojiko-el-text-large}      { font-size: $font-size-large;    } }
-@if $nojiko-el-text-small     { .#{$nojiko-el-text-small}      { font-size: $font-size-small;    } }
+@if $nojiko-el-text-large     { .#{$nojiko-el-text-large}      { font-size: $font-size-large;     } }
+@if $nojiko-el-text-small     { .#{$nojiko-el-text-small}      { font-size: $font-size-small;     } }
 
 
 // 文字单行，溢出显示省略号；需设定宽度
 // ---------------------------
 
-@if $nojiko-el-text-overflow {
-    .#{$nojiko-el-text-overflow} {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-}
+@if $nojiko-el-text-overflow  { .#{$nojiko-el-text-overflow}   { @include text-overflow-ellipsis; } }
 
 
 // 字符分隔线

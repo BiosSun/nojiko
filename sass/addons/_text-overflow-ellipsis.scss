@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/// 单行文字超出显示省略号
+///
+/// @example scss
+///     .box {
+///         width: 100%;
+///         @include text-overflow-ellipsis();
+///     }
+///
+/// @example css
+///
+///     .box {
+///         width: 100%;
+///         overflow: hidden;
+///         text-overflow: ellipsis;
+///         white-space: nowrap;
+///     }
+@mixin text-overflow-ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
