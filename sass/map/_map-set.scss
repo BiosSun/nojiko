@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/// 设置集合中某个属性的值
+///
+/// @example
+///     $map: ( name: 'myname' );
+///     map-set($map, name, 'youname');
+@function map-set($source, $key, $value) {
+    @return map-merge($source, ($key: $value));
+}
