@@ -3,6 +3,34 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [debug] 前缀的更新建议尽快更新。*
 
+## 0.5.0
+
+- **[danger]** 移除 is-default 函数
+- **[danger]** 移除is-merge 函数
+- **[danger]** 移除 map-extend 函数
+- **[danger]** 不再强制在宽度元素类中追加宽度为 0 的样式
+- **[danger]** 将 arrows-style 混入类名称改为 triangle
+- **[danger]** 将 $nojiko-el-arrow 元素类改为 $nojiko-el-triangle，其长类名改为 'triangle'
+- **[danger]** 移除 $nojiko-el-block-formatting-context 元素类
+- **[debug]** block-formatting-context 混入类设置为已弃用状态，请不要再使用
+- **[debug]** 将 $font-size-small 的默认值改为 floor($font-size-base * 0.88)
+- **[debug]** 调整 inline-block 混入类，其参数 $vertical-align 该为可选值，若调用时不指定，则不设置该属性
+- 添加 list-first 函数，用于获取列表中的第一个元素
+- 添加 list-rest 函数，用于获取列表中除第一个元素之外的其它元素
+- 添加 list-slice 函数，用于截取列表中的子列表
+- 添加 map-deep-get 函数，用于获取多层嵌套的集合中的某个属性
+- 添加 map-deep-set 函数，用于设置多层嵌套的集合中的某个属性
+- 添加 text-overflow-ellipsis 混入类，用于添加单行文字超出时显示省略号的样式
+- 添加混入类 superfine-border-top、superfine-border-bottom、superfine-border-left、superfine-border-right、superfine-border-vertical 及 superfine-border-horizontal，用于快速为对应方向添加超细边框
+- 在 exhaustive-reset 模式下的内外边距清除元素选择器中，移除  optgroup 元素，并加入 pre 及 select 元素
+- gulp 的依赖版本更新到 3.9.0
+- 不再将所有子文件合并到 _nojiko.scss 文件中，而是改为在该文件中引用
+
+## 0.4.14
+
+- 添加 superfine-border 混入类，以在高清屏中实现超细边框
+- 在 exhaustive-reset 模式下的内外边距清除元素选择器中，移除 div、dt、li、pre 及 code 元素，并加入 optgroup 元素
+
 ## 0.4.13
 
 - 添加内边距样式类
