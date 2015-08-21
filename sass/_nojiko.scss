@@ -26,6 +26,7 @@
 
 "helpers/set-element-box-maps",
 "helpers/get-element-box-height-by-name",
+"helpers/set-element-box",
 
 "helpers/computed-line-height",
 
@@ -41,15 +42,13 @@
 "helpers/inline-block",
 "helpers/translucent-bgcolor",
 
-"helpers/clearfix",
-"helpers/hide-text",
-
 "helpers/block-formatting-context",
 
-"helpers/set-element-box",
-"helpers/foreground-color",
-"helpers/superfine-border",
-
 // 附加组件
+
 "addons/triangle",
+"addons/clearfix",
+"addons/hide-text",
+"addons/superfine-border",
+"addons/foreground-color",
 "addons/text-overflow-ellipsis";
