@@ -1,7 +1,7 @@
 @charset "utf-8"
 
 @import '../sass/nojiko';
-@import '../sass/settings';
+@import '../sass/variables';
 
 .nojiko-expand {
     margin: nojiko-expand(1px);
