@@ -1,90 +1,123 @@
 @charset "utf-8";
 
 ////
-/// @group settings
+/// @group variables
 ////
 
 // 兼容浏览器
 // ---------------------------
 
-/// 是否支持 IE6
-/// @type Boolean
+/// 是否支持 IE6 浏览器
+/// @type bool
 $support-for-ie6:               true !default;
 
-// 是否支持 IE7
+/// 是否支持 IE7 浏览器
+/// @type bool
 $support-for-ie7:               true !default;
 
-// 是否支持 IE8
+/// 是否支持 IE8 浏览器
+/// @type bool
 $support-for-ie8:               true !default;
 
 
 // 目录路径
 // ---------------------------
 
-// 存放图片文件的目录的路径
+/// 存放图片文件的目录的路径
+/// @type {string}
 $images-path:                   '../images';
-// 存放字体文件的目录的路径
+
+/// 存放字体文件的目录的路径
+/// @type {string}
 $fonts-path:                    '../fonts';
 
 // 文字
 // ---------------------------
 
-// 默认字体集
+/// 默认字体集
+/// @type list
 $font-family:                   $FONT-FAMILY-SERIF !default;
-// 默认代码字体集
+/// 默认代码字体集
+/// @type list
 $font-family-monspace:          $FONT-FAMILY-FIXED-FONT !default;
 
-// 默认文字大小
+/// 默认文字大小
+/// @type length/px
 $font-size-base:                14px !default;
-// 较大文字大小
+/// 较大文字大小
+/// @type length/px
 $font-size-large:               ceil($font-size-base * 1.3) !default;  // 12: 15, 13: 16, 14: 18
-// 较小文字大小
+/// 较小文字大小
+/// @type length/px
 $font-size-small:               floor($font-size-base * 0.88) !default; // 12: 10, 13: 11, 14: 12
 
-// 默认文字行高
+/// 默认文字行高，该变量与 $font-size-base 对应
+/// @type length/px,em,none
 $line-height-base:              1.428571429 !default;
-// 较大文字行高
+/// 较大文字行高，该变量与 $font-size-large 对应
+/// @type length/px,em,none
 $line-height-large:             1.34 !default;
-// 较小文字行高
+/// 较小文字行高，该变量与 $font-size-small 对应
+/// @type length/px,em,none
 $line-height-small:             1.5 !default;
 
 
 // 配色
 // ---------------------------
 
-// 深灰色
+/// 深灰色
+/// @type color
 $gray-darker:                   lighten(#000, 13.5%)       !default;   // #222
-// 暗灰色
+/// 暗灰色
+/// @type color
 $gray-dark:                     lighten(#000, 20%)         !default;   // #333
-// 灰色
+/// 灰色
+/// @type color
 $gray:                          lighten(#000, 33.5%)       !default;   // #555
-// 淡灰色
+/// 淡灰色
+/// @type color
 $gray-light:                    lighten(#000, 60%)         !default;   // #999
-// 浅灰色
+/// 浅灰色
+/// @type color
 $gray-lighter:                  lighten(#000, 93.5%)       !default;   // #eee
 
-// 主色
+/// 主色
+/// @type color
 $primary-color:                 #428bca                    !default;
 
-// 背景色
+/// 背景色
+/// @type color
 $background-color:              #fff                       !default;
 
-// 文本颜色
-$text-color:                    $gray-dark                 !default;
-// 次要文本颜色
-$quiet-text-color:              $gray-light                !default;
-// 强调文本颜色
-$loud-text-color:               $gray-dark                 !default;
-
-// 链接颜色
-$link-color:                    $primary-color             !default;
-$link-focus-color:              darken($link-color, 15%)   !default;
-$link-visited-color:            $link-color                !default;
-
-// 线条颜色
+/// 线条颜色
+/// @type color
 $line-color:                    #d7d7d7                    !default;
 
-// 配色集合
+/// 文本颜色
+/// @type color
+$text-color:                    $gray-dark                 !default;
+/// 次要文本颜色
+/// @type color
+$quiet-text-color:              $gray-light                !default;
+/// 强调文本颜色
+/// @type color
+$loud-text-color:               $gray-dark                 !default;
+
+/// 链接颜色
+/// @type color
+$link-color:                    $primary-color             !default;
+/// 链接获取到焦点时的颜色
+/// @type color
+$link-focus-color:              darken($link-color, 15%)   !default;
+/// 已访问过的链接的颜色
+/// @type color
+$link-visited-color:            $link-color                !default;
+
+/// 配色集合
+/// @type map
+$color-maps:                    (:)                        !default;
+
+// 将主色加入配色集合中
 $color-maps:                    set-color-maps(primary, $primary-color, default);
 
 // 成功状态配色
@@ -98,6 +131,10 @@ $color-maps:                    set-color-maps(warning, #f0ad4e, default);
 
 // 错误状态配色
 $color-maps:                    set-color-maps(danger,  #d9534f, default);
+
+/// 备选颜色集合
+/// @type map
+$alternative-color-maps:        (:)                        !default;
 
 // 成功状态备选色
 $alternative-color-maps:        set-alternative-color-maps(success, #dff0d8, #3c763d, default);
@@ -115,10 +152,12 @@ $alternative-color-maps:        set-alternative-color-maps(danger,  #f2dede, #a9
 // 尺寸
 // ---------------------------
 
-// 全局盒尺寸计算模式
+/// 全局盒尺寸计算模式
+/// @type [content-box|border-box]
 $default-box-sizing:            content-box               !default;
 
-// 默认盒尺寸名称
+/// 默认盒尺寸名称
+/// @type meta
 $default-element-box-name:      m                         !default;
 
 // 普通尺寸
@@ -185,11 +224,14 @@ $element-box-maps: set-element-box-maps(
 // 布局
 // ---------------------------
 
-// 页面宽度
+/// 页面宽度
+/// @type bool, length
 $page-width:                    false                     !default;
 
-// 模块之间的垂直间距
+/// 模块之间的垂直间距
+/// @type length/px
 $distance-vertical:             20px                      !default;
 
-// 模块之间的水平间距
+/// 模块之间的水平间距
+/// @type length/px
 $distance-horizontal:           20px                      !default;
