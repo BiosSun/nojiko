@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/// 设置多层嵌套的 map 数据中的某个属性
+///
+/// 和所有 map 修改方法一样，该方法会返回一个新的 map，而不是修改源数据。
+///
+/// @param {Map}    $source - 需要设置属性的源数据集合
+/// @param {List}   $keys   - 属性路径，如果没有提供该参数，则返回 val 参数的值。
+/// @param {*}      $val    - 设置的值，如果不提供该参数，则会将指定属性的值设置为 null，但如果 keys 和 val 都没有提供，则返回源数据。
+///
+/// @example sass
+///     $data: (
+///         user: (
+///             name: 'biossun'
+///         )
+///     )
+///
+///     map-deep-set($data, user name, 'sunhaiyang');             // ( user: ( name: 'sunhaiyang' ) )
+///     map-deep-set($data, user name);                           // ( user: ( name: null ) )
+///     map-deep-set($data, user name first-name, 'sunhaiyang');  // ( user: ( name: (first-name: 'sunhaiyang') ) )
+///     map-deep-set($data, user name first-name);                // ( user: ( name: (first-name: null) ) )
+///     map-deep-set($data, user, 'sunhaiyang');                  // ( user: 'sunhaiyang' )
+@function map-deep-set($source, $keys: null, $value: null) {
+    $keys-length: length($keys);
+
+    @if $keys-length == 1 {
+        @return map-set($source, nth($keys, 1), $value);
+    }
+    @else {
+        $first-key: list-first($keys);
+        $other-keys: list-rest($keys);
+        $value: map-deep-set(map-get($source, $first-key), $other-keys, $value);
+        @return map-set($source, $first-key, $value);
+    }
+}
