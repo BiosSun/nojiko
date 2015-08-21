@@ -133,7 +133,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     $nojiko-el-separator-line:                separator-line             !default !global;
 
     // 小三角箭头
-    $nojiko-el-arrow:                         arrow                      !default !global;
+    $nojiko-el-triangle:                      triangle                   !default !global;
 }
 @else {
     // 尺寸
@@ -243,7 +243,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
     $nojiko-el-separator-line:                sl                         !default !global;
 
     // 小三角箭头
-    $nojiko-el-arrow:                         ar                         !default !global;
+    $nojiko-el-triangle:                      ar                         !default !global;
 }
 
 
@@ -629,9 +629,9 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 
 // 小三角箭头
 // ---------------------------
-@if $nojiko-el-arrow {
-    .#{$nojiko-el-arrow}-b { @include triangle(4px, bottom); margin-left: 2px; }
-    .#{$nojiko-el-arrow}-t { @include triangle(4px, top   ); margin-left: 2px; }
-    .#{$nojiko-el-arrow}-l { @include triangle(4px, left  ); margin-left: 2px; }
-    .#{$nojiko-el-arrow}-r { @include triangle(4px, right ); margin-left: 2px; }
+@if $nojiko-el-triangle {
+    .#{$nojiko-el-triangle}-b { @include triangle(4px, bottom); margin-left: 2px; }
+    .#{$nojiko-el-triangle}-t { @include triangle(4px, top   ); margin-left: 2px; }
+    .#{$nojiko-el-triangle}-l { @include triangle(4px, left  ); margin-left: 2px; }
+    .#{$nojiko-el-triangle}-r { @include triangle(4px, right ); margin-left: 2px; }
 }
