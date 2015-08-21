@@ -1,10 +1,9 @@
-// ===========================================================================================================
-// 用于快速书写 postion 相关样式规则，可以同时定义 position，left，right，top，bottom 以及 z-index 五个规则。
-//
-// @example:
-//    position(absolute, 20px 0 0, 1000);
-// ===========================================================================================================
+@charset "utf-8";
 
+/// 用于快速书写 postion 相关样式规则，可以同时定义 position，left，right，top，bottom 以及 z-index 五个规则。
+///
+/// @example
+///     position(absolute, 20px 0 0, 1000);
 @mixin position($position: relative, $coordinates: null null null null, $z-index: null) {
     position: $position;
 

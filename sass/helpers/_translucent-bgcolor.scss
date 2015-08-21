@@ -1,14 +1,13 @@
-// ===========================================================================================================
-// 为元素设置半透明背景色，在低版本的 IE 浏览器中，会使用 filter 实现该效果。
-//
-// 注意: 因为 IE9 同时支持 alpha 以及 filter，因此在应用 IE Hack 时会导致两个设置相互重叠，
-// 使得最终显示的颜色要比所设置的颜色深很多，不过万幸的是这并非太严重的问题。
-//
-// @examples:
-//   @include translucent-background(rgba(0, 0, 0, .2));
-//   @include translucent-background(#fff, 0.2);
-// ===========================================================================================================
+@charset "utf-8";
 
+/// 为元素设置半透明背景色，在低版本的 IE 浏览器中，会使用 filter 实现该效果。
+///
+/// 注意: 因为 IE9 同时支持 alpha 以及 filter，因此在应用 IE Hack 时会导致两个设置相互重叠，
+/// 使得最终显示的颜色要比所设置的颜色深很多，不过万幸的是这并非太严重的问题。
+///
+/// @examples
+///     @include translucent-background(rgba(0, 0, 0, .2));
+///     @include translucent-background(#fff, 0.2);
 @mixin translucent-bgcolor($color, $alpha: false) {
 
     @if $alpha {

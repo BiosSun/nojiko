@@ -1,11 +1,10 @@
-// ===========================================================================================================
-// padding 的速写格式
-//
-// example:
-//   padding(1px);               // 1px 1px 1px 1px
-//   padding(1px null);          // 1px 2px 1px 2px
-// ===========================================================================================================
+@charset "utf-8";
 
+/// padding 的速写格式
+///
+/// example:
+///   padding(1px);               // 1px 1px 1px 1px
+///   padding(1px null);          // 1px 2px 1px 2px
 @mixin padding($vals) {
     $coordinates: nojiko-expand($vals);
 

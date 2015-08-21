@@ -1,9 +1,10 @@
-// =============================================================================
-// 计算并返回所指定盒尺寸的实际高度
-// @param $name {String} 盒尺寸配置名称
-// @param $box-sizing {String} 盒模型计算模式
-// @param $row-number 文本内容的行数
-// =============================================================================
+@charset "utf-8";
+
+/// 计算并返回所指定盒尺寸的实际高度
+///
+/// @param {String}  $name 盒尺寸配置名称
+/// @param {String} $box-sizing 盒模型计算模式
+/// @param {Number} $row-number 文本内容的行数
 @function get-element-box-height-by-name (
     $name: $default-element-box-name,
     $box-sizing: $default-box-sizing,
