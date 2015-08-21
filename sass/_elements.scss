@@ -630,8 +630,8 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 // 小三角箭头
 // ---------------------------
 @if $nojiko-el-arrow {
-    .#{$nojiko-el-arrow}-b { @include arrows-style(4px, bottom); margin-left: 2px; }
-    .#{$nojiko-el-arrow}-t { @include arrows-style(4px, top   ); margin-left: 2px; }
-    .#{$nojiko-el-arrow}-l { @include arrows-style(4px, left  ); margin-left: 2px; }
-    .#{$nojiko-el-arrow}-r { @include arrows-style(4px, right ); margin-left: 2px; }
+    .#{$nojiko-el-arrow}-b { @include triangle(4px, bottom); margin-left: 2px; }
+    .#{$nojiko-el-arrow}-t { @include triangle(4px, top   ); margin-left: 2px; }
+    .#{$nojiko-el-arrow}-l { @include triangle(4px, left  ); margin-left: 2px; }
+    .#{$nojiko-el-arrow}-r { @include triangle(4px, right ); margin-left: 2px; }
 }
