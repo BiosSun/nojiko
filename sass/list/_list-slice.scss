@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/// 获取列表中的子集
+///
+/// @example
+///     $list: a, b, c, d, e;
+///     list-slice($list, 2, 4);   // b, c, d
+///     list-slice($list, 2);      // b, c, d, e
+@function list-slice($list, $start: 1, $end: length($list)) {
+    $length: $list;
+    $result: null;
+
+    @if type-of($start) != number {
+        @error "$start are not a number";
+    }
+
+    @if type-of($end) != number {
+        @error "$end are not a number";
+    }
+
+    @if $start < 0 {
+        $start: $length + $start + 1;
+    }
+
+    @if $end < 0 {
+        $end: $length + $end + 1;
+    }
+
+    $result: ();
+
+    @for $i from $start through $end {
+        $result: append($result, nth($list, $i), list-separator($list));
+    }
+
+    @return $result;
+}

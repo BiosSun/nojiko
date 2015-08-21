@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/// 获取列表中除第一个元素之外的所有元素
+///
+/// @example
+///     list-rest((1, 2, 3));   // --> (2, 3)
+///     list-rest((1));         // --> ()
+///     list-rest()             // --> ()
+@function list-rest($list) {
+    @return list-slice($list, 2);
+}

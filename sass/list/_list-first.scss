@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/// 获取列表中的第一个元素
+///
+/// @example
+///     list-first((1, 2, 3));   // --> 1
+///     list-first((1));         // --> 1
+///     list-first()             // --> null
+@function list-first($list: null) {
+    @return nth($list, 1);
+}
