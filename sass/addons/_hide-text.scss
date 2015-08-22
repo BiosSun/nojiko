@@ -1,12 +1,22 @@
 @charset "utf-8";
 
+/// 隐藏元素内的文字
+///
 /// https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7
+///
+/// @example scss - source
+///     .box {
+///         @include hide-text();
+///     }
+///
+/// @example css - output
+///     .box {
+///         font: 0/0 a;
+///         color: transparent;
+///         text-shadow: none;
+///     }
 @mixin hide-text {
-    color: transparent;
     font: 0/0 a;
+    color: transparent;
     text-shadow: none;
-
-    @if support-for-ie6 or support-for-ie7 or support-for-ie8 {
-        overflow: hidden; // for IE6; or IE7 and IE 8
-    }
 }
