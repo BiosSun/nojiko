@@ -3,6 +3,13 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [debug] 前缀的更新建议尽快更新。*
 
+## 0.5.1
+
+- **[danger]** 将 _settings.scss 文件的名称改为 _variables.scss
+- **[danger]** 将全局变量 $quiet-text-color 改为 $text-color-quiet
+- **[danger]** 将全局变量 $loud-text-color 改为 $text-color-loud
+- **[debug]** 移除 hide-text 混入类在支持 ie6，ie7 或 ie8 浏览器时加入的 `overflow: hidden;` 属性
+
 ## 0.5.0
 
 - **[danger]** 移除 is-default 函数
