@@ -13,14 +13,17 @@
 "helpers/is-dark",
 "helpers/is-light",
 
-"list-first",
-"list-rest",
-"list-slice",
+// 高级列表操作函数
+"list/list-first",
+"list/list-rest",
+"list/list-slice",
 
+// 高级集合操作函数
 "map/map-set",
 "map/map-deep-get",
 "map/map-deep-set",
 
+// 辅助工具
 "helpers/set-color-maps",
 "helpers/set-alternative-color-maps",
 
@@ -30,7 +33,6 @@
 
 "helpers/computed-line-height",
 
-// 混入类
 "helpers/position",
 "helpers/padding",
 "helpers/margin",
@@ -46,7 +48,6 @@
 "helpers/block-formatting-context",
 
 // 附加组件
-
 "addons/triangle",
 "addons/clearfix",
 "addons/hide-text",
