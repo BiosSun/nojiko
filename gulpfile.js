@@ -6,7 +6,7 @@ var header = require('gulp-header');
 
 var pkg = require('./package.json');
 
-gulp.task('test', ['nojiko'], function() {
+gulp.task('test', function() {
     gulp.src('./test/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('./test'));
@@ -16,4 +16,4 @@ gulp.task('test', ['nojiko'], function() {
 gulp.task('watch', function() {
 });
 
-gulp.task('default', ['nojiko', 'test']);
+gulp.task('default', ['test']);
