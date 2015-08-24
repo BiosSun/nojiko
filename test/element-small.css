@@ -1,12 +1,31 @@
 @charset "UTF-8";
-/*!
- * nojiko - 0.4.14
- * normalize.css - 3.0.2
- * @license: MIT  - https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT
- * @url: https://github.com/BiosSun/nojiko
- */
 /**
  * 使用 SVG 背景图片来模拟实现超细边框
+ * @param $colors {<Color>} 四个边框颜色，支持缩写
+ */
+/*
+ * 使用 SVG 背景图片来模拟实现顶部超细边框
+ * @param $color {Color} 边框颜色
+ */
+/*
+ * 使用 SVG 背景图片来模拟实现底部超细边框
+ * @param $color {Color} 边框颜色
+ */
+/*
+ * 使用 SVG 背景图片来模拟实现左边超细边框
+ * @param $color {Color} 边框颜色
+ */
+/*
+ * 使用 SVG 背景图片来模拟实现右边超细边框
+ * @param $color {Color} 边框颜色
+ */
+/*
+ * 使用 SVG 背景图片来模拟实现顶部及底部超细边框
+ * @param $color {Color} 边框颜色
+ */
+/*
+ * 使用 SVG 背景图片来模拟实现左边及右边超细边框
+ * @param $color {Color} 边框颜色
  */
 .sm {
   padding: 6px 12px;
@@ -73,42 +92,42 @@
 
 .ss {
   padding: 4px 9px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
   border-width: 1px;
   border-radius: 3px; }
 
 .ss-b {
   padding: 5px 10px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
   border-width: 0;
   border-radius: 3px; }
 
 .ss-bh {
   padding: 5px 0;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
   border-width: 0;
   border-radius: 3px; }
 
 .sxs {
   padding: 2px 6px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
   border-width: 1px;
   border-radius: 3px; }
 
 .sxs-b {
   padding: 3px 7px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
   border-width: 0;
   border-radius: 3px; }
 
 .sxs-bh {
   padding: 3px 0;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
   border-width: 0;
   border-radius: 3px; }
@@ -296,9 +315,6 @@
 .w700 {
   width: 700px; }
 
-.w0em {
-  width: 0em; }
-
 .w1em {
   width: 1em; }
 
@@ -334,9 +350,6 @@
 
 .w12em {
   width: 12em; }
-
-.w0p {
-  width: 0%; }
 
 .w25p {
   width: 25%; }
@@ -506,23 +519,8 @@
 
 .dib {
   display: inline-block;
-  vertical-align: baseline;
   *zoom: 1;
   *display: inline; }
-
-.bfc {
-  display: table-cell;
-  *zoom: 1;
-  _position: relative;
-  _left: -3px;
-  _margin-right: -3px; }
-  .bfc:after {
-    content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
-    visibility: hidden;
-    clear: both;
-    height: 0 !important;
-    display: block;
-    line-height: 0; }
 
 .tl {
   text-align: left; }
@@ -549,7 +547,7 @@
   font-size: 19px; }
 
 .tm {
-  font-size: 13px; }
+  font-size: 12px; }
 
 .to {
   overflow: hidden;
@@ -558,9 +556,9 @@
 
 .sl {
   display: inline-block;
-  vertical-align: middle;
   *zoom: 1;
   *display: inline;
+  vertical-align: middle;
   width: 1px;
   text-indent: 10000px;
   margin: -0.09em 0.5em 0;
@@ -570,14 +568,13 @@
 
 .ar-b {
   display: inline-block;
-  vertical-align: middle;
   *zoom: 1;
   *display: inline;
   width: 0;
   height: 0;
   font: 0/0 a;
-  position: relative;
-  top: -1px;
+  color: transparent;
+  text-shadow: none;
   *top: 0;
   border-top: 4px solid ;
   border-right: 4px dashed transparent;
@@ -586,14 +583,13 @@
 
 .ar-t {
   display: inline-block;
-  vertical-align: middle;
   *zoom: 1;
   *display: inline;
   width: 0;
   height: 0;
   font: 0/0 a;
-  position: relative;
-  top: -1px;
+  color: transparent;
+  text-shadow: none;
   *top: 0;
   border-bottom: 4px solid ;
   border-right: 4px dashed transparent;
@@ -602,14 +598,13 @@
 
 .ar-l {
   display: inline-block;
-  vertical-align: middle;
   *zoom: 1;
   *display: inline;
   width: 0;
   height: 0;
   font: 0/0 a;
-  position: relative;
-  top: -1px;
+  color: transparent;
+  text-shadow: none;
   *top: 0;
   border-right: 4px solid ;
   border-top: 4px dashed transparent;
@@ -618,14 +613,13 @@
 
 .ar-r {
   display: inline-block;
-  vertical-align: middle;
   *zoom: 1;
   *display: inline;
   width: 0;
   height: 0;
   font: 0/0 a;
-  position: relative;
-  top: -1px;
+  color: transparent;
+  text-shadow: none;
   *top: 0;
   border-left: 4px solid ;
   border-top: 4px dashed transparent;
