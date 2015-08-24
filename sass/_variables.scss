@@ -115,7 +115,7 @@ $link-visited-color:            $link-color                !default;
 
 /// 配色集合
 /// @type map
-$color-maps:                    (:)                        !default;
+$color-maps:                    ()                         !default;
 
 // 将主色加入配色集合中
 $color-maps:                    set-color-maps(primary, $primary-color, default);
@@ -134,7 +134,7 @@ $color-maps:                    set-color-maps(danger,  #d9534f, default);
 
 /// 备选颜色集合
 /// @type map
-$alternative-color-maps:        (:)                        !default;
+$alternative-color-maps:        ()                         !default;
 
 // 成功状态备选色
 $alternative-color-maps:        set-alternative-color-maps(success, #dff0d8, #3c763d, default);
