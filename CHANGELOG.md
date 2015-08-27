@@ -3,6 +3,11 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [debug] 前缀的更新建议尽快更新。*
 
+## 0.5.5
+
+- 添加全局变量 $placeholder-color，用于设置占位符颜色
+- 在 scaffolding 中设置占位符颜色
+
 ## 0.5.1
 
 - **[danger]** 将 _settings.scss 文件的名称改为 _variables.scss
