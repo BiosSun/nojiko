@@ -36,3 +36,7 @@ hr {
   border: 0;
   border-top: 1px solid $line-color;
 }
+
+::placeholder {
+    color: $placeholder-color;
+}

@@ -113,6 +113,10 @@ $link-focus-color:              darken($link-color, 15%)   !default;
 /// @type color
 $link-visited-color:            $link-color                !default;
 
+/// 占位符颜色
+/// @type color
+$placeholder-color:             lighten($text-color, 40%)  !default;
+
 /// 配色集合
 /// @type map
 $color-maps:                    ()                         !default;
