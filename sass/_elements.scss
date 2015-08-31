@@ -289,6 +289,9 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
         $h: $name;
     }
 
+    @if unit($v) == "" { $v: $v + 0px; }
+    @if unit($h) == "" { $h: $h + 0px; }
+
     // 如果类名使用简写方式，则隐去普通边距的尺寸名称
     @if $nojiko-el-margin == m {
         @if $name == m {
@@ -298,9 +301,6 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
             $name: '-';
         }
     }
-
-    $v: $v + 0px;
-    $h: $h + 0px;
 
     @if $nojiko-el-margin {
         .#{$nojiko-el-margin}#{$name} {
@@ -387,6 +387,9 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
         $h: $name;
     }
 
+    @if unit($v) == "" { $v: $v + 0px; }
+    @if unit($h) == "" { $h: $h + 0px; }
+
     // 如果类名使用简写方式，则隐去普通边距的尺寸名称
     @if $nojiko-el-padding == p {
         @if $name == p {
@@ -396,9 +399,6 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
             $name: '-';
         }
     }
-
-    $v: $v + 0px;
-    $h: $h + 0px;
 
     @if $nojiko-el-padding {
         .#{$nojiko-el-padding}#{$name} {
