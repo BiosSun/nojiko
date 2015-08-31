@@ -3,6 +3,14 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [debug] 前缀的更新建议尽快更新。*
 
+## 0.5.6
+
+- 在内外边距元素类中，不再强制设置单位，改为只有当所提供的值没有单位时，才使用默认单位 - px。
+- 在内外边距元素中，不再默认提供 0 值，若需要 0 值的内外边距，则必须在 $nojiko-el-margin-values 及 $nojiko-el-padding-values 列表中进行配置。
+- 移除 $nojiko-el-width-values 变量的默认配置
+- 移除 $nojiko-el-em-width-values 变量的默认配置
+- 移除 $nojiko-el-per-width-values 变量的默认配置
+
 ## 0.5.5
 
 - 添加全局变量 $placeholder-color，用于设置占位符颜色
