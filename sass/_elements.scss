@@ -256,7 +256,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 // 外边距
 // ---------------------------
 
-@each $name in join((m, d, x, 0), $nojiko-el-margin-values) {
+@each $name in join((m, d, x), $nojiko-el-margin-values) {
     $v: 0;
     $h: 0;
 
@@ -354,7 +354,7 @@ $nojiko-el-per-width-values: (25, 50, 75, 100) !default;
 // 内边距
 // ---------------------------
 
-@each $name in join((p, d, x, 0), $nojiko-el-padding-values) {
+@each $name in join((p, d, x), $nojiko-el-padding-values) {
     $v: 0;
     $h: 0;
 
