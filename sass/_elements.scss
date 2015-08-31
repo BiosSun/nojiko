@@ -22,7 +22,7 @@ $nojiko-el-width-values: () !default;
 $nojiko-el-em-width-values: () !default;
 
 // 百分比宽度值
-$nojiko-el-per-width-values: (25, 50, 75, 100) !default;
+$nojiko-el-per-width-values: () !default;
 
 // 类名配置
 @if $nojiko-el-class-style == 'long' {
