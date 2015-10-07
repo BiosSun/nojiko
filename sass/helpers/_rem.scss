@@ -1,0 +1,46 @@
+$rem-class-suffix:  -rem !default !global;
+$baseline-px:       16px;
+
+// Convert px unit to rem unit
+@function convert-rem($px-values) {
+
+    // Convert the baseline into rems
+    $baseline-rem: $baseline-px / 1rem * 1;
+
+    // If there is only one (numeric) value, return the property/value line for it.
+    @if type-of($px-values) == "number" {
+        @return $px-values / $baseline-rem;
+    }
+
+    @else {
+
+        // Create an empty list that we can dump values into
+        $rem-values: ();
+
+        @each $value in $px-values {
+
+            // If the value is zero or not a number, return it
+            @if $value == 0 or type-of( $value ) != "number" {
+                $rem-values: append($rem-values, $value);
+            }
+
+            @else {
+                $rem-values: append($rem-values, $value / $baseline-rem);
+            }
+        }
+
+        // Return the property and its list of converted values
+        @return $rem-values;
+    }
+}
+
+// Add rem suffix to each item in the list
+@function add-rem-suffix($list) {
+    $result: ();
+
+    @each $item in $list {
+        $result: append($result, #{$item}#{$rem-class-suffix}, comma);
+    }
+
+    @return $result;
+}

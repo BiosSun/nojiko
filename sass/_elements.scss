@@ -344,10 +344,22 @@ $nojiko-el-per-width-values: () !default;
         $cr: append($cr, unquote('.#{$nojiko-el-margin-horizontal}#{$name}'), comma);
     }
 
-    @if length($ct) > 0 { #{$ct} { margin-top    : $v; } }
-    @if length($cb) > 0 { #{$cb} { margin-bottom : $v; } }
-    @if length($cl) > 0 { #{$cl} { margin-left   : $h; } }
-    @if length($cr) > 0 { #{$cr} { margin-right  : $h; } }
+    @if length($ct) > 0 {
+        #{$ct} { margin-top    : $v; }
+        #{add-rem-suffix($ct)} { margin-top    : convert-rem($v); }
+    }
+    @if length($cb) > 0 {
+        #{$cb} { margin-bottom : $v; }
+        #{add-rem-suffix($cb)} { margin-bottom    : convert-rem($v); }
+    }
+    @if length($cl) > 0 {
+        #{$cl} { margin-left   : $h; }
+        #{add-rem-suffix($cl)} { margin-left    : convert-rem($h); }
+    }
+    @if length($cr) > 0 {
+        #{$cr} { margin-right  : $h; }
+        #{add-rem-suffix($cr)} { margin-right    : convert-rem($h); }
+    }
 }
 
 
@@ -442,10 +454,22 @@ $nojiko-el-per-width-values: () !default;
         $cr: append($cr, unquote('.#{$nojiko-el-padding-horizontal}#{$name}'), comma);
     }
 
-    @if length($ct) > 0 { #{$ct} { padding-top    : $v; } }
-    @if length($cb) > 0 { #{$cb} { padding-bottom : $v; } }
-    @if length($cl) > 0 { #{$cl} { padding-left   : $h; } }
-    @if length($cr) > 0 { #{$cr} { padding-right  : $h; } }
+    @if length($ct) > 0 {
+        #{$ct} { padding-top    : $v; }
+        #{add-rem-suffix($ct)} { padding-top    : convert-rem($v); }
+    }
+    @if length($cb) > 0 {
+        #{$cb} { padding-bottom : $v; }
+        #{add-rem-suffix($cb)} { padding-bottom    : convert-rem($v); }
+    }
+    @if length($cl) > 0 {
+        #{$cl} { padding-left   : $h; }
+        #{add-rem-suffix($cl)} { padding-left    : convert-rem($h); }
+    }
+    @if length($cr) > 0 {
+        #{$cr} { padding-right  : $h; }
+        #{add-rem-suffix($cr)} { padding-right    : convert-rem($h); }
+    }
 }
 
 
