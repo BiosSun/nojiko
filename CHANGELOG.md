@@ -1,7 +1,11 @@
 更新记录
 =======
 
-*以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [debug] 前缀的更新建议尽快更新。*
+*以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [fix] 前缀的更新为异常修复，建议尽快更新。*
+
+## 0.5.7
+
+- 增加 rem 支持
 
 ## 0.5.6
 
@@ -21,7 +25,7 @@
 - **[danger]** 将 _settings.scss 文件的名称改为 _variables.scss
 - **[danger]** 将全局变量 $quiet-text-color 改为 $text-color-quiet
 - **[danger]** 将全局变量 $loud-text-color 改为 $text-color-loud
-- **[debug]** 移除 hide-text 混入类在支持 ie6，ie7 或 ie8 浏览器时加入的 `overflow: hidden;` 属性
+- 移除 hide-text 混入类在支持 ie6，ie7 或 ie8 浏览器时加入的 `overflow: hidden;` 属性
 
 ## 0.5.0
 
@@ -32,9 +36,9 @@
 - **[danger]** 将 arrows-style 混入类名称改为 triangle
 - **[danger]** 将 $nojiko-el-arrow 元素类改为 $nojiko-el-triangle，其长类名改为 'triangle'
 - **[danger]** 移除 $nojiko-el-block-formatting-context 元素类
-- **[debug]** block-formatting-context 混入类设置为已弃用状态，请不要再使用
-- **[debug]** 将 $font-size-small 的默认值改为 floor($font-size-base * 0.88)
-- **[debug]** 调整 inline-block 混入类，其参数 $vertical-align 该为可选值，若调用时不指定，则不设置该属性
+- **[danger]** 将 $font-size-small 的默认值改为 floor($font-size-base * 0.88)
+- block-formatting-context 混入类设置为已弃用状态，请不要再使用
+- 调整 inline-block 混入类，其参数 $vertical-align 该为可选值，若调用时不指定，则不设置该属性
 - 添加 list-first 函数，用于获取列表中的第一个元素
 - 添加 list-rest 函数，用于获取列表中除第一个元素之外的其它元素
 - 添加 list-slice 函数，用于截取列表中的子列表
@@ -59,7 +63,7 @@
 ## 0.4.12
 
 - 背景色元素类添加五个灰度颜色
-- **[debug]** 元素类 `background-common` 被设置成了前景色
+- **[fix]** 元素类 `background-common` 被设置成了前景色
 
 ## 0.4.11
 
@@ -96,7 +100,7 @@
 
 ## 0.4.8
 
-- **[debug]** 解决在 windows 版本的 node-sass 中，不支持在函数内的 @if 条件语句内使用 !global 标签定义变量，抛出空指针异常的问题
+- **[fix]** 解决在 windows 版本的 node-sass 中，不支持在函数内的 @if 条件语句内使用 !global 标签定义变量，抛出空指针异常的问题
 
 ## 0.4.7
 
@@ -107,7 +111,7 @@
 
 ## 0.4.6
 
-- **[debug]** `$primary-color` 在添加到 `$color-maps` 中的名称有误
+- **[fix]** `$primary-color` 在添加到 `$color-maps` 中的名称有误
 - 添加 `block-formatting-context` 混入类，用于给一个元素激活块级格式化上下文
 - 添加元素类 `.block-formatting-context`（`.bfc`），用于给一个元素激活块级格式化上下文
 
@@ -142,7 +146,7 @@
 
 ## 0.4.2
 
-- **[debug]** 外边距元素类使用像素值时，外边距都为 0。
+- **[fix]** 外边距元素类使用像素值时，外边距都为 0。
 
 
 ## 0.4.1
