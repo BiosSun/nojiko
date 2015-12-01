@@ -7,11 +7,58 @@
 /// 如果传入两个参数，则第一个作为宽度值，而第二个作为高度值；
 /// 如果某一个值为 null，则不设置其对应的属性。
 ///
-/// @example
-/// size(10px);
-/// size(10px, 20px);
-/// size(10px, false);
+/// @example sass - source
+///     @include size(10px);
+///     @include size(10px, 20px);
+///     @include size(10px, null);
+///
+/// @example css - output
+///     width: 10px; height: 10px;
+///     width: 10px; height: 20px;
+///     width: 10px;
 @mixin size($w, $h: $w) {
     @if $w { width: $w;  }
     @if $h { height: $h; }
+}
+
+/// 设置元素的最小宽度和高度
+///
+/// @output
+/// 如果只传入一个参数，则该参数将作为所设置元素的最小宽度及高度值；
+/// 如果传入两个参数，则第一个作为最小宽度值，而第二个作为最小高度值；
+/// 如果某一个值为 null，则不设置其对应的属性。
+///
+/// @example sass - source
+///     @include min-size(10px);
+///     @include min-size(10px, 20px);
+///     @include min-size(10px, null);
+///
+/// @example css - output
+///     min-width: 10px; min-height: 10px;
+///     min-width: 10px; min-height: 20px;
+///     min-width: 10px;
+@mixin min-size($w, $h: $w) {
+    @if $w { min-width: $w;  }
+    @if $h { min-height: $h; }
+}
+
+/// 设置元素的最大宽度和高度
+///
+/// @output
+/// 如果只传入一个参数，则该参数将作为所设置元素的最大宽度及高度值；
+/// 如果传入两个参数，则第一个作为最大宽度值，而第二个作为最大高度值；
+/// 如果某一个值为 null，则不设置其对应的属性。
+///
+/// @example sass - source
+///     @include max-size(10px);
+///     @include max-size(10px, 20px);
+///     @include max-size(10px, null);
+///
+/// @example css - output
+///     max-width: 10px; max-height: 10px;
+///     max-width: 10px; max-height: 20px;
+///     max-width: 10px;
+@mixin max-size($w, $h: $w) {
+    @if $w { max-width: $w;  }
+    @if $h { max-height: $h; }
 }
