@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/// 扩充元素的可点击区域
+///
+/// 在移动端开发中，一般建议可点击的元素的尺寸应当不小于 48 * 48，但有时为了保证界面美观，
+/// 元素尺寸不能设置的太大，导致不太易于点击，此时可以通过该混入类扩充元素的可点击区域。
+///
+/// @output
+/// 注意，该混入类需要使用元素的 after 或 before 伪元素中的其中一个。
+///
+/// @example sass - source
+///     .box {
+///         @include expand-scope(20px);
+///     }
+///
+///     .button {
+///         @include expand-scope(20px, before);
+///     }
+///
+/// @example css - output
+///     .box {
+///         position: relative;
+///     }
+///
+///     .box:after {
+///         content: ' ';
+///         position: absolute;
+///         left: 20px;
+///         top: 20px;
+///         right: 20px;
+///         bottom: 20px;
+///         z-index: 1;
+///     }
+///
+///     .button {
+///         position: relative;
+///     }
+///
+///     .box:before {
+///         content: ' ';
+///         position: absolute;
+///         left: 20px;
+///         top: 20px;
+///         right: 20px;
+///         bottom: 20px;
+///         z-index: 1;
+///     }
+@mixin expand-scope($expand-length, $used-pseudo-element: after) {
+    position: relative;
+
+    &:#{$used-pseudo-element} {
+        content: ' ';
+        position: absolute;
+        left: $expand-length;
+        top: $expand-length;
+        right: $expand-length;
+        bottom: $expand-length;
+        z-index: 1;
+    }
+}
