@@ -1,32 +1,5 @@
-@charset "UTF-8";
-/**
- * 使用 SVG 背景图片来模拟实现超细边框
- * @param $colors {<Color>} 四个边框颜色，支持缩写
- */
-/*
- * 使用 SVG 背景图片来模拟实现顶部超细边框
- * @param $color {Color} 边框颜色
- */
-/*
- * 使用 SVG 背景图片来模拟实现底部超细边框
- * @param $color {Color} 边框颜色
- */
-/*
- * 使用 SVG 背景图片来模拟实现左边超细边框
- * @param $color {Color} 边框颜色
- */
-/*
- * 使用 SVG 背景图片来模拟实现右边超细边框
- * @param $color {Color} 边框颜色
- */
-/*
- * 使用 SVG 背景图片来模拟实现顶部及底部超细边框
- * @param $color {Color} 边框颜色
- */
-/*
- * 使用 SVG 背景图片来模拟实现左边及右边超细边框
- * @param $color {Color} 边框颜色
- */
+/*! Scaffolding
+    ============================================================================= */
 body {
   font: 14px/1.42857 Georgia, "Times New Roman", Times, serif;
   color: #333333;
@@ -43,8 +16,8 @@ img {
   vertical-align: middle; }
 
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 20.0px;
+  margin-bottom: 20.0px;
   border: 0;
   border-top: 1px solid #d7d7d7; }
 

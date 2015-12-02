@@ -1,14 +1,19 @@
 @charset "utf-8";
 
-/// 单行文字超出显示省略号
+////
+/// @group add-ons
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/// 设置单行文字超出时显示省略号
 ///
-/// @example scss
+/// @example scss - source
 ///     .box {
 ///         width: 100%;
 ///         @include text-overflow-ellipsis();
 ///     }
 ///
-/// @example css
+/// @example css - output
 ///
 ///     .box {
 ///         width: 100%;

@@ -1,9 +1,60 @@
 @charset "utf-8";
 
-/**
- * 使用 SVG 背景图片来模拟实现超细边框
- * @param $colors {<Color>} 四个边框颜色，支持缩写
- */
+////
+/// @group add-ons
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/// 使用 background-image 模拟实现超细边框
+///
+/// @param {Color} $colors - 边框的颜色，支持缩写格式
+///
+/// @example scss - source
+///     .box {
+///         background: superfine-border(#000);
+///     }
+///
+/// @example css - output
+///     .box {
+///         background: top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 50%, transparent 50%),
+///                     bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000 50%, transparent 50%),
+///                     center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 50%, transparent 50%),
+///                     center right/1px 100% no-repeat linear-gradient(270deg, #000, #000 50%, transparent 50%);
+///     }
+///
+/// @example scss - source
+///     .box {
+///         background: superfine-border(#000 null);
+///     }
+///
+/// @example css - output
+///     .box {
+///         background: top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 50%, transparent 50%),
+///                     bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000 50%, transparent 50%);
+///     }
+///
+/// @example scss - source
+///     .box {
+///         background: superfine-border(#000 null null);
+///     }
+///
+/// @example css - output
+///     .box {
+///         background: top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 50%, transparent 50%);
+///     }
+///
+/// @example scss - source
+///     .box {
+///         background: superfine-border(#f00 #0f0 #00f #000);
+///     }
+///
+/// @example css - output
+///     .box {
+///         background: top center/100% 1px no-repeat linear-gradient(180deg, #f00, #f00 50%, transparent 50%),
+///                     bottom center/100% 1px no-repeat linear-gradient(0deg, #00f, #00f 50%, transparent 50%),
+///                     center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 50%, transparent 50%),
+///                     center right/1px 100% no-repeat linear-gradient(270deg, #0f0, #0f0 50%, transparent 50%);
+///     }
 @function superfine-border($colors) {
     $colors: nojiko-expand($colors);
 
@@ -33,50 +84,44 @@
     @return $result;
 }
 
-/*
- * 使用 SVG 背景图片来模拟实现顶部超细边框
- * @param $color {Color} 边框颜色
- */
+/// 使用 SVG 背景图片来模拟实现**顶部**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
 @function superfine-border-top($color) {
     @return superfine-border($color null null);
 }
 
-/*
- * 使用 SVG 背景图片来模拟实现底部超细边框
- * @param $color {Color} 边框颜色
- */
+/// 使用 SVG 背景图片来模拟实现**底部**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
 @function superfine-border-bottom($color) {
     @return superfine-border(null null $color);
 }
 
-/*
- * 使用 SVG 背景图片来模拟实现左边超细边框
- * @param $color {Color} 边框颜色
- */
+/// 使用 SVG 背景图片来模拟实现**左边**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
 @function superfine-border-left($color) {
     @return superfine-border(null null null $color);
 }
 
-/*
- * 使用 SVG 背景图片来模拟实现右边超细边框
- * @param $color {Color} 边框颜色
- */
+/// 使用 SVG 背景图片来模拟实现**右边**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
 @function superfine-border-right($color) {
     @return superfine-border(null $color null null);
 }
 
-/*
- * 使用 SVG 背景图片来模拟实现顶部及底部超细边框
- * @param $color {Color} 边框颜色
- */
+/// 使用 SVG 背景图片来模拟实现**顶部及底部**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
 @function superfine-border-vertical($color) {
     @return superfine-border($color null);
 }
 
-/*
- * 使用 SVG 背景图片来模拟实现左边及右边超细边框
- * @param $color {Color} 边框颜色
- */
+/// 使用 SVG 背景图片来模拟实现**左边及右边**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
 @function superfine-border-horizontal($color) {
     @return superfine-border(null $color);
 }

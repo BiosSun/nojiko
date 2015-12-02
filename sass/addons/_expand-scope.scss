@@ -1,23 +1,26 @@
 @charset "utf-8";
 
-/// 扩充元素的可点击区域
+////
+/// @group add-ons
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/// 扩充元素的可点击区域。
 ///
-/// 在移动端开发中，一般建议可点击的元素的尺寸应当不小于 48 * 48，但有时为了保证界面美观，
-/// 元素尺寸不能设置的太大，导致不太易于点击，此时可以通过该混入类扩充元素的可点击区域。
+/// 在移动端开发中，一般建议可点击的元素的尺寸应当不小于 48 * 48，但有时为了界面美观，
+/// 不允许元素的尺寸设置的太大，而这会导致元素难于点击，此时可以通过该混入类扩充元素的可点击区域。
 ///
 /// @output
-/// 注意，该混入类需要使用元素的 after 或 before 伪元素中的其中一个。
+/// 注意，该混入类需要占用目标元素的 after 伪元素或 before 伪元素中的其中一个。
 ///
-/// @example sass - source
+/// @example scss - source
+///
 ///     .box {
 ///         @include expand-scope(20px);
 ///     }
 ///
-///     .button {
-///         @include expand-scope(20px, before);
-///     }
-///
 /// @example css - output
+///
 ///     .box {
 ///         position: relative;
 ///     }
@@ -32,11 +35,20 @@
 ///         z-index: 1;
 ///     }
 ///
+///
+/// @example scss - source
+///
+///     .button {
+///         @include expand-scope(20px, before);
+///     }
+///
+/// @example css - output
+///
 ///     .button {
 ///         position: relative;
 ///     }
 ///
-///     .box:before {
+///     .button:before {
 ///         content: ' ';
 ///         position: absolute;
 ///         left: 20px;
@@ -45,6 +57,9 @@
 ///         bottom: 20px;
 ///         z-index: 1;
 ///     }
+///
+/// @param {Number[unlt]} $expand-length - 扩充范围
+/// @param {String} $used-pseudo-element [after] - 使用的伪元素
 @mixin expand-scope($expand-length, $used-pseudo-element: after) {
     position: relative;
 

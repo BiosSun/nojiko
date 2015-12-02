@@ -1,35 +1,38 @@
 @charset "utf-8";
 
 ////
+/// _variables.scss 文件用于定义一些配置变量。
+///
 /// @group variables
+/// @author Bios Sun <biossun@gmail.com>
 ////
 
 // 兼容浏览器
 // ---------------------------
 
-/// 是否支持 IE6 浏览器
-/// @type bool
+/// 是否支持 IE6
+/// @type boolean
 $support-for-ie6:               true !default;
 
-/// 是否支持 IE7 浏览器
-/// @type bool
+/// 是否支持 IE7
+/// @type boolean
 $support-for-ie7:               true !default;
 
-/// 是否支持 IE8 浏览器
-/// @type bool
+/// 是否支持 IE8
+/// @type boolean
 $support-for-ie8:               true !default;
 
 
 // 目录路径
 // ---------------------------
 
-/// 存放图片文件的目录的路径
-/// @type {string}
-$images-path:                   '../images';
+/// 存放图片文件的目录路径
+/// @type string
+$images-path:                   '../images' !default;
 
-/// 存放字体文件的目录的路径
-/// @type {string}
-$fonts-path:                    '../fonts';
+/// 存放字体文件的目录路径
+/// @type string
+$fonts-path:                    '../fonts' !default;
 
 // 文字
 // ---------------------------
@@ -42,23 +45,23 @@ $font-family:                   $FONT-FAMILY-SERIF !default;
 $font-family-monspace:          $FONT-FAMILY-FIXED-FONT !default;
 
 /// 默认文字大小
-/// @type length/px
+/// @type number
 $font-size-base:                14px !default;
 /// 较大文字大小
-/// @type length/px
+/// @type number
 $font-size-large:               ceil($font-size-base * 1.3) !default;  // 12: 15, 13: 16, 14: 18
 /// 较小文字大小
-/// @type length/px
+/// @type number
 $font-size-small:               floor($font-size-base * 0.88) !default; // 12: 10, 13: 11, 14: 12
 
 /// 默认文字行高，该变量与 $font-size-base 对应
-/// @type length/px,em,none
+/// @type number
 $line-height-base:              1.428571429 !default;
 /// 较大文字行高，该变量与 $font-size-large 对应
-/// @type length/px,em,none
+/// @type number
 $line-height-large:             1.34 !default;
 /// 较小文字行高，该变量与 $font-size-small 对应
-/// @type length/px,em,none
+/// @type number
 $line-height-small:             1.5 !default;
 
 
@@ -156,12 +159,29 @@ $alternative-color-maps:        set-alternative-color-maps(danger,  #f2dede, #a9
 // 尺寸
 // ---------------------------
 
-/// 全局盒尺寸计算模式
-/// @type [content-box|border-box]
+/// 全局盒模型尺寸计算模式，可选择使用「content-box」或「border-box」这两种计算模式。
+/// @type string
+/// @link https://developer.mozilla.org/en/docs/Web/CSS/box-sizing 关于 box-sizing 属性的说明
 $default-box-sizing:            content-box               !default;
 
-/// 默认盒尺寸名称
-/// @type meta
+/// 默认组件尺寸名称（如按钮，文本框，标题栏等）。
+///
+/// Nojiko 建议参考服装的尺寸命名方式来命名尺寸定义，如：
+///
+/// - `m` 表示普通尺寸；
+/// - `l` 表示较大尺寸；
+/// - `s` 表示较小尺寸。
+///
+/// 更大或更小号，则通过添加 'x' 前缀声明，比如：
+///
+/// - `xl` 表示特大号；
+/// - `xs` 表示特小号；
+/// - `xxl` 表示超大号；
+/// - `xxs` 表示超小号。
+///
+/// 不过虽然可以使用 'x' 定义无限级尺寸，但一般只需定义普通、较大、较小、特大和特小五个级别即可。
+///
+/// @type string
 $default-element-box-name:      m                         !default;
 
 // 普通尺寸
@@ -228,14 +248,14 @@ $element-box-maps: set-element-box-maps(
 // 布局
 // ---------------------------
 
-/// 页面宽度
-/// @type bool, length
+/// 页面宽度，若定义为 false 则表示页面为非定宽布局
+/// @type boolean | number
 $page-width:                    false                     !default;
 
 /// 模块之间的垂直间距
-/// @type length/px
+/// @type number
 $distance-vertical:             20px                      !default;
 
 /// 模块之间的水平间距
-/// @type length/px
+/// @type number
 $distance-horizontal:           20px                      !default;

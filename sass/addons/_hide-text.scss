@@ -1,8 +1,11 @@
 @charset "utf-8";
 
+////
+/// @group add-ons
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 /// 隐藏元素内的文字
-///
-/// https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7
 ///
 /// @example scss - source
 ///     .box {
@@ -15,6 +18,8 @@
 ///         color: transparent;
 ///         text-shadow: none;
 ///     }
+///
+/// @link https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7 Update CSS image replacement technique
 @mixin hide-text {
     font: 0/0 a;
     color: transparent;

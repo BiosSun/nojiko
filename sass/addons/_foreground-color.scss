@@ -1,17 +1,95 @@
 @charset "utf-8";
 
+////
+/// @group add-ons
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 /// foreground-color 用于设置元素内的前景色，同时它也会更改链接的样式。
-@mixin foreground-color($color) {
+///
+/// @content
+///
+/// 额外的自定义样式
+///
+/// @param {Color} $color - 文本颜色
+///
+/// @param {Map} $options -
+///
+/// 配置项：
+///
+/// - is-change-link-style `Boolean` `Default: true`: 是否修改链接元素的样式，若设置为 true，
+///   则会将链接的文本颜色也设置为所指定的色值，另外，为便于区分，会为链接元素额外设置文字加粗样式，并扩大元素的左右边距。
+///
+/// @example scss - source
+///
+///     .box {
+///         @include foreground-color(#f00);
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         color: #f00;
+///     }
+///
+///     .box a {
+///         color: #f00;
+///         font-weight: 700;
+///         margin-left: 1px;
+///         margin-right: 1px;
+///     }
+///
+/// @example scss - source
+///
+///     .box {
+///         @include foreground-color(#f00, (
+///             is-change-link-style: false
+///         ));
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         color: #f00;
+///     }
+///
+/// @example scss - source
+///
+///     .box {
+///         @include foreground-color(#f00, (
+///             is-change-link-style: false
+///         )) {
+///             a {
+///                 color: #f00;
+///                 font-weight: 700;
+///             }
+///         };
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         color: #f00;
+///     }
+///
+///     .box a {
+///         color: #f00;
+///         font-weight: 700;
+///     }
+@mixin foreground-color($color, $options: ( is-change-link-style: true )) {
     color: $color;
 
-    // in IE6/7，not support inherit to color property.
-    a {
-        color: $color;
-        font-weight: 700;
-        margin: {
-            left: 1px;
-            right: 1px;
+    @if map-get($options, is-change-link-style) == true {
+        // in IE6/7，not support inherit to color property.
+        a {
+            color: $color;
+            font-weight: 700;
+            margin: {
+                left: 1px;
+                right: 1px;
+            }
         }
     }
 
+    @content;
 }

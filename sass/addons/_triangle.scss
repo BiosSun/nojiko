@@ -1,10 +1,15 @@
 @charset "utf-8";
 
+////
+/// @group add-ons
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 /// 小三角箭头样式
 ///
-/// @param {Length} $width - 长度
-/// @param {String} $orientation [bottom] - 箭头的指向方向，可选值为 [top, right, left, bottom] 四个
-/// @param {Color} $color [inherit] - 箭头颜色
+/// @param {Length} $width - 小三角的宽度
+/// @param {String} $orientation [bottom] - 小三角的指向方向，可选值有 `top`、 `right`、 `left` 及 `bottom` 四个值
+/// @param {Color} $color [inherit] - 小三角的颜色
 ///
 /// @example scss - source
 ///
@@ -35,7 +40,7 @@
     width: 0;
     height: 0;
 
-    @include hide-text();
+    @include hide-text;
 
     @if $support-for-ie6 or $support-for-ie7 {
         *top: 0;

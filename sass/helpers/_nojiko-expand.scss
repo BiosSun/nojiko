@@ -1,8 +1,17 @@
 @charset "utf-8";
 
-/// 展开使用速记语法声明的方向类型复合值，比如 margin，padding 属性的值。
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/// 展开使用缩写格式声明的方向类型复合值，比如 margin，padding 属性的值。
 ///
-/// @example
+/// @access private
+///
+/// @param {list} $shorthand - 待展开的数据
+///
+/// @example scss
 ///     nojiko-expand(1px);             // 1px 1px 1px 1px
 ///     nojiko-expand(1px 2px);         // 1px 2px 1px 2px
 ///     nojiko-expand(1px 2px 3px);     // 1px 2px 3px 2px

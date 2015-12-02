@@ -1,11 +1,16 @@
 @charset "utf-8";
 
+////
+/// @group map
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 /// 获取多层嵌套的 map 数据中的某个属性
 ///
 /// @param {Map} $source - 需要从中获取数据的源数据集合
 /// @param {List} $keys - 属性的访问路径
 ///
-/// @example sass
+/// @example scss
 ///     $data: (
 ///         user: (
 ///             name: (

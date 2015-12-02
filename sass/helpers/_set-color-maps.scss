@@ -1,8 +1,19 @@
 @charset "utf-8";
 
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 $color-maps: () !default;
 
 /// 该方法用于操纵全局配色集合
+///
+/// @param {String} $name - 颜色名称
+/// @param {Color} $color - 所设置颜色值
+/// @param {Color} $text - 文本颜色的色值
+/// @param {Color} $border - 边框颜色的色值
+/// @param {Boolean} $is-default - 是否为默认值
 @function set-color-maps(
     $name,
     $color,

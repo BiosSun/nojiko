@@ -2,7 +2,7 @@
   "name": "nojiko",
   "version": "0.5.8",
   "title": "Nojiko",
-  "description": "a base style lib.",
+  "description": "一个使用 SCSS 编写的基础样式库",
   "keywords": [
     "nojiko",
     "sass",
@@ -11,9 +11,12 @@
     "base"
   ],
   "homepage": "https://github.com/BiosSun/nojiko",
+  "lang": "zh_CN",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BiosSun/nojiko.git"
+    "url": "https://github.com/BiosSun/nojiko.git",
+    "homepage": "https://github.com/BiosSun/nojiko",
+    "sourceDirectoryName": "sass"
   },
   "bugs": {
     "url": "https://github.com/BiosSun/nojiko/issues"
@@ -29,8 +32,8 @@
     "gulp-concat": "^2.5.2",
     "gulp-header": "^1.2.2",
     "gulp-sass": "^2.0.1",
-    "gulp-sassdoc": "^1.3.2",
     "gulp-watch": "^4.2.4",
-    "sassdoc": "^2.1.13"
+    "sassdoc": "^2.1.20",
+    "sassdoc-theme-winter": "^0.3.6"
   }
 }

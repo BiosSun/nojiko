@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 // =============================================================================
 // 一个尺寸配置对象中包含如下属性：
 //   padding-vertical: 垂直内边距
@@ -13,10 +18,8 @@
 // =============================================================================
 
 
-// =============================================================================
-// 私有函数
-// 以 $element-box-maps 中的某个尺寸配置为基础生成一个新的定制的尺寸配置。
-// =============================================================================
+/// 以 $element-box-maps 中的某个尺寸配置为基础生成一个新的定制的尺寸配置。
+/// @access private
 @function nojiko-get-distinctive-element-box-by-name(
     $name:                 null,
     $width:                null,
@@ -44,10 +47,8 @@
     @return map-merge( map-merge( (), $eb ), $deb );
 };
 
-// =============================================================================
-// 私有函数
-// 将一个尺寸配置中的边框宽度转移给内边据
-// =============================================================================
+/// 将一个尺寸配置中的边框宽度转移给内边据
+/// @access private
 @function nojiko-transfer-element-box-border-width($element-box) {
     $bw: map-get($element-box, border-width);
     $pv: map-get($element-box, padding-vertical);
@@ -68,28 +69,23 @@
     );
 }
 
-// =============================================================================
-// 私有函数
-// 除去一个尺寸配置中的水平内边距
-// =============================================================================
+/// 除去一个尺寸配置中的水平内边距
+/// @access private
 @function nojiko-trim-element-box-padding-horizontal($element-box) {
     @return map-merge($element-box,
         (padding-horizontal: 0)
     );
 }
 
-// =============================================================================
-// 设置元素盒模型
-// @param width 宽度
-// @param height 高度
-// @param $padding-vertical 垂直内边距
-// @param $padding-horizontal 水平内边距
-// @param $font-size 文字大小
-// @param $line-height 文字行高
-// @param border-width 边框宽度
-// @param border-radius 圆角
-// =============================================================================
-
+/// 设置元素盒模型
+/// @param {Number} width - 宽度
+/// @param {Number} height - 高度
+/// @param {Number} $padding-vertical - 垂直内边距
+/// @param {Number} $padding-horizontal - 水平内边距
+/// @param {Number} $font-size - 文字大小
+/// @param {Number} $line-height - 文字行高
+/// @param {Number} border-width - 边框宽度
+/// @param {Number} border-radius - 圆角
 @mixin element-box(
     $width:                null,
     $height:               null,
@@ -182,10 +178,8 @@
 }
 
 
-// =============================================================================
-// 设置一个无边框的盒模型尺寸
-// 将该盒模型的边框设置为 0，并将原边框宽度分配到水平及垂直内边距上。
-// =============================================================================
+/// 设置一个无边框的盒模型尺寸
+/// 将该盒模型的边框设置为 0，并将原边框宽度分配到水平及垂直内边距上。
 @mixin element-box-by-name-b(
     $name:                 null,
     $width:                null,
@@ -212,9 +206,7 @@
     @include element-box-by-map($element-box);
 }
 
-// =============================================================================
-// 设置一个无边框的且无水平内边距的盒模型尺寸
-// =============================================================================
+/// 设置一个无边框的且无水平内边距的盒模型尺寸
 @mixin element-box-by-name-bh(
     $name:                 null,
     $width:                null,

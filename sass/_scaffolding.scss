@@ -1,5 +1,15 @@
 @charset "utf-8";
 
+////
+/// _scaffolding.scss 文件用于提供一份尽可能通用的基础样式，以期望能够帮助开发者减少一些重复性的工作。
+///
+/// @group scaffolding
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/*! Scaffolding
+    ============================================================================= */
+
 @if $default-box-sizing == border-box {
     * {
         box-sizing: $default-box-sizing;

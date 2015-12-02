@@ -1,9 +1,21 @@
 @charset "utf-8";
 
+////
+/// @group map
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 /// 设置集合中某个属性的值
 ///
-/// @example
-///     $map: ( name: 'myname' );
+/// @param {Map} $source - 需要设置属性的源数据集合
+/// @param {String} $key - 所设置属性的名称
+/// @param {*} $value - 设置的值
+///
+/// @example scss
+///     $map: (
+///         name: 'myname'
+///     );
+///
 ///     map-set($map, name, 'youname');
 @function map-set($source, $key, $value) {
     @return map-merge($source, ($key: $value));

@@ -1,10 +1,31 @@
 @charset "utf-8";
 
-/// padding 的速写格式
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/// 快速设置元素的 padding 值
 ///
-/// example:
-///   padding(1px);               // 1px 1px 1px 1px
-///   padding(1px null);          // 1px 2px 1px 2px
+/// @param {List} $vals - 所设置的内边距的值
+///
+/// @example scss - source
+///     @include padding(10px);
+///
+///     @include padding(10px null 10px);
+///
+///
+///     @include padding(10px 10px 10px null);
+///
+/// @example css - output
+///     padding: 10px;
+///
+///     padding-top: 10px;
+///     padding-bottom: 10px;
+///
+///     padding-top: 10px;
+///     padding-right: 10px;
+///     padding-bottom: 10px;
 @mixin padding($vals) {
     $coordinates: nojiko-expand($vals);
 

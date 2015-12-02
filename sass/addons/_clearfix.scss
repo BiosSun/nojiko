@@ -1,9 +1,34 @@
 @charset "utf-8";
 
-/// 清除元素左右浮动
+////
+/// @group add-ons
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/// 清除元素内部的左右浮动
 ///
-/// Originated from:
-///   Micro clearfix: [http://nicolasgallagher.com/micro-clearfix-hack/]
+/// @example scss - source
+///
+///     .box {
+///         @include clearfix;
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         *zoom: 1;   /* if support ie6 or ie7, has this. */
+///     }
+///
+///     .box:before, .box:after {
+///         content: " ";
+///         display: table;
+///     }
+///
+///     .box:after {
+///         clear: both;
+///     }
+///
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro clearfix
 @mixin clearfix {
     @if $support-for-ie6 or $support-for-ie7 {
         *zoom: 1;

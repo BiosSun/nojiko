@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 @mixin opacity($opacity) {
     opacity: $opacity;
     @if $support-for-ie6 or $support-for-ie7 or $support-for-ie8 {

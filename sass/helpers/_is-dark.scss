@@ -1,8 +1,14 @@
 @charset "utf-8";
 
-/// Programatically determines whether a color is dark
-/// Returns a boolean
-/// More details here http://robots.thoughtbot.com/closer-look-color-lightness
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/// 判断所传入的颜色是否是偏深色的
+///
+/// @return {boolean} - 是否为深色色值
+/// @link http://robots.thoughtbot.com/closer-look-color-lightness A Closer Look at Color Lightness
 @function is-dark($hex-color) {
     @return if(is-light($hex-color), false, true);
 }

@@ -1,9 +1,44 @@
 @charset "utf-8";
 
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 /// 用于快速书写 postion 相关样式规则，可以同时定义 position，left，right，top，bottom 以及 z-index 五个规则。
 ///
-/// @example
-///     position(absolute, 20px 0 0, 1000);
+/// @param {String} $position [relative] - 定位类型
+/// @param {List} $coordinates [null null null null] - 各个方向的定位距离
+/// @param {Number} $z-index [null] - 层叠数值
+///
+/// @example scss - source
+///
+///     .box {
+///         @include position();
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         position: relative;
+///     }
+///
+/// @example scss - source
+///
+///     .box {
+///         @include position(absolute, 50% null null 50%, 100);
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         position: absolute;
+///
+///         top: 50%;
+///         left: 50%;
+///
+///         z-index: 100;
+///     }
 @mixin position($position: relative, $coordinates: null null null null, $z-index: null) {
     position: $position;
 

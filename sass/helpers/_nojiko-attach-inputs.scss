@@ -1,6 +1,18 @@
 @charset "utf-8";
 
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 /// 遍历所提供的一组 input 元素选择器，为每个元素选择器附加伪类。
+///
+/// @access private
+///
+/// @param {list} $inputs - 待处理的元素选择器列表
+/// @param {string} $attached [null] - 待添加的伪类名称
+///
+/// @return {list} 一个新的已为每个元素添加了伪类的列表
 ///
 /// @examples
 ///     nojiko-attach-inputs('input[text]' 'input[password]', :hover);   // input[text], input[password]
@@ -9,7 +21,11 @@
 
     @each $input in $inputs {
         $input: unquote($input);
-        @if $attached { $input: $input + ":" + $attached; }
+
+        @if $attached {
+            $input: $input + ":" + $attached;
+        }
+
         $list: append($list, $input, comma);
     }
 

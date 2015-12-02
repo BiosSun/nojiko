@@ -1,6 +1,15 @@
 @charset "utf-8";
 
+////
+/// @group list
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 /// 获取列表中的子集
+///
+/// @param {List} $list - 源数据列表
+/// @param {Number} $start [1] - 起始下标，第一个元素的下标为 0
+/// @param {Number} $end [length($list)] - 结束下标，所截取的子集中包含该下标元素
 ///
 /// @example
 ///     $list: a, b, c, d, e;

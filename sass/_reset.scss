@@ -1,5 +1,22 @@
 @charset "utf-8";
 
+////
+/// _reset.scss 文件用于提供一份通用的重置样式。
+///
+/// @group reset
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/*! Reset
+    ============================================================================= */
+
+/// 若设置该变量为 `true`，则会在 Normalize.css 的基础上额外添加如下重置样式：
+///
+/// - 清除所有元素的内外边距
+/// - 清除 `h1-6`、`big` 及 `small` 的文字样式
+/// - 清除无序列表及有序列表的列表样式
+///
+/// @type boolean
 $is-exhaustive-reset: false !default;
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */

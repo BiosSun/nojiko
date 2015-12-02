@@ -1,8 +1,12 @@
 @charset "utf-8";
 
+/*! Elements
+    ============================================================================= */
+
 ////
-/// _elements.scss 文件提供了一些常用的样式类。
-/// @group Elements
+/// _elements.scss 文件用于提供一些常用的样式类。
+///
+/// @group elements
 /// @author Bios Sun <biossun@gmail.com>
 ////
 
@@ -239,7 +243,6 @@ $nojiko-el-per-width-values: () !default;
     // 小三角箭头
     $nojiko-el-triangle:                      ar                         !default !global;
 }
-
 
 // 尺寸
 // ---------------------------

@@ -1,8 +1,14 @@
 @charset "utf-8";
 
-/// Programatically determines whether a color is light
-/// Returns a boolean
-/// More details here http://robots.thoughtbot.com/closer-look-color-lightness
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/// 判断所传入的颜色是否是偏浅色的
+///
+/// @return {boolean} - 是否是浅色色值
+/// @link http://robots.thoughtbot.com/closer-look-color-lightness A Closer Look at Color Lightness
 @function is-light($hex-color) {
     $-local-red: red(rgba($hex-color, 1.0));
     $-local-green: green(rgba($hex-color, 1.0));

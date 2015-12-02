@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 /// 设置元素的宽度和高度
 ///
 /// @output
@@ -7,7 +12,7 @@
 /// 如果传入两个参数，则第一个作为宽度值，而第二个作为高度值；
 /// 如果某一个值为 null，则不设置其对应的属性。
 ///
-/// @example sass - source
+/// @example scss - source
 ///     @include size(10px);
 ///     @include size(10px, 20px);
 ///     @include size(10px, null);
@@ -28,7 +33,7 @@
 /// 如果传入两个参数，则第一个作为最小宽度值，而第二个作为最小高度值；
 /// 如果某一个值为 null，则不设置其对应的属性。
 ///
-/// @example sass - source
+/// @example scss - source
 ///     @include min-size(10px);
 ///     @include min-size(10px, 20px);
 ///     @include min-size(10px, null);
@@ -49,7 +54,7 @@
 /// 如果传入两个参数，则第一个作为最大宽度值，而第二个作为最大高度值；
 /// 如果某一个值为 null，则不设置其对应的属性。
 ///
-/// @example sass - source
+/// @example scss - source
 ///     @include max-size(10px);
 ///     @include max-size(10px, 20px);
 ///     @include max-size(10px, null);

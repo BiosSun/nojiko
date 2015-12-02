@@ -1,14 +1,58 @@
 @charset "utf-8";
 
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
 /// 为元素设置半透明背景色，在低版本的 IE 浏览器中，会使用 filter 实现该效果。
 ///
-/// 注意: 因为 IE9 同时支持 alpha 以及 filter，因此在应用 IE Hack 时会导致两个设置相互重叠，
-/// 使得最终显示的颜色要比所设置的颜色深很多，不过万幸的是这并非太严重的问题。
+/// **Notes: 因为 IE9 同时支持 alpha 以及 filter，因此在应用 IE Hack 时会导致两个设置相互重叠，
+/// 使得最终显示的颜色要比所设置的颜色深一些。**
 ///
-/// @examples
-///     @include translucent-background(rgba(0, 0, 0, .2));
-///     @include translucent-background(#fff, 0.2);
-@mixin translucent-bgcolor($color, $alpha: false) {
+/// @param {Color} $color - 所设置的背景色
+/// @param {Number} $alpha [null] - 若所设置的色值中不包含 alpha 通道，则可以使用该参数单独指定
+///
+/// @example scss - source
+///
+///     .box {
+///         @include translucent-background(rgba(0, 0, 0, .2));
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         background: rgba(0, 0, 0, .2);
+///
+///         /* if support ie6, ie7 or ie8, has this. */
+///         zoom: 1\9;
+///         filter: progid:DXImageTransform.Microsoft.Gradient(
+///             GradientType=0,
+///             StartColorStr='#33000000',
+///             EndColorStr='#33000000'
+///         );
+///     }
+///
+/// @example scss - source
+///
+///     .box {
+///         @include translucent-background(#000, .2);
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         background: rgba(0, 0, 0, .2);
+///
+///         /* if support ie6, ie7 or ie8, has this. */
+///         zoom: 1\9;
+///         filter: progid:DXImageTransform.Microsoft.Gradient(
+///             GradientType=0,
+///             StartColorStr='#33000000',
+///             EndColorStr='#33000000'
+///         );
+///     }
+@mixin translucent-bgcolor($color, $alpha: null) {
 
     @if $alpha {
         $color: rgba($color, $alpha);
@@ -16,7 +60,7 @@
 
     background: $color;
 
-    @if $support-for-ie6 or $support-for-ie7 or $support-ie8 {
+    @if $support-for-ie6 or $support-for-ie7 or $support-for-ie8 {
         zoom: 1\9;
         filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#{ie-hex-str($color)}', EndColorStr='#{ie-hex-str($color)}');
     }

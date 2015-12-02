@@ -1,32 +1,4 @@
 @charset "UTF-8";
-/**
- * 使用 SVG 背景图片来模拟实现超细边框
- * @param $colors {<Color>} 四个边框颜色，支持缩写
- */
-/*
- * 使用 SVG 背景图片来模拟实现顶部超细边框
- * @param $color {Color} 边框颜色
- */
-/*
- * 使用 SVG 背景图片来模拟实现底部超细边框
- * @param $color {Color} 边框颜色
- */
-/*
- * 使用 SVG 背景图片来模拟实现左边超细边框
- * @param $color {Color} 边框颜色
- */
-/*
- * 使用 SVG 背景图片来模拟实现右边超细边框
- * @param $color {Color} 边框颜色
- */
-/*
- * 使用 SVG 背景图片来模拟实现顶部及底部超细边框
- * @param $color {Color} 边框颜色
- */
-/*
- * 使用 SVG 背景图片来模拟实现左边及右边超细边框
- * @param $color {Color} 边框颜色
- */
 .nojiko-expand {
   margin: 1px 1px 1px 1px;
   margin: 1px 2px 1px 2px;
@@ -109,8 +81,7 @@ input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:ac
 
 .clearfix {
   *zoom: 1; }
-  .clearfix:before,
-  .clearfix:after {
+  .clearfix:before, .clearfix:after {
     content: " ";
     display: table; }
   .clearfix:after {
@@ -122,19 +93,19 @@ input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:ac
   text-shadow: none; }
 
 .get-element-box-height-by-name {
-  height: 34px;
-  height: 47px;
-  height: 58px;
+  height: 34.0px;
+  height: 47.46px;
+  height: 58.82px;
   height: 28px;
   height: 24px;
-  height: 34px;
-  height: 47px;
-  height: 58px;
+  height: 34.0px;
+  height: 47.46px;
+  height: 58.82px;
   height: 28px;
   height: 24px;
-  height: 54px;
-  height: 72px;
-  height: 88px;
+  height: 54.0px;
+  height: 72.92px;
+  height: 89.64px;
   height: 46px;
   height: 42px; }
 
