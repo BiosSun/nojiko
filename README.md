@@ -29,3 +29,7 @@ $ bower install nojiko
 @import "nojiko/scaffolding";
 @import "nojiko/elements";
 ```
+
+## 升级
+
+目前 Nojiko 尚处于开发阶段，因此若要从老版本升级到新版本，请仔细查阅 [更新记录](./CHANGELOG.md)，并对自己项目中的代码进行相应的修改。
