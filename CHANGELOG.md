@@ -3,6 +3,15 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [fix] 前缀的更新为异常修复，建议尽快更新。*
 
+## 0.5.8
+
+- [fix] computed-line-height 方法命名有误，将其设置为已弃用状态，并提供一个新的方法：compute-line-height；
+- [fix] 解决在调用 computed-line-height 时，若 $line-height 参数有单位但非 px 时，仍进行计算的问题；
+- 另外，computed-line-height 方法中不再对计算结果进行向下取整；
+- 添加 min-size 及 max-size 两个混入类，用于设置元素的最小尺寸及最大尺寸；
+- 添加 expand-scope 混入类，用于扩大元素的可点击区域；
+- 更新 normalize.css 到 3.0.3；
+
 ## 0.5.7
 
 - 增加 rem 支持
