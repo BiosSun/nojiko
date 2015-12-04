@@ -3,13 +3,25 @@
   "version": "0.5.7",
   "title": "Nojiko",
   "description": "a base style lib.",
-  "homepage": "https://github.com/BiosSun/nojiko",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT"
-    }
+  "keywords": [
+    "nojiko",
+    "sass",
+    "scss",
+    "lib",
+    "base"
   ],
+  "homepage": "https://github.com/BiosSun/nojiko",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BiosSun/nojiko.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BiosSun/nojiko/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT"
+  },
   "dependencies": {},
   "devDependencies": {
     "commander": "^2.5.0",
