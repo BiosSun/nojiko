@@ -1,5 +1,0 @@
-port: 4008
-
-markdown: redcarpet
-redcarpet:
-  extensions: [footnotes, fenced_code_blocks, autolink, tables, strikethrough, underline, superscript]
