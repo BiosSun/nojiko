@@ -10,9 +10,6 @@
 /// @author Bios Sun <biossun@gmail.com>
 ////
 
-// 元素类名风格
-$nojiko-el-class-style: 'long' !default;
-
 // 外边距值
 $nojiko-el-margin-values: () !default;
 
@@ -29,220 +26,113 @@ $nojiko-el-em-width-values: () !default;
 $nojiko-el-per-width-values: () !default;
 
 // 类名配置
-@if $nojiko-el-class-style == 'long' {
-    // 尺寸
-    $nojiko-el-size:                          size-                      !default !global;
+// ---------------------------
 
-    // 外边距
-    $nojiko-el-margin:                        margin-                    !default !global;
-    $nojiko-el-margin-top:                    margin-top-                !default !global;
-    $nojiko-el-margin-right:                  margin-right-              !default !global;
-    $nojiko-el-margin-left:                   margin-left-               !default !global;
-    $nojiko-el-margin-bottom:                 margin-bottom-             !default !global;
-    $nojiko-el-margin-vertical:               margin-vertical-           !default !global;
-    $nojiko-el-margin-horizontal:             margin-horizontal-         !default !global;
+// 尺寸
+$nojiko-el-size:                          s                          !default;
 
-    // 内边距
-    $nojiko-el-padding:                       padding-                   !default !global;
-    $nojiko-el-padding-top:                   padding-top-               !default !global;
-    $nojiko-el-padding-right:                 padding-right-             !default !global;
-    $nojiko-el-padding-left:                  padding-left-              !default !global;
-    $nojiko-el-padding-bottom:                padding-bottom-            !default !global;
-    $nojiko-el-padding-vertical:              padding-vertical-          !default !global;
-    $nojiko-el-padding-horizontal:            padding-horizontal-        !default !global;
+// 外边距
+$nojiko-el-margin:                        m                          !default;
+$nojiko-el-margin-top:                    mt                         !default;
+$nojiko-el-margin-right:                  mr                         !default;
+$nojiko-el-margin-left:                   ml                         !default;
+$nojiko-el-margin-bottom:                 mb                         !default;
+$nojiko-el-margin-vertical:               mv                         !default;
+$nojiko-el-margin-horizontal:             mh                         !default;
 
-    // 宽度
-    $nojiko-el-width:                         width-                     !default !global;
+// 内边距
+$nojiko-el-padding:                       p                          !default;
+$nojiko-el-padding-top:                   pt                         !default;
+$nojiko-el-padding-right:                 pr                         !default;
+$nojiko-el-padding-left:                  pl                         !default;
+$nojiko-el-padding-bottom:                pb                         !default;
+$nojiko-el-padding-vertical:              pv                         !default;
+$nojiko-el-padding-horizontal:            ph                         !default;
 
-    // 隐藏元素
-    // -----------------
+// 宽度
+$nojiko-el-width:                         w                          !default;
 
-    // 完全隐藏
-    $nojiko-el-hidden:                        hidden                     !default !global;
-    // 视觉隐藏，但在屏幕阅读器中显示
-    $nojiko-el-visually-hidden:               visually-hidden            !default !global;
-    // 在视觉及屏幕阅读器中隐藏，但保持布局结构
-    $nojiko-el-invisible:                     invisible                  !default !global;
+// 隐藏元素
+// -----------------
 
-    // 浮动
-    // -----------------
+// 完全隐藏
+$nojiko-el-hidden:                        h                          !default;
+// 视觉隐藏，只在屏幕阅读器中显示
+$nojiko-el-visually-hidden:               hv                         !default;
+// 在视觉及屏幕阅读器中隐藏，但保持布局结构
+$nojiko-el-invisible:                     hi                         !default;
 
-    // 向左浮动的元素
-    $nojiko-el-float-left:                    float-left                 !default !global;
-    // 向右浮动的元素
-    $nojiko-el-float-right:                   float-right                !default !global;
-    // 清除内部浮动的元素
-    $nojiko-el-clear-float:                   clear-float                !default !global;
+// 浮动
+// -----------------
 
-    // 颜色
-    // -----------------
+// 向左浮动的元素
+$nojiko-el-float-left:                    fl                         !default;
+// 向右浮动的元素
+$nojiko-el-float-right:                   fr                         !default;
+// 清除内部浮动的元素
+$nojiko-el-clear-float:                   fc                         !default;
 
-    // 背景颜色
-    $nojiko-el-background-color:              background-                !default !global;
+// 颜色
+// -----------------
 
-    // 前景颜色
-    $nojiko-el-foreground-color:              foreground-                !default !global;
+// 背景颜色
+$nojiko-el-background-color:              bg-                        !default;
 
-    // 元素显示
-    // -----------------
+// 前景颜色
+$nojiko-el-foreground-color:              fg-                        !default;
 
-    // 块级元素
-    $nojiko-el-display-block:                 block                      !default !global;
+// 元素显示
+// -----------------
 
-    // 行内元素
-    $nojiko-el-display-inline:                inline                     !default !global;
+// 块级元素
+$nojiko-el-display-block:                 db                         !default;
 
-    // 行内块级元素
-    $nojiko-el-display-inline-block:          inline-block               !default !global;
+// 行内元素
+$nojiko-el-display-inline:                di                         !default;
 
-    // 文字对齐
-    // -----------------
+// 行内块级元素
+$nojiko-el-display-inline-block:          dib                        !default;
 
-    // 文字左对齐
-    $nojiko-el-text-left:                     text-left                  !default !global;
-    // 文字右对齐
-    $nojiko-el-text-right:                    text-right                 !default !global;
-    // 文字居中对齐
-    $nojiko-el-text-center:                   text-center                !default !global;
-    // 文字两端对齐
-    $nojiko-el-text-justify:                  text-justify               !default !global;
+// 文字对齐
+// -----------------
 
-    // 文字样式
-    // -----------------
+// 文字左对齐
+$nojiko-el-text-left:                     tl                         !default;
+// 文字右对齐
+$nojiko-el-text-right:                    tr                         !default;
+// 文字居中对齐
+$nojiko-el-text-center:                   tc                         !default;
+// 文字两端对齐
+$nojiko-el-text-justify:                  tj                         !default;
 
-    // 文字加粗
-    $nojiko-el-text-bold:                     text-bold                  !default !global;
-    // 文字倾斜
-    $nojiko-el-text-italic:                   text-italic                !default !global;
-    // 文字下划线
-    $nojiko-el-text-underline:                text-underline             !default !global;
-    // 文字删除线
-    $nojiko-el-text-del:                      text-del                   !default !global;
+// 文字样式
+// -----------------
 
-    // 文字较大
-    $nojiko-el-text-large:                    text-large                 !default !global;
-    // 文字较小
-    $nojiko-el-text-small:                    text-small                 !default !global;
+// 文字加粗
+$nojiko-el-text-bold:                     tb                         !default;
+// 文字倾斜
+$nojiko-el-text-italic:                   ti                         !default;
+// 文字下划线
+$nojiko-el-text-underline:                tu                         !default;
+// 文字删除线
+$nojiko-el-text-del:                      td                         !default;
 
-    // 其它
-    // -----------------
+// 文字较大
+$nojiko-el-text-large:                    tp                         !default;
+// 文字较小
+$nojiko-el-text-small:                    tm                         !default;
 
-    // 单行文本，且内容溢出时显示省略号的元素（需要设置宽度）
-    $nojiko-el-text-overflow:                 text-overflow              !default !global;
+// 其它
+// -----------------
 
-    // 包含一个字符 '|' 的元素，通常用于分隔其他行内元素
-    $nojiko-el-separator-line:                separator-line             !default !global;
+// 单行文本，且内容溢出时显示省略号的元素（需要设置宽度）
+$nojiko-el-text-overflow:                 to                         !default;
 
-    // 小三角箭头
-    $nojiko-el-triangle:                      triangle                   !default !global;
-}
-@else {
-    // 尺寸
-    $nojiko-el-size:                          s                          !default !global;
+// 包含一个字符 '|' 的元素，通常用于分隔其他行内元素
+$nojiko-el-separator-line:                sl                         !default;
 
-    // 外边距
-    $nojiko-el-margin:                        m                          !default !global;
-    $nojiko-el-margin-top:                    mt                         !default !global;
-    $nojiko-el-margin-right:                  mr                         !default !global;
-    $nojiko-el-margin-left:                   ml                         !default !global;
-    $nojiko-el-margin-bottom:                 mb                         !default !global;
-    $nojiko-el-margin-vertical:               mv                         !default !global;
-    $nojiko-el-margin-horizontal:             mh                         !default !global;
-
-    // 内边距
-    $nojiko-el-padding:                       p                          !default !global;
-    $nojiko-el-padding-top:                   pt                         !default !global;
-    $nojiko-el-padding-right:                 pr                         !default !global;
-    $nojiko-el-padding-left:                  pl                         !default !global;
-    $nojiko-el-padding-bottom:                pb                         !default !global;
-    $nojiko-el-padding-vertical:              pv                         !default !global;
-    $nojiko-el-padding-horizontal:            ph                         !default !global;
-
-    // 宽度
-    $nojiko-el-width:                         w                          !default !global;
-
-    // 隐藏元素
-    // -----------------
-
-    // 完全隐藏
-    $nojiko-el-hidden:                        h                          !default !global;
-    // 视觉隐藏，只在屏幕阅读器中显示
-    $nojiko-el-visually-hidden:               hv                         !default !global;
-    // 在视觉及屏幕阅读器中隐藏，但保持布局结构
-    $nojiko-el-invisible:                     hi                         !default !global;
-
-    // 浮动
-    // -----------------
-
-    // 向左浮动的元素
-    $nojiko-el-float-left:                    fl                         !default !global;
-    // 向右浮动的元素
-    $nojiko-el-float-right:                   fr                         !default !global;
-    // 清除内部浮动的元素
-    $nojiko-el-clear-float:                   fc                         !default !global;
-
-    // 颜色
-    // -----------------
-
-    // 背景颜色
-    $nojiko-el-background-color:              bg-                        !default !global;
-
-    // 前景颜色
-    $nojiko-el-foreground-color:              fg-                        !default !global;
-
-    // 元素显示
-    // -----------------
-
-    // 块级元素
-    $nojiko-el-display-block:                 db                         !default !global;
-
-    // 行内元素
-    $nojiko-el-display-inline:                di                         !default !global;
-
-    // 行内块级元素
-    $nojiko-el-display-inline-block:          dib                        !default !global;
-
-    // 文字对齐
-    // -----------------
-
-    // 文字左对齐
-    $nojiko-el-text-left:                     tl                         !default !global;
-    // 文字右对齐
-    $nojiko-el-text-right:                    tr                         !default !global;
-    // 文字居中对齐
-    $nojiko-el-text-center:                   tc                         !default !global;
-    // 文字两端对齐
-    $nojiko-el-text-justify:                  tj                         !default !global;
-
-    // 文字样式
-    // -----------------
-
-    // 文字加粗
-    $nojiko-el-text-bold:                     tb                         !default !global;
-    // 文字倾斜
-    $nojiko-el-text-italic:                   ti                         !default !global;
-    // 文字下划线
-    $nojiko-el-text-underline:                tu                         !default !global;
-    // 文字删除线
-    $nojiko-el-text-del:                      td                         !default !global;
-
-    // 文字较大
-    $nojiko-el-text-large:                    tp                         !default !global;
-    // 文字较小
-    $nojiko-el-text-small:                    tm                         !default !global;
-
-    // 其它
-    // -----------------
-
-    // 单行文本，且内容溢出时显示省略号的元素（需要设置宽度）
-    $nojiko-el-text-overflow:                 to                         !default !global;
-
-    // 包含一个字符 '|' 的元素，通常用于分隔其他行内元素
-    $nojiko-el-separator-line:                sl                         !default !global;
-
-    // 小三角箭头
-    $nojiko-el-triangle:                      ar                         !default !global;
-}
+// 小三角箭头
+$nojiko-el-triangle:                      ar                         !default;
 
 // 尺寸
 // ---------------------------
