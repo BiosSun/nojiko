@@ -14,36 +14,93 @@
 // 类名配置
 // ---------------------------
 
+
 // 外边距
+
+/// 用于 「**添加外边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-margin:                        m                          !default;
+
+/// 用于 「**添加顶部外边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-margin-top:                    mt                         !default;
+
+/// 用于 「**添加右边外边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-margin-right:                  mr                         !default;
+
+/// 用于 「**添加左边外边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-margin-left:                   ml                         !default;
+
+/// 用于 「**添加底部外边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-margin-bottom:                 mb                         !default;
+
+/// 用于 「**添加垂直方向外边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-margin-vertical:               mv                         !default;
+
+/// 用于 「**添加水平方向外边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-margin-horizontal:             mh                         !default;
 
+
 // 内边距
+
+/// 用于 「**添加内边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-padding:                       p                          !default;
+
+/// 用于 「**添加顶部内边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-padding-top:                   pt                         !default;
+
+/// 用于 「**添加右边内边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-padding-right:                 pr                         !default;
+
+/// 用于 「**添加左边内边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-padding-left:                  pl                         !default;
+
+/// 用于 「**添加底部内边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-padding-bottom:                pb                         !default;
+
+/// 用于 「**添加垂直方向内边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-padding-vertical:              pv                         !default;
+
+/// 用于 「**添加水平方向内边距**」 的元素样式类的类名
+/// @type string
 $nojiko-el-padding-horizontal:            ph                         !default;
 
-// 完全隐藏
+
+// 隐藏
+
+/// 用于 「**完全隐藏元素**」 的元素样式类的类名
+/// @type string
 $nojiko-el-hidden:                        h                          !default;
-// 视觉隐藏，只在屏幕阅读器中显示
+
+/// 用于 「**只在普通屏幕上隐藏元素，而在屏幕阅读器中显示**」 的元素样式类的类名
+/// @type string
 $nojiko-el-visually-hidden:               hv                         !default;
-// 在视觉及屏幕阅读器中隐藏，但保持布局结构
+
+/// 用于 「**在视觉及屏幕阅读器中隐藏元素，但保持布局结构**」 的元素样式类的类名
+/// @type string
 $nojiko-el-invisible:                     hi                         !default;
 
-// 向左浮动的元素
+/// 用于 「**设置元素向左浮动**」 的元素样式类的类名
+/// @type string
 $nojiko-el-float-left:                    fl                         !default;
-// 向右浮动的元素
+
+/// 用于 「**设置元素向右浮动**」 的元素样式类的类名
+/// @type string
 $nojiko-el-float-right:                   fr                         !default;
-// 清除内部浮动的元素
+
+/// 用于 「**清除元素内部浮动**」 的元素样式类的类名
+/// @type string
 $nojiko-el-clear-float:                   fc                         !default;
 
 

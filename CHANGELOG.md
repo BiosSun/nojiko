@@ -3,6 +3,13 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [fix] 前缀的更新为异常修复，建议尽快更新。*
 
+## 0.6.1
+
+- [danger] 移除元素类的长短类名配置，一律默认使用短类名
+- [danger] 将 elements 模块中除内外边距、隐藏元素、左右浮动及清除浮动之外的所有元素类移入到 elements-extend 模块中
+- [danger] 去除配置变量 $nojiko-el-margin-values，不再允许自定义外边距元素类的值
+- [danger] 去除配置变量 $nojiko-el-padding-values，不再允许自定义内边距元素类的值
+
 ## 0.6.0
 
 - 添加文档
