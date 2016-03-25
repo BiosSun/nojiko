@@ -10,12 +10,6 @@
 /// @author Bios Sun <biossun@gmail.com>
 ////
 
-// 外边距值
-$nojiko-el-margin-values: () !default;
-
-// 内边距值
-$nojiko-el-padding-values: () !default;
-
 
 // 类名配置
 // ---------------------------
@@ -56,7 +50,7 @@ $nojiko-el-clear-float:                   fc                         !default;
 // 外边距
 // ---------------------------
 
-@each $name in join((m, d, x), $nojiko-el-margin-values) {
+@each $name in (m, d, x) {
     $v: 0;
     $h: 0;
 
@@ -166,7 +160,7 @@ $nojiko-el-clear-float:                   fc                         !default;
 // 内边距
 // ---------------------------
 
-@each $name in join((p, d, x), $nojiko-el-padding-values) {
+@each $name in (p, d, x) {
     $v: 0;
     $h: 0;
 
