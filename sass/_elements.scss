@@ -16,20 +16,9 @@ $nojiko-el-margin-values: () !default;
 // 内边距值
 $nojiko-el-padding-values: () !default;
 
-// 像素宽度值
-$nojiko-el-width-values: () !default;
-
-// 字宽宽度值
-$nojiko-el-em-width-values: () !default;
-
-// 百分比宽度值
-$nojiko-el-per-width-values: () !default;
 
 // 类名配置
 // ---------------------------
-
-// 尺寸
-$nojiko-el-size:                          s                          !default;
 
 // 外边距
 $nojiko-el-margin:                        m                          !default;
@@ -49,12 +38,6 @@ $nojiko-el-padding-bottom:                pb                         !default;
 $nojiko-el-padding-vertical:              pv                         !default;
 $nojiko-el-padding-horizontal:            ph                         !default;
 
-// 宽度
-$nojiko-el-width:                         w                          !default;
-
-// 隐藏元素
-// -----------------
-
 // 完全隐藏
 $nojiko-el-hidden:                        h                          !default;
 // 视觉隐藏，只在屏幕阅读器中显示
@@ -62,88 +45,12 @@ $nojiko-el-visually-hidden:               hv                         !default;
 // 在视觉及屏幕阅读器中隐藏，但保持布局结构
 $nojiko-el-invisible:                     hi                         !default;
 
-// 浮动
-// -----------------
-
 // 向左浮动的元素
 $nojiko-el-float-left:                    fl                         !default;
 // 向右浮动的元素
 $nojiko-el-float-right:                   fr                         !default;
 // 清除内部浮动的元素
 $nojiko-el-clear-float:                   fc                         !default;
-
-// 颜色
-// -----------------
-
-// 背景颜色
-$nojiko-el-background-color:              bg-                        !default;
-
-// 前景颜色
-$nojiko-el-foreground-color:              fg-                        !default;
-
-// 元素显示
-// -----------------
-
-// 块级元素
-$nojiko-el-display-block:                 db                         !default;
-
-// 行内元素
-$nojiko-el-display-inline:                di                         !default;
-
-// 行内块级元素
-$nojiko-el-display-inline-block:          dib                        !default;
-
-// 文字对齐
-// -----------------
-
-// 文字左对齐
-$nojiko-el-text-left:                     tl                         !default;
-// 文字右对齐
-$nojiko-el-text-right:                    tr                         !default;
-// 文字居中对齐
-$nojiko-el-text-center:                   tc                         !default;
-// 文字两端对齐
-$nojiko-el-text-justify:                  tj                         !default;
-
-// 文字样式
-// -----------------
-
-// 文字加粗
-$nojiko-el-text-bold:                     tb                         !default;
-// 文字倾斜
-$nojiko-el-text-italic:                   ti                         !default;
-// 文字下划线
-$nojiko-el-text-underline:                tu                         !default;
-// 文字删除线
-$nojiko-el-text-del:                      td                         !default;
-
-// 文字较大
-$nojiko-el-text-large:                    tp                         !default;
-// 文字较小
-$nojiko-el-text-small:                    tm                         !default;
-
-// 其它
-// -----------------
-
-// 单行文本，且内容溢出时显示省略号的元素（需要设置宽度）
-$nojiko-el-text-overflow:                 to                         !default;
-
-// 包含一个字符 '|' 的元素，通常用于分隔其他行内元素
-$nojiko-el-separator-line:                sl                         !default;
-
-// 小三角箭头
-$nojiko-el-triangle:                      ar                         !default;
-
-// 尺寸
-// ---------------------------
-
-    @if $nojiko-el-size {
-        @each $k, $v in $element-box-maps {
-            .#{$nojiko-el-size}#{$k}    { @include element-box-by-name($k);    }
-            .#{$nojiko-el-size}#{$k}-b  { @include element-box-by-name-b($k);  }
-            .#{$nojiko-el-size}#{$k}-bh { @include element-box-by-name-bh($k); }
-        }
-}
 
 
 // 外边距
@@ -366,25 +273,6 @@ $nojiko-el-triangle:                      ar                         !default;
 }
 
 
-
-// 宽度
-// ---------------------------
-
-
-@if $nojiko-el-width {
-    @each $length in $nojiko-el-width-values {
-        .#{$nojiko-el-width}#{$length} { width: $length + 0px; }
-    }
-
-    @each $length in $nojiko-el-em-width-values {
-        .#{$nojiko-el-width}#{$length}em { width: $length + 0em; }
-    }
-
-    @each $length in $nojiko-el-per-width-values {
-        .#{$nojiko-el-width}#{$length}p { width: $length + 0%; }
-    }
-}
-
 // 隐藏元素
 // ---------------------------
 
@@ -421,126 +309,10 @@ $nojiko-el-triangle:                      ar                         !default;
     }
 }
 
+
 // 浮动
 // ---------------------------
 
 @if $nojiko-el-float-left  { .#{$nojiko-el-float-left}  { @include float(left);  } }
 @if $nojiko-el-float-right { .#{$nojiko-el-float-right} { @include float(right); } }
 @if $nojiko-el-clear-float { .#{$nojiko-el-clear-float} { @include clearfix;     } }
-
-
-// 颜色
-// ---------------------------
-
-@if $nojiko-el-background-color {
-    @each $key, $color in $color-maps {
-        .#{$nojiko-el-background-color}#{$key} {
-            background: map-get($color, color);
-        }
-    }
-
-    .#{$nojiko-el-background-color}common {
-        background: $background-color;
-    }
-
-    .#{$nojiko-el-background-color}gray-darker {
-        background: $gray-darker;
-    }
-
-    .#{$nojiko-el-background-color}gray-dark {
-        background: $gray-dark;
-    }
-
-    .#{$nojiko-el-background-color}gray {
-        background: $gray;
-    }
-
-    .#{$nojiko-el-background-color}gray-light {
-        background: $gray-light;
-    }
-
-    .#{$nojiko-el-background-color}gray-lighter {
-        background: $gray-lighter;
-    }
-}
-
-@if $nojiko-el-foreground-color {
-    @each $key, $color in $color-maps {
-        .#{$nojiko-el-foreground-color}#{$key} {
-            @include foreground-color(map-get($color, color));
-        }
-    }
-
-    .#{$nojiko-el-foreground-color}text {
-        @include foreground-color($text-color);
-    }
-
-    .#{$nojiko-el-foreground-color}quiet {
-        @include foreground-color($text-color-quiet);
-    }
-
-    .#{$nojiko-el-foreground-color}loud {
-        @include foreground-color($text-color-loud);
-    }
-
-    .#{$nojiko-el-foreground-color}link {
-        @include foreground-color($link-color);
-    }
-}
-
-// 元素显示
-// ---------------------------
-
-@if $nojiko-el-display-block            { .#{$nojiko-el-display-block}            { display: block;                    } }
-@if $nojiko-el-display-inline           { .#{$nojiko-el-display-inline}           { display: inline;                   } }
-@if $nojiko-el-display-inline-block     { .#{$nojiko-el-display-inline-block}     { @include inline-block;             } }
-
-
-// 文字对齐
-// ---------------------------
-
-@if $nojiko-el-text-left   { .#{$nojiko-el-text-left}   { text-align: left;   } }
-@if $nojiko-el-text-right  { .#{$nojiko-el-text-right}  { text-align: right;  } }
-@if $nojiko-el-text-center { .#{$nojiko-el-text-center} { text-align: center; } }
-
-
-// 文字样式
-// ---------------------------
-@if $nojiko-el-text-bold      { .#{$nojiko-el-text-bold}       { font-weight: bold;               } }
-@if $nojiko-el-text-italic    { .#{$nojiko-el-text-italic}     { font-style: italic;              } }
-@if $nojiko-el-text-underline { .#{$nojiko-el-text-underline}  { text-decoration: underline;      } }
-@if $nojiko-el-text-del       { .#{$nojiko-el-text-del}        { text-decoration: line-through;   } }
-
-@if $nojiko-el-text-large     { .#{$nojiko-el-text-large}      { font-size: $font-size-large;     } }
-@if $nojiko-el-text-small     { .#{$nojiko-el-text-small}      { font-size: $font-size-small;     } }
-
-
-// 文字单行，溢出显示省略号；需设定宽度
-// ---------------------------
-
-@if $nojiko-el-text-overflow  { .#{$nojiko-el-text-overflow}   { @include text-overflow-ellipsis; } }
-
-
-// 字符分隔线
-// ---------------------------
-
-@if $nojiko-el-separator-line {
-    .#{$nojiko-el-separator-line} {
-        @include inline-block(middle);
-        width: 1px;
-        text-indent: 10000px;
-        margin: -0.09em 0.5em 0;
-        line-height: 1;
-        background-color: $gray-light;
-        overflow: hidden;
-    }
-}
-
-// 小三角箭头
-// ---------------------------
-@if $nojiko-el-triangle {
-    .#{$nojiko-el-triangle}-b { @include triangle(4px, bottom); margin-left: 2px; }
-    .#{$nojiko-el-triangle}-t { @include triangle(4px, top   ); margin-left: 2px; }
-    .#{$nojiko-el-triangle}-l { @include triangle(4px, left  ); margin-left: 2px; }
-    .#{$nojiko-el-triangle}-r { @include triangle(4px, right ); margin-left: 2px; }
-}
