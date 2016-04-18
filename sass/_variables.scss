@@ -38,6 +38,14 @@ $fonts-path:                    '../fonts' !default;
 // ---------------------------
 
 /// 默认字体集
+///
+/// 除了自己指定字体集之外，Nojiko 还提供了如下几个常用字体集以供选用：
+///
+/// - `$FONT-FAMILY-SANS-SERIF` 英文无衬线字体集
+/// - `$FONT-FAMILY-SERIF` 英文衬线字体集
+/// - `$FONT-FAMILY-FIXED-FONT` 英文等宽字体集
+/// - `$FONT-FAMILY-CHINESE-SANS-SERIF` 较适合中文环境的无衬线字体集
+///
 /// @type list
 $font-family:                   $FONT-FAMILY-SERIF !default;
 /// 默认代码字体集
