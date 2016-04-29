@@ -813,8 +813,8 @@ hr {
 
 .document .type-header {
   border-bottom: 1px dashed #e0e0e0;
-  padding: 20px 0;
-  margin: 20px 0;
+  padding: 20px 10000px;
+  margin: 50px -10000px 70px;
 }
 
 .document .type-name {
