@@ -70,7 +70,8 @@ gulp.task('docs', function() {
                 'elements-extend': __dirname + '/doc-fragments/group-elements-extend.md'
             }
         },
-        basePath: 'http://biossun.org/nojiko'
+        basePath: 'http://biossun.org/nojiko',
+        sourceLinkPrefix: 'sass/'
     };
 
     return gulp.src('./sass/**/*.scss')
