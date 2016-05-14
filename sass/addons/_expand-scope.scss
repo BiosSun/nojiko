@@ -60,16 +60,14 @@
 ///
 /// @param {Number[unlt]} $expand-length - 扩充范围
 /// @param {String} $used-pseudo-element [after] - 使用的伪元素
-@mixin expand-scope($expand-length, $used-pseudo-element: after) {
-    position: relative;
+/// @param {String} $position [relative] - 元素的定位设置，默认为 relative，若所扩充元素已定义 position，则可设置为 null。
+@mixin expand-scope($expand-length, $used-pseudo-element: after, $position: relative) {
+    @if $position {
+        position: relative;
+    }
 
     &:#{$used-pseudo-element} {
         content: ' ';
-        position: absolute;
-        left: $expand-length;
-        top: $expand-length;
-        right: $expand-length;
-        bottom: $expand-length;
-        z-index: 1;
+        @include position(absolute, $expand-length, 1);
     }
 }
