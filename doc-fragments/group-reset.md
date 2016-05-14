@@ -6,7 +6,7 @@ Reset 模块用于提供一份通用的重置样式。
 @import "nojiko/reset";
 ```
 
-Reset 模块以 [Normalize.css](https://necolas.github.io/normalize.css/) 作为基础重置样式，并在其上添加了对 IE6 和 IE7 的兼容支持，若您的网站需要兼容这些浏览器，请设置 `$support-for-ie6` 或 `$support-for-ie7` 为 `true`，即可应用这部分兼容样式。
+Reset 模块以 [Normalize.css](https://necolas.github.io/normalize.css/) 作为基础重置样式，并在其上添加了对 IE6 和 IE7 的兼容支持，若你的网站需要兼容这些浏览器，请设置 `$support-for-ie6` 或 `$support-for-ie7` 为 `true`，即可应用这部分兼容样式。
 
 额外的，若有更极端的样式重置需求，比如一些样式定制性比较高的网站如电商网站等，可能需要清除所有元素的内外边距及文本样式等以节省后续的开发工作量，则可以设置 `$is-exhaustive-reset` 为 `true`，当该变量设置为 `true` 时，会在 Normalize.css 的基础上额外添加如下重置样式：
 

@@ -129,6 +129,13 @@ $link-visited-color:            $link-color                !default;
 $placeholder-color:             lighten($text-color, 40%)  !default;
 
 /// 配色集合
+///
+/// 在该集合中，每个 key 代表一个颜色名称，其 value 是一个颜色信息集合，其中包含如下内容：
+///
+/// - color: 颜色值
+/// - text: 当颜色值用于背景色时，其对应的文本颜色
+/// - border: 当颜色值用于背景色时，其对应的边框颜色
+///
 /// @type map
 $color-maps:                    ()                         !default;
 

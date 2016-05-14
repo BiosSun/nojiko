@@ -39,11 +39,11 @@ gulp.task('docs', function() {
             sort: {
                 group: [
                     'undefined',
+                    'variables',
                     'helpers',
                     'add-ons',
                     'list',
                     'map',
-                    'variables',
                     'reset',
                     'scaffolding',
                     'elements',
