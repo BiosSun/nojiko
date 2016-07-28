@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* nojiko-debug
+
+## Variables
+
+### 兼容浏览器
+
+- $support-for-ie6 :: #{inspect($support-for-ie6)} :: #{type-of($support-for-ie6)}
+- $support-for-ie7 :: #{inspect($support-for-ie7)} :: #{type-of($support-for-ie7)}
+- $support-for-ie8 :: #{inspect($support-for-ie8)} :: #{type-of($support-for-ie8)}
+
+### 目录路径
+
+- $images-path :: #{inspect($images-path)} :: #{type-of($images-path)}
+- $fonts-path :: #{inspect($fonts-path)} :: #{type-of($fonts-path)}
+
+## 文字
+
+- $font-family :: #{inspect($font-family)} :: #{type-of($font-family)}
+- $font-family-monspace :: #{inspect($font-family-monspace)} :: #{type-of($font-family-monspace)}
+
+- $font-size-base :: #{inspect($font-size-base)} :: #{type-of($font-size-base)}
+- $font-size-large :: #{inspect($font-size-large)} :: #{type-of($font-size-large)}
+- $font-size-small :: #{inspect($font-size-small)} :: #{type-of($font-size-small)}
+
+- $line-height-base :: #{inspect($line-height-base)} :: #{type-of($line-height-base)}
+- $line-height-large :: #{inspect($line-height-large)} :: #{type-of($line-height-large)}
+- $line-height-small :: #{inspect($line-height-small)} :: #{type-of($line-height-small)}
+
+## 配色
+
+- $gray-darker :: #{inspect($gray-darker)} :: #{type-of($gray-darker)}
+- $gray-dark :: #{inspect($gray-dark)} :: #{type-of($gray-dark)}
+- $gray :: #{inspect($gray)} :: #{type-of($gray)}
+- $gray-light :: #{inspect($gray-light)} :: #{type-of($gray-light)}
+- $gray-lighter :: #{inspect($gray-lighter)} :: #{type-of($gray-lighter)}
+
+- $primary-color :: #{inspect($primary-color)} :: #{type-of($primary-color)}
+- $background-color :: #{inspect($primary-color)} :: #{type-of($primary-color)}
+
+- $line-color :: #{inspect($line-color)} :: #{type-of($line-color)}
+
+- $text-color :: #{inspect($text-color)} :: #{type-of($text-color)}
+- $text-color-quiet :: #{inspect($text-color-quiet)} :: #{type-of($text-color-quiet)}
+- $text-color-loud :: #{inspect($text-color-loud)} :: #{type-of($text-color-loud)}
+
+- $link-color :: #{inspect($link-color)} :: #{type-of($link-color)}
+- $link-focus-color :: #{inspect($link-focus-color)} :: #{type-of($link-focus-color)}
+- $link-visited-color :: #{inspect($link-visited-color)} :: #{type-of($link-visited-color)}
+
+- $placeholder-color :: #{inspect($placeholder-color)} :: #{type-of($placeholder-color)}
+
+- $color-maps :: #{inspect($color-maps)} :: #{type-of($color-maps)}
+- $alternative-color-maps :: #{inspect($alternative-color-maps)} :: #{type-of($alternative-color-maps)}
+
+## 尺寸
+
+- $default-box-sizing :: #{inspect($default-box-sizing)} :: #{type-of($default-box-sizing)}
+- $default-element-box-name :: #{inspect($default-element-box-name)} :: #{type-of($default-element-box-name)}
+
+- $element-box-maps :: #{inspect($element-box-maps)} :: #{type-of($element-box-maps)}
+
+## 布局
+
+- $page-width :: #{inspect($page-width)} :: #{type-of($page-width)}
+
+- $distance-vertical :: #{inspect($distance-vertical)} :: #{type-of($distance-vertical)}
+- $distance-horizontal :: #{inspect($distance-horizontal)} :: #{type-of($distance-horizontal)}
+
+ */

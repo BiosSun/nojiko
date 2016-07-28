@@ -29,7 +29,8 @@ gulp.task('docs', function() {
             'elements-extend': 'Elements Extend',
             'reset': 'Reset',
             'scaffolding': 'Scaffolding',
-            'variables': 'Variables'
+            'variables': 'Variables',
+            'debug': 'Debug'
         },
         display: {
             access: ['public'],
@@ -38,15 +39,16 @@ gulp.task('docs', function() {
             sort: {
                 group: [
                     'undefined',
+                    'variables',
                     'helpers',
                     'add-ons',
                     'list',
                     'map',
-                    'variables',
                     'reset',
                     'scaffolding',
                     'elements',
-                    'elements-extend'
+                    'elements-extend',
+                    'debug'
                 ],
                 type: [
                     'variable',
@@ -67,7 +69,8 @@ gulp.task('docs', function() {
                 'reset': __dirname + '/doc-fragments/group-reset.md',
                 'scaffolding': __dirname + '/doc-fragments/group-scaffolding.md',
                 'elements': __dirname + '/doc-fragments/group-elements.md',
-                'elements-extend': __dirname + '/doc-fragments/group-elements-extend.md'
+                'elements-extend': __dirname + '/doc-fragments/group-elements-extend.md',
+                'debug': __dirname + '/doc-fragments/debug.md'
             }
         },
         basePath: 'http://biossun.org/nojiko',
