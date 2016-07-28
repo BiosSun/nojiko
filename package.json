@@ -3,6 +3,13 @@
   "version": "0.6.2",
   "title": "Nojiko",
   "description": "一个使用 SCSS 编写的基础样式库",
+  "files": [
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "docs",
+    "sass"
+  ],
   "keywords": [
     "nojiko",
     "sass",
