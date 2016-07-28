@@ -32,7 +32,11 @@ $images-path:                   '../images' !default;
 
 /// 存放字体文件的目录路径
 /// @type string
-$fonts-path:                    '../fonts' !default;
+$fonts-path:                    '../fonts'  !default;
+
+/// 存放 SVG 文件的目录路径
+/// @type string
+$svg-path:                      '../svg'    !default;
 
 // 文字
 // ---------------------------
