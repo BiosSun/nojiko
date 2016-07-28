@@ -23,7 +23,7 @@
   },
   "license": {
     "type": "MIT",
-    "url": "https://github.com/BiosSun/nojiko/blob/master/LICENSE-MIT"
+    "url": "https://github.com/BiosSun/nojiko/blob/master/LICENSE"
   },
   "dependencies": {},
   "devDependencies": {
