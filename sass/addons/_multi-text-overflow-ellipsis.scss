@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+////
+/// @group add-ons
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/// 设置多行文字超出时显示省略号
+///
+/// **Note 1: 该方式的兼容性不佳，请谨慎使用。**<br/>
+/// **Note 2: 为避免在不兼容浏览器下出现布局异常，请为应用该样式的元素设置对应的高度，如示例所示。**
+///
+/// @param {Number} $line-to-show-number [2] - 需要显示的文本行数
+///
+/// @example scss - source
+///
+///     .box {
+///         width: 100%;
+///         font-size: 12px;
+///         line-height: 20px;
+///
+///         // line-height * line-to-show-number
+///         height: 40px;  
+///        
+///         @include multi-text-overflow-ellipsis(2);
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         width: 100%;
+///         font-size: 12px;
+///         line-height: 20px;
+///
+///         height: 40px;
+///        
+///         display: -webkit-box;
+///         -webkit-line-clamp: $line-to-show-number;
+///         -webkit-box-orient: vertical;
+///         overflow: hidden;
+///         text-overflow: ellipsis;
+///     }
+@mixin multi-text-overflow-ellipsis($line-to-show-number: 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line-to-show-number;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

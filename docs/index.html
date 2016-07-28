@@ -862,6 +862,17 @@
                                     
                                         <li class="item" rule="treeitem">
                                             <div class="item-body">
+                                                <a class="item-content" href="#id--add-ons-mixin-multi-text-overflow-ellipsis">
+                                                    <span class="item-type" data-type="mixin" title="Mixin">m</span>
+                                                    <span class="item-title">
+                                                        multi-text-overflow-ellipsis
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="item" rule="treeitem">
+                                            <div class="item-body">
                                                 <a class="item-content" href="#id--add-ons-mixin-text-overflow-ellipsis">
                                                     <span class="item-type" data-type="mixin" title="Mixin">m</span>
                                                     <span class="item-title">
@@ -9330,6 +9341,159 @@ max-width: 10px;</code></pre>
             
         </ul>
     </div>
+
+
+
+        
+
+        
+
+
+
+        
+
+
+        
+
+
+    </div>
+</section>
+
+                    
+                        <section class="item" id="id--add-ons-mixin-multi-text-overflow-ellipsis"
+         data-group="add-ons"
+         data-access="public"
+         data-type="mixin">
+    <header class="item-header">
+        
+        <h4 class="item-name">
+            
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2Faddons%2F_multi-text-overflow-ellipsis.scss#L8-L42" target="_blank">source</a>
+
+
+
+            
+
+
+            <code class="item-name-text">multi-text-overflow-ellipsis</code>
+
+
+            
+            
+
+            
+    
+
+
+            
+
+
+            
+ 
+
+        </h4>
+    </header>
+
+    
+
+
+
+    <div class="item-body">
+        
+
+    <div class="item-description"><p>设置多行文字超出时显示省略号</p>
+<p><strong>Note 1: 该方式的兼容性不佳，请谨慎使用。</strong><br/>
+<strong>Note 2: 为避免在不兼容浏览器下出现布局异常，请为应用该样式的元素设置对应的高度，如示例所示。</strong></p>
+</div>
+
+
+        
+
+
+        
+    <div class="item-parameters">
+        <h5 class="sub-heading">参数</h5>
+
+        <dl class="item-parameters">
+            
+            <dt class="item-parameter-heading">
+                <strong class="item-parameter-name">
+                    <code>$line-to-show-number</code>
+                </strong>
+
+                <span class="item-parameter-type">Number</span>
+
+                <span class="item-parameter-default" title="2">
+                            Default: <code>2</code></span>
+            </dt>
+            <dd class="item-parameter-description">
+                <p>需要显示的文本行数</p>
+
+            </dd>
+            
+        </dl>
+    </div>
+
+
+        
+
+        
+
+        
+
+
+        
+
+    <div class="item-examples">
+        <h5 class="sub-heading">示例</h5>
+
+        
+            <div class="item-example">
+                
+                    <div class="example-description"><p>source</p>
+</div>
+                
+
+                <pre class="example-code"><code class="lang-scss">.box {
+    width: 100%;
+    font-size: 12px;
+    line-height: 20px;
+
+    // line-height * line-to-show-number
+    height: 40px;  
+   
+    @include multi-text-overflow-ellipsis(2);
+}</code></pre>
+            </div>
+        
+            <div class="item-example">
+                
+                    <div class="example-description"><p>output</p>
+</div>
+                
+
+                <pre class="example-code"><code class="lang-css">.box {
+    width: 100%;
+    font-size: 12px;
+    line-height: 20px;
+
+    height: 40px;
+   
+    display: -webkit-box;
+    -webkit-line-clamp: $line-to-show-number;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}</code></pre>
+            </div>
+        
+    </div>
+
+
+        
+
+
+        
 
 
 
