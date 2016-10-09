@@ -368,10 +368,10 @@
                                     
                                         <li class="item" rule="treeitem">
                                             <div class="item-body">
-                                                <a class="item-content" href="#id--variables-variable-color-maps">
+                                                <a class="item-content" href="#id--variables-variable-info-color">
                                                     <span class="item-type" data-type="variable" title="Variable">v</span>
                                                     <span class="item-title">
-                                                        color-maps
+                                                        info-color
                                                     </span>
                                                 </a>
                                             </div>
@@ -379,10 +379,32 @@
                                     
                                         <li class="item" rule="treeitem">
                                             <div class="item-body">
-                                                <a class="item-content" href="#id--variables-variable-alternative-color-maps">
+                                                <a class="item-content" href="#id--variables-variable-success-color">
                                                     <span class="item-type" data-type="variable" title="Variable">v</span>
                                                     <span class="item-title">
-                                                        alternative-color-maps
+                                                        success-color
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="item" rule="treeitem">
+                                            <div class="item-body">
+                                                <a class="item-content" href="#id--variables-variable-warning-color">
+                                                    <span class="item-type" data-type="variable" title="Variable">v</span>
+                                                    <span class="item-title">
+                                                        warning-color
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="item" rule="treeitem">
+                                            <div class="item-body">
+                                                <a class="item-content" href="#id--variables-variable-danger-color">
+                                                    <span class="item-type" data-type="variable" title="Variable">v</span>
+                                                    <span class="item-title">
+                                                        danger-color
                                                     </span>
                                                 </a>
                                             </div>
@@ -4289,7 +4311,7 @@
 </section>
 
                     
-                        <section class="item" id="id--variables-variable-color-maps"
+                        <section class="item" id="id--variables-variable-info-color"
          data-group="variables"
          data-access="public"
          data-type="variable">
@@ -4297,14 +4319,14 @@
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L135-L143" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L135-L139" target="_blank">source</a>
 
 
 
             
 
 
-            <code class="item-name-text">$color-maps</code>
+            <code class="item-name-text">$info-color</code>
 
 
             
@@ -4320,7 +4342,7 @@
         
             <span class="item-type" title="type">
                 
-                    Map
+                    Color
                 
             </span>
         
@@ -4329,7 +4351,7 @@
 
             
     <span class="item-value" data-language="scss">
-        Value: <code>()</code>
+        Value: <code>#5bc0de</code>
     </span>
 
  
@@ -4344,13 +4366,8 @@
     <div class="item-body">
         
 
-    <div class="item-description"><p>配色集合</p>
-<p>在该集合中，每个 key 代表一个颜色名称，其 value 是一个颜色信息集合，其中包含如下内容：</p>
-<ul>
-<li>color: 颜色值</li>
-<li>text: 当颜色值用于背景色时，其对应的文本颜色</li>
-<li>border: 当颜色值用于背景色时，其对应的边框颜色</li>
-</ul>
+    <div class="item-description"><p>消息色</p>
+<p>非重要性的提示内容，可使用该色调。</p>
 </div>
 
 
@@ -4392,7 +4409,7 @@
 </section>
 
                     
-                        <section class="item" id="id--variables-variable-alternative-color-maps"
+                        <section class="item" id="id--variables-variable-success-color"
          data-group="variables"
          data-access="public"
          data-type="variable">
@@ -4400,14 +4417,14 @@
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L161-L162" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L142-L146" target="_blank">source</a>
 
 
 
             
 
 
-            <code class="item-name-text">$alternative-color-maps</code>
+            <code class="item-name-text">$success-color</code>
 
 
             
@@ -4423,7 +4440,7 @@
         
             <span class="item-type" title="type">
                 
-                    Map
+                    Color
                 
             </span>
         
@@ -4432,7 +4449,7 @@
 
             
     <span class="item-value" data-language="scss">
-        Value: <code>()</code>
+        Value: <code>#5cb85c</code>
     </span>
 
  
@@ -4447,7 +4464,204 @@
     <div class="item-body">
         
 
-    <div class="item-description"><p>备选颜色集合</p>
+    <div class="item-description"><p>成功色</p>
+<p>表示成功状态的内容，可使用该色调。</p>
+</div>
+
+
+        
+
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+
+        
+
+        
+
+
+
+        
+
+
+        
+
+
+    </div>
+</section>
+
+                    
+                        <section class="item" id="id--variables-variable-warning-color"
+         data-group="variables"
+         data-access="public"
+         data-type="variable">
+    <header class="item-header">
+        
+        <h4 class="item-name">
+            
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L149-L153" target="_blank">source</a>
+
+
+
+            
+
+
+            <code class="item-name-text">$warning-color</code>
+
+
+            
+            
+
+            
+    
+
+
+            
+
+    <span class="item-types">
+        
+            <span class="item-type" title="type">
+                
+                    Color
+                
+            </span>
+        
+    </span>
+
+
+            
+    <span class="item-value" data-language="scss">
+        Value: <code>#f0ad4e</code>
+    </span>
+
+ 
+
+        </h4>
+    </header>
+
+    
+
+
+
+    <div class="item-body">
+        
+
+    <div class="item-description"><p>警告色</p>
+<p>具有警告性质的内容，需要提示用户关注时，可使用该色调。</p>
+</div>
+
+
+        
+
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+
+        
+
+        
+
+
+
+        
+
+
+        
+
+
+    </div>
+</section>
+
+                    
+                        <section class="item" id="id--variables-variable-danger-color"
+         data-group="variables"
+         data-access="public"
+         data-type="variable">
+    <header class="item-header">
+        
+        <h4 class="item-name">
+            
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L156-L160" target="_blank">source</a>
+
+
+
+            
+
+
+            <code class="item-name-text">$danger-color</code>
+
+
+            
+            
+
+            
+    
+
+
+            
+
+    <span class="item-types">
+        
+            <span class="item-type" title="type">
+                
+                    Color
+                
+            </span>
+        
+    </span>
+
+
+            
+    <span class="item-value" data-language="scss">
+        Value: <code>#d9534f</code>
+    </span>
+
+ 
+
+        </h4>
+    </header>
+
+    
+
+
+
+    <div class="item-body">
+        
+
+    <div class="item-description"><p>危险色</p>
+<p>表示危险、错误或非法等内容，需要用户立即关注或处理时，可使用该色调。</p>
 </div>
 
 
@@ -4497,7 +4711,7 @@
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L181-L183" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L167-L169" target="_blank">source</a>
 
 
 
@@ -4610,7 +4824,7 @@
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L186-L203" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L172-L189" target="_blank">source</a>
 
 
 
@@ -4721,7 +4935,7 @@
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L270-L271" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L256-L257" target="_blank">source</a>
 
 
 
@@ -4824,7 +5038,7 @@
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L274-L275" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L260-L261" target="_blank">source</a>
 
 
 
@@ -4921,7 +5135,7 @@
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L278-L279" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/blob/0.6.2/sass%2F_variables.scss#L264-L265" target="_blank">source</a>
 
 
 
@@ -6162,7 +6376,8 @@ line-height: computed-line-height(12px, 1.5em);  // => 1.5em</code></pre>
     
 
     <div class="item-sub-header">
-        <div class="item-deprecated"><strong>Deprecated!</strong> </div>
+        <div class="item-deprecated"><strong>Deprecated!</strong> <p>基本没有多少情况下会需要使用该方式触发一个元素的块级格式化上下文，因此该混入类将在正式版（v1.0.0）中移除，请不要再使用。</p>
+</div>
     </div>
 
 
