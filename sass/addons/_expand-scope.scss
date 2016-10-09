@@ -5,10 +5,10 @@
 /// @author Bios Sun <biossun@gmail.com>
 ////
 
-/// 扩充元素的可点击区域。
+/// 扩展元素的可点击区域。
 ///
 /// 在移动端开发中，一般建议可点击的元素的尺寸应当不小于 48 * 48，但有时为了界面美观，
-/// 不允许元素的尺寸设置的太大，而这会导致元素难于点击，此时可以通过该混入类扩充元素的可点击区域。
+/// 不允许元素的尺寸设置的太大，而这会导致元素难于点击，此时可以通过该混入类扩展元素的可点击区域。
 ///
 /// @output
 /// 注意，该混入类需要占用目标元素的 after 伪元素或 before 伪元素中的其中一个。
@@ -16,7 +16,7 @@
 /// @example scss - source
 ///
 ///     .box {
-///         @include expand-scope(20px);
+///         @include expand-scope(-20px);
 ///     }
 ///
 /// @example css - output
@@ -28,10 +28,10 @@
 ///     .box:after {
 ///         content: ' ';
 ///         position: absolute;
-///         left: 20px;
-///         top: 20px;
-///         right: 20px;
-///         bottom: 20px;
+///         left: -20px;
+///         top: -20px;
+///         right: -20px;
+///         bottom: -20px;
 ///         z-index: 1;
 ///     }
 ///
@@ -39,7 +39,7 @@
 /// @example scss - source
 ///
 ///     .button {
-///         @include expand-scope(20px, before);
+///         @include expand-scope(-20px -10px, before);
 ///     }
 ///
 /// @example css - output
@@ -51,19 +51,59 @@
 ///     .button:before {
 ///         content: ' ';
 ///         position: absolute;
-///         left: 20px;
-///         top: 20px;
-///         right: 20px;
-///         bottom: 20px;
+///         left: -10px;
+///         top: -20px;
+///         right: -10px;
+///         bottom: -20px;
 ///         z-index: 1;
 ///     }
 ///
-/// @param {Number[unlt]} $expand-length - 扩充范围
+/// @example scss - source
+///
+///     .button {
+///         @include expand-scope(-20px, before, absolute);
+///     }
+///
+/// @example css - output
+///
+///     .button {
+///         position: absolute;
+///     }
+///
+///     .button:before {
+///         content: ' ';
+///         position: absolute;
+///         left: -20px;
+///         top: -20px;
+///         right: -20px;
+///         bottom: -20px;
+///         z-index: 1;
+///     }
+///
+/// @example scss - source
+///
+///     .button {
+///         @include expand-scope(-20px, before, null);
+///     }
+///
+/// @example css - output
+///
+///     .button:before {
+///         content: ' ';
+///         position: absolute;
+///         left: -20px;
+///         top: -20px;
+///         right: -20px;
+///         bottom: -20px;
+///         z-index: 1;
+///     }
+///
+/// @param {Number[unlt]} $expand-length - 扩展长度
 /// @param {String} $used-pseudo-element [after] - 使用的伪元素
-/// @param {String} $position [relative] - 元素的定位设置，默认为 relative，若所扩充元素已定义 position，则可设置为 null。
+/// @param {String} $position [relative] - 元素的定位设置，默认为 relative，若所扩展元素已定义 position，则可设置为 null。
 @mixin expand-scope($expand-length, $used-pseudo-element: after, $position: relative) {
     @if $position {
-        position: relative;
+        position: $position;
     }
 
     &:#{$used-pseudo-element} {
