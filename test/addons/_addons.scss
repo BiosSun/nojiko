@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@import "clearfix";
+@import "expand-scope";
+@import "foreground-color";
+@import "hide-text";
+@import "text-overflow-ellipsis";
+@import "multi-text-overflow-ellipsis";
+@import "superfine-border";
+@import "triangle";
+
+@include test-module('addons') {
+
+    @include test_helpers_superfine-border;
+    @include test_helpers_clearfix;
+    @include test_helpers_expand-scope;
+    @include test_helpers_foreground-color;
+    @include test_helpers_hide-text;
+    @include test_helpers_text-overflow-ellipsis;
+    @include test_helpers_multi-text-overflow-ellipsis;
+    @include test_helpers_triangle;
+
+}

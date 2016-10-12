@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@mixin test_helpers_map-deep-set {
+
+    @include test('function: map-deep-set') {
+
+        $base: (
+            user: (
+                name: 'biossun'
+            )
+    );
+
+        @include assert-equal(
+            map-deep-set($base, user name, 'sunhaiyang'),
+            ( user: ( name: 'sunhaiyang' ) ),
+            '设置一个已存在的值'
+        );
+
+        @include assert-equal(
+            map-deep-set($base, user name),
+            ( user: ( name: null ) ),
+            '指定所设置的 key，但不指定所设置的 value'
+        );
+
+        @include assert-equal(
+            map-deep-set($base, user name first-name, 'sun'),
+            ( user: ( name: ( first-name: 'sun' ) ) ),
+            '设置一个新的值'
+        );
+
+    }
+
+}

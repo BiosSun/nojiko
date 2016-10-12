@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+@mixin test_helpers_list-first {
+
+    @include test('function: list-first') {
+
+        @include assert-equal(
+            list-first(),
+            null,
+            '若不传入任何参数，则返回 null'
+        );
+
+        @include assert-equal(
+            list-first(1),
+            1,
+            '若传入一个只有一个元素的列表，则返回这个元素'
+        );
+
+        @include assert-equal(
+            list-first(1 2 3),
+            1,
+            '若传入一个具有多个元素的列表，则返回其第一个元素'
+        );
+
+    }
+
+}

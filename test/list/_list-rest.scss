@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+@mixin test_helpers_list-rest {
+
+    @include test('function: list-rest') {
+
+        @include assert-equal(
+            list-rest(),
+            (),
+            '若不传入任何参数，则返回一个空列表'
+        );
+
+        @include assert-equal(
+            list-rest(1),
+            (),
+            '若传入一个只有一个元素的列表，则返回一个空列表'
+        );
+
+        $expect: (2);
+
+        @include assert-equal(
+            list-rest(1 2),
+            append((), 2),   // sass 没法直接写只包含一个元素的列表字面量
+            '若传入一个具有两个元素的列表，则返回一个只包含第二个元素的列表'
+        );
+
+        @include assert-equal(
+            list-rest(1 2 3),
+            (2 3),
+            '若传入一个具有两个以上元素的列表，则返回一个包含除第一个元素以外的所有元素的列表'
+        );
+
+    }
+
+}

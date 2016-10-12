@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@mixin test_helpers_hide-text {
+
+    @include test('   mixin: hide-text') {
+
+        @include assert('调用 hide-text 混入类，会输出一组用于隐藏文本的样式') {
+            @include output {
+                @include hide-text;
+            }
+
+            @include expect {
+                font: 0/0 a;
+                color: transparent;
+                text-shadow: none;
+            }
+        }
+
+    }
+
+}

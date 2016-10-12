@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+@mixin test_helpers_superfine-border {
+
+    @include test('function: text-overflow-ellipsis') {
+
+        $top: unquote("top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 50%, transparent 50%)");
+        $bottom: unquote("bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000 50%, transparent 50%)");
+        $left: unquote("center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 50%, transparent 50%)");
+        $right: unquote("center right/1px 100% no-repeat linear-gradient(270deg, #000, #000 50%, transparent 50%)");
+
+        @include assert-equal(
+            superfine-border(#000),
+            ($top, $bottom, $left, $right),
+            '若只传入一个色值，则使用该色值设置四个边框'
+        );
+
+        @include assert-equal(
+            superfine-border(#000 null),
+            ($top, $bottom),
+            '若传入两个色值，最后一个为 null，则使用第一个色值设置顶部及底部边框'
+        );
+
+        @include assert-equal(
+            superfine-border(#000 #000 null),
+            ($top, $left, $right),
+            '若传入三个色值，最后一个为 null，则使用第一个色值设置顶部边框，第二个色值设置左部和右部边框'
+        );
+
+        @include assert-equal(
+            superfine-border(#000 #000 #000 null),
+            ($top, $bottom, $right),
+            '若传入四个色值，最后一个为 null，则使用第一个色值设置顶部边框，第二个色值设置右部边框，第三个色值设置底部边框'
+        );
+
+        @include assert-equal(
+            superfine-border(null),
+            (),
+            '若色值为 null，则不输出任何内容'
+        );
+
+    }
+
+}

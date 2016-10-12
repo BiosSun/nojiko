@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@mixin test_helpers_is-dark {
+
+    @include test('function: is-dark') {
+
+        @include assert-equal(
+            is-dark(#000),
+            true,
+            '若传入一个深色色值，则返回 true'
+        );
+
+        @include assert-equal(
+            is-dark(#fff),
+            false,
+            '若传入一个浅色色值，则返回 false'
+        );
+
+    }
+
+}

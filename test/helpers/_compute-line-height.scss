@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@mixin test_helpers_compute-line-height {
+
+    @include test('function: compute-line-height') {
+
+        @include assert-equal(
+            compute-line-height(12px, 1.5),
+            18px,
+            '若 $line-height 参数为无单位数字，则返回使用该数字乘以 $font-size 的值'
+        );
+
+        @include assert-equal(
+            compute-line-height(1.2em, 2),
+            2.4em,
+            '若 $line-height 参数为无单位数字，则返回使用该数字乘以 $font-size 的值'
+        );
+
+        @include assert-equal(
+            compute-line-height(12px, 18px),
+            18px,
+            '若 $line-height 参数为有单位数字，则直接返回该行高'
+        );
+
+        @include assert-equal(
+            compute-line-height(1.2em, 2.4em),
+            2.4em,
+            '若 $line-height 参数为有单位数字，则直接返回该行高'
+        );
+
+    };
+
+}

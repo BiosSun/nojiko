@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+@mixin test_helpers_size {
+
+    @include test('   mixin: size') {
+
+        @include assert('若所提供的参数都是 null，则没有任何输出') {
+            @include output {
+                @include size(null);
+            }
+
+            @include expect {}
+        }
+
+        @include assert('若所提供的参数都是 null，则没有任何输出') {
+            @include output {
+                @include size(null null);
+            }
+
+            @include expect {}
+        }
+
+        @include assert('若只提供一个参数，则使用该值设置元素宽度及高度') {
+            @include output {
+                @include size(1px);
+            }
+
+            @include expect {
+                width: 1px;
+                height: 1px;
+            }
+        }
+
+        @include assert('若提供两个参数，则使用第一个参数设置元素宽度，第二个设置元素高度') {
+            @include output {
+                @include size(1px, 2px);
+            }
+
+            @include expect {
+                width: 1px;
+                height: 2px;
+            }
+        }
+
+    }
+
+    @include test('   mixin: min-size') {
+
+        @include assert('若所提供的参数都是 null，则没有任何输出') {
+            @include output {
+                @include min-size(null);
+            }
+
+            @include expect {}
+        }
+
+        @include assert('若所提供的参数都是 null，则没有任何输出') {
+            @include output {
+                @include min-size(null null);
+            }
+
+            @include expect {}
+        }
+
+        @include assert('若只提供一个参数，则使用该值设置元素宽度及高度') {
+            @include output {
+                @include min-size(1px);
+            }
+
+            @include expect {
+                min-width: 1px;
+                min-height: 1px;
+            }
+        }
+
+        @include assert('若提供两个参数，则使用第一个参数设置元素宽度，第二个设置元素高度') {
+            @include output {
+                @include min-size(1px, 2px);
+            }
+
+            @include expect {
+                min-width: 1px;
+                min-height: 2px;
+            }
+        }
+
+    }
+
+    @include test('   mixin: max-size') {
+
+        @include assert('若所提供的参数都是 null，则没有任何输出') {
+            @include output {
+                @include max-size(null);
+            }
+
+            @include expect {}
+        }
+
+        @include assert('若所提供的参数都是 null，则没有任何输出') {
+            @include output {
+                @include max-size(null null);
+            }
+
+            @include expect {}
+        }
+
+        @include assert('若只提供一个参数，则使用该值设置元素宽度及高度') {
+            @include output {
+                @include max-size(1px);
+            }
+
+            @include expect {
+                max-width: 1px;
+                max-height: 1px;
+            }
+        }
+
+        @include assert('若提供两个参数，则使用第一个参数设置元素宽度，第二个设置元素高度') {
+            @include output {
+                @include max-size(1px, 2px);
+            }
+
+            @include expect {
+                max-width: 1px;
+                max-height: 2px;
+            }
+        }
+
+    }
+
+
+}

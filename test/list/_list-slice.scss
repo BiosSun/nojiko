@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+@mixin test_helpers_list-slice {
+
+    @include test('function: list-slice') {
+
+        $list: (1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+        @include assert-equal(
+            list-slice($list),
+            (1, 2, 3, 4, 5, 6, 7, 8, 9),
+            '若不指定截取区间，则默认从列表的第二个元素一直截取到最后一个元素'
+        );
+
+        @include assert-equal(
+            list-slice($list, 5),
+            (5, 6, 7, 8, 9),
+            '若指定起始截取索引，则从该索引一直截取到最后一个元素'
+        );
+
+        @include assert-equal(
+            list-slice($list, -2),
+            (8, 9),
+            '若指定的起始截取索引为负数，则以最后一个元素为起始值，视索引值为 -1，向右查找对应索引的元素，并截取该元素及其之后的所有元素'
+        );
+
+        @include assert-equal(
+            list-slice($list, 2, 4),
+            (2, 3, 4),
+            '若同时指定截止索引，则返回从初始索引、截止索引及其之间的元素。'
+        );
+
+        @include assert-equal(
+            list-slice($list, 2, -4),
+            (2, 3, 4, 5, 6),
+            '截止索引也可以为负值。'
+        );
+
+        @include assert-equal(
+            list-slice($list, -6, -4),
+            (4, 5, 6),
+            '初始索引与截止索引可以同时为负值。'
+        );
+
+        @include assert-equal(
+            list-slice($list, a),
+            (),
+            '若起始索引不是一个数字，则返回一个空数组，并显示一个警告信息'
+        );
+
+        @include assert-equal(
+            list-slice($list, 2, a),
+            (),
+            '若截止索引不是一个数字，则返回一个空数组，并显示一个警告信息'
+        );
+
+        @include assert-equal(
+            list-slice($list, 2px),
+            (2, 3, 4, 5, 6, 7, 8, 9),
+            '若起始索引是一个带有单位的数值，则无视其单位，并显示一个警告信息'
+        );
+
+        @include assert-equal(
+            list-slice($list, 2, 4px),
+            (2, 3, 4),
+            '若截止索引是一个带有单位的数值，则无视其单位，并显示一个警告信息'
+        );
+
+        @include assert-equal(
+            list-slice($list, 2, 10),
+            (2, 3, 4, 5, 6, 7, 8, 9),
+            '若截止索引超出列表长度，则视为截取到最后一个元素，并显示一个警告信息'
+        );
+
+        @include assert-equal(
+            list-slice($list, -10),
+            (),
+            '若起始截取位置小于 1，则返回一个空列表，并显示一个警告信息'
+        );
+
+        @include assert-equal(
+            list-slice($list, 10),
+            (),
+            '若起始截取位置超过 $list 的最大长度，则返回一个空列表，并显示一个警告信息'
+        );
+
+        @include assert-equal(
+            list-slice($list, 2, -10),
+            (),
+            '若截止位置小于 1，则返回一个空列表，并显示一个警告信息'
+        );
+
+        @include assert-equal(
+            list-slice($list, 4, 2),
+            (),
+            '若起始索引大于截止索引，则返回一个空数组，并显示一个警告信息'
+        );
+
+    }
+
+}

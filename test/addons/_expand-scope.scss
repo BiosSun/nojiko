@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+@mixin test_helpers_expand-scope {
+
+    @include test('   mixin: expand-scope') {
+
+        @include assert('可以只指定扩展长度，其它参数使用默认值') {
+            @include output {
+                @include expand-scope(-1px);
+            }
+
+            @include expect {
+                position: relative;
+
+                &:after {
+                    content: ' ';
+                    @include position(absolute, -1px, 1);
+                }
+            }
+        }
+
+        @include assert('可以指定用于扩展的伪元素') {
+            @include output {
+                @include expand-scope(-1px, before);
+            }
+
+            @include expect {
+                position: relative;
+
+                &:before {
+                    content: ' ';
+                    @include position(absolute, -1px, 1);
+                }
+            }
+        }
+
+        @include assert('可以指定被扩展元素的定位设置') {
+            @include output {
+                @include expand-scope(-1px, before, absolute);
+            }
+
+            @include expect {
+                position: absolute;
+
+                &:before {
+                    content: ' ';
+                    @include position(absolute, -1px, 1);
+                }
+            }
+        }
+
+        @include assert('若指定被扩展元素的定位设置为 null，则不设置定位') {
+            @include output {
+                @include expand-scope(-1px, before, null);
+            }
+
+            @include expect {
+                &:before {
+                    content: ' ';
+                    @include position(absolute, -1px, 1);
+                }
+            }
+        }
+
+    }
+}

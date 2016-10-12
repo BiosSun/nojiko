@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+@mixin test_helpers_map-set {
+
+    @include test('function: map-set') {
+
+        @include assert-equal(
+            map-set( (name: 'name'), 'name', 'youname' ),
+            ( name: 'youname' ),
+            '覆盖同名属性'
+        );
+
+        @include assert-equal(
+            map-set( (name: 'name'), 'age', 26 ),
+            ( name: 'name', age: 26 ),
+            '添加新的属性'
+        );
+
+        @include assert-equal(
+            map-set( 1px, 'age', 26 ),
+            ( age: 26 ),
+            '若源数据不是一个 map，则返回一个只包含所设置值的 map'
+        );
+    }
+
+}

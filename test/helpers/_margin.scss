@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+@mixin test_helpers_margin {
+
+    @include test('   mixin: margin') {
+
+        // 参数中只有 null 值
+        // -----------------------------------------------------------------------------
+
+        @include assert('若参数只包含一个或多个 null 值，则没有任何输出') {
+            @include output {
+                @include margin(null);
+            }
+
+            @include expect {}
+        }
+
+        @include assert('若参数只包含一个或多个 null 值，则没有任何输出') {
+            @include output {
+                @include margin(null null);
+            }
+
+            @include expect {}
+        }
+
+        @include assert('若参数只包含一个或多个 null 值，则没有任何输出') {
+            @include output {
+                @include margin(null null null);
+            }
+
+            @include expect {}
+        }
+
+        @include assert('若参数只包含一个或多个 null 值，则没有任何输出') {
+            @include output {
+                @include margin(null null null null);
+            }
+
+            @include expect {}
+        }
+
+        // 参数只有有效值
+        // -----------------------------------------------------------------------------
+
+        @include assert('若参数中包含一个或多个有效值，则直接设置 margin 属性') {
+            @include output {
+                @include margin(1px);
+            }
+
+            @include expect {
+                margin: 1px;
+            }
+        }
+
+        @include assert('若参数中包含一个或多个有效值，则直接设置 margin 属性') {
+            @include output {
+                @include margin(1px 2px);
+            }
+            @include expect {
+                margin: 1px 2px;
+            }
+        }
+
+        @include assert('若参数中包含一个或多个有效值，则直接设置 margin 属性') {
+            @include output {
+                @include margin(1px 2px 3px);
+            }
+            @include expect {
+                margin: 1px 2px 3px;
+            }
+        }
+
+        @include assert('若参数中包含一个或多个有效值，则直接设置 margin 属性') {
+            @include output {
+                @include margin(1px 2px 3px 4px);
+            }
+            @include expect {
+                margin: 1px 2px 3px 4px;
+            }
+        }
+
+        // 参数中有两个值，其中有一个 null 值
+        // -----------------------------------------------------------------------------
+
+        @include assert('若参数中包含一个或多个值，且其中有一个或多个 null 值，则只设置有效值所对应方向上的外边距') {
+            @include output {
+                @include margin(1px null);
+            }
+
+            @include expect {
+                margin-top: 1px;
+                margin-bottom: 1px;
+            }
+        }
+
+        // 参数中有三个值，其中有一个或两个 null 值
+        // -----------------------------------------------------------------------------
+
+        @include assert('若参数中包含一个或多个值，且其中有一个或多个 null 值，则只设置有效值所对应方向上的外边距') {
+            @include output {
+                @include margin(1px 2px null);
+            }
+
+            @include expect {
+                margin-top: 1px;
+                margin-right: 2px;
+                margin-left: 2px;
+            }
+        }
+
+        @include assert('若参数中包含一个或多个值，且其中有一个或多个 null 值，则只设置有效值所对应方向上的外边距') {
+            @include output {
+                @include margin(1px null null);
+            }
+
+            @include expect {
+                margin-top: 1px;
+            }
+        }
+
+        // 参数中有四个值，其中有一个、两个或三个 null 值
+        // -----------------------------------------------------------------------------
+
+        @include assert('若参数中包含一个或多个值，且其中有一个或多个 null 值，则只设置有效值所对应方向上的外边距') {
+            @include output {
+                @include margin(1px 2px 3px null);
+            }
+
+            @include expect {
+                margin-top: 1px;
+                margin-right: 2px;
+                margin-bottom: 3px;
+            }
+        }
+
+        @include assert('若参数中包含一个或多个值，且其中有一个或多个 null 值，则只设置有效值所对应方向上的外边距') {
+            @include output {
+                @include margin(1px 2px null null);
+            }
+
+            @include expect {
+                margin-top: 1px;
+                margin-right: 2px;
+            }
+        }
+
+        @include assert('若参数中包含一个或多个值，且其中有一个或多个 null 值，则只设置有效值所对应方向上的外边距') {
+            @include output {
+                @include margin(1px null null null);
+            }
+
+            @include expect {
+                margin-top: 1px;
+            }
+        }
+
+    }
+
+}
+

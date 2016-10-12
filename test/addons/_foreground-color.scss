@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+@mixin test_helpers_foreground-color {
+
+    @include test('   mixin: foreground-color') {
+
+        @include assert('默认会重置链接子元素的颜色') {
+            @include output {
+                @include foreground-color(#000);
+            }
+
+            @include expect {
+                color: #000;
+
+                a {
+                    color: #000;
+                    font-weight: 700;
+                    margin-left: 1px;
+                    margin-right: 1px;
+                }
+            }
+        }
+
+        @include assert('可以通过设置第二个参数来禁止重置 a 元素样式') {
+            @include output {
+                @include foreground-color(#000, (
+                                             is-change-link-style: false
+                                         ));
+            }
+
+            @include expect {
+                color: #000;
+            }
+        }
+
+    }
+
+}

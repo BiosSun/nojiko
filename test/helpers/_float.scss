@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@mixin test_helpers_float {
+
+    $__support-for-ie6: $support-for-ie6;
+
+
+    @include test('   mixin: float') {
+
+        $support-for-ie6: false !global;
+
+        @include assert('设置 float 属性为所传入的值') {
+            @include output {
+                @include float(left);
+            }
+
+            @include expect {
+                float: left;
+            }
+        }
+
+        @include assert('设置 float 属性为所传入的值') {
+            @include output {
+                @include float(right);
+            }
+
+            @include expect {
+                float: right;
+            }
+        }
+
+        $support-for-ie6: true !global;
+
+        @include assert('当配置支持 IE6 时，额外设置 _display 为 inline') {
+            @include output {
+                @include float(left);
+            }
+
+            @include expect {
+                float: left;
+                _display: inline;
+            }
+        }
+
+    }
+
+    $support-for-ie6: $__support-for-ie6 !global;
+
+}

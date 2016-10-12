@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+@mixin test_helpers_position {
+
+    $__support-for-ie6: $support-for-ie6;
+
+    @include test('   mixin: position') {
+
+        $support-for-ie6: false !global;
+
+        // 无实参
+        // -----------------------------------------------------------------------------
+
+        @include assert('若不传入任何参数，则按照默认值进行设置') {
+            @include output {
+                @include position();
+            }
+
+            @include expect {
+                position: relative;
+            }
+        }
+
+        // $position
+        // -----------------------------------------------------------------------------
+
+        @include assert('若指定定位类型，则按所传入的值设置 position') {
+            @include output {
+                @include position(absolute);
+            }
+
+            @include expect {
+                position: absolute;
+            }
+        }
+
+        // $coordinates
+        // -----------------------------------------------------------------------------
+
+        @include assert('若指定各个方向的定位距离，则按所传入的值设置 top、right、bottom 和 left') {
+            @include output {
+                @include position(absolute, 0);
+            }
+
+            @include expect {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        @include assert('若指定各个方向的定位距离，则按所传入的值设置 top、right、bottom 和 left') {
+            @include output {
+                @include position(absolute, 1px);
+            }
+
+            @include expect {
+                position: absolute;
+                top: 1px;
+                right: 1px;
+                bottom: 1px;
+                left: 1px;
+            }
+        }
+
+        @include assert('若指定各个方向的定位距离，则按所传入的值设置 top、right、bottom 和 left') {
+            @include output {
+                @include position(absolute, 1px null);
+            }
+
+            @include expect {
+                position: absolute;
+                top: 1px;
+                bottom: 1px;
+            }
+        }
+
+        @include assert('若指定各个方向的定位距离，则按所传入的值设置 top、right、bottom 和 left') {
+            @include output {
+                @include position(absolute, 1px null 2px);
+            }
+
+            @include expect {
+                position: absolute;
+                top: 1px;
+                bottom: 2px;
+            }
+        }
+
+        @include assert('若指定各个方向的定位距离，则按所传入的值设置 top、right、bottom 和 left') {
+            @include output {
+                @include position(absolute, 1px 3px 2px);
+            }
+
+            @include expect {
+                position: absolute;
+                top: 1px;
+                right: 3px;
+                bottom: 2px;
+                left: 3px;
+            }
+        }
+
+        @include assert('若指定各个方向的定位距离，则按所传入的值设置 top、right、bottom 和 left') {
+            @include output {
+                @include position(absolute, 1px 2px 3px 4px);
+            }
+
+            @include expect {
+                position: absolute;
+                top: 1px;
+                right: 2px;
+                bottom: 3px;
+                left: 4px;
+            }
+        }
+
+        // $z-index
+        // -----------------------------------------------------------------------------
+
+        @include assert('若指定层叠数值，则按所传入的值设置 z-index') {
+            @include output {
+                @include position(absolute, null, 10);
+            }
+
+            @include expect {
+                position: absolute;
+                z-index: 10;
+            }
+        }
+
+        // 支持 IE6
+        // -----------------------------------------------------------------------------
+
+        $support-for-ie6: true !global;
+
+        @include assert('若支持 IE6，且设置为绝对定位，则额外设置 _zoom 为 1') {
+            @include output {
+                @include position(absolute);
+            }
+
+            @include expect {
+                position: absolute;
+                _zoom: 1;
+            }
+        }
+
+        @include assert('若支持 IE6，且设置为绝对定位，则额外设置 _zoom 为 1') {
+            @include output {
+                @include position();
+            }
+
+            @include expect {
+                position: relative;
+            }
+        }
+
+    }
+
+    $support-for-ie6: $__support-for-ie6 !global;
+
+}

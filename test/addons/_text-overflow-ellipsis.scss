@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@mixin test_helpers_text-overflow-ellipsis {
+
+    @include test('   mixin: text-overflow-ellipsis') {
+
+        @include assert('调用 text-overflow-ellipsis 混入类，会输出一组用于设置单行溢出时显示省略号的样式') {
+            @include output {
+                @include text-overflow-ellipsis;
+            }
+
+            @include expect {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+    }
+
+}

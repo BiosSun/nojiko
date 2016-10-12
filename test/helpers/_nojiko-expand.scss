@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@mixin test_helpers_nojiko-expand {
+
+    @include test('function: nojiko-expand') {
+        @include assert-equal(
+            nojiko-expand(1px),
+            1px 1px 1px 1px,
+            '若参数中只包含一个值，则四个方向都是该值。'
+        );
+
+        @include assert-equal(
+            nojiko-expand(1px 2px),
+            1px 2px 1px 2px,
+            '若参数中包含两个值，则上下方向为第一个值，左右方向为第二个值。'
+        );
+
+        @include assert-equal(
+            nojiko-expand(1px 2px 3px),
+            1px 2px 3px 2px,
+            '若参数中包含三个值，则上方向为第一个值，左右方向为第二个值，下方向为第三个值。'
+        );
+
+        @include assert-equal(
+            nojiko-expand(1px 2px 3px 4px),
+            1px 2px 3px 4px,
+            '若参数中包含四个值，则上方向为第一个值，右方向为第二个值，下方向为第三个值，左方向为第四个值。'
+        );
+    };
+
+}

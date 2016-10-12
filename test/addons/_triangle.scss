@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+@mixin test_helpers_triangle_expect-basis {
+    @include inline-block;
+    @include size(0);
+    @include hide-text;
+}
+
+@mixin test_helpers_triangle_expect-for-ie {
+    @include test_helpers_triangle_expect-basis;
+
+    *top: 0;
+
+    border-top: 10px solid #000;
+    border-right: 10px dashed transparent;
+    border-left: 10px dashed transparent;
+}
+
+@mixin test_helpers_triangle {
+
+    $__support-for-ie6: $support-for-ie6;
+    $__support-for-ie7: $support-for-ie7;
+
+    @include test('   mixin: triangle') {
+
+        $support-for-ie6: false !global;
+        $support-for-ie7: false !global;
+
+        @include assert('可以只指定三角箭头的宽度，其它使用默认值') {
+            @include output {
+                @include triangle(10px);
+            }
+
+            @include expect {
+                @include test_helpers_triangle_expect-basis;
+
+                border-top: 10px solid;
+                border-right: 10px dashed transparent;
+                border-left: 10px dashed transparent;
+            }
+        }
+
+        @include assert('可以通过第二个参数（$orientation）来指定箭头的朝向，如设置为 left 则指向左方') {
+            @include output {
+                @include triangle(10px, left);
+            }
+
+            @include expect {
+                @include test_helpers_triangle_expect-basis;
+
+                border-right: 10px solid;
+                border-top: 10px dashed transparent;
+                border-bottom: 10px dashed transparent;
+            }
+        }
+
+        @include assert('可以通过第二个参数（$orientation）来指定箭头的朝向，如设置为 right 则指向右方') {
+            @include output {
+                @include triangle(10px, right);
+            }
+
+            @include expect {
+                @include test_helpers_triangle_expect-basis;
+
+                border-left: 10px solid;
+                border-top: 10px dashed transparent;
+                border-bottom: 10px dashed transparent;
+            }
+        }
+
+        @include assert('可以通过第二个参数（$orientation）来指定箭头的朝向，如设置为 top 则指向上方') {
+            @include output {
+                @include triangle(10px, top);
+            }
+
+            @include expect {
+                @include test_helpers_triangle_expect-basis;
+
+                border-bottom: 10px solid;
+                border-right: 10px dashed transparent;
+                border-left: 10px dashed transparent;
+            }
+        }
+
+        @include assert('可以通过第二个参数（$orientation）来指定箭头的朝向，如设置为 bottom 则指向下方（默认值）') {
+            @include output {
+                @include triangle(10px, bottom);
+            }
+
+            @include expect {
+                @include test_helpers_triangle_expect-basis;
+
+                border-top: 10px solid;
+                border-right: 10px dashed transparent;
+                border-left: 10px dashed transparent;
+            }
+        }
+
+        @include assert('可以通过第三个参数（$color）来指定箭头的颜色') {
+            @include output {
+                @include triangle(10px, bottom, #000);
+            }
+
+            @include expect {
+                @include test_helpers_triangle_expect-basis;
+
+                border-top: 10px solid #000;
+                border-right: 10px dashed transparent;
+                border-left: 10px dashed transparent;
+            }
+        }
+
+        $support-for-ie6: true !global;
+        $support-for-ie7: false !global;
+
+        @include assert('若兼容 IE6 或 IE7，则额外输出 *top 为 0') {
+            @include output {
+                @include triangle(10px, bottom, #000);
+            }
+
+            @include expect {
+                @include test_helpers_triangle_expect-for-ie;
+            }
+        }
+
+        $support-for-ie6: false !global;
+        $support-for-ie7: true !global;
+
+        @include assert('若兼容 IE6 或 IE7，则额外输出 *top 为 0') {
+            @include output {
+                @include triangle(10px, bottom, #000);
+            }
+
+            @include expect {
+                @include test_helpers_triangle_expect-for-ie;
+            }
+        }
+
+        $support-for-ie6: true !global;
+        $support-for-ie7: true !global;
+
+        @include assert('若兼容 IE6 或 IE7，则额外输出 *top 为 0') {
+            @include output {
+                @include triangle(10px, bottom, #000);
+            }
+
+            @include expect {
+                @include test_helpers_triangle_expect-for-ie;
+            }
+        }
+    }
+
+    $support-for-ie6: $__support-for-ie6 !global;
+    $support-for-ie7: $__support-for-ie7 !global;
+
+}

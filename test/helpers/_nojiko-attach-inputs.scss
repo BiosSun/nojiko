@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@mixin test_helpers_nojiko-attach-inputs {
+
+    @include test('function: nojiko-attach-inputs') {
+
+        $inputs: input div a;
+
+        @include assert-equal(
+            nojiko-attach-inputs($inputs),
+            ('input', 'div', 'a'),
+            '返回列表中的元素使用逗号分割'
+        );
+
+        @include assert-equal(
+            nojiko-attach-inputs($inputs, hover),
+            ('input:hover', 'div:hover', 'a:hover'),
+            '若指定附加内容，则将附加内容作为伪类拼接到每个元素的后面'
+        );
+
+    }
+
+}

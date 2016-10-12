@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@mixin test_helpers_multi-text-overflow-ellipsis {
+
+    @include test('   mixin: multi-text-overflow-ellipsis') {
+
+        @include assert('调用 multi-text-overflow-ellipsis 混入类，会输出一组用于设置所指定行数的溢出时显示省略号的样式') {
+            @include output {
+                @include multi-text-overflow-ellipsis(2);
+            }
+
+            @include expect {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+    }
+
+}

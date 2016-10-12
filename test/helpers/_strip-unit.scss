@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@mixin test_helpers_strip-unit {
+
+    @include test('function: strip-unit') {
+
+        @include assert-equal(
+            strip-unit(20px),
+            20,
+            '移除整数数值的单位'
+        );
+
+        @include assert-equal(
+            strip-unit(2.7em),
+            2.7,
+            '移除浮点数数值的单位'
+        );
+
+    }
+
+}

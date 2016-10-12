@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@import "map-deep-get";
+@import "map-deep-set";
+@import "map-set";
+
+@include test-module('map') {
+    @include test_helpers_map-deep-get;
+    @include test_helpers_map-deep-set;
+    @include test_helpers_map-set;
+}
