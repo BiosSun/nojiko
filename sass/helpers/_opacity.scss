@@ -5,6 +5,26 @@
 /// @author Bios Sun <biossun@gmail.com>
 ////
 
+/// 为元素设置不透明度
+///
+/// **Note：如果项目不需要兼容 IE6、IE7 或 IE8，可以不使用该方法。**
+///
+/// @param {Number} $opacity - 需设置的不透明度值
+///
+/// @example scss - source
+///
+///     .box {
+///         @include opacity(0.2);
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         opacity: 0.2;
+///
+///         /* 如果配置支持 IE6, IE7 或 IE8, 则额外输出如下代码： */
+///         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+///     }
 @mixin opacity($opacity) {
     opacity: $opacity;
     @if $support-for-ie6 or $support-for-ie7 or $support-for-ie8 {
@@ -12,10 +32,42 @@
     }
 }
 
+/// 设置元素为全透明，既 `opacity: 0`
+///
+/// @example scss - source
+///
+///     .box {
+///         @include transparent;
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         opacity: 0;
+///
+///         /* 如果配置支持 IE6, IE7 或 IE8, 则额外输出如下代码： */
+///         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+///     }
 @mixin transparent {
     @include opacity(0);
 }
 
+/// 设置元素为全不透明，既 `opacity: 1`
+///
+/// @example scss - source
+///
+///     .box {
+///         @include opacity;
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         opacity: 1;
+///
+///         /* 如果配置支持 IE6, IE7 或 IE8, 则额外输出如下代码： */
+///         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+///     }
 @mixin opaque {
     @include opacity(1);
 }
