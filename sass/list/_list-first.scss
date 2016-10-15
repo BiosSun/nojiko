@@ -13,6 +13,6 @@
 ///     list-first((1, 2, 3));   // --> 1
 ///     list-first((1));         // --> 1
 ///     list-first()             // --> null
-@function list-first($list) {
+@function list-first($list: null) {
     @return nth($list, 1);
 }
