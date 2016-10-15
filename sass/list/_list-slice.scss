@@ -16,15 +16,30 @@
 ///     list-slice($list, 2, 4);   // b, c, d
 ///     list-slice($list, 2);      // b, c, d, e
 @function list-slice($list, $start: 1, $end: length($list)) {
-    $length: $list;
-    $result: null;
+    $length: length($list);
+    $result: ();
+
+    $debugFlat: "[ function: list-slice ]";
+    $debugInfo:  "{ $start: #{$start}, $end: #{$end}, $list: #{$list} }";
 
     @if type-of($start) != number {
-        @error "$start are not a number";
+        @warn "#{$debugFlat} start are not a number, return a empty list. #{$debugInfo}";
+        @return $result;
     }
 
     @if type-of($end) != number {
-        @error "$end are not a number";
+        @warn "#{$debugFlat} end are not a number, return a empty list. #{$debugInfo}";
+        @return $result;
+    }
+
+    @if not unitless($start) {
+        @warn "#{$debugFlat} start has unit, strip the unit. #{$debugInfo}";
+        $start: strip-unit($start);
+    }
+
+    @if not unitless($end) {
+        @warn "#{$debugFlat} end has unit, strip the unit. #{$debugInfo}";
+        $end: strip-unit($end);
     }
 
     @if $start < 0 {
@@ -35,7 +50,30 @@
         $end: $length + $end + 1;
     }
 
-    $result: ();
+    @if $end > $length {
+        @warn "#{$debugFlat} end is greater than the list length, reset $end to the list length. #{$debugInfo}";
+        $end: $length;
+    }
+
+    @if $start < 1 {
+        @warn "#{$debugFlat} start is less than 1, return a empty list. #{$debugInfo}";
+        @return $result;
+    }
+
+    @if $start > $length {
+        @warn "#{$debugFlat} start is greater than the list length, return a empty list. #{$debugInfo}";
+        @return $result;
+    }
+
+    @if $end < 1 {
+        @warn "#{$debugFlat} end is less than 1, return a empty list.  #{$debugInfo}";
+        @return $result;
+    }
+
+    @if $start > $end {
+        @warn "#{$debugFlat} start is greater than end, return a empty list.  #{$debugInfo}";
+        @return $result;
+    }
 
     @for $i from $start through $end {
         $result: append($result, nth($list, $i), list-separator($list));
