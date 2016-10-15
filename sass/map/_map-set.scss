@@ -18,5 +18,9 @@
 ///
 ///     map-set($map, name, 'youname');
 @function map-set($source, $key, $value) {
+    @if type-of($source) != 'map' {
+        $source: ();
+    }
+
     @return map-merge($source, ($key: $value));
 }
