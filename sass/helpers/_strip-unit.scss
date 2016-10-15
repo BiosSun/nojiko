@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/// 删除一个数值类型数据的单位
+///
+/// @param {Number} $number - 需要移除其单位的数值
+/// @return {Number} - 一个无单位的数值
+///
+/// @example scss
+///
+///     strip-unit(20px);    // 20
+///     strip-unit(1.7em);   // 1.7
+///     strip-unit(3rem);    // 3
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
