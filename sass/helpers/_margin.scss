@@ -45,9 +45,11 @@
         @if $right {
             margin-right: $right;
         }
+
         @if $bottom {
             margin-bottom: $bottom;
         }
+
         @if $left {
             margin-left: $left;
         }

@@ -26,6 +26,6 @@
 @mixin float($direction) {
     float: $direction;
     @if $support-for-ie6 {
-        _display: inline;    
+        _display: inline;
     }
 }

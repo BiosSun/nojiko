@@ -18,15 +18,15 @@
 ///     }
 ///
 /// @example css - output
-/// 
+///
 ///     .box {
 ///         display: inline-block;
-/// 
+///
 ///         /* if support ie6 or ie7, has this */
 ///         *zoom: 1;
 ///         *display: inline;
 ///     }
-/// 
+///
 /// @example scss - source
 ///
 ///     .box {
@@ -34,14 +34,14 @@
 ///     }
 ///
 /// @example css - output
-/// 
+///
 ///     .box {
 ///         display: inline-block;
-/// 
+///
 ///         /* if support ie6 or ie7, has this */
 ///         *zoom: 1;
 ///         *display: inline;
-/// 
+///
 ///         vertical-align: middle;
 ///     }
 @mixin inline-block ($vertical-align : null) {

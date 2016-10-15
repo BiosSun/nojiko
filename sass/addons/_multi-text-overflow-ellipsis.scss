@@ -20,8 +20,8 @@
 ///         line-height: 20px;
 ///
 ///         // line-height * line-to-show-number
-///         height: 40px;  
-///        
+///         height: 40px;
+///
 ///         @include multi-text-overflow-ellipsis(2);
 ///     }
 ///
@@ -33,7 +33,7 @@
 ///         line-height: 20px;
 ///
 ///         height: 40px;
-///        
+///
 ///         display: -webkit-box;
 ///         -webkit-line-clamp: $line-to-show-number;
 ///         -webkit-box-orient: vertical;
