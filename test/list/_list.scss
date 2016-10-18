@@ -3,9 +3,11 @@
 @import "list-first";
 @import "list-rest";
 @import "list-slice";
+@import "list-compact";
 
 @include test-module('list') {
     @include test_helpers_list-first;
     @include test_helpers_list-rest;
     @include test_helpers_list-slice;
+    @include test_helpers_list-compact;
 }

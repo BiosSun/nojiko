@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+@mixin test_helpers_list-compact {
+
+    @include test('function: list-compact') {
+
+        @include assert-equal(
+            list-compact(),
+            (),
+            '若不传入任何参数，则返回一个空列表'
+        );
+
+        @include assert-equal(
+            list-compact( () ),
+            (),
+            '若传入一个空列表，则原样返回'
+        );
+
+        @include assert-equal(
+            list-compact( (null) ),
+            (),
+            '若传入列表中只包含 null 元素，则返回一个空列表'
+        );
+
+        @include assert-equal(
+            list-compact( (null null) ),
+            (),
+            '若传入列表中只包含 null 元素，则返回一个空列表'
+        );
+
+        @include assert-equal(
+            list-compact( (null null null) ),
+            (),
+            '若传入列表中只包含 null 元素，则返回一个空列表'
+        );
+
+        @include assert-equal(
+            list-compact( (1, 2, 3) ),
+            (1, 2, 3),
+            '若传入列表中不包含 null 元素，则原样返回'
+        );
+
+        @include assert-equal(
+            list-compact( (null, 1, null, 2, null, 3, null) ),
+            (1, 2, 3),
+            '若传入列表中既包含 null 值，又包含非 null 的值，则只返回非 null 的值'
+        );
+    }
+
+}
