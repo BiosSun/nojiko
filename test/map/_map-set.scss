@@ -21,6 +21,12 @@
             ( age: 26 ),
             '若源数据不是一个 map，则返回一个只包含所设置值的 map'
         );
+
+        @include assert-equal(
+            map-set( (name: 'name'), '', 26 ),
+            ( name: 'name', '': 26 ),
+            '可以设置一个 key 为空字符串的属性'
+        );
     }
 
 }
