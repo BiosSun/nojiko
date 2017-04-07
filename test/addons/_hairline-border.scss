@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+@mixin test_addons_hairline-border {
+
+    @include test('   mixin: hairline-border') {
+
+        $top1x: unquote("top center/100% 1px no-repeat linear-gradient(180deg, #000, #000)");
+        $bottom1x: unquote("bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000)");
+        $left1x: unquote("center left/1px 100% no-repeat linear-gradient(90deg, #000, #000)");
+        $right1x: unquote("center right/1px 100% no-repeat linear-gradient(270deg, #000, #000)");
+
+        $top2x: unquote("top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 50%, transparent 50%)");
+        $bottom2x: unquote("bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000 50%, transparent 50%)");
+        $left2x: unquote("center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 50%, transparent 50%)");
+        $right2x: unquote("center right/1px 100% no-repeat linear-gradient(270deg, #000, #000 50%, transparent 50%)");
+
+        $top3x: unquote("top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 33.334%, transparent 33.334%)");
+        $bottom3x: unquote("bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000 33.334%, transparent 33.334%)");
+        $left3x: unquote("center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 33.334%, transparent 33.334%)");
+        $right3x: unquote("center right/1px 100% no-repeat linear-gradient(270deg, #000, #000 33.334%, transparent 33.334%)");
+
+        $top4x: unquote("top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 25%, transparent 25%)");
+        $bottom4x: unquote("bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000 25%, transparent 25%)");
+        $left4x: unquote("center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 25%, transparent 25%)");
+        $right4x: unquote("center right/1px 100% no-repeat linear-gradient(270deg, #000, #000 25%, transparent 25%)");
+
+        @include assert('若只传入一个色值，则使用该色值设置四个边框') {
+            @include output {
+                .box {
+                    @include hairline-border(#000);
+                }
+            }
+
+            @include expect {
+                
+            }
+        };
+
+        @include assert-equal(
+            superfine-border(#000 null),
+            ($top, $bottom),
+            '若传入两个色值，最后一个为 null，则使用第一个色值设置顶部及底部边框'
+        );
+
+        @include assert-equal(
+            superfine-border(#000 #000 null),
+            ($top, $left, $right),
+            '若传入三个色值，最后一个为 null，则使用第一个色值设置顶部边框，第二个色值设置左部和右部边框'
+        );
+
+        @include assert-equal(
+            superfine-border(#000 #000 #000 null),
+            ($top, $bottom, $right),
+            '若传入四个色值，最后一个为 null，则使用第一个色值设置顶部边框，第二个色值设置右部边框，第三个色值设置底部边框'
+        );
+
+        @include assert-equal(
+            superfine-border(null),
+            (),
+            '若色值为 null，则不输出任何内容'
+        );
+
+    }
+
+}

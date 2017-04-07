@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+////
+/// @group add-ons
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+@function nojiko-cretate-hairline-borders($colors, $length-percentage) {
+    $colors: nojiko-expand($colors);
+
+    $top-color:    nth($colors, 1);
+    $right-color:  nth($colors, 2);
+    $bottom-color: nth($colors, 3);
+    $left-color:   nth($colors, 4);
+
+    $border-images: ();
+
+    @each $color, $position, $angle in (($top-color,    top center/100% 1px,    180deg ),
+                                        ($right-color,  center right/1px 100%,  270deg ),
+                                        ($bottom-color, bottom center/100% 1px, 0deg   ),
+                                        ($left-color,   center left/1px 100%,   90deg  )) {
+
+        @if ($color) {
+            $color-stop: null;
+
+            @if ($length-percentage == 100%) {
+                $color-stop: $color, $color;
+            }
+            @else {
+                $color-stop: $color, $color $length-percentage, transparent $length-percentage;
+            }
+
+            $bbg: #{$position} no-repeat linear-gradient($angle, $color-stop);
+            $border-images: append($border-images, $bbg, comma);
+        }
+    }
+
+    @return $border-images;
+}
+
+
+/// 模拟实现一物理像素边框。
+///
+/// 该效果使用线性渐变（linear-gradient）实现，并使用媒体查询控制在多倍屏下边框的宽度，支持 `1x`、`2x`、`3x` 及 `4x` 四个像素比级别。
+///
+/// @param {Color} $colors - 边框的颜色，支持缩写格式
+/// @param {value} $custom-background - 额外的背景样式，会将其放到边框样式的下面，而边框会盖住部分背景内容
+///
+/// @example scss - source
+///     .box {
+///         background: hairline-border(#000);
+///     }
+///
+/// @example css - output
+///
+///     .box {
+///         background: top center/100% 1px no-repeat linear-gradient(180deg, #000, #000),
+///                     center right/1px 100% no-repeat linear-gradient(270deg, #000, #000),
+///                     bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000),
+///                     center left/1px 100% no-repeat linear-gradient(90deg, #000, #000);
+///     }
+///
+///     @media only screen and (min-device-pixel-ratio: 2) {
+///         .box {
+///             background: top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 50%, transparent 50%),
+///                         center right/1px 100% no-repeat linear-gradient(270deg, #000, #000 50%, transparent 50%),
+///                         bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000 50%, transparent 50%),
+///                         center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 50%, transparent 50%);
+///         }
+///     }
+///
+///     @media only screen and (min-device-pixel-ratio: 3) {
+///         .box {
+///             background: top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 33.334%, transparent 33.334%),
+///                         center right/1px 100% no-repeat linear-gradient(270deg, #000, #000 33.334%, transparent 33.334%),
+///                         bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000 33.334%, transparent 33.334%),
+///                         center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 33.334%, transparent 33.334%);
+///         }
+///     }
+///
+///     @media only screen and (min-device-pixel-ratio: 4) {
+///         .box {
+///             background: top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 25%, transparent 25%),
+///                         center right/1px 100% no-repeat linear-gradient(270deg, #000, #000 25%, transparent 25%),
+///                         bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000 25%, transparent 25%),
+///                         center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 25%, transparent 25%);
+///         }
+///     }
+///
+/// @example scss - source
+///     .box {
+///         background: superfine-border-media(#000 null, #fff url('bg.jpg'));
+///     }
+///
+/// @example css - output
+///     .box {
+///         background: #fff url("bg.jpg"),
+///                     top center/100% 1px no-repeat linear-gradient(180deg, #000, #000);
+///     }
+///
+///     @media only screen and (min-device-pixel-ratio: 2) {
+///         .box {
+///             background: #fff url("bg.jpg"),
+///                         top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 50%, transparent 50%);
+///         }
+///     }
+///
+///     @media only screen and (min-device-pixel-ratio: 3) {
+///         .box {
+///             background: #fff url("bg.jpg"),
+///                         top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 33.334%, transparent 33.334%);
+///         }
+///     }
+///
+///     @media only screen and (min-device-pixel-ratio: 4) {
+///         .box {
+///             background: #fff url("bg.jpg"),
+///                         top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 25%, transparent 25%);
+///         }
+///     }
+@mixin hairline-border($colors, $custom-background...) {
+
+    background: append(nojiko-cretate-hairline-borders($colors, 100%), $custom-background, comma);
+
+    @each $min-device-pixel-ratio, $length-percentage in (2: 50%, 3: 33.334%, 4: 25%) {
+        @media only screen and (min-device-pixel-ratio: #{$min-device-pixel-ratio}) {
+            & {
+                background: append(nojiko-cretate-hairline-borders($colors, $length-percentage), $custom-background, comma);
+            }
+        }
+    }
+}
+
+/// 使用 SVG 背景图片来模拟实现**顶部**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
+@mixin hairline-border-top($color, $custom-background...) {
+    @include hairline-border($color null null, $custom-background...);
+}
+
+/// 使用 SVG 背景图片来模拟实现**底部**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
+@mixin hairline-border-bottom($color, $custom-background...) {
+    @include hairline-border(null null $color, $custom-background...);
+}
+
+/// 使用 SVG 背景图片来模拟实现**左边**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
+@mixin hairline-border-left($color, $custom-background...) {
+    @include hairline-border(null null null $color, $custom-background...);
+}
+
+/// 使用 SVG 背景图片来模拟实现**右边**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
+@mixin hairline-border-right($color, $custom-background...) {
+    @include hairline-border(null $color null null, $custom-background...);
+}
+
+/// 使用 SVG 背景图片来模拟实现**顶部及底部**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
+@mixin hairline-border-vertical($color, $custom-background...) {
+    @include hairline-border($color null, $custom-background...);
+}
+
+/// 使用 SVG 背景图片来模拟实现**左边及右边**超细边框
+///
+/// @param {Color} $colors - 边框的颜色
+@mixin hairline-border-horizontal($color, $custom-background...) {
+    @include hairline-border(null $color, $custom-background...);
+}
