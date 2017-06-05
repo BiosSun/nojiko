@@ -50,18 +50,18 @@ var documentOptions = {
         }
     },
     fragments: {
-        document: __dirname + '/doc-fragments/document.md',
+        document: __dirname + '/docs-fragments/document.md',
         group: {
-            'variables': __dirname + '/doc-fragments/group-variables.md',
-            'helpers': __dirname + '/doc-fragments/group-helpers.md',
-            'add-ons': __dirname + '/doc-fragments/group-add-ons.md',
-            'list': __dirname + '/doc-fragments/group-list.md',
-            'map': __dirname + '/doc-fragments/group-map.md',
-            'reset': __dirname + '/doc-fragments/group-reset.md',
-            'scaffolding': __dirname + '/doc-fragments/group-scaffolding.md',
-            'elements': __dirname + '/doc-fragments/group-elements.md',
-            'elements-extend': __dirname + '/doc-fragments/group-elements-extend.md',
-            'debug': __dirname + '/doc-fragments/debug.md'
+            'variables': __dirname + '/docs-fragments/group-variables.md',
+            'helpers': __dirname + '/docs-fragments/group-helpers.md',
+            'add-ons': __dirname + '/docs-fragments/group-add-ons.md',
+            'list': __dirname + '/docs-fragments/group-list.md',
+            'map': __dirname + '/docs-fragments/group-map.md',
+            'reset': __dirname + '/docs-fragments/group-reset.md',
+            'scaffolding': __dirname + '/docs-fragments/group-scaffolding.md',
+            'elements': __dirname + '/docs-fragments/group-elements.md',
+            'elements-extend': __dirname + '/docs-fragments/group-elements-extend.md',
+            'debug': __dirname + '/docs-fragments/debug.md'
         }
     },
     basePath: 'http://biossun.org/nojiko',
@@ -82,7 +82,7 @@ gulp.task('test', function() {
 gulp.task('develop', ['docs', 'test'], function() {
     gulp.watch('./sass/**/*', ['test', 'docs']);
     gulp.watch('./test/**/*', ['test']);
-    gulp.watch('./doc-fragments/**/*', ['docs']);
+    gulp.watch('./docs-fragments/**/*', ['docs']);
 });
 
 gulp.task('default', ['docs', 'test']);
