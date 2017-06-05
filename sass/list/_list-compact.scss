@@ -5,16 +5,14 @@
 /// @author Bios Sun <biossun@gmail.com>
 ////
 
-// TODO: 添加单元测试
-
-/// 移除一个列表中的值为 null 的元素
+/// 移除一个列表中所有值为 null 的元素
 ///
 /// @param {List} $list - 源数据列表
 ///
 /// @example scss
-///     list-compact( (1, 2, 3) );          // --> (1, 2, 3)
-///     list-compact( (1, 2, 3, null) );    // --> (1, 2, 3)
-///     list-compact( (null) );             // --> ()
+///     list-compact( (1, 2, 3) );                // --> (1, 2, 3)
+///     list-compact( (null, 1, 2, 3, null) );    // --> (1, 2, 3)
+///     list-compact( (null) );                   // --> ()
 @function list-compact($list:()) {
     $result: ();
 
