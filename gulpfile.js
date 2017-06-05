@@ -73,25 +73,25 @@ gulp.task('docs', function() {
         .pipe(sassdoc(documentOptions));
 });
 
-gulp.task('test', function() {
-    gulp.src('./test/test_sass.js', { read: false })
+gulp.task('test.sass', function() {
+    gulp.src('./test/sass/index.js', { read: false })
         .pipe( mocha() );
 });
 
 gulp.task('test.css', function() {
-    gulp.src(['./test/**/*.scss', '!./test/test.scss'])
+    gulp.src('./test/css/**/*.scss')
         .pipe(sass({
             outputStyle: 'expanded',
             precision: 10
         }))
-        .pipe(gulp.dest('./test'));
+        .pipe(gulp.dest('./test/css'));
 });
 
 // watch
-gulp.task('develop', ['docs', 'test', 'test.css'], function() {
-    gulp.watch('./sass/**/*', ['test', 'test.css', 'docs']);
-    gulp.watch('./test/**/*', ['test', 'test.css']);
+gulp.task('develop', ['docs', 'test.sass', 'test.css'], function() {
+    gulp.watch('./sass/**/*', ['test.sass', 'test.css', 'docs']);
+    gulp.watch('./test/**/*', ['test.sass', 'test.css']);
     gulp.watch('./docs-fragments/**/*', ['docs']);
 });
 
-gulp.task('default', ['docs', 'test', 'test.css']);
+gulp.task('default', ['docs', 'test.sass', 'test.css']);
