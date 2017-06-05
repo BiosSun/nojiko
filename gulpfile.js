@@ -78,11 +78,20 @@ gulp.task('test', function() {
         .pipe( mocha() );
 });
 
+gulp.task('test.css', function() {
+    gulp.src(['./test/**/*.scss', '!./test/test.scss'])
+        .pipe(sass({
+            outputStyle: 'expanded',
+            precision: 10
+        }))
+        .pipe(gulp.dest('./test'));
+});
+
 // watch
-gulp.task('develop', ['docs', 'test'], function() {
-    gulp.watch('./sass/**/*', ['test', 'docs']);
-    gulp.watch('./test/**/*', ['test']);
+gulp.task('develop', ['docs', 'test', 'test.css'], function() {
+    gulp.watch('./sass/**/*', ['test', 'test.css', 'docs']);
+    gulp.watch('./test/**/*', ['test', 'test.css']);
     gulp.watch('./docs-fragments/**/*', ['docs']);
 });
 
-gulp.task('default', ['docs', 'test']);
+gulp.task('default', ['docs', 'test', 'test.css']);
