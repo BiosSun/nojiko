@@ -61,10 +61,10 @@ $font-family-monspace:          $FONT-FAMILY-FIXED-FONT !default;
 $font-size-base:                14px !default;
 /// 较大文字大小
 /// @type number
-$font-size-large:               ceil($font-size-base * 1.3) !default;  // 12: 15, 13: 16, 14: 18
+$font-size-large:               18px !default;
 /// 较小文字大小
 /// @type number
-$font-size-small:               floor($font-size-base * 0.88) !default; // 12: 10, 13: 11, 14: 12
+$font-size-small:               12px !default;
 
 /// 默认文字行高，该变量与 $font-size-base 对应
 /// @type number
