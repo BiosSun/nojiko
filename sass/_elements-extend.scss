@@ -29,15 +29,6 @@ $nojiko-el-size:                          s                          !default;
 // 宽度
 $nojiko-el-width:                         w                          !default;
 
-// 颜色
-// -----------------
-
-// 背景颜色
-$nojiko-el-background-color:              bg-                        !default;
-
-// 前景颜色
-$nojiko-el-foreground-color:              fg-                        !default;
-
 // 元素显示
 // -----------------
 
@@ -118,66 +109,6 @@ $nojiko-el-triangle:                      ar                         !default;
 
     @each $length in $nojiko-el-per-width-values {
         .#{$nojiko-el-width}#{$length}p { width: $length + 0%; }
-    }
-}
-
-
-// 颜色
-// ---------------------------
-
-@if $nojiko-el-background-color {
-    @each $key, $color in $color-maps {
-        .#{$nojiko-el-background-color}#{$key} {
-            background: map-get($color, color);
-        }
-    }
-
-    .#{$nojiko-el-background-color}common {
-        background: $background-color;
-    }
-
-    .#{$nojiko-el-background-color}gray-darker {
-        background: $gray-darker;
-    }
-
-    .#{$nojiko-el-background-color}gray-dark {
-        background: $gray-dark;
-    }
-
-    .#{$nojiko-el-background-color}gray {
-        background: $gray;
-    }
-
-    .#{$nojiko-el-background-color}gray-light {
-        background: $gray-light;
-    }
-
-    .#{$nojiko-el-background-color}gray-lighter {
-        background: $gray-lighter;
-    }
-}
-
-@if $nojiko-el-foreground-color {
-    @each $key, $color in $color-maps {
-        .#{$nojiko-el-foreground-color}#{$key} {
-            @include foreground-color(map-get($color, color));
-        }
-    }
-
-    .#{$nojiko-el-foreground-color}text {
-        @include foreground-color($text-color);
-    }
-
-    .#{$nojiko-el-foreground-color}quiet {
-        @include foreground-color($text-color-quiet);
-    }
-
-    .#{$nojiko-el-foreground-color}loud {
-        @include foreground-color($text-color-loud);
-    }
-
-    .#{$nojiko-el-foreground-color}link {
-        @include foreground-color($link-color);
     }
 }
 
