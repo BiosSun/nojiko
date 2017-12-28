@@ -51,6 +51,11 @@
 
 - $placeholder-color :: #{inspect($placeholder-color)} :: #{type-of($placeholder-color)}
 
+- $info-color :: #{inspect($info-color)} :: #{type-of($info-color)}
+- $success-color :: #{inspect($success-color)} :: #{type-of($success-color)}
+- $warning-color :: #{inspect($warning-color)} :: #{type-of($warning-color)}
+- $danger-color :: #{inspect($danger-color)} :: #{type-of($danger-color)}
+
 ## 尺寸
 
 - $default-box-sizing :: #{inspect($default-box-sizing)} :: #{type-of($default-box-sizing)}
