@@ -80,7 +80,6 @@
     color: $color;
 
     @if map-get($options, is-change-link-style) == true {
-        // in IE6/7，not support inherit to color property.
         a {
             color: $color;
             font-weight: 700;

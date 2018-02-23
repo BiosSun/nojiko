@@ -2,13 +2,7 @@
 
 @mixin test_helpers_inline-block {
 
-    $__support-for-ie6: $support-for-ie6;
-    $__support-for-ie7: $support-for-ie7;
-
     @include test('   mixin: inline-block') {
-
-        $support-for-ie6: false !global;
-        $support-for-ie7: false !global;
 
         @include assert('若不传入任何参数，则只设置 display 为 inline-block') {
             @include output {
@@ -30,41 +24,5 @@
                 vertical-align: middle;
             }
         }
-
-        // 支持 IE6 及 IE7
-        // -----------------------------------------------------------------------------
-
-        $support-for-ie6: true !global;
-        $support-for-ie7: false !global;
-
-        @include assert('若声明支持 IE6 或 IE7，则额外设置 *zoom 及 *display') {
-            @include output {
-                @include inline-block();
-            }
-
-            @include expect {
-                display: inline-block;
-                *zoom: 1;
-                *display: inline;
-            }
-        }
-
-        $support-for-ie6: false !global;
-        $support-for-ie7: true !global;
-
-        @include assert('若声明支持 IE6 或 IE7，则额外设置 *zoom 及 *display') {
-            @include output {
-                @include inline-block();
-            }
-
-            @include expect {
-                display: inline-block;
-                *zoom: 1;
-                *display: inline;
-            }
-        }
     }
-
-    $support-for-ie6: $__support-for-ie6 !global;
-    $support-for-ie7: $__support-for-ie7 !global;
 }

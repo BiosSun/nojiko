@@ -5,9 +5,7 @@
 /// @author Bios Sun <biossun@gmail.com>
 ////
 
-/// 支持 IE6/7 的行内块元素
-///
-/// **Note：如果项目不需要兼容 IE6/7，可以不使用该方法。**
+/// 设置行内块元素及其垂直对齐方式。
 ///
 /// @param {String} $vertical-align [null] - 设置垂直对齐方向
 ///
@@ -21,10 +19,6 @@
 ///
 ///     .box {
 ///         display: inline-block;
-///
-///         /* if support ie6 or ie7, has this */
-///         *zoom: 1;
-///         *display: inline;
 ///     }
 ///
 /// @example scss - source
@@ -37,20 +31,10 @@
 ///
 ///     .box {
 ///         display: inline-block;
-///
-///         /* if support ie6 or ie7, has this */
-///         *zoom: 1;
-///         *display: inline;
-///
 ///         vertical-align: middle;
 ///     }
 @mixin inline-block ($vertical-align : null) {
     display: inline-block;
-
-    @if $support-for-ie6 or $support-for-ie7 {
-        *zoom: 1;
-        *display: inline;
-    }
 
     @if $vertical-align {
         vertical-align: $vertical-align;

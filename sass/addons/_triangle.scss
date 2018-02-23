@@ -42,10 +42,6 @@
 
     @include hide-text;
 
-    @if $support-for-ie6 or $support-for-ie7 {
-        *top: 0;
-    }
-
     @if $color == inherit {
         $color: unquote('');
     }

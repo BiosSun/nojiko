@@ -15,10 +15,6 @@
 ///
 /// @example css - output
 ///
-///     .box {
-///         *zoom: 1;   /* if support ie6 or ie7, has this. */
-///     }
-///
 ///     .box:before, .box:after {
 ///         content: " ";
 ///         display: table;
@@ -30,10 +26,6 @@
 ///
 /// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro clearfix
 @mixin clearfix {
-    @if $support-for-ie6 or $support-for-ie7 {
-        *zoom: 1;
-    }
-
     &:before,
     &:after {
         content: " ";

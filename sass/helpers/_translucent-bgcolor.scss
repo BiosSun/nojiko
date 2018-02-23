@@ -24,7 +24,7 @@
 ///     .box {
 ///         background: rgba(0, 0, 0, .2);
 ///
-///         /* if support ie6, ie7 or ie8, has this. */
+///         /* if support ie8, has this. */
 ///         zoom: 1\9;
 ///         filter: progid:DXImageTransform.Microsoft.Gradient(
 ///             GradientType=0,
@@ -44,7 +44,7 @@
 ///     .box {
 ///         background: rgba(0, 0, 0, .2);
 ///
-///         /* if support ie6, ie7 or ie8, has this. */
+///         /* if support ie8, has this. */
 ///         zoom: 1\9;
 ///         filter: progid:DXImageTransform.Microsoft.Gradient(
 ///             GradientType=0,
@@ -60,7 +60,7 @@
 
     background: $color;
 
-    @if $support-for-ie6 or $support-for-ie7 or $support-for-ie8 {
+    @if $support-for-ie8 {
         zoom: 1\9;
         filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#{ie-hex-str($color)}', EndColorStr='#{ie-hex-str($color)}');
     }

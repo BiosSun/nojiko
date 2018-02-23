@@ -2,11 +2,7 @@
 
 @mixin test_helpers_position {
 
-    $__support-for-ie6: $support-for-ie6;
-
     @include test('   mixin: position') {
-
-        $support-for-ie6: false !global;
 
         // 无实参
         // -----------------------------------------------------------------------------
@@ -131,34 +127,6 @@
             }
         }
 
-        // 支持 IE6
-        // -----------------------------------------------------------------------------
-
-        $support-for-ie6: true !global;
-
-        @include assert('若支持 IE6，且设置为绝对定位，则额外设置 _zoom 为 1') {
-            @include output {
-                @include position(absolute);
-            }
-
-            @include expect {
-                position: absolute;
-                _zoom: 1;
-            }
-        }
-
-        @include assert('若支持 IE6，且设置为绝对定位，则额外设置 _zoom 为 1') {
-            @include output {
-                @include position();
-            }
-
-            @include expect {
-                position: relative;
-            }
-        }
-
     }
-
-    $support-for-ie6: $__support-for-ie6 !global;
 
 }

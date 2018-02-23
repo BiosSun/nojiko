@@ -1,15 +1,10 @@
 @charset "utf-8";
 
 @mixin test_helpers_opacity {
-
-    $__support-for-ie6: $support-for-ie6;
-    $__support-for-ie7: $support-for-ie7;
     $__support-for-ie8: $support-for-ie8;
 
     @include test('   mixin: opacity') {
 
-        $support-for-ie6: false !global;
-        $support-for-ie7: false !global;
         $support-for-ie8: false !global;
 
         @include assert('设置 opacity 为所传入的值') {
@@ -22,38 +17,6 @@
             }
         }
 
-        $support-for-ie6: true !global;
-        $support-for-ie7: false !global;
-        $support-for-ie8: false !global;
-
-        @include assert('支持 IE6 时，通过 filter 属性实现不透明度') {
-            @include output {
-                @include opacity(0.2);
-            }
-
-            @include expect {
-                opacity: 0.2;
-                filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-            }
-        }
-
-        $support-for-ie6: false !global;
-        $support-for-ie7: true !global;
-        $support-for-ie8: false !global;
-
-        @include assert('支持 IE7 时，通过 filter 属性实现不透明度') {
-            @include output {
-                @include opacity(0.2);
-            }
-
-            @include expect {
-                opacity: 0.2;
-                filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-            }
-        }
-
-        $support-for-ie6: false !global;
-        $support-for-ie7: false !global;
         $support-for-ie8: true !global;
 
         @include assert('支持 IE8 时，通过 filter 属性实现不透明度') {
@@ -67,25 +30,8 @@
             }
         }
 
-        $support-for-ie6: true !global;
-        $support-for-ie7: true !global;
-        $support-for-ie8: true !global;
-
-        @include assert('支持 IE6、IE7 及 IE8 时，通过 filter 属性实现不透明度') {
-            @include output {
-                @include opacity(0.2);
-            }
-
-            @include expect {
-                opacity: 0.2;
-                filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-            }
-        }
-
         @include test('   mixin: transparent') {
 
-            $support-for-ie6: false !global;
-            $support-for-ie7: false !global;
             $support-for-ie8: false !global;
 
             @include assert('调用该混入类，设置元素为全透明') {
@@ -101,8 +47,6 @@
 
         @include test('   mixin: opaque') {
 
-            $support-for-ie6: false !global;
-            $support-for-ie7: false !global;
             $support-for-ie8: false !global;
 
             @include assert('调用该混入类，设置元素为全不透明') {
@@ -118,8 +62,6 @@
 
     }
 
-    $support-for-ie6: $__support-for-ie6 !global;
-    $support-for-ie7: $__support-for-ie7 !global;
     $support-for-ie8: $__support-for-ie8 !global;
 
 }

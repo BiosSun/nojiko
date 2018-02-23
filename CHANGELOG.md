@@ -7,6 +7,8 @@
   - compute-line-height *(computed-line-height)*
   - get-element-box-height-by-name
 - **[danger]** 移除 _reset.scss；
+- **[danger]** 不再支持 IE6 及 IE7；
+- **[danger]** 移除 float 混入类（因已不再支持 IE6 及 IE7，因此该混入类已没有意义）；
 
 ## 0.7.1
 

@@ -17,8 +17,6 @@ Nojiko 提供了一个 `_debug.scss` 文件，该文件将以 CSS 注释的形�
 
 ### 兼容浏览器
 
-- $support-for-ie6 :: false :: bool
-- $support-for-ie7 :: false :: bool
 - $support-for-ie8 :: true :: bool
 
 ### 目录路径

@@ -2,14 +2,10 @@
 
 @mixin test_helpers_translucent-bgcolor {
 
-    $__support-for-ie6: $support-for-ie6;
-    $__support-for-ie7: $support-for-ie7;
     $__support-for-ie8: $support-for-ie8;
 
     @include test('   mixin: translucent-bgcolor') {
 
-        $support-for-ie6: false !global;
-        $support-for-ie7: false !global;
         $support-for-ie8: false !global;
 
         @include assert('使用 rgba 类型的色值') {
@@ -32,40 +28,6 @@
             }
         }
 
-        $support-for-ie6: true !global;
-        $support-for-ie7: false !global;
-        $support-for-ie8: false !global;
-
-        @include assert('支持 IE6 时，额外设置 zoom 属性及 filter 属性') {
-            @include output {
-                @include translucent-bgcolor(rgba(0, 0, 0, 0.2));
-            }
-
-            @include expect {
-                background: rgba(0, 0, 0, 0.2);
-                zoom: 1\9;
-                filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#33000000', EndColorStr='#33000000');
-            }
-        }
-
-        $support-for-ie6: false !global;
-        $support-for-ie7: true !global;
-        $support-for-ie8: false !global;
-
-        @include assert('支持 IE7 时，额外设置 zoom 属性及 filter 属性') {
-            @include output {
-                @include translucent-bgcolor(rgba(0, 0, 0, 0.2));
-            }
-
-            @include expect {
-                background: rgba(0, 0, 0, 0.2);
-                zoom: 1\9;
-                filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#33000000', EndColorStr='#33000000');
-            }
-        }
-
-        $support-for-ie6: false !global;
-        $support-for-ie7: false !global;
         $support-for-ie8: true !global;
 
         @include assert('支持 IE8 时，额外设置 zoom 属性及 filter 属性') {
@@ -80,26 +42,8 @@
             }
         }
 
-        $support-for-ie6: true !global;
-        $support-for-ie7: true !global;
-        $support-for-ie8: true !global;
-
-        @include assert('支持 IE6、IE7 及 IE8 时，额外设置 zoom 属性及 filter 属性') {
-            @include output {
-                @include translucent-bgcolor(rgba(0, 0, 0, 0.2));
-            }
-
-            @include expect {
-                background: rgba(0, 0, 0, 0.2);
-                zoom: 1\9;
-                filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#33000000', EndColorStr='#33000000');
-            }
-        }
-
     }
 
-    $support-for-ie6: $__support-for-ie6 !global;
-    $support-for-ie7: $__support-for-ie7 !global;
     $support-for-ie8: $__support-for-ie8 !global;
 
 }

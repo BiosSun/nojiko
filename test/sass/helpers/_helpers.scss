@@ -6,7 +6,6 @@
 @import "is-dark";
 @import "is-light";
 @import "strip-unit";
-@import "float";
 @import "inline-block";
 @import "margin";
 @import "padding";
@@ -31,7 +30,6 @@
     @include test_helpers_is-dark;
     @include test_helpers_is-light;
     @include test_helpers_strip-unit;
-    @include test_helpers_float;
     @include test_helpers_inline-block;
     @include test_helpers_margin;
     @include test_helpers_padding;

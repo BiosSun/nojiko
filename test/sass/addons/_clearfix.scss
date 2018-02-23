@@ -13,30 +13,9 @@
     }
 }
 
-// 支持 IE 时，应该输出的内容
-@mixin test_helpers_clearfix_expect-for-ie {
-    *zoom: 1;
-
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
-    }
-
-    &:after {
-        clear: both;
-    }
-}
-
 @mixin test_helpers_clearfix {
 
-    $__support-for-ie6: $support-for-ie6;
-    $__support-for-ie7: $support-for-ie7;
-
     @include test('   mixin: clearfix') {
-
-        $support-for-ie6: false !global;
-        $support-for-ie7: false !global;
 
         @include assert('调用该混入类，可以清除元素内部的左右浮动') {
             @include output {
@@ -48,48 +27,6 @@
             }
         }
 
-        $support-for-ie6: true !global;
-        $support-for-ie7: false !global;
-
-        @include assert('若设置支持 IE6 或 IE7，则额外设置 *zoom 为 1') {
-            @include output {
-                @include clearfix;
-            }
-
-            @include expect {
-                @include test_helpers_clearfix_expect-for-ie();
-            }
-        }
-
-        $support-for-ie6: false !global;
-        $support-for-ie7: true !global;
-
-        @include assert('若设置支持 IE6 或 IE7，则额外设置 *zoom 为 1') {
-            @include output {
-                @include clearfix;
-            }
-
-            @include expect {
-                @include test_helpers_clearfix_expect-for-ie;
-            }
-        }
-
-        $support-for-ie6: true !global;
-        $support-for-ie7: true !global;
-
-        @include assert('若设置支持 IE6 或 IE7，则额外设置 *zoom 为 1') {
-            @include output {
-                @include clearfix;
-            }
-
-            @include expect {
-                @include test_helpers_clearfix_expect-for-ie;
-            }
-        }
-
     }
-
-    $support-for-ie6: $__support-for-ie6 !global;
-    $support-for-ie7: $__support-for-ie7 !global;
 
 }

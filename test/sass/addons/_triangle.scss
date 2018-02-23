@@ -6,25 +6,9 @@
     @include hide-text;
 }
 
-@mixin test_helpers_triangle_expect-for-ie {
-    @include test_helpers_triangle_expect-basis;
-
-    *top: 0;
-
-    border-top: 10px solid #000;
-    border-right: 10px dashed transparent;
-    border-left: 10px dashed transparent;
-}
-
 @mixin test_helpers_triangle {
 
-    $__support-for-ie6: $support-for-ie6;
-    $__support-for-ie7: $support-for-ie7;
-
     @include test('   mixin: triangle') {
-
-        $support-for-ie6: false !global;
-        $support-for-ie7: false !global;
 
         @include assert('可以只指定三角箭头的宽度，其它使用默认值') {
             @include output {
@@ -109,48 +93,6 @@
                 border-left: 10px dashed transparent;
             }
         }
-
-        $support-for-ie6: true !global;
-        $support-for-ie7: false !global;
-
-        @include assert('若兼容 IE6 或 IE7，则额外输出 *top 为 0') {
-            @include output {
-                @include triangle(10px, bottom, #000);
-            }
-
-            @include expect {
-                @include test_helpers_triangle_expect-for-ie;
-            }
-        }
-
-        $support-for-ie6: false !global;
-        $support-for-ie7: true !global;
-
-        @include assert('若兼容 IE6 或 IE7，则额外输出 *top 为 0') {
-            @include output {
-                @include triangle(10px, bottom, #000);
-            }
-
-            @include expect {
-                @include test_helpers_triangle_expect-for-ie;
-            }
-        }
-
-        $support-for-ie6: true !global;
-        $support-for-ie7: true !global;
-
-        @include assert('若兼容 IE6 或 IE7，则额外输出 *top 为 0') {
-            @include output {
-                @include triangle(10px, bottom, #000);
-            }
-
-            @include expect {
-                @include test_helpers_triangle_expect-for-ie;
-            }
-        }
     }
-
-    $support-for-ie6: $__support-for-ie6 !global;
-    $support-for-ie7: $__support-for-ie7 !global;
 
 }

@@ -54,9 +54,5 @@
     @if $bottom { bottom: $bottom; }
     @if $left   { left:   $left;   }
 
-    @if $position == absolute and $support-for-ie6 {
-        _zoom: 1; // IE6 中的绝对定位是相对内容区域定位，而非包含内边距在内的区域
-    }
-
     @if $z-index { z-index: $z-index; }
 }

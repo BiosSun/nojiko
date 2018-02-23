@@ -7,7 +7,7 @@
 
 /// 为元素设置不透明度
 ///
-/// **Note：如果项目不需要兼容 IE6、IE7 或 IE8，可以不使用该方法。**
+/// **Note：如果项目不需要兼容 IE8，可以不使用该方法。**
 ///
 /// @param {Number} $opacity - 需设置的不透明度值
 ///
@@ -22,12 +22,12 @@
 ///     .box {
 ///         opacity: 0.2;
 ///
-///         /* 如果配置支持 IE6, IE7 或 IE8, 则额外输出如下代码： */
+///         /* 如果配置支持 IE8, 则额外输出如下代码： */
 ///         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
 ///     }
 @mixin opacity($opacity) {
     opacity: $opacity;
-    @if $support-for-ie6 or $support-for-ie7 or $support-for-ie8 {
+    @if $support-for-ie8 {
         filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
     }
 }
@@ -45,7 +45,7 @@
 ///     .box {
 ///         opacity: 0;
 ///
-///         /* 如果配置支持 IE6, IE7 或 IE8, 则额外输出如下代码： */
+///         /* 如果配置支持 IE8, 则额外输出如下代码： */
 ///         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 ///     }
 @mixin transparent {
@@ -65,7 +65,7 @@
 ///     .box {
 ///         opacity: 1;
 ///
-///         /* 如果配置支持 IE6, IE7 或 IE8, 则额外输出如下代码： */
+///         /* 如果配置支持 IE8, 则额外输出如下代码： */
 ///         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 ///     }
 @mixin opaque {
