@@ -10,6 +10,7 @@
 - **[danger]** 不再支持 IE6 及 IE7；
 - **[danger]** 移除 `float` 混入类（因已不再支持 IE6 及 IE7，因此该混入类已没有意义）；
 - **[danger]** 全局配置变量 `$support-for-ie8` 的默认值改为 `false`；
+- **[danger]** 移除已弃用混入类 `block-formatting-context`；
 
 ## 0.7.1
 
