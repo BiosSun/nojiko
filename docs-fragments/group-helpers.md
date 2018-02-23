@@ -1,7 +1,6 @@
 
 Helpers 分组提供一些辅助性的函数及混入类，
 用于方便地书写某些复杂样式（如 [position](#id--helpers-mixin-position) 混入类），
-或解决一些兼容性问题（如 [float](#id-helpers-mixin-float) 混入类），
 以及用于一些计算或条件判断操作（如 [is-dark](#id--helpers-function-is-dark) 函数）。
 
 ### 示例
