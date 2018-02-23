@@ -12,6 +12,7 @@
 - **[danger]** 全局配置变量 `$support-for-ie8` 的默认值改为 `false`；
 - **[danger]** 移除已弃用混入类 `block-formatting-context`；
 - **[danger]** 移除已弃用混入类 `computed-line-height`；
+- **[danger]** 移除 `convert-rem` 及 `add-rem-suffix` 两个混入类；
 
 ## 0.7.1
 
