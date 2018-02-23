@@ -18,7 +18,6 @@ var documentOptions = {
         'map': 'Map',
         'elements': 'Elements',
         'elements-extend': 'Elements Extend',
-        'reset': 'Reset',
         'scaffolding': 'Scaffolding',
         'variables': 'Variables',
         'debug': 'Debug'
@@ -35,7 +34,6 @@ var documentOptions = {
                 'add-ons',
                 'list',
                 'map',
-                'reset',
                 'scaffolding',
                 'elements',
                 'elements-extend',
@@ -57,7 +55,6 @@ var documentOptions = {
             'add-ons': __dirname + '/docs-fragments/group-add-ons.md',
             'list': __dirname + '/docs-fragments/group-list.md',
             'map': __dirname + '/docs-fragments/group-map.md',
-            'reset': __dirname + '/docs-fragments/group-reset.md',
             'scaffolding': __dirname + '/docs-fragments/group-scaffolding.md',
             'elements': __dirname + '/docs-fragments/group-elements.md',
             'elements-extend': __dirname + '/docs-fragments/group-elements-extend.md',

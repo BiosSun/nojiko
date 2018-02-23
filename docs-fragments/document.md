@@ -24,7 +24,6 @@ $ bower install nojiko
 @import "nojiko/nojiko";
 @import "nojiko/variables";
 
-@import "nojiko/reset";
 @import "nojiko/scaffolding";
 @import "nojiko/elements";
 ```

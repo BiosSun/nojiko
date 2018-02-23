@@ -6,6 +6,7 @@
 - **[danger]** 为提高混入类的通用性，之后所有混入类的参数将不再使用 _variables.scss 中定义的全局变量作为默认值，而因此需调整的混入类有如下几个：
   - compute-line-height *(computed-line-height)*
   - get-element-box-height-by-name
+- **[danger]** 移除 _reset.scss；
 
 ## 0.7.1
 
