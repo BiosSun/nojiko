@@ -4,11 +4,12 @@
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [fix] 前缀的更新为异常修复，建议尽快更新。*
 
 - **[danger]** 为提高混入类的通用性，之后所有混入类的参数将不再使用 _variables.scss 中定义的全局变量作为默认值，而因此需调整的混入类有如下几个：
-  - compute-line-height *(computed-line-height)*
-  - get-element-box-height-by-name
-- **[danger]** 移除 _reset.scss；
+  - `compute-line-height` *`(computed-line-height)`*
+  - `get-element-box-height-by-name`
+- **[danger]** 移除 `_reset.scss`；
 - **[danger]** 不再支持 IE6 及 IE7；
-- **[danger]** 移除 float 混入类（因已不再支持 IE6 及 IE7，因此该混入类已没有意义）；
+- **[danger]** 移除 `float` 混入类（因已不再支持 IE6 及 IE7，因此该混入类已没有意义）；
+- **[danger]** 全局配置变量 `$support-for-ie8` 的默认值改为 `false`；
 
 ## 0.7.1
 
