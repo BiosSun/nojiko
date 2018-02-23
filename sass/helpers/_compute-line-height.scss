@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+////
+/// @group helpers
+/// @author Bios Sun <biossun@gmail.com>
+////
+
+/// 获取计算为有单位值的行高
+///
+/// @param {Number} $font-size - 文字大小
+/// @param {Number} $line-height - 文本行高
+///
+/// @example scss
+///     line-height: compute-line-height(12px, 1.5);    // => 18px
+///     line-height: compute-line-height(12px, 1.5em);  // => 1.5em
+@function compute-line-height($font-size, $line-height) {
+    @return if(unit($line-height) == '', $font-size * $line-height, $line-height);
+}

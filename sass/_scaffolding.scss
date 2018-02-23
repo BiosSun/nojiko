@@ -37,8 +37,8 @@ a {
 }
 
 hr {
-  margin-top: computed-line-height();
-  margin-bottom: computed-line-height();
+  margin-top: compute-line-height($font-size-base, $line-height-base);
+  margin-bottom: compute-line-height($font-size-base, $line-height-base);
   border: 0;
   border-top: 1px solid $line-color;
 }

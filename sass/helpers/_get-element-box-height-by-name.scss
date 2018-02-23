@@ -24,7 +24,7 @@
 
     $fs:  if($fs, $fs, $font-size-base);
     $lh:  if($lh, $lh, $line-height-base);
-    $clh: computed-line-height($fs, $lh);
+    $clh: compute-line-height($fs, $lh);
 
     $eh:  0;
 
