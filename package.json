@@ -17,6 +17,10 @@
     "lib",
     "base"
   ],
+  "scripts": {
+    "develop": "gulp develop",
+    "build": "gulp"
+  },
   "homepage": "https://github.com/BiosSun/nojiko",
   "lang": "zh_CN",
   "repository": {
