@@ -4,7 +4,7 @@
     ============================================================================= */
 
 ////
-/// _elements.scss 文件用于提供一些常用的样式类。
+/// _elements.scss 文件用于提供一些常用的原子样式。
 ///
 /// @group elements
 /// @author Bios Sun <biossun@gmail.com>
@@ -14,313 +14,318 @@
 // 类名配置
 // ---------------------------
 
-
 // 外边距
 
-/// 用于 「**添加外边距**」 的元素样式类的类名
+/// 设置「**外边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-margin:                        m                          !default;
 
-/// 用于 「**添加顶部外边距**」 的元素样式类的类名
+/// 设置「**顶部外边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-margin-top:                    mt                         !default;
 
-/// 用于 「**添加右边外边距**」 的元素样式类的类名
+/// 设置「**右边外边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-margin-right:                  mr                         !default;
 
-/// 用于 「**添加左边外边距**」 的元素样式类的类名
+/// 设置「**左边外边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-margin-left:                   ml                         !default;
 
-/// 用于 「**添加底部外边距**」 的元素样式类的类名
+/// 设置「**底部外边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-margin-bottom:                 mb                         !default;
 
-/// 用于 「**添加垂直方向外边距**」 的元素样式类的类名
+/// 设置「**垂直方向外边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-margin-vertical:               mv                         !default;
 
-/// 用于 「**添加水平方向外边距**」 的元素样式类的类名
+/// 设置「**水平方向外边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-margin-horizontal:             mh                         !default;
+
+/// 设置 「**较大的外边距**」原子样式类的类名后缀。
+$nojiko-el-margin-suffix-large:           -l                          !default;
+
+/// 设置 「**较小的外边距**」原子样式类的类名后缀。
+$nojiko-el-margin-suffix-small:           -s                          !default;
 
 
 // 内边距
 
-/// 用于 「**添加内边距**」 的元素样式类的类名
+/// 设置「**内边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-padding:                       p                          !default;
 
-/// 用于 「**添加顶部内边距**」 的元素样式类的类名
+/// 设置「**顶部内边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-padding-top:                   pt                         !default;
 
-/// 用于 「**添加右边内边距**」 的元素样式类的类名
+/// 设置「**右边内边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-padding-right:                 pr                         !default;
 
-/// 用于 「**添加左边内边距**」 的元素样式类的类名
+/// 设置「**左边内边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-padding-left:                  pl                         !default;
 
-/// 用于 「**添加底部内边距**」 的元素样式类的类名
+/// 设置「**底部内边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-padding-bottom:                pb                         !default;
 
-/// 用于 「**添加垂直方向内边距**」 的元素样式类的类名
+/// 设置「**垂直方向内边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-padding-vertical:              pv                         !default;
 
-/// 用于 「**添加水平方向内边距**」 的元素样式类的类名
+/// 设置「**水平方向内边距**」原子样式类的类名。
 /// @type string
 $nojiko-el-padding-horizontal:            ph                         !default;
+
+/// 设置 「**较大的外边距**」原子样式类的类名后缀。
+$nojiko-el-padding-suffix-large:          -l                          !default;
+
+/// 设置 「**较小的外边距**」原子样式类的类名后缀。
+$nojiko-el-padding-suffix-small:          -s                          !default;
 
 
 // 隐藏
 
-/// 用于 「**完全隐藏元素**」 的元素样式类的类名
+/// 设置「**完全隐藏元素**」原子样式类的类名。
 /// @type string
 $nojiko-el-hidden:                        h                          !default;
 
-/// 用于 「**只在普通屏幕上隐藏元素，而在屏幕阅读器中显示**」 的元素样式类的类名
+/// 设置「**只在普通屏幕上隐藏元素，而在屏幕阅读器中显示**」原子样式类的类名。
 /// @type string
 $nojiko-el-visually-hidden:               hv                         !default;
 
-/// 用于 「**在视觉及屏幕阅读器中隐藏元素，但保持布局结构**」 的元素样式类的类名
+/// 设置「**在视觉及屏幕阅读器中隐藏元素，但保持布局结构**」原子样式类的类名。
 /// @type string
 $nojiko-el-invisible:                     hi                         !default;
 
-/// 用于 「**设置元素向左浮动**」 的元素样式类的类名
+/// 设置「**设置元素向左浮动**」原子样式类的类名。
 /// @type string
 $nojiko-el-float-left:                    fl                         !default;
 
-/// 用于 「**设置元素向右浮动**」 的元素样式类的类名
+/// 设置「**设置元素向右浮动**」原子样式类的类名。
 /// @type string
 $nojiko-el-float-right:                   fr                         !default;
 
-/// 用于 「**清除元素内部浮动**」 的元素样式类的类名
+/// 设置「**清除元素内部浮动**」原子样式类的类名。
 /// @type string
 $nojiko-el-clear-float:                   fc                         !default;
+
+
+// 相关混入类
+// ---------------------------
+
+/// 生成各个方向上的内/外间距样式
+///
+/// @access private
+///
+/// @param {Map} $classes - 各个方向的类名定义，如 (all: 'm', top: 'mt', right: 'mr', bottom: 'mb', left: 'ml', vertical: 'mv', horizontal: 'mh')
+/// @param {String} $prefix - 统一类名前缀
+/// @param {String} $suffix - 统一类名后缀
+/// @param {'margin' | 'padding'} $property - 间距属性
+/// @param {Length} $vertical - 垂直方向上的间距值
+/// @param {Length} $horizontal - 水平方向上的间距值
+@mixin nojiko-el-distance(
+    $classes,
+
+    $prefix, 
+    $suffix, 
+    
+    $property,
+    
+    $vertical, 
+    $horizontal
+) {
+
+    // 生成各个方向上的 class 名称
+    $c:  map-get($classes, all);
+    $cv: map-get($classes, vertical);
+    $ch: map-get($classes, horizontal);
+    $ct: map-get($classes, top);
+    $cb: map-get($classes, bottom);
+    $cl: map-get($classes, left);
+    $cr: map-get($classes, right);
+
+    $c:  if($c,  '.#{$prefix}#{$c}#{$suffix}',  null);
+    $cv: if($cv, '.#{$prefix}#{$cv}#{$suffix}', null);
+    $ch: if($ch, '.#{$prefix}#{$ch}#{$suffix}', null);
+    $ct: if($ct, '.#{$prefix}#{$ct}#{$suffix}', null);
+    $cb: if($cb, '.#{$prefix}#{$cb}#{$suffix}', null);
+    $cl: if($cl, '.#{$prefix}#{$cl}#{$suffix}', null);
+    $cr: if($cr, '.#{$prefix}#{$cr}#{$suffix}', null);
+
+    $ct: list-compact( ($ct, $cv) );
+    $cb: list-compact( ($cb, $cv) );
+    $cl: list-compact( ($cl, $ch) );
+    $cr: list-compact( ($cr, $ch) );
+
+    // 若间距值无单位的话，默认使用 px
+    @if unit($vertical) == "" { $vertical: $vertical + 0px; }
+    @if unit($horizontal) == "" { $horizontal: $horizontal + 0px; }
+
+    // 输出 $classes.all 的样式
+    @if $c {
+        #{$c} {
+            @if $vertical eq $horizontal {
+                #{$property}: $vertical;
+            }
+            @else {
+                #{$property}: $vertical $horizontal;
+            }
+        }
+    }
+
+    // 输出其余方向的样式
+    @each $item in (
+        // class, direction, value
+        ($ct, top, $vertical),
+        ($cb, bottom, $vertical),
+        ($cl, left, $vertical),
+        ($cr, right, $horizontal)
+    ) {
+        $classes: nth($item, 1);
+        $property-suffix: nth($item, 2);
+        $value: nth($item, 3);
+
+        @if length($classes) > 0 {
+            #{$classes} {
+                #{$property}-#{$property-suffix}: $value;
+            }
+        }
+    }
+}
+
+/// 生成各个方向上的外间距样式；
+///
+/// 基础类名分别使用全局配置变量：
+///
+/// - $nojiko-el-margin
+/// - $nojiko-el-margin-vertical
+/// - $nojiko-el-margin-horizontal
+/// - $nojiko-el-margin-top
+/// - $nojiko-el-margin-bottom
+/// - $nojiko-el-margin-left
+/// - $nojiko-el-margin-right
+///
+/// @param {String} $prefix - 类名前缀
+/// @param {String} $suffix - 类名后缀
+/// @param {Length} $vertical - 垂直方向上的间距值
+/// @param {Length} $horizontal - 水平方向上的间距值
+///
+/// @example scss - source
+/// 
+///     @include el-marge('p-', '-s', 10px, 20px);
+///
+/// @example css - output
+///
+///     .p-m-s { margin: 10px 20px; }
+///
+///     .p-mt-s, .p-mv-s { margin-top:    10px; }
+///     .p-mb-s, .p-mv-s { margin-bottom: 10px; }
+///     .p-ml-s, .p-mh-s { margin-left:   20px; }
+///     .p-mr-s, .p-mh-s { margin-right:  20px; }
+@mixin el-margin($prefix, $suffix, $vertical, $horizontal) {
+    @include nojiko-el-distance(
+        $classes: (
+            all: $nojiko-el-margin,
+            vertical: $nojiko-el-margin-vertical,
+            horizontal: $nojiko-el-margin-horizontal,
+            top: $nojiko-el-margin-top,
+            bottom: $nojiko-el-margin-bottom,
+            left: $nojiko-el-margin-left,
+            right: $nojiko-el-margin-right
+        ),
+
+        $prefix: $prefix,
+        $suffix: $suffix,
+
+        $property: margin,
+        
+        $vertical: $vertical,
+        $horizontal: $horizontal
+    );
+}
+
+/// 生成各个方向上的内间距样式；
+///
+/// 基础类名分别使用全局配置变量：
+///
+/// - $nojiko-el-padding
+/// - $nojiko-el-padding-vertical
+/// - $nojiko-el-padding-horizontal
+/// - $nojiko-el-padding-top
+/// - $nojiko-el-padding-bottom
+/// - $nojiko-el-padding-left
+/// - $nojiko-el-padding-right
+///
+/// @param {String} $prefix - 类名前缀
+/// @param {String} $suffix - 类名后缀
+/// @param {Length} $vertical - 垂直方向上的间距值
+/// @param {Length} $horizontal - 水平方向上的间距值
+///
+/// @example scss - source
+/// 
+///     @include el-padding('p-', '-s', 10px, 20px);
+///
+/// @example css - output
+///
+///     .p-p-s { padding: 10px 20px; }
+///
+///     .p-pt-s, .p-pv-s { padding-top:    10px; }
+///     .p-pb-s, .p-pv-s { padding-bottom: 10px; }
+///     .p-pl-s, .p-ph-s { padding-left:   20px; }
+///     .p-pr-s, .p-ph-s { padding-right:  20px; }
+@mixin el-padding($prefix, $suffix, $vertical, $horizontal) {
+    @include nojiko-el-distance(
+        $classes: (
+            all: $nojiko-el-padding,
+            vertical: $nojiko-el-padding-vertical,
+            horizontal: $nojiko-el-padding-horizontal,
+            top: $nojiko-el-padding-top,
+            bottom: $nojiko-el-padding-bottom,
+            left: $nojiko-el-padding-left,
+            right: $nojiko-el-padding-right
+        ),
+
+        $prefix: $prefix,
+        $suffix: $suffix,
+
+        $property: padding,
+        
+        $vertical: $vertical,
+        $horizontal: $horizontal
+    );
+}
 
 
 // 外边距
 // ---------------------------
 
-@each $name in (m, d, x) {
-    $v: 0;
-    $h: 0;
+@include el-margin(null, null, $distance-vertical, $distance-horizontal);
 
-    @if $name == m {
-        $v: $distance-vertical;
-        $h: $distance-horizontal;
-    }
-    @else if $name == -m {
-        $v: -$distance-vertical;
-        $h: -$distance-horizontal;
-    }
-    @else if $name == d {
-        $v: $distance-vertical * 2;
-        $h: $distance-horizontal *2;
-    }
-    @else if $name == x {
-        $v: $distance-vertical / 2;
-        $h: $distance-horizontal / 2;
-    }
-    @else if $name == -d {
-        $v: -$distance-vertical * 2;
-        $h: -$distance-horizontal * 2;
-    }
-    @else if $name == -x {
-        $v: -$distance-vertical / 2;
-        $h: -$distance-horizontal / 2;
-    }
-    @else {
-        $v: $name;
-        $h: $name;
-    }
+@if $nojiko-el-margin-suffix-large {
+    @include el-margin(null, $nojiko-el-margin-suffix-large, $distance-vertical-large, $distance-horizontal-large);
+}
 
-    @if unit($v) == "" { $v: $v + 0px; }
-    @if unit($h) == "" { $h: $h + 0px; }
-
-    // 如果类名使用简写方式，则隐去普通边距的尺寸名称
-    @if $nojiko-el-margin == m {
-        @if $name == m {
-            $name: '';
-        }
-        @if $name == -m {
-            $name: '-';
-        }
-    }
-
-    @if $nojiko-el-margin {
-        .#{$nojiko-el-margin}#{$name} {
-            @if $v eq $h {
-                margin: $v;
-            }
-            @else {
-                margin: $v $h;
-            }
-        }
-    }
-
-    $ct: ();
-    $cb: ();
-    $cl: ();
-    $cr: ();
-
-    @if $nojiko-el-margin-top {
-        $ct: append($ct, unquote('.#{$nojiko-el-margin-top}#{$name}'), comma);
-    }
-
-    @if $nojiko-el-margin-bottom {
-        $cb: append($cb, unquote('.#{$nojiko-el-margin-bottom}#{$name}'), comma);
-    }
-
-    @if $nojiko-el-margin-left {
-        $cl: append($cl, unquote('.#{$nojiko-el-margin-left}#{$name}'), comma);
-    }
-
-    @if $nojiko-el-margin-right {
-        $cr: append($cr, unquote('.#{$nojiko-el-margin-right}#{$name}'), comma);
-    }
-
-    @if $nojiko-el-margin-vertical {
-        $ct: append($ct, unquote('.#{$nojiko-el-margin-vertical}#{$name}'), comma);
-        $cb: append($cb, unquote('.#{$nojiko-el-margin-vertical}#{$name}'), comma);
-    }
-
-    @if $nojiko-el-margin-horizontal {
-        $cl: append($cl, unquote('.#{$nojiko-el-margin-horizontal}#{$name}'), comma);
-        $cr: append($cr, unquote('.#{$nojiko-el-margin-horizontal}#{$name}'), comma);
-    }
-
-    @if length($ct) > 0 {
-        #{$ct} { margin-top    : $v; }
-        #{add-rem-suffix($ct)} { margin-top    : convert-rem($v); }
-    }
-    @if length($cb) > 0 {
-        #{$cb} { margin-bottom : $v; }
-        #{add-rem-suffix($cb)} { margin-bottom    : convert-rem($v); }
-    }
-    @if length($cl) > 0 {
-        #{$cl} { margin-left   : $h; }
-        #{add-rem-suffix($cl)} { margin-left    : convert-rem($h); }
-    }
-    @if length($cr) > 0 {
-        #{$cr} { margin-right  : $h; }
-        #{add-rem-suffix($cr)} { margin-right    : convert-rem($h); }
-    }
+@if $nojiko-el-margin-suffix-small {
+    @include el-margin(null, $nojiko-el-margin-suffix-small, $distance-vertical-small, $distance-horizontal-small);
 }
 
 
 // 内边距
 // ---------------------------
 
-@each $name in (p, d, x) {
-    $v: 0;
-    $h: 0;
+@include el-padding(null, null, $distance-vertical, $distance-horizontal);
 
-    @if $name == p {
-        $v: $distance-vertical;
-        $h: $distance-horizontal;
-    }
-    @else if $name == -p {
-        $v: -$distance-vertical;
-        $h: -$distance-horizontal;
-    }
-    @else if $name == d {
-        $v: $distance-vertical * 2;
-        $h: $distance-horizontal *2;
-    }
-    @else if $name == x {
-        $v: $distance-vertical / 2;
-        $h: $distance-horizontal / 2;
-    }
-    @else if $name == -d {
-        $v: -$distance-vertical * 2;
-        $h: -$distance-horizontal * 2;
-    }
-    @else if $name == -x {
-        $v: -$distance-vertical / 2;
-        $h: -$distance-horizontal / 2;
-    }
-    @else {
-        $v: $name;
-        $h: $name;
-    }
+@if $nojiko-el-padding-suffix-large {
+    @include el-padding(null, $nojiko-el-padding-suffix-large, $distance-vertical-large, $distance-horizontal-large);
+}
 
-    @if unit($v) == "" { $v: $v + 0px; }
-    @if unit($h) == "" { $h: $h + 0px; }
-
-    // 如果类名使用简写方式，则隐去普通边距的尺寸名称
-    @if $nojiko-el-padding == p {
-        @if $name == p {
-            $name: '';
-        }
-        @if $name == -p {
-            $name: '-';
-        }
-    }
-
-    @if $nojiko-el-padding {
-        .#{$nojiko-el-padding}#{$name} {
-            @if $v eq $h {
-                padding: $v;
-            }
-            @else {
-                padding: $v $h;
-            }
-        }
-    }
-
-    $ct: ();
-    $cb: ();
-    $cl: ();
-    $cr: ();
-
-    @if $nojiko-el-padding-top {
-        $ct: append($ct, unquote('.#{$nojiko-el-padding-top}#{$name}'), comma);
-    }
-
-    @if $nojiko-el-padding-bottom {
-        $cb: append($cb, unquote('.#{$nojiko-el-padding-bottom}#{$name}'), comma);
-    }
-
-    @if $nojiko-el-padding-left {
-        $cl: append($cl, unquote('.#{$nojiko-el-padding-left}#{$name}'), comma);
-    }
-
-    @if $nojiko-el-padding-right {
-        $cr: append($cr, unquote('.#{$nojiko-el-padding-right}#{$name}'), comma);
-    }
-
-    @if $nojiko-el-padding-vertical {
-        $ct: append($ct, unquote('.#{$nojiko-el-padding-vertical}#{$name}'), comma);
-        $cb: append($cb, unquote('.#{$nojiko-el-padding-vertical}#{$name}'), comma);
-    }
-
-    @if $nojiko-el-padding-horizontal {
-        $cl: append($cl, unquote('.#{$nojiko-el-padding-horizontal}#{$name}'), comma);
-        $cr: append($cr, unquote('.#{$nojiko-el-padding-horizontal}#{$name}'), comma);
-    }
-
-    @if length($ct) > 0 {
-        #{$ct} { padding-top    : $v; }
-        #{add-rem-suffix($ct)} { padding-top    : convert-rem($v); }
-    }
-    @if length($cb) > 0 {
-        #{$cb} { padding-bottom : $v; }
-        #{add-rem-suffix($cb)} { padding-bottom    : convert-rem($v); }
-    }
-    @if length($cl) > 0 {
-        #{$cl} { padding-left   : $h; }
-        #{add-rem-suffix($cl)} { padding-left    : convert-rem($h); }
-    }
-    @if length($cr) > 0 {
-        #{$cr} { padding-right  : $h; }
-        #{add-rem-suffix($cr)} { padding-right    : convert-rem($h); }
-    }
+@if $nojiko-el-padding-suffix-small {
+    @include el-padding(null, $nojiko-el-padding-suffix-small, $distance-vertical-small, $distance-horizontal-small);
 }
 
 
@@ -364,6 +369,6 @@ $nojiko-el-clear-float:                   fc                         !default;
 // 浮动
 // ---------------------------
 
-@if $nojiko-el-float-left  { .#{$nojiko-el-float-left}  { @include float(left);  } }
-@if $nojiko-el-float-right { .#{$nojiko-el-float-right} { @include float(right); } }
+@if $nojiko-el-float-left  { .#{$nojiko-el-float-left}  { float: left;  } }
+@if $nojiko-el-float-right { .#{$nojiko-el-float-right} { float: right; } }
 @if $nojiko-el-clear-float { .#{$nojiko-el-clear-float} { @include clearfix;     } }

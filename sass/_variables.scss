@@ -169,10 +169,22 @@ $default-box-sizing:            content-box               !default;
 /// @type boolean | number
 $page-width:                    false                     !default;
 
-/// 模块之间的垂直间距
-/// @type number
-$distance-vertical:             20px                      !default;
-
 /// 模块之间的水平间距
 /// @type number
 $distance-horizontal:           20px                      !default;
+/// 较大的模块之间的水平间距
+/// @type number
+$distance-horizontal-large:     40px                      !default;
+/// 较小的模块之间的水平间距
+/// @type number
+$distance-horizontal-small:     10px                      !default;
+
+/// 模块之间的垂直间距
+/// @type number
+$distance-vertical:             20px                      !default;
+/// 较大的模块之间的垂直间距
+/// @type number
+$distance-vertical-large:       40px                      !default;
+/// 较小的模块之间的垂直间距
+/// @type number
+$distance-vertical-small:       10px                      !default;

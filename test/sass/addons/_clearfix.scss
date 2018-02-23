@@ -4,7 +4,7 @@
 @mixin test_helpers_clearfix_expect {
     &:before,
     &:after {
-        content: " ";
+        content: "";
         display: table;
     }
 
