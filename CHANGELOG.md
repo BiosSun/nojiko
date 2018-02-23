@@ -3,24 +3,217 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [fix] 前缀的更新为异常修复，建议尽快更新。*
 
-- **[danger]** 为提高混入类的通用性，之后所有混入类的参数将不再使用 _variables.scss 中定义的全局变量作为默认值，而因此需调整的混入类有如下几个：
-  - `compute-line-height` *`(computed-line-height)`*
-  - `get-element-box-height-by-name`
-- **[danger]** 移除 `_reset.scss`；
-- **[danger]** 不再支持 IE6 及 IE7；
-- **[danger]** 移除 `float` 混入类（因已不再支持 IE6 及 IE7，因此该混入类已没有意义）；
-- **[danger]** 全局配置变量 `$support-for-ie8` 的默认值改为 `false`；
-- **[danger]** 移除已弃用混入类 `block-formatting-context`；
-- **[danger]** 移除已弃用混入类 `computed-line-height`；
-- **[danger]** 移除 `convert-rem` 及 `add-rem-suffix` 两个混入类；
-- **[danger]** 移除盒模型相关内容，该特性应在具体的 UI 库中负责提供：
-  - 混入类 `get-element-box-height-by-name`
-  - 混入类 `set-element-box-maps`
-  - 混入类 `element-box`、`element-box-by-map`、`element-box-by-name`、`element-box-by-name-b`、`element-box-by-name-bh`
-  - 全局配置变量 `$default-element-box-name`
-  - 全局配置变量 `$element-box-maps`
-  - 全局配置变量 `$nojiko-el-size`
-  - 及 `elements-extend.scss` 中尺寸相关的原子样式类；
+## 1.0.0-rc.1 (2018-02-23)
+
+在该版本中，nojiko 做了较多的破坏性变更，因此请在升级到该版本前仔细阅读修改日志。
+
+### 破坏性变更
+
+#### 1. 浏览器兼容性支持：自该版本开始，Nojiko 将不再支持 IE6 及 IE7
+
+因为从当前的市场统计数据来看，这两个浏览器版本在全球市场份额已降到极低，而且即便是在中国，其总计市场份额也已降到 4% 以下；
+
+另外再加上兼容这两个浏览器版本需要付出极多额外的工作量，而且在支持他们的前提下，也很难放心的大量使用更加先进的技术以满足当前市场中用户日益增高的体验需求；
+
+基于以上考虑，我们认为再继续兼容 IE6 及 IE7 将是一件性价比非常低的事情。
+
+> **升级指南：** 如果你的项目仍需支持 IE6 或 IE7，那么请不要升级到该版本。
+
+#### 2. 浏览器兼容性支持：依然兼容 IE8，但全局配置变量 `$support-for-ie8` 的默认值将被改为 `false`
+
+限于仍有很多用户还在继续使用 Windows XP，联带 IE8 的市场份额也高达 6% 之多，因此 Nojiko 将继续支持 IE8。
+
+但在 Nojiko 中，IE8 已被列为低级别的兼容目标，且随时有可能放弃支持 IE8，因此特将 IE8 的兼容配置变量的默认值改为 `false`。
+
+
+> **升级指南：** 若你的项目仍需支持 IE8，那么请在引入 nojiko 的 `_variables.scss` 之前，添加如下配置代码：
+>
+> ``` scss
+> $support-for-ie8: true;
+> ```
+
+#### 3. 移除 `float` 混入类
+
+因已不再支持 IE6 及 IE7，因此混入类 `float` 也就没有必要存在，故此移除。
+
+> **升级指南：*** 使用关键字 `@include float` 检索项目中所有 `.scss` 文件，并将其改为直接使用 css 的 `float` 属性。
+>
+> 如将如下代码：
+> ``` scss
+> @include float(left);
+> ```
+>
+> 改为：
+> ``` scss
+> float: left;
+> ```
+
+#### 4. 移除已弃用混入类 `block-formatting-context`
+
+该混入类用于激活元素的块级格式化上下文，但其应用场景非常有限，而且有一些副作用，因此早已于 `0.5.0` 版本中便已声明为 `已弃用` 状态，并声明将在 `1.0.0` 正式版本中移除。
+
+> **升级指南：** 使用关键字 `@include block-formating-context` 检索项目中所有 `.scss` 样式文件，并根据你的使用场景将其更换为一个更好的方案。
+
+#### 5. 移除已弃用混入类 `computed-line-height`
+
+该混入类在 `0.5.8` 版本中更名为 `compute-line-height`，原名称依然保留，但被声明为 `已弃用` 状态，并声明将在 `1.0.0` 正式版本中移除。
+
+> **升级指南：** 使用关键字 `@include computed-line-height` 检索项目中所有 `.scss` 样式文件，并将混入类名称改为 `compute-line-height`。
+
+#### 6. 移除 `_reset.scss`
+
+Nojiko 的重置样式实际上是封装自 [Normalize.css](http://necolas.github.io/normalize.css/)，并在其基础上添加了一些兼容 IE6/7 的代码，另外额外提供了一份清除所有元素内外边距、字号、行高及有序/无序列表符号的「破坏性重置样式」。
+
+因当前已不再支持 IE6 及 IE7，且「破坏性重置样式」也没有太多的普适性，因此 Nojiko 已没有太大的必要提供一份样式重置代码，因此移除。
+
+> **升级指南：** 建议各项目改为使用 Normalize.css，若需要「破坏性重置样式」，那么请自行添加如下代码：
+>
+> ``` css
+> body,
+> ul, ol, dl, dd,
+> h1, h2, h3, h4, h5, h6, p, pre,
+> form, fieldset, legend, input, textarea, select, button,
+> blockquote, th, td, hr, article, aside, details,
+> figcaption, figure, header, footer, section, hgroup, menu, nav {
+>     margin:0;
+>     padding:0;
+> }
+>
+>  h1, h2, h3, h4, h5, h6, big, small {
+>      font: inherit;
+>      font-size: 100%;
+>      vertical-align: baseline;
+>  }
+>
+>  ol, ul {
+>      list-style: none;
+>  }
+> ```
+
+#### 7. 移除 rem 支持
+
+这将移除三个部分的内容：
+
+- 混入类 `convert-rem`；
+- 混入类 `add-rem-suffix`；
+- rem 相关的内外边距原子样式类。
+
+在 Nojiko 中对 rem 的支持做的还不是很好，比如没有提供充分的说明文档、示例代码及单元测试；
+对外暴露的接口也缺少足够的普适性。且它需要有配套的 JS 支持，这违背了 Nojiko “作为一个纯样式工具库” 的原则；
+因此 Nojiko 中将不再提供对 rem 的支持。
+
+相应的，我们认为这种特定性的功能应该放在一个单独的项目中维护会比较好。
+
+> **升级指南：** 建议自行寻找或编写一个 rem 功能库。
+>
+> 至于 rem 相关的内外边距原子样式类，可参照如下方式添加补丁代码：
+>
+> ``` scss
+> // 外边距
+> // ---------------------------
+>
+> @include el-margin(null, null, 20rem, 20rem);
+>
+> @if $nojiko-el-margin-suffix-large {
+>     @include el-margin(null, $nojiko-el-margin-suffix-large, 40rem, 40rem);
+> }
+>
+> @if $nojiko-el-margin-suffix-small {
+>     @include el-margin(null, $nojiko-el-margin-suffix-small, 10rem, 10rem);
+> }
+>
+>
+> // 内边距
+> // ---------------------------
+>
+> @include el-padding(null, null, 20rem, 20rem);
+>
+> @if $nojiko-el-padding-suffix-large {
+>     @include el-padding(null, $nojiko-el-padding-suffix-large, 40rem, 40rem);
+> }
+>
+> @if $nojiko-el-padding-suffix-small {
+>     @include el-padding(null, $nojiko-el-padding-suffix-small, 10rem, 10rem);
+> }
+> ```
+>
+> 关于 `el-marge` 及 `el-padding` 混入类可以参考文档中 [`Elements`](http://biossun.org/nojiko/#id--elements) 分组下的相关说明。
+
+#### 8. 所有混入类及函数的参数在定义默认值时，不再引用 `_variables.scss` 中所定义的全局配置变量
+
+因为在某些特殊项目中会自行设计一套全局配置变量，而不会使用 nojiko 所默认提供的，因此为了提高 nojiko 中所提供的混入类和函数的普适性，使其能应用在所有项目中，因此提出该约束。
+
+不过目前受该规定影响的只有如下一个函数：
+
+- `compute-line-height`
+
+> **升级指南：** 使用关键字 `compute-line-height("` 检索项目中所有 `.scss` 样式文件，若调用该函数时没有传入参数，或只传入了一个参数，则修改如下：
+>
+> ``` scss
+> compute-line-height($font-size-base, $line-height-base)
+> ```
+>
+> **注意** 在该版本中已移除了具有同样功能的 `computed-line-height` 函数，若你尚未处理该问题，那么需额外检索 `computed-line-height` 函数。
+
+#### 9. 移除盒模型相关内容
+
+`$element-box-maps` 存在与 `$color-maps` 同样的问题，既很难定义出一份足够通用的配置。因此 nojiko 中将不再提供关于盒模型相关的配置，另外配套的一些混入类也随之移除。
+
+相应的，关于组件盒模型的设计、配置及约束，应下移到 UI 库中进行。
+
+相关的移除内容有：
+
+- 混入类 `get-element-box-height-by-name`
+- 混入类 `set-element-box-maps`
+- 混入类 `element-box`、`element-box-by-map`、`element-box-by-name`、`element-box-by-name-b`、`element-box-by-name-bh`
+- 全局配置变量 `$default-element-box-name`
+- 全局配置变量 `$element-box-maps`
+- 全局配置变量 `$nojiko-el-size`
+- 及 `elements-extend.scss` 中尺寸相关的原子样式类；
+
+> **升级指南：** 移除你的项目中这些混入类、配置变量及原子样式类的使用，并根据你的项目自行设计一套更加易用且又要的盒模型约束机制。
+
+#### 10. 修改全局配置变量 `$font-size-large` 的默认值为固定像素值 `18px`，`$font-size-small` 的默认值为 `12px`
+
+之前这两个变量的值都是基于 `$font-size-base` 的值计算而来，但难以得到一个比较好的计算算法，因此简便起见，将其默认值改为固定值。
+
+> **升级指南：** 若你的项目中有修改 `$font-size-base` 的值，但未修改 `$font-size-large` 及 `$font-size-base`，那么请明确为这两个变量指定值。
+
+#### 11. 提供更多的模块间距控制
+
+首先，我们新增了八个全局配置变量：
+
+| 变量 | 类型 | 默认值 | 说明 |
+|-----|------|------|------|
+| $distance-horizontal-large | `number` | `40px` | 用于设置较大的模块间水平间距值；|
+| $distance-horizontal-small | `number` | `10px` |  用于设置较小的模块间水平间距值；|
+| $distance-vertical-large | `number` | `40px` | 用于设置较大的模块间垂直间距值；|
+| $distance-vertical-small | `number` | `10px` | 用于设置较小的模块间垂直间距值；|
+| $nojiko-el-margin-suffix-large | `string` | `-l` | 用于设置 「**较大的外边距**」原子样式类的类名后缀； |
+| $nojiko-el-margin-suffix-small | `string` | `-s` | 用于设置 「**较小的外边距**」原子样式类的类名后缀； |
+| $nojiko-el-padding-suffix-large | `string` | `-l` | 用于设置 「**较大的内边距**」原子样式类的类名后缀； |
+| $nojiko-el-padding-suffix-small | `string` | `-s` | 用于设置 「**较小的内边距**」原子样式类的类名后缀； |
+
+与字体和行高一样，我们认为将模块间的间距控制三个级别是较为合适的，既：普通间距、较大间距及较小间距。
+
+但是在之前的版本中，我们仅通过原子样式类中提供了这三个级别的间距，而且较大间距及较小间距的值是固定为 `$distance-horizontal` 及 `$distance-vertical` 的 2 倍及 0.5 倍，相应的，所添加的类名后缀也强制设置为 `d` 及 `x**，不可配置，而且难以记忆。
+
+为改善这些问题，我们特此提供了以上八个变量。
+
+**而且需要注意的是，为了方便记忆，较大间距及较小间距的原子样式类的类名后缀，我们改为了 `-l` 及 `-s`，既 `large` 及 `small`，
+而不再是 `d` 及 `x`。**
+
+> **升级指南：**
+>
+> 首先，若你的项目中有修改 `$distance-horizontal` 及 `$distance-vertical` 的值，那么请额外为新增的四个配置变量设置值。
+>
+> 之后，若你希望沿用老的原子样式类的命名后缀，那么请配置相应的全局配置变量为 `d` 及 `x` 即可。
+
+### 新增内容
+
+- 添加 `list-compact` 函数，用于清除列表中所有值为 null 的元素；
+- 添加 `hairline-border` 混入类，用于实现更好的 1 物理像素边框效果（但所生成的 css 代码也会更多）；
+
 
 ## 0.7.1
 
@@ -257,3 +450,5 @@
 - 移除 `%arrows-style` 抽象类，并将其其内容合并到 `arrows-style` 混入类中，之后每次调用该混入类时，都会写入一些相同的内容。
 - 默认将 `$primary-color` 放入 `$color-maps` 中
 - 为 `set-color-map` 及 `set-alternative-color-map` 方法添加 `is-default` 参数，如果改参数值为 `true` 或 `default`，则不会覆盖已存在的颜色配置。
+
+
