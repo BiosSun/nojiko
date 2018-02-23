@@ -14,13 +14,9 @@
 @import "translucent-bgcolor";
 @import "opacity";
 
-// TODO: @import "rem";
 // TODO: @import "font-family";
 // TODO: @import "text-inputs";
 // TODO: @import "button-inputs";
-// TODO: @import "set-element-box";
-// TODO: @import "set-element-box-maps";
-// TODO: @import "get-element-box-height-by-name";
 @include test-module('helpers') {
 
     @include test_helpers_nojiko-expand;

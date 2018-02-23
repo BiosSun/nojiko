@@ -19,12 +19,8 @@ $nojiko-el-em-width-values: () !default;
 // 百分比宽度值
 $nojiko-el-per-width-values: () !default;
 
-
 // 类名配置
 // ---------------------------
-
-// 尺寸
-$nojiko-el-size:                          s                          !default;
 
 // 宽度
 $nojiko-el-width:                         w                          !default;
@@ -81,18 +77,6 @@ $nojiko-el-separator-line:                sl                         !default;
 
 // 小三角箭头
 $nojiko-el-triangle:                      ar                         !default;
-
-
-// 尺寸
-// ---------------------------
-
-@if $nojiko-el-size {
-    @each $k, $v in $element-box-maps {
-        .#{$nojiko-el-size}#{$k}    { @include element-box-by-name($k);    }
-        .#{$nojiko-el-size}#{$k}-b  { @include element-box-by-name-b($k);  }
-        .#{$nojiko-el-size}#{$k}-bh { @include element-box-by-name-bh($k); }
-    }
-}
 
 
 // 宽度

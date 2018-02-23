@@ -13,6 +13,14 @@
 - **[danger]** 移除已弃用混入类 `block-formatting-context`；
 - **[danger]** 移除已弃用混入类 `computed-line-height`；
 - **[danger]** 移除 `convert-rem` 及 `add-rem-suffix` 两个混入类；
+- **[danger]** 移除盒模型相关内容，该特性应在具体的 UI 库中负责提供：
+  - 混入类 `get-element-box-height-by-name`
+  - 混入类 `set-element-box-maps`
+  - 混入类 `element-box`、`element-box-by-map`、`element-box-by-name`、`element-box-by-name-b`、`element-box-by-name-bh`
+  - 全局配置变量 `$default-element-box-name`
+  - 全局配置变量 `$element-box-maps`
+  - 全局配置变量 `$nojiko-el-size`
+  - 及 `elements-extend.scss` 中尺寸相关的原子样式类；
 
 ## 0.7.1
 
