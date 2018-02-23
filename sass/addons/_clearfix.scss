@@ -16,7 +16,7 @@
 /// @example css - output
 ///
 ///     .box:before, .box:after {
-///         content: " ";
+///         content: "";
 ///         display: table;
 ///     }
 ///
@@ -28,7 +28,7 @@
 @mixin clearfix {
     &:before,
     &:after {
-        content: " ";
+        content: "";
         display: table;
     }
 
