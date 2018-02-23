@@ -11,8 +11,8 @@
 /// @param {String} $box-sizing 盒模型计算模式
 /// @param {Number} $row-number 文本内容的行数
 @function get-element-box-height-by-name (
-    $name: $default-element-box-name,
-    $box-sizing: $default-box-sizing,
+    $name,
+    $box-sizing,
     $row-number: 1
 ) {
     $map: map-get($element-box-maps, $name);

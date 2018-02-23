@@ -7,13 +7,13 @@
 
 /// 获取计算为有单位值的行高
 ///
-/// @param {Number} $font-size [$font-size-base] - 文字大小
-/// @param {Number} $line-height [$line-height-base] - 文本行高
+/// @param {Number} $font-size - 文字大小
+/// @param {Number} $line-height - 文本行高
 ///
 /// @example scss
 ///     line-height: compute-line-height(12px, 1.5);    // => 18px
 ///     line-height: compute-line-height(12px, 1.5em);  // => 1.5em
-@function compute-line-height($font-size: $font-size-base, $line-height: $line-height-base) {
+@function compute-line-height($font-size, $line-height) {
     @return if(unit($line-height) == '', $font-size * $line-height, $line-height);
 }
 
@@ -21,12 +21,12 @@
 ///
 /// @deprecated 请改为使用 compute-line-height 方法，该方法命名有误，将在正式版（v1.0.0）中移除。
 ///
-/// @param {Number} $font-size [$font-size-base] - 文字大小
-/// @param {Number} $line-height [$line-height-base] - 文本行高
+/// @param {Number} $font-size - 文字大小
+/// @param {Number} $line-height - 文本行高
 ///
 /// @example scss
 ///     line-height: computed-line-height(12px, 1.5);    // => 18px
 ///     line-height: computed-line-height(12px, 1.5em);  // => 1.5em
-@function computed-line-height($font-size: $font-size-base, $line-height: $line-height-base) {
+@function computed-line-height($font-size, $line-height) {
     @return compute-line-height($font-size, $line-height);
 }
