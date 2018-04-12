@@ -137,28 +137,28 @@ $placeholder-color:             lighten($text-color, 40%)  !default;
 /// 非重要性的提示内容，可使用该色调。
 ///
 /// @type color
-$info-color:     #5bc0de;
+$info-color:     #5bc0de  !default;
 
 /// 成功色
 ///
 /// 表示成功状态的内容，可使用该色调。
 ///
 /// @type color
-$success-color:  #5cb85c;
+$success-color:  #5cb85c  !default;
 
 /// 警告色
 ///
 /// 具有警告性质的内容，需要提示用户关注时，可使用该色调。
 ///
 /// @type color
-$warning-color:  #f0ad4e;
+$warning-color:  #f0ad4e  !default;
 
 /// 危险色
 ///
 /// 表示危险、错误或非法等内容，需要用户立即关注或处理时，可使用该色调。
 ///
 /// @type color
-$danger-color:   #d9534f;
+$danger-color:   #d9534f  !default;
 
 
 // 尺寸
