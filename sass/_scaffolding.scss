@@ -7,16 +7,11 @@
 /// @author Bios Sun <biossun@gmail.com>
 ////
 
-/*! Scaffolding
-    ============================================================================= */
-
 @if $default-box-sizing == border-box {
-    * {
-        box-sizing: $default-box-sizing;
-    }
-
-    *:before, *:after {
-        box-sizing: $default-box-sizing;
+    *,
+    *:before, 
+    *:after {
+        box-sizing: $box-sizing;
     }
 }
 
