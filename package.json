@@ -19,7 +19,8 @@
   ],
   "scripts": {
     "develop": "gulp develop",
-    "build": "gulp"
+    "build": "gulp",
+    "publish-docs": "gh-pages -d docs"
   },
   "homepage": "https://github.com/BiosSun/nojiko",
   "lang": "zh_CN",
