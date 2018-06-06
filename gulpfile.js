@@ -70,12 +70,12 @@ gulp.task('docs', function() {
 });
 
 gulp.task('test.sass', function() {
-    gulp.src('./test/sass/index.js', { read: false })
+    return gulp.src('./test/sass/index.js', { read: false })
         .pipe( mocha() );
 });
 
 gulp.task('test.css', function() {
-    gulp.src('./test/css/**/*.scss')
+    return gulp.src('./test/css/**/*.scss')
         .pipe(sass({
             outputStyle: 'expanded',
             precision: 10
