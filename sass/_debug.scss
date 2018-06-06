@@ -12,6 +12,7 @@
 
 - $images-path :: #{inspect($images-path)} :: #{type-of($images-path)}
 - $fonts-path :: #{inspect($fonts-path)} :: #{type-of($fonts-path)}
+- $svg-path :: #{inspect($svg-path)} :: #{type-of($svg-path)}
 
 ## 文字
 
@@ -63,6 +64,11 @@
 - $page-width :: #{inspect($page-width)} :: #{type-of($page-width)}
 
 - $distance-vertical :: #{inspect($distance-vertical)} :: #{type-of($distance-vertical)}
+- $distance-vertical-large :: #{inspect($distance-vertical-large)} :: #{type-of($distance-vertical-large)}
+- $distance-verti-cal-small :: #{inspect($distance-verti-cal-small)} :: #{type-of($distance-verti-cal-small)}
+ 
 - $distance-horizontal :: #{inspect($distance-horizontal)} :: #{type-of($distance-horizontal)}
+- $distance-horizontal-large :: #{inspect($distance-horizontal-large)} :: #{type-of($distance-horizontal-large)}
+- $distance-horizontal-small :: #{inspect($distance-horizontal-small)} :: #{type-of($distance-horizontal-small)}
 
  */
