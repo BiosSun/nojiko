@@ -36,6 +36,7 @@ var documentOptions = {
                 'list',
                 'map',
                 'elements',
+                'scaffolding',
                 'debug'
             ],
             type: [
@@ -55,6 +56,7 @@ var documentOptions = {
             'list': __dirname + '/docs-fragments/group-list.md',
             'map': __dirname + '/docs-fragments/group-map.md',
             'elements': __dirname + '/docs-fragments/group-elements.md',
+            'scaffolding': __dirname + '/docs-fragments/group-scaffolding.md',
             'debug': __dirname + '/docs-fragments/debug.md'
         }
     },
