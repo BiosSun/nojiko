@@ -70,6 +70,11 @@ $(function() {
             var description = $(this).find('.example-description');
             description.stop().fadeIn(500);
         });
+    
+    $('.example-code').perfectScrollbar({
+        suppressScrollX: false,
+        suppressScrollY: true,
+    });
 
     /**
      * 所有文档内容中的链接，都在新标签页中打开
