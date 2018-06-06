@@ -60,7 +60,7 @@
 
     background: $color;
 
-    @if $support-for-ie8 {
+    @if variable_exists(support-for-ie8) and $support-for-ie8 {
         zoom: 1\9;
         filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#{ie-hex-str($color)}', EndColorStr='#{ie-hex-str($color)}');
     }

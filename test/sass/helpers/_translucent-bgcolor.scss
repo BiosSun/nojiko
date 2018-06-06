@@ -1,8 +1,7 @@
 @charset "utf-8";
 
 @mixin test_helpers_translucent-bgcolor {
-
-    $__support-for-ie8: $support-for-ie8;
+    $__support-for-ie8: if(variable_exists(support-for-ie8), $support-for-ie8, '#undefined');
 
     @include test('   mixin: translucent-bgcolor') {
 
@@ -44,6 +43,7 @@
 
     }
 
-    $support-for-ie8: $__support-for-ie8 !global;
-
+    @if ($__support-for-ie8 != '#undefined') {
+        $support-for-ie8: $__support-for-ie8 !global;
+    }
 }

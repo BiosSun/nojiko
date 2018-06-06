@@ -27,7 +27,7 @@
 ///     }
 @mixin opacity($opacity) {
     opacity: $opacity;
-    @if $support-for-ie8 {
+    @if variable_exists(support-for-ie8) and $support-for-ie8 {
         filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
     }
 }
