@@ -19,16 +19,17 @@ $ yarn add nojiko
 之后，便可引入并使用 nojiko：
 
 ```scss
-@import "nojiko/nojiko";
-@import "nojiko/variables";
+@import "nojiko/nojiko";       // 提供 Helpers、Add-ons、List 及 Map 四个分组下所定义的所有函数及混入类
 
-@import "nojiko/scaffolding";
-@import "nojiko/elements";
+@import "nojiko/variables";    // 提供 Variables 分组下所定义的所有全局配置变量
+@import "nojiko/scaffolding";  // 提供 Scaffolding 分组下所定义的一套全局脚手架样式
+@import "nojiko/elements";     // 提供 Elements 分组下所定义的一套元子样式类相关的全局配置变量、混入类及样式
 ```
 
 ## 升级
 
-目前 Nojiko 尚处于开发阶段，因此若要从老版本升级到新版本，请仔细查阅该[更新记录](https://github.com/BiosSun/nojiko/blob/master/CHANGELOG.md)，并对自己项目中的代码进行相应的修改。
+Nojiko 采用语义化版本控制，并提供了一份详尽的 [更新记录](https://github.com/BiosSun/nojiko/blob/master/CHANGELOG.md)，因此请在升级之前仔细阅读该更新记录，尤其是在升级到一个新的大版本号时。
+
 
 
 ## 其它 SASS 库
