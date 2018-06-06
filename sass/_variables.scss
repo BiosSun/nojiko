@@ -33,7 +33,7 @@ $svg-path:                      '../svg'    !default;
 // 文字
 // ---------------------------
 
-/// 默认字体集
+/// 默认字体集；
 ///
 /// 除了自己指定字体集之外，Nojiko 还提供了如下几个常用字体集以供选用：
 ///
@@ -58,13 +58,13 @@ $font-size-large:               18px !default;
 /// @type number
 $font-size-small:               12px !default;
 
-/// 默认文字行高，该变量与 $font-size-base 对应
+/// 默认文字行高，该变量与 `$font-size-base` 对应
 /// @type number
 $line-height-base:              1.428571429 !default;
-/// 较大文字行高，该变量与 $font-size-large 对应
+/// 较大文字行高，该变量与 `$font-size-large` 对应
 /// @type number
 $line-height-large:             1.34 !default;
-/// 较小文字行高，该变量与 $font-size-small 对应
+/// 较小文字行高，该变量与 `$font-size-small` 对应
 /// @type number
 $line-height-small:             1.5 !default;
 
@@ -124,30 +124,22 @@ $link-visited-color:            $link-color                !default;
 /// @type color
 $placeholder-color:             lighten($text-color, 40%)  !default;
 
-/// 消息色
-///
-/// 非重要性的提示内容，可使用该色调。
+/// 消息色：用于非重要性的提示内容
 ///
 /// @type color
 $info-color:     #5bc0de  !default;
 
-/// 成功色
-///
-/// 表示成功状态的内容，可使用该色调。
+/// 成功色：用于表示成功状态的内容
 ///
 /// @type color
 $success-color:  #5cb85c  !default;
 
-/// 警告色
-///
-/// 具有警告性质的内容，需要提示用户关注时，可使用该色调。
+/// 警告色：用于具有风险性的内容，需要提醒用户关注并警觉时
 ///
 /// @type color
 $warning-color:  #f0ad4e  !default;
 
-/// 危险色
-///
-/// 表示危险、错误或非法等内容，需要用户立即关注或处理时，可使用该色调。
+/// 危险色：用于具有危险、错误等性质的内容，需要通知用户需立即进行处理时
 ///
 /// @type color
 $danger-color:   #d9534f  !default;
@@ -156,9 +148,9 @@ $danger-color:   #d9534f  !default;
 // 尺寸
 // ---------------------------
 
-/// 全局盒模型尺寸计算模式，可选择使用「content-box」或「border-box」这两种计算模式。
+/// 全局盒模型尺寸计算模式，可选择使用 `content-box` 或 `border-box`
+///
 /// @type string
-/// @link https://developer.mozilla.org/en/docs/Web/CSS/box-sizing 关于 box-sizing 属性的说明
 $default-box-sizing:            content-box               !default;
 
 

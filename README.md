@@ -16,7 +16,7 @@ Nojiko 是一个使用 SCSS 编写的基础工具库，其中包含如下内容�
 $ yarn add nojiko
 ```
 
-之后，就可以引入并使用 nojiko 了：
+之后，便可引入并使用 nojiko：
 
 ```scss
 @import "nojiko/nojiko";

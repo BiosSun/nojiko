@@ -35,9 +35,7 @@ var documentOptions = {
                 'add-ons',
                 'list',
                 'map',
-                'scaffolding',
                 'elements',
-                'elements-extend',
                 'debug'
             ],
             type: [
@@ -56,9 +54,7 @@ var documentOptions = {
             'add-ons': __dirname + '/docs-fragments/group-add-ons.md',
             'list': __dirname + '/docs-fragments/group-list.md',
             'map': __dirname + '/docs-fragments/group-map.md',
-            'scaffolding': __dirname + '/docs-fragments/group-scaffolding.md',
             'elements': __dirname + '/docs-fragments/group-elements.md',
-            'elements-extend': __dirname + '/docs-fragments/group-elements-extend.md',
             'debug': __dirname + '/docs-fragments/debug.md'
         }
     },

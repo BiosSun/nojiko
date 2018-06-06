@@ -16,101 +16,105 @@
 
 // 外边距
 
-/// 设置「**外边距**」原子样式类的类名。
+/// 设置「**外边距**」原子样式类的类名
 /// @type string
 $nojiko-el-margin:                        m                          !default;
 
-/// 设置「**顶部外边距**」原子样式类的类名。
-/// @type string
-$nojiko-el-margin-top:                    mt                         !default;
-
-/// 设置「**右边外边距**」原子样式类的类名。
-/// @type string
-$nojiko-el-margin-right:                  mr                         !default;
-
-/// 设置「**左边外边距**」原子样式类的类名。
-/// @type string
-$nojiko-el-margin-left:                   ml                         !default;
-
-/// 设置「**底部外边距**」原子样式类的类名。
-/// @type string
-$nojiko-el-margin-bottom:                 mb                         !default;
-
-/// 设置「**垂直方向外边距**」原子样式类的类名。
+/// 设置「**垂直方向外边距**」原子样式类的类名
 /// @type string
 $nojiko-el-margin-vertical:               mv                         !default;
 
-/// 设置「**水平方向外边距**」原子样式类的类名。
+/// 设置「**水平方向外边距**」原子样式类的类名
 /// @type string
 $nojiko-el-margin-horizontal:             mh                         !default;
 
-/// 设置 「**较大的外边距**」原子样式类的类名后缀。
+/// 设置「**顶部外边距**」原子样式类的类名
+/// @type string
+$nojiko-el-margin-top:                    mt                         !default;
+
+/// 设置「**底部外边距**」原子样式类的类名
+/// @type string
+$nojiko-el-margin-bottom:                 mb                         !default;
+
+/// 设置「**左边外边距**」原子样式类的类名
+/// @type string
+$nojiko-el-margin-left:                   ml                         !default;
+
+/// 设置「**右边外边距**」原子样式类的类名
+/// @type string
+$nojiko-el-margin-right:                  mr                         !default;
+
+/// 设置 「**较大的外边距**」原子样式类的类名后缀
+/// @type string
 $nojiko-el-margin-suffix-large:           -l                          !default;
 
-/// 设置 「**较小的外边距**」原子样式类的类名后缀。
+/// 设置 「**较小的外边距**」原子样式类的类名后缀
+/// @type string
 $nojiko-el-margin-suffix-small:           -s                          !default;
 
 
 // 内边距
 
-/// 设置「**内边距**」原子样式类的类名。
+/// 设置「**内边距**」原子样式类的类名
 /// @type string
 $nojiko-el-padding:                       p                          !default;
 
-/// 设置「**顶部内边距**」原子样式类的类名。
-/// @type string
-$nojiko-el-padding-top:                   pt                         !default;
-
-/// 设置「**右边内边距**」原子样式类的类名。
-/// @type string
-$nojiko-el-padding-right:                 pr                         !default;
-
-/// 设置「**左边内边距**」原子样式类的类名。
-/// @type string
-$nojiko-el-padding-left:                  pl                         !default;
-
-/// 设置「**底部内边距**」原子样式类的类名。
-/// @type string
-$nojiko-el-padding-bottom:                pb                         !default;
-
-/// 设置「**垂直方向内边距**」原子样式类的类名。
+/// 设置「**垂直方向内边距**」原子样式类的类名
 /// @type string
 $nojiko-el-padding-vertical:              pv                         !default;
 
-/// 设置「**水平方向内边距**」原子样式类的类名。
+/// 设置「**水平方向内边距**」原子样式类的类名
 /// @type string
 $nojiko-el-padding-horizontal:            ph                         !default;
 
-/// 设置 「**较大的外边距**」原子样式类的类名后缀。
+/// 设置「**顶部内边距**」原子样式类的类名
+/// @type string
+$nojiko-el-padding-top:                   pt                         !default;
+
+/// 设置「**底部内边距**」原子样式类的类名
+/// @type string
+$nojiko-el-padding-bottom:                pb                         !default;
+
+/// 设置「**左边内边距**」原子样式类的类名
+/// @type string
+$nojiko-el-padding-left:                  pl                         !default;
+
+/// 设置「**右边内边距**」原子样式类的类名
+/// @type string
+$nojiko-el-padding-right:                 pr                         !default;
+
+/// 设置 「**较大的外边距**」原子样式类的类名后缀
+/// @type string
 $nojiko-el-padding-suffix-large:          -l                          !default;
 
-/// 设置 「**较小的外边距**」原子样式类的类名后缀。
+/// 设置 「**较小的外边距**」原子样式类的类名后缀
+/// @type string
 $nojiko-el-padding-suffix-small:          -s                          !default;
 
 
 // 隐藏
 
-/// 设置「**完全隐藏元素**」原子样式类的类名。
+/// 设置「**完全隐藏元素**」原子样式类的类名
 /// @type string
 $nojiko-el-hidden:                        h                          !default;
 
-/// 设置「**只在普通屏幕上隐藏元素，而在屏幕阅读器中显示**」原子样式类的类名。
+/// 设置「**只在普通屏幕上隐藏元素，而在屏幕阅读器中显示**」原子样式类的类名
 /// @type string
 $nojiko-el-visually-hidden:               hv                         !default;
 
-/// 设置「**在视觉及屏幕阅读器中隐藏元素，但保持布局结构**」原子样式类的类名。
+/// 设置「**在视觉及屏幕阅读器中隐藏元素，但保持布局结构**」原子样式类的类名
 /// @type string
 $nojiko-el-invisible:                     hi                         !default;
 
-/// 设置「**设置元素向左浮动**」原子样式类的类名。
+/// 设置「**设置元素向左浮动**」原子样式类的类名
 /// @type string
 $nojiko-el-float-left:                    fl                         !default;
 
-/// 设置「**设置元素向右浮动**」原子样式类的类名。
+/// 设置「**设置元素向右浮动**」原子样式类的类名
 /// @type string
 $nojiko-el-float-right:                   fr                         !default;
 
-/// 设置「**清除元素内部浮动**」原子样式类的类名。
+/// 设置「**清除元素内部浮动**」原子样式类的类名
 /// @type string
 $nojiko-el-clear-float:                   fc                         !default;
 
