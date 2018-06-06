@@ -19,6 +19,7 @@
   ],
   "scripts": {
     "develop": "gulp develop",
+    "prepublishOnly": "yarn build && yarn publish-docs",
     "build": "gulp",
     "publish-docs": "gh-pages -d docs"
   },
