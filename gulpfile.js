@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sassdoc = require('sassdoc');
 var mocha = require('gulp-mocha');
+var _ = require('lodash');
 
 var pkg = require('./package.json');
 
@@ -48,7 +49,7 @@ var documentOptions = {
         }
     },
     fragments: {
-        document: __dirname + '/docs-fragments/document.md',
+        document: __dirname + '/README.md',
         group: {
             'variables': __dirname + '/docs-fragments/group-variables.md',
             'helpers': __dirname + '/docs-fragments/group-helpers.md',
@@ -67,7 +68,7 @@ var documentOptions = {
 
 gulp.task('docs', function() {
     return gulp.src('./sass/**/*.scss')
-        .pipe(sassdoc(documentOptions));
+        .pipe( sassdoc(_.cloneDeep(documentOptions)) );
 });
 
 gulp.task('test.sass', function() {
@@ -89,6 +90,7 @@ gulp.task('develop', ['docs', 'test.sass', 'test.css'], function() {
     gulp.watch('./sass/**/*', ['test.sass', 'test.css', 'docs']);
     gulp.watch('./test/**/*', ['test.sass', 'test.css']);
     gulp.watch('./docs-fragments/**/*', ['docs']);
+    gulp.watch('./README.md', ['docs']);
 });
 
 gulp.task('default', ['docs', 'test.sass', 'test.css']);

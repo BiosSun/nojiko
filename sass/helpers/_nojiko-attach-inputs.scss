@@ -14,7 +14,7 @@
 ///
 /// @return {list} 一个新的已为每个元素添加了伪类的列表
 ///
-/// @examples
+/// @example
 ///     nojiko-attach-inputs('input[text]' 'input[password]', :hover);   // input[text], input[password]
 @function nojiko-attach-inputs($inputs, $attached: null) {
     $list: ();
