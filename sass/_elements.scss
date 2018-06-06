@@ -173,7 +173,7 @@ $nojiko-el-clear-float:                   fc                         !default;
     // 输出 $classes.all 的样式
     @if $c {
         #{$c} {
-            @if $vertical eq $horizontal {
+            @if $vertical == $horizontal {
                 #{$property}: $vertical;
             }
             @else {
@@ -187,7 +187,7 @@ $nojiko-el-clear-float:                   fc                         !default;
         // class, direction, value
         ($ct, top, $vertical),
         ($cb, bottom, $vertical),
-        ($cl, left, $vertical),
+        ($cl, left, $horizontal),
         ($cr, right, $horizontal)
     ) {
         $classes: nth($item, 1);

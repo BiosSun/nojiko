@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+@mixin test_elements_el-padding {
+    @include test('   mixin: el-padding') {
+
+        @include assert('没有传入前/后缀') {
+            @include output {
+                @include el-padding(null, null, 20px, 10px);
+            }
+
+            @include expect {
+                .p { padding: 20px 10px; }
+
+                .pt, .pv { padding-top: 20px; }
+                .pb, .pv { padding-bottom: 20px; }
+                .pl, .ph { padding-left: 10px; }
+                .pr, .ph { padding-right: 10px; }
+            }
+        }
+        
+        @include assert('如果垂直与水平方向上的值相等，则 .p 应只输出一个值') {
+            @include output {
+                @include el-padding(null, null, 20px, 20px);
+            }
+
+            @include expect {
+                .p { padding: 20px; }
+
+                .pt, .pv { padding-top: 20px; }
+                .pb, .pv { padding-bottom: 20px; }
+                .pl, .ph { padding-left: 20px; }
+                .pr, .ph { padding-right: 20px; }
+            }
+        }
+
+
+        @include assert('只传入前缀') {
+            @include output {
+                @include el-padding('x-', null, 20px, 10px);
+            }
+
+            @include expect {
+                .x-p { padding: 20px 10px; }
+
+                .x-pt, .x-pv { padding-top: 20px; }
+                .x-pb, .x-pv { padding-bottom: 20px; }
+                .x-pl, .x-ph { padding-left: 10px; }
+                .x-pr, .x-ph { padding-right: 10px; }
+            }
+        }
+        
+        @include assert('只传入后缀') {
+            @include output {
+                @include el-padding(null, '-s', 20px, 10px);
+            }
+
+            @include expect {
+                .p-s { padding: 20px 10px; }
+
+                .pt-s, .pv-s { padding-top: 20px; }
+                .pb-s, .pv-s { padding-bottom: 20px; }
+                .pl-s, .ph-s { padding-left: 10px; }
+                .pr-s, .ph-s { padding-right: 10px; }
+            }
+        }
+        
+        @include assert('传入前/后缀') {
+            @include output {
+                @include el-padding('x-', '-s', 20px, 10px);
+            }
+
+            @include expect {
+                .x-p-s { padding: 20px 10px; }
+
+                .x-pt-s, .x-pv-s { padding-top: 20px; }
+                .x-pb-s, .x-pv-s { padding-bottom: 20px; }
+                .x-pl-s, .x-ph-s { padding-left: 10px; }
+                .x-pr-s, .x-ph-s { padding-right: 10px; }
+            }
+        }
+
+    }
+}

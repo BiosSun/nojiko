@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+@import "./el-margin";
+@import "./el-padding";
+
+@include test-module('elements') {
+    @include test_elements_el-margin;
+    @include test_elements_el-padding;
+}

@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+@mixin test_elements_el-margin {
+    @include test('   mixin: el-margin') {
+
+        @include assert('没有传入前/后缀') {
+            @include output {
+                @include el-margin(null, null, 20px, 10px);
+            }
+
+            @include expect {
+                .m { margin: 20px 10px; }
+
+                .mt, .mv { margin-top: 20px; }
+                .mb, .mv { margin-bottom: 20px; }
+                .ml, .mh { margin-left: 10px; }
+                .mr, .mh { margin-right: 10px; }
+            }
+        }
+
+        @include assert('如果垂直与水平方向上的值相等，则 .m 应只输出一个值') {
+            @include output {
+                @include el-margin(null, null, 20px, 20px);
+            }
+
+            @include expect {
+                .m { margin: 20px; }
+
+                .mt, .mv { margin-top: 20px; }
+                .mb, .mv { margin-bottom: 20px; }
+                .ml, .mh { margin-left: 20px; }
+                .mr, .mh { margin-right: 20px; }
+            }
+        }
+
+        @include assert('只传入前缀') {
+            @include output {
+                @include el-margin('x-', null, 20px, 10px);
+            }
+
+            @include expect {
+                .x-m { margin: 20px 10px; }
+
+                .x-mt, .x-mv { margin-top: 20px; }
+                .x-mb, .x-mv { margin-bottom: 20px; }
+                .x-ml, .x-mh { margin-left: 10px; }
+                .x-mr, .x-mh { margin-right: 10px; }
+            }
+        }
+        
+        @include assert('只传入后缀') {
+            @include output {
+                @include el-margin(null, '-s', 20px, 10px);
+            }
+
+            @include expect {
+                .m-s { margin: 20px 10px; }
+
+                .mt-s, .mv-s { margin-top: 20px; }
+                .mb-s, .mv-s { margin-bottom: 20px; }
+                .ml-s, .mh-s { margin-left: 10px; }
+                .mr-s, .mh-s { margin-right: 10px; }
+            }
+        }
+        
+        @include assert('传入前/后缀') {
+            @include output {
+                @include el-margin('x-', '-s', 20px, 10px);
+            }
+
+            @include expect {
+                .x-m-s { margin: 20px 10px; }
+
+                .x-mt-s, .x-mv-s { margin-top: 20px; }
+                .x-mb-s, .x-mv-s { margin-bottom: 20px; }
+                .x-ml-s, .x-mh-s { margin-left: 10px; }
+                .x-mr-s, .x-mh-s { margin-right: 10px; }
+            }
+        }
+    }
+}
