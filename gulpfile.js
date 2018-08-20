@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sassdoc = require('sassdoc');
 var mocha = require('gulp-mocha');
+var ghpages = require('gh-pages');
 var _ = require('lodash');
 
 var pkg = require('./package.json');
@@ -60,13 +61,18 @@ var documentOptions = {
             'debug': __dirname + '/docs-fragments/debug.md'
         }
     },
-    basePath: 'http://biossun.org/nojiko',
+    basePath: 'https://nojiko.biossun.org',
     sourceLinkPrefix: 'sass/'
 };
 
-gulp.task('docs', function() {
+gulp.task('docs', function () {
     return gulp.src('./sass/**/*.scss')
         .pipe( sassdoc(_.cloneDeep(documentOptions)) );
+});
+
+gulp.task('docs.other', function() {
+    return gulp.src('./CNAME')
+        .pipe( gulp.dest('./docs') );
 });
 
 gulp.task('test.sass', function() {
@@ -84,11 +90,11 @@ gulp.task('test.css', function() {
 });
 
 // watch
-gulp.task('develop', ['docs', 'test.sass', 'test.css'], function() {
-    gulp.watch('./sass/**/*', ['test.sass', 'test.css', 'docs']);
-    gulp.watch('./test/**/*', ['test.sass', 'test.css']);
-    gulp.watch('./docs-fragments/**/*', ['docs']);
-    gulp.watch('./README.md', ['docs']);
-});
+gulp.task('develop', gulp.series('docs', 'test.sass', 'test.css', function() {
+    gulp.watch('./sass/**/*', gulp.series('test.sass', 'test.css', 'docs'));
+    gulp.watch('./test/**/*', gulp.series('test.sass', 'test.css'));
+    gulp.watch('./docs-fragments/**/*', gulp.series('docs'));
+    gulp.watch('./README.md', gulp.series('docs'));
+}));
 
-gulp.task('default', ['docs', 'test.sass', 'test.css']);
+gulp.task('default', gulp.series('docs', 'test.sass', 'test.css', 'docs.other'));
