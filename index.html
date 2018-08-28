@@ -787,19 +787,24 @@
 <li>一套基础全局样式；</li>
 <li>以及一套原子样式。</li>
 </ul>
-<h2 id="-">使用</h2>
-<p>首先，在项目中安装 nojiko：</p>
+<h2 id="-">安装</h2>
+<p>1. 在项目中安装 nojiko：</p>
 <pre><code class="lang-bash">$ yarn add nojiko
+$ npm install nojiko
+$ bower install nojiko
 </code></pre>
-<p>之后，便可引入并使用 nojiko：</p>
-<pre><code class="lang-scss">@import &quot;nojiko/nojiko&quot;;       // 提供 Helpers、Add-ons、List 及 Map 四个分组下所定义的所有函数及混入类
+<p>2. 配置引入路径：将 <code>node_modules</code> （或 <code>bower_components</code>，如果你使用 bower）
+目录添加到 SASS 编译器的 <code>includePaths</code> 配置中（当然你也可以根据你的项目自行配置，
+但要注意这可能会导致下一步中的引入路径有所不同）。</p>
+<p>3. 按需引入 nojiko：</p>
+<pre><code class="lang-scss">@import &quot;nojiko/sass/nojiko&quot;;       // 提供 Helpers、Add-ons、List 及 Map 四个分组下所定义的所有函数及混入类
 
-@import &quot;nojiko/variables&quot;;    // 提供 Variables 分组下所定义的所有全局配置变量
-@import &quot;nojiko/scaffolding&quot;;  // 提供 Scaffolding 分组下所定义的一套全局脚手架样式
-@import &quot;nojiko/elements&quot;;     // 提供 Elements 分组下所定义的一套元子样式类相关的全局配置变量、混入类及样式
+@import &quot;nojiko/sass/variables&quot;;    // 提供 Variables 分组下所定义的所有全局配置变量，依赖 nojiko 模块
+@import &quot;nojiko/sass/scaffolding&quot;;  // 提供 Scaffolding 分组下所定义的一套全局脚手架样式，依赖 variables 模块
+@import &quot;nojiko/sass/elements&quot;;     // 提供 Elements 分组下所定义的一套原子样式类，依赖 variables 模块
 </code></pre>
 <h2 id="-">升级</h2>
-<p>Nojiko 采用语义化版本控制，并提供了一份详尽的 <a href="https://github.com/BiosSun/nojiko/blob/master/CHANGELOG.md">更新记录</a>，因此请在升级之前仔细阅读该更新记录，尤其是在升级到一个新的大版本号时。</p>
+<p>Nojiko 采用语义化版本控制，并提供了一份详细的 <a href="https://github.com/BiosSun/nojiko/blob/master/CHANGELOG.md">更新记录</a>，请在升级之前仔细阅读该更新记录。</p>
 <h2 id="-sass-">其它 SASS 库</h2>
 <ul>
 <li><a href="https://github.com/sass-mq/sass-mq"><code>sass-mq</code></a> 更方便的书写媒体查询样式；</li>
