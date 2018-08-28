@@ -19,9 +19,9 @@
   ],
   "scripts": {
     "develop": "gulp develop",
-    "prepublishOnly": "yarn build && yarn publish-docs",
-    "build": "gulp",
-    "publish-docs": "gh-pages -d docs"
+    "prepublishOnly": "yarn publish-docs",
+    "publish-docs": "yarn build && gh-pages -d docs",
+    "build": "gulp"
   },
   "homepage": "https://github.com/BiosSun/nojiko",
   "lang": "zh_CN",
