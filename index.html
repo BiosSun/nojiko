@@ -9729,8 +9729,8 @@ map-set($map, name, 'youname');</code></pre>
 <p>内外边距的长度值从模块间距的配置变量中获取（<code>$distance-vertical</code> 和 <code>$distance-horizontal</code>），并基于这两个变量提供三种长度级别，每个长度级别对应不同的类名后缀：</p>
 <ul>
 <li><code>[类名]</code> - 1 倍长度</li>
-<li><code>[类名]d</code> - 2 倍长度</li>
-<li><code>[类名]x</code> - 0.5 倍长度</li>
+<li><code>[类名]-l</code> - 2 倍长度</li>
+<li><code>[类名]-s</code> - 0.5 倍长度</li>
 </ul>
 <p>比如两个变量的值设置如下：</p>
 <pre><code class="lang-scss">$distance-vertical: 10px;
@@ -9744,11 +9744,11 @@ $distance-horizontal: 20px;
     margin: 10px 20px;
 }
 
-.md {
+.m-l {
     margin: 20px 40px;
 }
 
-.mx {
+.m-s {
     margin: 5px 10px;
 }
 </code></pre>
