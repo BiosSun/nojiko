@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@mixin test_helpers_limit {
+    @include test('function: limit') {
+        
+        @include assert-equal(
+            limit(2, 1, 3),
+            2,
+            '若传入值在区间内，则返回原值'
+        );
+        
+        @include assert-equal(
+            limit(0, 1, 3),
+            1,
+            '若传入值小于最小值，则返回最小值'
+        );
+        
+        @include assert-equal(
+            limit(4, 1, 3),
+            3,
+            '若传入值大于最大值，则返回最大值'
+        );
+        
+    }
+}

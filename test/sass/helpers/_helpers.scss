@@ -13,6 +13,7 @@
 @import "size";
 @import "translucent-bgcolor";
 @import "opacity";
+@import "limit";
 
 // TODO: @import "font-family";
 // TODO: @import "text-inputs";
@@ -32,5 +33,6 @@
     @include test_helpers_size;
     @include test_helpers_translucent-bgcolor;
     @include test_helpers_opacity;
+    @include test_helpers_limit;
 
 }
