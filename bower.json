@@ -1,6 +1,6 @@
 {
   "name": "nojiko",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "sass/_nojiko.scss",
   "license": "MIT",
   "ignore": [
@@ -12,9 +12,5 @@
     "test/",
     "doc-fragments/"
   ],
-  "keywords": [
-    "nojiko",
-    "scss",
-    "library"
-  ]
+  "keywords": ["nojiko", "scss", "library"]
 }
