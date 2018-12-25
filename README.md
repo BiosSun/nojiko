@@ -15,10 +15,9 @@ Nojiko 是一个使用 SCSS 编写的基础工具库，其中包含如下内容�
 ```bash
 $ yarn add nojiko
 $ npm install nojiko
-$ bower install nojiko
 ```
 
-2\. 配置引入路径：将 `node_modules` 目录（或 `bower_components` 目录，如果你使用 bower 的话）添加到 SASS 编译器的 `includePaths` 配置中（当然你也可以根据你的项目自行配置， 但要注意这可能会导致下一步中的引入路径有所不同）。
+2\. 配置引入路径：将 `node_modules` 目录添加到 SASS 编译器的 `includePaths` 配置中（当然你也可以根据你的项目自行配置， 但要注意这可能会导致下一步中的引入路径有所不同）。
 
 3\. 按需引入 nojiko：
 
