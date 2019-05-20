@@ -8,6 +8,13 @@ Nojiko 是一个使用 SCSS 编写的基础工具库，其中包含如下内容�
 - 一套基础全局样式；
 - 以及一套原子样式。
 
+## 原则
+
+- 不依赖 JS；
+- 不限定 HTML 结构；
+- 兼容多种客户端；
+- 兼容 [browserslist 的默认规则所匹配的浏览器](https://browserl.ist/?q=defaults);
+
 ## 安装
 
 1\. 在项目中安装 nojiko：
