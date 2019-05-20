@@ -5,7 +5,28 @@
 /// @author Bios Sun <biossun@gmail.com>
 ////
 
-/// 使用 background-image 模拟实现超细边框
+/// 使用线性渐变背景图模拟实现超细边框。
+///
+/// 需要注意的是，该方案有如下两条限制：
+///
+/// 1. 该方案所实现的是 0.5 像素的边框，而非 1 物理像素的边框；
+/// 2. 该方案不支持圆角。
+///
+/// 虽然如此，但若综合考虑兼容性、性能及所生成的代码量，我们认为这仍是一个较好的方案，因此选择提供它。
+///
+/// 如果受限于以上所列的两点，不能使用该方案，那么可以参考如下两个链接中所述的其它方案：
+///
+/// - [再谈Retina下1px的解决方案](https://www.w3cplus.com/css/fix-1px-for-retina.html)
+/// - [聊聊一物理像素边框](https://blog.biossun.org/one-physical-pixel-border)
+///
+/// > 为便于创建特定方向的边框，额外提供如下六个方法：
+/// >
+/// > - `superfine-border-top` - 顶部边框；
+/// > - `superfine-border-bottom` - 底部边框；
+/// > - `superfine-border-left` - 左侧边框；
+/// > - `superfine-border-right` - 右侧边框；
+/// > - `superfine-border-vertical` - 顶部及底部边框；
+/// > - `superfine-border-horizontal` - 左侧及右侧边框；
 ///
 /// @param {Color} $colors - 边框的颜色，支持缩写格式
 ///
@@ -55,6 +76,68 @@
 ///                     center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 50%, transparent 50%),
 ///                     center right/1px 100% no-repeat linear-gradient(270deg, #0f0, #0f0 50%, transparent 50%);
 ///     }
+///
+/// @example scss - source
+///     .box {
+///         background: superfine-border-top(#000);
+///     }
+///
+/// @example css - output
+///     .box {
+///         background: top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 50%, transparent 50%);
+///     }
+///
+/// @example scss - source
+///     .box {
+///         background: superfine-border-bottom(#000);
+///     }
+///
+/// @example css - output
+///     .box {
+///         background: bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000 50%, transparent 50%);
+///     }
+///
+/// @example scss - source
+///     .box {
+///         background: superfine-border-left(#000);
+///     }
+///
+/// @example css - output
+///     .box {
+///         background: center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 50%, transparent 50%);
+///     }
+///
+/// @example scss - source
+///     .box {
+///         background: superfine-border-right(#000);
+///     }
+///
+/// @example css - output
+///     .box {
+///         background: center right/1px 100% no-repeat linear-gradient(270deg, #000, #000 50%, transparent 50%),
+///     }
+///
+/// @example scss - source
+///     .box {
+///         background: superfine-border-vertical(#000);
+///     }
+///
+/// @example css - output
+///     .box {
+///         background: top center/100% 1px no-repeat linear-gradient(180deg, #000, #000 50%, transparent 50%),
+///                     bottom center/100% 1px no-repeat linear-gradient(0deg, #000, #000 50%, transparent 50%);
+///     }
+///
+/// @example scss - source
+///     .box {
+///         background: superfine-border-horizontal(#000);
+///     }
+///
+/// @example css - output
+///     .box {
+///         background: center left/1px 100% no-repeat linear-gradient(90deg, #000, #000 50%, transparent 50%),
+///                     center right/1px 100% no-repeat linear-gradient(270deg, #000, #000 50%, transparent 50%);
+///     }
 @function superfine-border($colors) {
     $colors: nojiko-expand($colors);
 
@@ -84,44 +167,26 @@
     @return $result;
 }
 
-/// 使用 SVG 背景图片来模拟实现**顶部**超细边框
-///
-/// @param {Color} $colors - 边框的颜色
 @function superfine-border-top($color) {
     @return superfine-border($color null null);
 }
 
-/// 使用 SVG 背景图片来模拟实现**底部**超细边框
-///
-/// @param {Color} $colors - 边框的颜色
 @function superfine-border-bottom($color) {
     @return superfine-border(null null $color);
 }
 
-/// 使用 SVG 背景图片来模拟实现**左边**超细边框
-///
-/// @param {Color} $colors - 边框的颜色
 @function superfine-border-left($color) {
     @return superfine-border(null null null $color);
 }
 
-/// 使用 SVG 背景图片来模拟实现**右边**超细边框
-///
-/// @param {Color} $colors - 边框的颜色
 @function superfine-border-right($color) {
     @return superfine-border(null $color null null);
 }
 
-/// 使用 SVG 背景图片来模拟实现**顶部及底部**超细边框
-///
-/// @param {Color} $colors - 边框的颜色
 @function superfine-border-vertical($color) {
     @return superfine-border($color null);
 }
 
-/// 使用 SVG 背景图片来模拟实现**左边及右边**超细边框
-///
-/// @param {Color} $colors - 边框的颜色
 @function superfine-border-horizontal($color) {
     @return superfine-border(null $color);
 }
