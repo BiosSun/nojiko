@@ -3,6 +3,10 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [fix] 前缀的更新为异常修复，建议尽快更新。*
 
+## 2.0.0 (2021-01-01)
+
+- [danger] 删除 clamp 函数（详细信息请看下面 1.2.0 发布说明）；
+
 ## 1.2.0 (2021-01-01)
 
 为支持 CSS 中的 [clamp](https://drafts.csswg.org/css-values-4/#comp-func) 函数，Dart Sass 在其
