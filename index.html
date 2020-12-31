@@ -63,17 +63,6 @@
                                         
                                             <li class="item" rule="treeitem">
                                                 <div class="item-body">
-                                                    <a class="item-content" href="#id--helpers-function-clamp">
-                                                        <span class="item-type" data-type="function" title="Function">f</span>
-                                                        <span class="item-title">
-                                                            clamp
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        
-                                            <li class="item" rule="treeitem">
-                                                <div class="item-body">
                                                     <a class="item-content" href="#id--helpers-function-compute-line-height">
                                                         <span class="item-type" data-type="function" title="Function">f</span>
                                                         <span class="item-title">
@@ -634,7 +623,7 @@
     <div class="content-wrapper">
         <h1 class="title">
             Nojiko
-            <span>1.2.0</span>
+            <span>2.0.0</span>
         </h1>
         
     </div>
@@ -3369,187 +3358,6 @@ $ npm install nojiko
 
                     
                         
-                            <section class="item" id="id--helpers-function-clamp"
-         data-group="helpers"
-         data-access="public"
-         data-type="function">
-    <header class="item-header">
-        
-        <h4 class="item-name">
-            
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_clamp.scss#L8-L19" target="_blank">source</a>
-
-
-
-            
-
-
-            <code class="item-name-text">clamp</code>
-
-
-            
-            
-
-            
-    
-
-
-            
-
-
-            
- 
-
-        </h4>
-    </header>
-
-    
-
-
-
-    <div class="item-body">
-        
-
-    <div class="item-description"><p>限定某个数值在指定的区间内</p>
-</div>
-
-
-        
-
-
-        
-    <div class="item-parameters">
-        <h5 class="sub-heading">参数</h5>
-
-        <dl class="item-parameters">
-            
-            <dt class="item-parameter-heading">
-                <strong class="item-parameter-name">
-                    <code>$val</code>
-                </strong>
-
-                <span class="item-parameter-type">Number</span>
-
-                
-            </dt>
-            <dd class="item-parameter-description">
-                <p>待限定的数值</p>
-
-            </dd>
-            
-            <dt class="item-parameter-heading">
-                <strong class="item-parameter-name">
-                    <code>$min</code>
-                </strong>
-
-                <span class="item-parameter-type">Number</span>
-
-                
-            </dt>
-            <dd class="item-parameter-description">
-                <p>区间最小值（包含）</p>
-
-            </dd>
-            
-            <dt class="item-parameter-heading">
-                <strong class="item-parameter-name">
-                    <code>$max</code>
-                </strong>
-
-                <span class="item-parameter-type">Number</span>
-
-                
-            </dt>
-            <dd class="item-parameter-description">
-                <p>区间最大值（包含）</p>
-
-            </dd>
-            
-        </dl>
-    </div>
-
-
-        
-
-        
-
-        
-
-    <div class="item-return">
-        <h5 class="sub-heading">
-            返回值
-
-            
-            <span class="item-return-type">
-                
-                    Number
-                
-            </span>
-            
-        </h5>
-
-        <div class="item-return">
-            
-                <p>若该值在区间内，则返回原值，但若小于最小值，则返回最小值，同样若大于最大值，则返回最大值。</p>
-
-            
-        </div>
-    </div>
-
-
-        
-
-    <div class="item-examples">
-        <h5 class="sub-heading">示例</h5>
-
-        
-            <div class="item-example">
-                
-
-                <div class="example-code">
-                    <pre><code class="lang-scss">clamp(2, 1, 3)   // --> 2
-clamp(0, 1, 3)   // --> 1
-clamp(4, 1, 3)   // --> 3</code></pre>
-                </div>
-            </div>
-        
-    </div>
-
-
-        
-
-    <div class="item-throws">
-        <h5 class="sub-heading">异常</h5>
-
-        <ul class="list">
-            
-                <li><p>[Nojiko] The </p>
-</li>
-            
-        </ul>
-    </div>
-
-
-        
-
-
-
-        
-
-        
-
-
-
-        
-
-
-        
-
-
-    </div>
-</section>
-
-                        
                             <section class="item" id="id--helpers-function-compute-line-height"
          data-group="helpers"
          data-access="public"
@@ -3558,7 +3366,7 @@ clamp(4, 1, 3)   // --> 3</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_compute-line-height.scss#L8-L15" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_compute-line-height.scss#L8-L15" target="_blank">source</a>
 
 
 
@@ -3692,7 +3500,7 @@ line-height: compute-line-height(12px, 1.5em);  // => 1.5em</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_is-dark.scss#L8-L11" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_is-dark.scss#L8-L11" target="_blank">source</a>
 
 
 
@@ -3812,7 +3620,7 @@ line-height: compute-line-height(12px, 1.5em);  // => 1.5em</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_is-light.scss#L8-L11" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_is-light.scss#L8-L11" target="_blank">source</a>
 
 
 
@@ -3932,7 +3740,7 @@ line-height: compute-line-height(12px, 1.5em);  // => 1.5em</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_strip-unit.scss#L8-L17" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_strip-unit.scss#L8-L17" target="_blank">source</a>
 
 
 
@@ -4088,7 +3896,7 @@ strip-unit(3rem);    // 3</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_inline-block.scss#L8-L35" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_inline-block.scss#L8-L35" target="_blank">source</a>
 
 
 
@@ -4253,7 +4061,7 @@ strip-unit(3rem);    // 3</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_margin.scss#L8-L28" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_margin.scss#L8-L28" target="_blank">source</a>
 
 
 
@@ -4398,7 +4206,7 @@ margin-bottom: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_opacity.scss#L8-L27" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_opacity.scss#L8-L27" target="_blank">source</a>
 
 
 
@@ -4539,7 +4347,7 @@ margin-bottom: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_opacity.scss#L35-L50" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_opacity.scss#L35-L50" target="_blank">source</a>
 
 
 
@@ -4657,7 +4465,7 @@ margin-bottom: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_opacity.scss#L55-L70" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_opacity.scss#L55-L70" target="_blank">source</a>
 
 
 
@@ -4775,7 +4583,7 @@ margin-bottom: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_padding.scss#L8-L28" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_padding.scss#L8-L28" target="_blank">source</a>
 
 
 
@@ -4920,7 +4728,7 @@ padding-bottom: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_position.scss#L8-L41" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_position.scss#L8-L41" target="_blank">source</a>
 
 
 
@@ -5119,7 +4927,7 @@ padding-bottom: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_size.scss#L8-L23" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_size.scss#L8-L23" target="_blank">source</a>
 
 
 
@@ -5242,7 +5050,7 @@ width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_size.scss#L29-L44" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_size.scss#L29-L44" target="_blank">source</a>
 
 
 
@@ -5365,7 +5173,7 @@ min-width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_size.scss#L50-L65" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_size.scss#L50-L65" target="_blank">source</a>
 
 
 
@@ -5488,7 +5296,7 @@ max-width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/helpers/_translucent-bgcolor.scss#L8-L54" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/helpers/_translucent-bgcolor.scss#L8-L54" target="_blank">source</a>
 
 
 
@@ -5711,7 +5519,7 @@ max-width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/addons/_superfine-border.scss#L8-L140" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/addons/_superfine-border.scss#L8-L140" target="_blank">source</a>
 
 
 
@@ -6127,7 +5935,7 @@ max-width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/addons/_clearfix.scss#L8-L27" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/addons/_clearfix.scss#L8-L27" target="_blank">source</a>
 
 
 
@@ -6263,7 +6071,7 @@ max-width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/addons/_expand-scope.scss#L8-L103" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/addons/_expand-scope.scss#L8-L103" target="_blank">source</a>
 
 
 
@@ -6553,7 +6361,7 @@ max-width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/addons/_foreground-color.scss#L8-L78" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/addons/_foreground-color.scss#L8-L78" target="_blank">source</a>
 
 
 
@@ -6787,7 +6595,7 @@ max-width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/addons/_hide-text.scss#L8-L22" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/addons/_hide-text.scss#L8-L22" target="_blank">source</a>
 
 
 
@@ -6920,7 +6728,7 @@ max-width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/addons/_multi-text-overflow-ellipsis.scss#L8-L42" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/addons/_multi-text-overflow-ellipsis.scss#L8-L42" target="_blank">source</a>
 
 
 
@@ -7077,7 +6885,7 @@ max-width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/addons/_text-overflow-ellipsis.scss#L8-L24" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/addons/_text-overflow-ellipsis.scss#L8-L24" target="_blank">source</a>
 
 
 
@@ -7197,7 +7005,7 @@ max-width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/addons/_triangle.scss#L8-L36" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/addons/_triangle.scss#L8-L36" target="_blank">source</a>
 
 
 
@@ -7408,7 +7216,7 @@ max-width: 10px;</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/list/_list-compact.scss#L8-L15" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/list/_list-compact.scss#L8-L15" target="_blank">source</a>
 
 
 
@@ -7529,7 +7337,7 @@ list-compact( (null) );                   // --> ()</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/list/_list-first.scss#L8-L15" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/list/_list-first.scss#L8-L15" target="_blank">source</a>
 
 
 
@@ -7650,7 +7458,7 @@ list-first()             // --> null</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/list/_list-rest.scss#L8-L15" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/list/_list-rest.scss#L8-L15" target="_blank">source</a>
 
 
 
@@ -7771,7 +7579,7 @@ list-rest();            // --> ()</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/list/_list-slice.scss#L8-L17" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/list/_list-slice.scss#L8-L17" target="_blank">source</a>
 
 
 
@@ -7954,7 +7762,7 @@ list-slice($list, 2);      // b, c, d, e</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/map/_map-deep-get.scss#L8-L28" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/map/_map-deep-get.scss#L8-L28" target="_blank">source</a>
 
 
 
@@ -8101,7 +7909,7 @@ map-deep-get($data);                        // --> `return $data`</code></pre>
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/map/_map-deep-set.scss#L8-L27" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/map/_map-deep-set.scss#L8-L27" target="_blank">source</a>
 
 
 
@@ -8259,7 +8067,7 @@ map-deep-set($data, user, 'sunhaiyang');                  // ( user: 'sunhaiyang
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/map/_map-set.scss#L8-L19" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/map/_map-set.scss#L8-L19" target="_blank">source</a>
 
 
 
@@ -10128,7 +9936,7 @@ $distance-horizontal: 20px;
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/_elements.scss#L205-L233" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/_elements.scss#L205-L233" target="_blank">source</a>
 
 
 
@@ -10318,7 +10126,7 @@ $distance-horizontal: 20px;
         
         <h4 class="item-name">
             
-    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/1.2.0/sass/_elements.scss#L256-L284" target="_blank">source</a>
+    <a class="item-source-link" href="https://github.com/BiosSun/nojiko/tree/2.0.0/sass/_elements.scss#L256-L284" target="_blank">source</a>
 
 
 
