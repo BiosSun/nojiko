@@ -1,6 +1,6 @@
 {
   "name": "nojiko",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "title": "Nojiko",
   "description": "一个使用 SCSS 编写的基础样式库",
   "files": [

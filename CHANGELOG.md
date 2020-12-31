@@ -3,6 +3,42 @@
 
 *以下带有 [danger] 前缀的为不兼容更新，需要注意。而带有 [fix] 前缀的更新为异常修复，建议尽快更新。*
 
+## 1.2.0 (2021-01-01)
+
+为支持 CSS 中的 [clamp](https://drafts.csswg.org/css-values-4/#comp-func) 函数，Dart Sass 在其
+[1.31.0](https://github.com/sass/dart-sass/commit/02c92aa7cd4e9bc569b94037f87c27d8da23eeeb) 版本中，将 *clamp* 解析为特殊函数；
+我们若在 sass 中声明了一个名为 *clamp* 的自定义函数，并使用该版本进行编译，则会抛出异常：`Invalid function name.`。
+
+因此，nojiko 将弃用其 clamp 函数，若您需要，则可以改用 sass 在其官方模块 math 中提供的 clamp 函数。
+
+例如，将如下使用 nojiko 提供的 clamp 函数的代码：
+
+```sass
+width: clamp($width, 20px, 30px);
+```
+
+改为：
+
+```sass
+@use "sass:math";                       // 引入 math 模块
+width: math.clamp($width, 20px, 30px);  // 并将 `clamp` 改为 `math.clamp`
+```
+
+为帮助你进行迁移，我们提供了这个 nojiko 1.2.0 版本。在进行迁移时，你可以先将 Dart Sass 降级到 1.30.0，并安装 nojiko 1.2.0：
+
+```bash
+npm i sass@1.30.0 --save-dev && npm i nojiko@1.2.0
+```
+
+在 nojiko 1.2.0 版本中，clamp 函数会在被调用时抛出一个异常，这可以帮助你定位在哪里使用到了它。
+待你完成迁移后，你便可以将 Dart Sass 升级回最新版本，并将 nojiko 升级到 2.0.0，在 2.0.0 中，我们完全移除了 clamp 函数。
+
+```bash
+npm i sass --save-dev && npm i nojiko@^2.0.0
+```
+
+- [danger] 弃用 clamp 函数；
+
 ## 1.1.1 (2019-07-14)
 
 - [fix] 修复当设置 default-box-sizing 为 border-box 后，引入 scaffolding 会抛出异常的问题；
