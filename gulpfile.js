@@ -2,10 +2,9 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sassdoc = require('sassdoc');
 var mocha = require('gulp-mocha');
-var ghpages = require('gh-pages');
 var _ = require('lodash');
 
-var pkg = require('./package.json');
+sass.compiler = require('sass');
 
 var documentOptions = {
     dest: 'docs',

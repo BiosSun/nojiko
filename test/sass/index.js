@@ -6,4 +6,4 @@ var sassFile = path.join(__dirname, 'test.scss');
 sassTrue.runSass({
     file: sassFile,
     includePaths: ['./node_modules/']
-}, describe, it);
+}, { describe, it });

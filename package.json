@@ -37,14 +37,14 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "commander": "^2.5.0",
-    "gh-pages": "^1.2.0",
-    "gulp": "^4.0.0",
-    "gulp-mocha": "^6.0.0",
-    "gulp-sass": "^4.0.1",
-    "lodash": "^4.17.5",
-    "sass-true": "^4.0.0",
-    "sassdoc": "^2.1.20",
+    "gh-pages": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-mocha": "^7.0.2",
+    "gulp-sass": "^4.1.0",
+    "lodash": "^4.17.20",
+    "sass": "1.30.0",
+    "sass-true": "^6.0.1",
+    "sassdoc": "^2.7.3",
     "sassdoc-theme-winter": "^0.4.3"
   }
 }
